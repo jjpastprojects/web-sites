@@ -15,8 +15,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from twilio.rest import TwilioRestClient
 
 def send_twilio_message(phone, code):
-    account_sid ="AC662898986a6dfe5ade716c7a8dd25688"
-    auth_token = "0d02b2f14cd1e7dc1f2cdf65203da1ef"
+    account_sid ="key"
+    auth_token = "key"
     client = TwilioRestClient(account_sid, auth_token)
 
     msg = 'Your code is %s' % (code)
