@@ -1,0 +1,35 @@
+@font-face {
+    font-family: custom_font;
+    src: url(Helvetica.otf);
+}
+
+div {
+    font-family: custom_font;
+}
+span {
+    font-family: custom_font;
+}
+p {
+    font-family: custom_font!important;
+}
+h1 {
+    font-family: custom_font;
+}
+h2 {
+    font-family: custom_font;
+}
+h3 {
+    font-family: custom_font;
+}
+h4 {
+    font-family: custom_font;
+}
+h5 {
+    font-family: custom_font;
+}
+a {
+    font-family: custom_font;
+}
+b {
+    font-family: custom_font;
+}

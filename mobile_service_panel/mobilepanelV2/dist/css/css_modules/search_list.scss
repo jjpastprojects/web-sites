@@ -1,0 +1,57 @@
+/*===============================*/
+/* search result listing  css */
+/*===============================*/
+.search-list {
+   color: $fontcolor1;
+ & > .media {
+width:100%;
+display: block;
+ color:$fontcolor3;
+text-decoration: none;
+padding:12px 1em;
+border-bottom: 1px solid $bordercolor;
+position: relative;
+ &:last-child {
+border-bottom: 0
+}
+ h6 {
+width:100%;
+display: block;
+color:$fontcolor1;
+ a {
+color:$fontcolor2;
+font-weight: 600;
+}
+ small {
+color:$fontcolor3;
+}
+}
+ p {
+width:100%;
+display: block;
+max-width: 500px;
+color:$fontcolor2;
+}
+ .description {
+color:$fontcolor2;
+margin:5px 0px;
+font-size: 13px;
+max-width: none
+}
+ &:hover {
+     @extend .gradient;
+ .description, h6 ,p{
+color: $fontcolor1;
+}
+ .overlay {
+opacity: 1;
+display: block
+}
+}
+ .title-nav {
+font-size: 20px;
+padding: 0 15px;
+color: $fontcolor1;
+}
+}
+}

@@ -1,0 +1,9 @@
+/* --------Weather icons ------- */
+p.icon{  color: $fontcolor1 ; font-size: 30px; &+.icon-name{ text-align: center; font-size: 14px; margin-bottom: 50px;}}
+ul.icons{ 
+    padding: 0; list-style: none;
+    li{ font-size: 14px; margin-bottom: 50px; text-align: center;
+        i{ color: $fontcolor1 ; font-size:30px; display: block; width: 100%; margin-bottom: 10px; }
+    }
+}
+.icon-container{ text-align: center; span:first-child{color:  $fontcolor1; font-size: 30px; margin: 15px 0; display: block; width: 100%; } .icon-name{ font-size: 14px; margin-bottom: 50px;display: block; width: 100%;}}

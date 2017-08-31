@@ -1,0 +1,66 @@
+/*==============================================*/
+/*============== masonary gallery ==============*/
+/*==============================================*/
+.grid {
+	display: block;
+	width: 100%;
+	float: left;
+ .grid-item {
+ width: 33.33333%;
+padding:13px;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+         :before {
+content: "\f002";
+position: absolute;
+right: 13px;
+bottom: 13px;
+width: 30px;
+height: 30px;
+background: rgba(0,0,0,0.6);
+color: rgba(255,255,255,0.8);
+font-size: 18px;
+text-align: center;
+line-height: 30px;
+vertical-align: middle;
+font-family: FontAwesome;
+}
+}
+ &.two {
+ .grid-item {
+width: 50%;
+}
+}
+ &.one {
+ .grid-item {
+width: 100%;
+}
+}
+a {
+	width: 100%;
+	display: block;
+	float: left;
+ img {
+width: 100%;
+display: block;
+float: left
+}
+}
+}
+#swipebox-overlay {
+	background: rgba(0, 0, 0, 0.5)
+}
+.profilegallery .grid-item {
+	height: 180px;
+	overflow: hidden;
+ a {
+height: 100%;
+display: block
+}
+img {
+	height: 100%;
+	overflow: hidden;
+}
+}

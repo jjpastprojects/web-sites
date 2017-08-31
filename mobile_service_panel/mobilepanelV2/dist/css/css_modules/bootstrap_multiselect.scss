@@ -1,0 +1,14 @@
+
+/*==============================================*/
+/*=========== Bootstrap multiselect ============*/
+/*==============================================*/
+.multiselect-container {
+ >li>a>label, >li>a>label.checkbox {
+padding:5px 10px;
+color: $black;
+}
+}
+.multiselect-container .input-group {
+	margin: 0;
+    .input-group-addon{ color: $fontcolor3}
+}

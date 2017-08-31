@@ -1,0 +1,10 @@
+[08-Apr-2015 03:25:18 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::user_save() in /home3/tags/public_html/demo/reddot/application/controllers/api/user_register.php on line 24
+[20-Apr-2015 06:50:17 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41
+[20-Apr-2015 06:50:18 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41
+[20-Apr-2015 06:52:18 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41
+[20-Apr-2015 07:37:05 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41
+[20-Apr-2015 07:37:07 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41
+[20-Apr-2015 07:37:18 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41
+[20-Apr-2015 07:37:19 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41
+[20-Apr-2015 07:43:37 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41
+[20-Apr-2015 07:43:39 America/Chicago] PHP Fatal error:  Call to undefined method Red_model::get_top_video() in /home3/tags/public_html/demo/reddot/application/controllers/api/view_categories.php on line 41

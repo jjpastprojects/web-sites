@@ -1,0 +1,59 @@
+/*=======================*/
+/*======Cards css =======*/
+/*=======================*/
+.card {
+	margin: 15px auto 15px auto;
+    background: $cards-color;
+    .card-img-top{ max-width: 100%}
+ .card-header {
+ background: transparent;
+border-bottom: 1px solid $bordercolor;
+ .nav-item {
+position: relative;
+ .pull-right .dropdown-menu {
+left: auto;
+right: 0px;
+margin-top: 12px;
+}
+}
+ .card-title {
+ font-size: 18px;
+margin: 0;
+line-height: 30px;
+font-weight: 300;
+color: $fontcolor1;
+vertical-align: middle;
+ small {
+color: $fontcolor3;
+}
+}
+ .btn {
+line-height: 28px;
+padding: 0 12px;
+font-size: 13px;
+margin-left: 10px;
+height: 30px;
+ i {
+margin:0 2px
+}
+ &:focus {
+color: $fontcolor1;
+@include shadow(0, 0px, 0px, 0px, rgba(0, 0, 0, 0.0));
+outline: none;
+}
+}
+ .btn-link {
+padding: 0 6px
+}
+ .list-unstyled {
+overflow: visible;
+.media {
+padding: 5px 0
+}
+}
+}
+.card-footer {
+ background: lighten($cards-color, 3%);
+	border-top: 1px solid $bordercolor;
+}
+}

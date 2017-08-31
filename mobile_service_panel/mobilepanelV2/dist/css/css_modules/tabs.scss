@@ -1,0 +1,40 @@
+/*==============================================*/
+/*=============== nav-tabs styles===============*/
+/*==============================================*/
+.nav-tabs {
+ color: $fontcolor1;
+	border-bottom: none;
+ &.light {
+ .nav-link {
+color: #ffffff
+}
+}
+.nav-link {
+	line-height: 24px;
+	font-size: 16px;
+@include round(2px);
+	border: none;
+	vertical-align: middle;
+ &.active {
+     @extend .gradient;
+}
+}
+}
+.tab-content {
+    background: $cards-color;
+	border: 1px solid $bordercolor;
+@include round(2px);
+	padding: 13px;
+	margin-top: 0px;
+ &:last-of-type {
+margin-bottom: 20px;
+}
+}
+.modal .tab-content{ background: #ffffff; }
+.modal.dark .tab-content{ background: $cards-color; }
+@media (min-width: 1020px) {
+.col-lg-30 {
+	flex: 0 0 33%;
+	max-width: 33%;
+}
+}

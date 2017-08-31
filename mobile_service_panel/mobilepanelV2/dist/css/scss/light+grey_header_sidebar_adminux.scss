@@ -1,0 +1,209 @@
+/*!
+ * Adminux (http://maxartkiller.com)
+ * Copyright 2017 The Adminux Author: Maxartkiller
+ * purchase licence before use
+ * You can not resale or modify without prior licences.
+*/
+
+
+/*------------------------------------------------------------------ 
+
+[Table of contents]
+
+1.	Variables
+2.	Mixins
+3.	basics customized 
+4.	Sidebar left 
+5.	Sidebar right 
+6.	Menus classes
+7.	media, event and data listing  
+8.	search result listing  
+9.	comment list
+10.	member list 
+11.	member list 
+12.	Ribbon
+13.	header top navbar
+14.	Buttons
+15.	Timelines
+16.	Other misc headers
+17.	page wrapper title
+18.	Activity blocks
+19.	sparklines charts
+20.	Cards
+21.	Modal and popovers
+22.	jqvector map
+23.	Full screen and search
+24.	playerfixed bottom
+25.	sing-in-css
+26.	Text selecton colors
+27.	Mailbox css
+28.	Notes
+29.	Social profile cover images
+30.	nav-tabs styles
+31.	Full calendar custom CSS
+32.	Services Block
+33.	masonary gallery
+34.	Products ecommerce
+35.	Tables
+36.	Faq accordion
+37.	flot js charts
+38.	flot js charts
+39.	Tables
+40.	Timeline blocks
+41.	range slider
+42.	Wizard
+43.	Bootstrap multiselect
+44.	Picker
+45.	CSS switch
+46.	Layout switch
+47.	Customized flexislider 
+48.	layouts
+49.	chatapp
+50.	jstree
+51.	Dragable
+52.	tour
+53.	loader
+54.	icons
+55.	theme picker
+56.	dropzone
+57.	Resposnive
+58.	webkit custom scrollbar 
+
+------------------------------------------------------------------*/
+
+/*=======================*/
+/*======Variables=======*/
+/*=======================*/
+
+// Start with assigning color names to specific hex values. 
+$white:  #fff !default;
+$black:  #000 !default;
+$red:    #ff6262 !default;
+$orange: #f0ad4e !default;
+$yellow: #ffb803 !default;
+$green:  #15d4be !default;
+$blue:   #6c8bef !default;
+$teal:   #22bfed !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+
+//base colors 
+$main-background: #ffffff;
+$fontcolor1: darken($main-background, 100%);
+$fontcolor2: darken($main-background, 60%);
+$fontcolor3: darken($main-background, 45%);
+$colorlink: $blue;
+
+//card color
+$cards-color: $main-background;
+
+//sidebar colors 
+$sidebar-background: #222222;
+$sidebar-fontcolor1: lighten($sidebar-background, 100%);
+$sidebar-fontcolor2: lighten($sidebar-background, 60%);
+$sidebar-fontcolor3: lighten($sidebar-background, 45%);
+$sidebar-colorlink: $blue;
+
+
+//sidebar colors 
+$header-background: #222222;
+$header-fontcolor1: lighten($header-background, 100%);
+$header-fontcolor2: lighten($header-background, 60%);
+$header-fontcolor3: lighten($header-background, 45%);
+$header-colorlink: $blue;
+
+//forms field colors
+$bordercolor: darken($main-background, 10%);
+
+//Gradiet colors
+$gradient-color1:$teal;
+$gradient-color2: $blue;
+
+//width and heights
+$sidebar_width: 270px;
+$footerheight:40px;
+
+//images path
+$main-header-logo:'../img/logo_header.png';
+$loading-logo:'../img/logo.png';
+$file-explorer-image:'../vendor/jstree/dist/themes/default/32px.png';
+
+
+
+@import '../css_modules/mixins';
+@import '../css_modules/animations';
+@import '../css_modules/misc_basics';
+@import '../css_modules/sidebar';
+@import '../css_modules/left_sidebar';
+@import '../css_modules/right_sidebar';
+@import '../css_modules/menu_openclose';
+@import '../css_modules/media_list';
+@import '../css_modules/search_list';
+@import '../css_modules/comment_list';
+@import '../css_modules/member_list';
+@import '../css_modules/project_list';
+@import '../css_modules/ribbon';
+@import '../css_modules/header';
+@import '../css_modules/button';
+@import '../css_modules/timeline';
+@import '../css_modules/activityblock';
+@import '../css_modules/sparklines';
+@import '../css_modules/cards';
+@import '../css_modules/modal_popover';
+@import '../css_modules/vector_map';
+@import '../css_modules/fullscreen_search';
+@import '../css_modules/player';
+@import '../css_modules/signins';
+@import '../css_modules/text_selection';
+@import '../css_modules/mailbox';
+@import '../css_modules/notes';
+@import '../css_modules/social_profile';
+@import '../css_modules/tabs';
+@import '../css_modules/fullcalendar';
+@import '../css_modules/services_block';
+@import '../css_modules/gallery_masonry';
+@import '../css_modules/products';
+@import '../css_modules/tables';
+@import '../css_modules/invoice';
+@import '../css_modules/faqs';
+@import '../css_modules/floatjs';
+@import '../css_modules/map_locations';
+@import '../css_modules/rangeslider';
+@import '../css_modules/wizards';
+@import '../css_modules/bootstrap_multiselect';
+@import '../css_modules/picker';
+@import '../css_modules/switchcss';
+@import '../css_modules/layouts';
+@import '../css_modules/flexislidercustomized';
+@import '../css_modules/chat_app';
+@import '../css_modules/jstree';
+@import '../css_modules/dragable_sortable';
+@import '../css_modules/bootstrap_tour';
+/*-------- css loaders https://github.com/lukehaas/css-loaders -------*/
+@import '../cssloaders/load1';
+@import '../cssloaders/load2';
+@import '../cssloaders/load3';
+@import '../cssloaders/load4';
+@import '../cssloaders/load5';
+@import '../cssloaders/load6';
+@import '../cssloaders/load7';
+@import '../cssloaders/load8';
+/*-------- css loaders https://github.com/lukehaas/css-loaders ends-------*/
+@import '../css_modules/loaders';
+@import '../css_modules/icons';
+@import '../css_modules/theme_picker';
+@import '../css_modules/dropzone';
+@import '../css_modules/responsive';
+
+
+
+
+/* webkit custom scrollbar */
+::-webkit-scrollbar {width: 5px;height: 5px;}
+ 
+/* Track */
+::-webkit-scrollbar-track {@include round(5px); background: darken($main-background,4%);}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {-webkit-border-radius: 5px; border-radius: 5px; background: darken($main-background, 10%);}
+::-webkit-scrollbar-thumb:window-inactive { background: darken($main-background,4%);}

@@ -1,0 +1,156 @@
+/*=======================*/
+/* header top navbar css */
+/*=======================*/
+header {
+	width: 100%;
+	display: block;
+	position: relative;
+	z-index: 10;
+@include transition(0.5s, ease, all);
+ .icon-header {
+ color: $header-fontcolor2;
+ &:hover {
+color: $header-fontcolor1;
+}
+ &:focus {
+color:$header-fontcolor1;
+outline: 0px none;
+@include shadow(0, 0px, 0px, 0px, rgba(0, 0, 0, 0.0));
+}
+}
+.navbar {
+background:$header-background;
+@include shadow(0, 2px, 5px, 0px, rgba(0, 0, 0, 0.10) );
+ .navbar-brand {
+font-size: 20px
+}
+}
+.nav-item .dropdown-menu {
+	margin-top: 12px;
+}
+.search-header, .nav-item, .nav-item .btn {
+	position: relative
+}
+.search-header {
+	margin: -15px 0;
+ input[type="text"] {
+background: darken($header-background, 4%);
+color: $fontcolor1;
+height: 60px;
+min-width: 300px;
+border: 0;
+@include round(0);
+    &::placeholder{ color: #999999}
+ &:focus {
+border: 0px;
+}
+}
+button {
+	position: absolute;
+	right: 0;
+	top: 10px
+}
+}
+.sidebar-right, .sidebar-left {
+width: ($sidebar_width)-10;
+}
+    &.navbar-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+}
+.message-container {
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+	padding: 0px;
+ &:before {
+content: " ";
+height: 8px;
+width: 8px;
+border-left:8px solid transparent;
+border-right: 8px solid transparent;
+border-bottom: 8px solid #ffffff;
+margin-left: -9px;
+margin-top: -8px;
+left:50%;
+position: absolute;
+z-index:2;
+}
+    &:after {
+content: " ";
+height: 8px;
+width: 8px;
+border-left:8px solid transparent;
+border-right: 8px solid transparent;
+border-bottom: 8px solid #bbbbbb;
+margin-left: -9px;
+margin-top: -9px;
+left:50%;
+position: absolute;
+top:0;      
+z-index: 1;
+}
+div {
+	max-height: 400px;
+	overflow-y: auto;
+ .media {
+ color: lighten($black, 40%);
+text-decoration: none;
+padding:12px 10px;
+border-bottom: 1px solid #eeeeee;
+ h6 {
+color:$black;
+}
+ &:hover {
+ @extend .gradient;
+ h6 {
+color: $header-fontcolor1
+}
+}
+}
+}
+}
+.userprofile {
+	padding-left: 40px !important;
+    color: $header-fontcolor1;
+}
+.userpic {
+	height: 30px;
+	width: 30px;
+	margin-right: 10px;
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+    @include round(3px);
+	background: #ffffff;
+	position: absolute;
+	left: 0;
+	top: 3px;
+ img {
+height:auto;
+width:100%;
+border:0;
+vertical-align: top
+}
+}
+
+.box-links > div > .media {
+	width: 33.33%;
+	padding: 15px;
+	float: left;
+	border: 0px none !important;
+ .quick-block {
+width: 100%;
+height: 70px;
+line-height: 70px;
+vertical-align: middle;
+text-align: center;
+border: 1px solid #eeeeee;
+font-size: 24px;
+@include round(4px)
+}
+}
+.navbar-brand.imglogo{ height: 42px; width: 166px; background: url($main-header-logo) no-repeat center left; background-size: auto 40px; margin-bottom: -5px; margin-top: -4px;}

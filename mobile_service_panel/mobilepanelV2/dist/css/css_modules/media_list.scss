@@ -1,0 +1,130 @@
+/*======================================*/
+/* media, event and data listing  css */
+/*=====================================*/
+.media-list {
+	/*max-height: 400px;*/ overflow-y: auto;
+color: $fontcolor1;
+ & > .media {
+ color:$fontcolor3;
+text-decoration: none;
+padding:12px 1em;
+border-bottom: 1px solid $bordercolor;
+position: relative;
+ &:last-child {
+border-bottom: 0
+}
+ .message_userpic {
+width: 30px;
+height: 30px;
+@include round(3px);
+overflow: hidden;
+margin-right: 15px;
+position: relative;
+ .user-status {
+height: 8px;
+width: 8px;
+display: block;
+position: absolute;
+right: 0px;
+top: 0px;
+@include round(5px);
+@include shadow(-2px, 0px, 5px, 0px, rgba(0, 0, 0, 0.2));
+border: 1px solid #ffffff;
+}
+}
+ h6 {
+color:$fontcolor1;
+ small {
+color:$fontcolor3;
+}
+}
+ .description {
+color:$fontcolor2;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 13px
+}
+ .invites-by {
+ height: 20px;
+width: 20px;
+display: inline-block;
+vertical-align: middle;
+margin-left: 5px;
+@include round(3px);
+overflow: hidden;
+position: relative;
+ img {
+width: 100%;
+vertical-align: top
+}
+ .user-status {
+height: 6px;
+width: 6px;
+display: block;
+position: absolute;
+right: 0px;
+top: 0px;
+@include round(4px);
+@include shadow(-2px, 0px, 5px, 0px, rgba(0, 0, 0, 0.2));
+border: 1px solid #ffffff;
+}
+}
+ .overlay {
+position: absolute;
+height: 100.1%;
+width: 100%;
+padding: 10px;
+vertical-align: middle;
+display: flex;
+left: 0;
+top: 0px;
+display: block;
+opacity: 0;
+text-align: right;
+background: rgba(0, 0, 0, 0.3);
+ .btn {
+padding: 0;
+height: 40px;
+width: 40px;
+line-height: 40px;
+text-align: center;
+margin-top: 5px;
+ i {
+margin: 0;
+}
+}
+}
+ &.new {
+    background: lighten($main-background, 10%);
+    &.active{@extend .gradient;}
+    &:hover{@extend .gradient;}
+}
+ &:hover, &.active {
+ @extend .gradient;
+ .description, h6, h6 small {
+color: $fontcolor1;
+}
+ .overlay {
+opacity: 1;
+display: block
+}
+}
+}
+ &.bordered {
+ .media {
+ border: 1px solid $bordercolor;
+border-bottom:0;
+ &:last-child {
+border-bottom: 1px solid $bordercolor;
+}
+ .btn {
+text-align: center
+}
+ .btn-sm {
+line-height: 10px;
+padding: 6px 10px;
+min-width: 60px;
+}
+}
+}
+}

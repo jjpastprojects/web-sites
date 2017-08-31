@@ -1,0 +1,345 @@
+/*=======================*/
+/*==== basics customized scss====*/
+/*=======================*/
+html, body {
+	height: 100%
+}
+body {
+color:$fontcolor2;
+direction: ltr;
+background: $main-background;
+background: -moz-radial-gradient(center, ellipse cover, darken($main-background, 1%) 0%, darken($main-background, 5%) 100%);
+background: -webkit-radial-gradient(center, ellipse cover, darken($main-background, 1%) 0%, darken($main-background, 5%) 100%);
+background: radial-gradient(ellipse at center, darken($main-background, 1%) 0%, darken($main-background, 5%) 100%);
+	font-weight: 400;
+	background-attachment: fixed;
+}
+h1, h2, h3, h4, h5, h6{ color: $fontcolor1;}
+a { color: $colorlink;}
+
+.gradient {
+    @include gradient($gradient-color1, $gradient-color2);
+    *{ color:#fff !important; border-color:#fff !important;}
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+@extend .gradient;
+}
+.custom-file-control, .custom-select, .form-control {
+border: 1px solid $bordercolor;
+	background-color: transparent;
+color: $fontcolor1;
+:focus {
+color: #666666
+}
+    &::placeholder {
+       color: rgba($fontcolor1, 0.3)
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        color: rgba($fontcolor1, 0.3)
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        color: rgba($fontcolor1, 0.3)
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        color: rgba($fontcolor1, 0.3)
+    }
+
+}
+.custom-select option {
+	color: #222222
+}
+.input-group-addon,.input-group-btn {
+	background: transparent;
+    color: $fontcolor1;
+border: 1px solid  $bordercolor;
+}
+.page_subtitles {
+	font-size: 16px;
+	line-height: 40px;
+color: $fontcolor1;
+	padding: 0.5em 0 0 0;
+	text-transform: uppercase;
+ a {
+text-transform:none;
+font-size: 14px;
+}
+}
+.v-devider {
+	margin: 0 10px;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/*=======================*/
+/*==== Other misc headers ======*/
+/*=======================*/
+.badge-number {
+	cursor: default;
+@include round(50%);
+	color: #fff;
+	font-weight: bold;
+	font-size: 10px;
+	height: 6px;
+	letter-spacing: -1px;
+	line-height: 10px;
+	top: 10px;
+	right: 10px;
+	position: absolute;
+	text-align: center;
+	width: 6px;
+ &:after {
+content: '';
+position: absolute;
+top:-3px;
+right: -3px;
+border:2px solid rgba(255, 255, 255, 0.5);
+opacity:0;
+@include round(50%);
+width:12px;
+height:12px;
+animation: sonar 1.5s infinite;
+-moz-animation: sonar 1.5s infinite;
+-ms-animation: sonar 1.5s infinite;
+-webkit-animation: sonar 1.5s infinite;
+}
+}
+
+
+.pull-right .dropdown-menu {
+	left: auto;
+	right: 0
+}
+.dropdown-menu.with-arrow {
+	margin-top: 10px;
+	width: 200px;
+	margin-left: -100px;
+	left: 50%;
+ &:before {
+content: " ";
+height: 8px;
+width: 8px;
+border-left:8px solid transparent;
+border-right: 8px solid transparent;
+border-bottom: 8px solid #ffffff;
+margin-top: -8px;
+margin-left: -8px;
+left:50%;
+position: absolute;
+top:0;
+}
+}
+.message_userpic {
+	width: 50px;
+	height: 50px;
+@include round(3px);
+	overflow: hidden;
+	margin-right: 15px;
+ img {
+height:auto;
+width:100%;
+border:0;
+vertical-align: top;
+min-height: 100%
+}
+}
+.alert-block {
+	width: 30px;
+	height: 30px;
+@include round(3px);
+	overflow: hidden;
+	margin-right: 15px;
+	line-height: 30px;
+	font-size: 20px;
+	vertical-align: middle;
+	text-align: center;
+color: $fontcolor1;
+ span {
+display: block;
+vertical-align: middle;
+height: 100%;
+width: 100%;
+line-height: 30px;
+}
+}
+.post-options {
+background: lighten($main-background, 8%);
+	margin: 25px auto 15px auto;
+	padding: 10px 0px
+}
+.btn .fa {
+	vertical-align: middle;
+	margin:0 3px
+}
+
+
+.footer-content {
+background: darken($main-background, 13%);
+	margin: 0px;
+	position: absolute;
+height: $footerheight;
+line-height:  $footerheight;
+	bottom: 0;
+	left: 0;
+	width: 100%
+}
+.truncate {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap
+}
+hr {
+	border-top: 1px solid $bordercolor;
+}
+
+
+
+.clearfix {
+	clear: both
+}
+.responsive-img {
+	max-width: 100%;
+	display: block;
+	text-align: center;
+	margin-bottom: 0;
+ img {
+max-width:100%;
+@include shadow(0, 5px, 10px, 0px, rgba(0, 0, 0, 0.4));
+}
+}
+
+.list-group-item {
+background: rgba(lighten($main-background, 15%), 0.4);
+}
+.block-time {
+	font-size: 60px;
+	display: inline-block;
+	padding: 10px;
+	margin: 0 5px;
+ span {
+font-size:16px !important;
+display: block;
+text-transform: uppercase;
+color: #ffffff
+}
+}
+.input-group {
+    
+ .input-group-addon {
+color: $fontcolor1;
+     &.bg-primary{ color: #ffffff;}
+    &.bg-success{ color: #ffffff;}
+    &.bg-warning{ color: #ffffff;}
+}
+}
+textarea.form-control {
+	line-height: 1.4;
+}
+pre code {
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 10px;
+	width: 100%;
+	overflow: auto
+}
+code {
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.6);
+	display: inline-block
+}
+pre {
+	position: relative;
+	width: 100%;
+}
+.btn-ico {
+	height: 44px;
+	width: 44px;
+	line-height: 42px;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+@include round(0px)
+}
+.btn-top-right {
+	position: absolute;
+	top: 0;
+	right: 0
+}
+
+/*===============================*/
+/*===== page wrapper title=======*/
+/*===============================*/
+.wrapper-content {
+ padding: 60px 13px $footerheight 13px;
+	height: auto;
+	min-height: 100%;
+	position: relative;
+	z-index: 0;
+margin: 0 $sidebar_width;
+@include transition(0.5s, ease, all);
+}
+.page-title {
+	padding-top: 30px;
+	padding-bottom: 30px;
+ h3 {
+color: $fontcolor1;
+font-weight: 300;
+}
+p {
+color: $fontcolor3;
+	margin: 0
+}
+}
+
+/*========================================= */
+/* ========== label checkbox radio ======== */
+/*========================================= */
+
+label.form-check-label {
+ border: 1px solid $fontcolor2;
+@include round(1px);
+color: $fontcolor2;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 5px;
+@include round(3px);
+ i {
+vertical-align: top;
+display: inline-block;
+width: 22px;
+height: 22px;
+line-height: 22px;
+}
+.form-check-input {
+	display: none
+}
+ &.radio {
+@include round(15px);
+}
+}
+label.form-check-label.active {
+color: #ffffff;
+background: $blue;
+}
+.text-muted {
+color: $fontcolor3 !important;
+	font-size: 13px;
+}
+
+
+/* ----------------file manager---------------- */
+.br-1{ border-right: 1px solid $bordercolor}
+
+/*------- cookie positioning ---------*/
+.alert.top{ position: fixed; top: 0; left: 0; z-index: 99999; max-width: 100%; right: 0; .close{ float: right; position: absolute; top:4px; right: 0}}
+.alert.bottom{ margin: 0; position: fixed; bottom: 0; left: 0; z-index: 99999; max-width: 100%; right: 0; .close{ float: right; position: absolute; top:4px; right: 0}}
+.push-cookie{ padding-top: 58px; header.navbar-fixed{top: 58px;}   &>.sidebar-right, &>.sidebar-left,&> .container > .sidebar-right, &>.container > .sidebar-left{ padding-top:118px; }}
+select.form-control{ padding: 0.4rem 1rem}
+
+
+/*-------------------- Forum page --------------------*/
+.forum_title{  color: #ffffff; & +p{ color:$fontcolor2}}

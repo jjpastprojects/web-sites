@@ -1,0 +1,315 @@
+/* ============================================*/
+/*=============== Layout css   ===============*/
+/* ===========================================*/
+body {
+ &.sidebar-left-fixed {
+ .wrapper-content {
+margin-left: $sidebar_width
+}
+}
+ &.scroll_header {
+ &.active_scroll {
+ header {
+margin-top: -150px;
+}
+ > .sidebar-right, > .sidebar-left {
+padding: 0
+}
+}
+}
+ &.boxed_page {
+padding: 15px 0;
+height: auto;
+min-height: 100%
+}
+ > .container {
+ height: auto;
+overflow: hidden;
+margin: 0 auto;
+min-height: 100%;
+background: rgba(lighten($main-background, 1%), 0.5);
+padding-bottom: 50px;
+ header {
+position: relative;
+}
+ .wrapper-content {
+padding: 0;
+margin: 0;
+min-height: auto;
+height: auto;
+}
+ > .sidebar-right, > .sidebar-left {
+position: absolute;
+height: 100%;
+}
+ > footer {
+position: absolute;
+bottom: 0;
+margin-top:20px;
+}
+}
+ &.fixed-header {
+ .wrapper-content {
+padding-top: 60px;
+}
+ header {
+position: fixed;
+top:0;
+left: 0;
+right: 0;
+padding: 0;
+}
+}
+ &.horizontal-menu {
+ > .container > .sidebar-left, > .sidebar-left {
+ .nav {
+flex-direction: column;
+}
+}
+ @media screen and (min-width:1020px) {
+ > .container > .sidebar-left, > .sidebar-left {
+ width: 100%;
+z-index: 9;
+height: auto;
+min-height: auto;
+overflow: visible;
+@include shadow(0, 2px, 10px, 0px, rgba(0, 0, 0, 0.3) );
+ .nav {
+ flex-direction: inherit;
+ li {
+width:auto;
+float: left;
+ a, a.nav-link {
+white-space: nowrap;
+padding: 0.5em 1em;
+ i {
+display: inline-block;
+float: none;
+margin: 0 5px;
+}
+}
+}
+ .nav-second-level {
+min-width: 200px;
+position: absolute;
+top: 45px;
+left: 0;
+background: #ffffff;
+@include round(3px);
+max-height: 400px;
+overflow-y: auto;
+ li {
+width: 100%;
+ a.nav-link {
+ color:#222222;
+ &:hover {
+background: rgba(0, 0, 0, 0.1);
+color: #000000 !important
+}
+ &.menudropdown {
+color: #000000;
+font-weight: 500;
+}
+}
+}
+ .nav-third-level {
+ li {
+ a {
+ &.nav-link {
+padding: 0.5em 1em !important;
+color:#222222;
+}
+}
+ .menudropdown {
+color: #000000;
+font-weight: 500;
+}
+}
+}
+}
+}
+}
+ .wrapper-content {
+padding-top: 100px;
+margin-left:auto
+}
+ > .sidebar-right, > .container > .sidebar-right {
+padding-top: 100px;
+z-index: 8
+}
+ &.menuclose {
+ >.sidebar-left, >.container>.sidebar-left {
+left: 0;
+top:-100px;
+overflow: hidden
+}
+ .wrapper-content {
+padding-top: 60px;
+}
+}
+}
+
+}
+ &.rounded {
+.tab-content, .member-list .media .background, .project-list .media .projectpic img, .member-list .media, .project-list .media, .card, .activity-block {
+@include round(8px);
+overflow: hidden;
+@include shadow(0, 2px, 5px, 0, rgba(0, 0, 0, 0.15))
+}
+ .alert-block, .box-links > div > .media, .box-links > div > .media .quick-block, .list-unstyled .media .message_userpic, .userpic {
+@include round(50%);
+overflow: hidden
+}
+ div.dataTables_wrapper div.dataTables_filter input, div.dataTables_wrapper div.dataTables_length select, .form-control, .btn,.custom-dropzone,.dropzone {
+@include round(18px);
+overflow: hidden;
+}
+ .custom-select, .custom-file-control, .custom-file-input, .page-link, .page-item:first-child .page-link, .page-item:last-child .page-link {
+margin: 0 2px;
+@include round(50px);
+overflow: hidden;
+}
+ .input-group .input-group-addon:first-child {
+@include round(50px 0 0 50px);
+}
+ .input-group .input-group-addon:last-child {
+@include round( 0 50px 50px 0);
+}
+ header .search-header input[type="text"], .user-menu-items .btn-group .btn {
+@include round(0px);
+}
+ .product button {
+min-width: 40px;
+@include round(8px);
+}
+ .project-list .media .overlay {
+@include round(0 8px 8px 0);
+}
+ .status {
+@include round(15px);
+padding: 0 15px 2px 15px;
+}
+.alert{@include round(8px);}
+.tab-content{ margin-top: 10px;}
+.nav-tabs .nav-link{@include round(8px);}
+}
+ &.rtl-read {
+direction: rtl;
+ text-align: right;
+.nav{padding-right:  0}
+ header .navbar .navbar-brand .fa, header .navbar .navbar-brand img {
+float: right;
+margin: 5px 5px auto 5px;
+}
+ .input-group, .nav, .progress, header .navbar .navbar-brand, .list-group, .card-block, .navbar-nav, header .navbar, .media, .row {
+/*flex-direction: row-reverse;*/
+}
+ .pull-left {
+float: right !important;
+}
+ .activity-block .progress .progress-bar .trackerball, .pull-right {
+float: left !important;
+}
+ .media-list .media .message_userpic, .message_userpic {
+margin-right: 0;
+margin-left: 15px;
+}
+ .dropdown-menu, .media-body {
+text-align: right
+}
+.activity-block h5 {/*
+    flex-flow: row-reverse;
+    display: flex;*/
+}
+.alert-block, .form-check {
+margin-top: 7px;
+margin-right:0px;
+margin-left: 10px;
+}
+ .mr-2 {
+margin-right: 0 !important;
+margin-left: 0.75rem !important;
+}
+ .ml-2 {
+margin-left: 0 !important;
+margin-right: 0.75rem !important;
+}
+ .userprofile {
+padding-left: 15px !important;
+padding-right: 50px !important;
+.userpic {
+left: auto;
+right: 0;
+}
+}
+ > .sidebar-left, > .container > .sidebar-left {
+left: auto;
+right: 0
+}
+ > .sidebar-right, > .container > .sidebar-right {
+right: auto;
+left: 0
+}
+ .wrapper-content {
+margin: 0 270px;
+}
+ &.menuclose-right .wrapper-content {
+margin-left: 0px;
+}
+ &.menuclose-right .sidebar-right {
+left: -280px;
+}
+ &.menuclose .wrapper-content {
+margin-right: 0px;
+}
+ &.menuclose .sidebar-left {
+right: -280px;
+}
+ header .search-header button, .search-block .search-block-form .btn {
+right: auto;
+left: 10px;
+}
+ .form-control, input {
+text-align: right
+}
+ .member-list .media .media-body, .text-center {
+text-align: center
+}
+ .text-right {
+text-align: left !important;
+}
+ .text-left {
+text-align: right !important;
+}
+ .card .card-header .card-title small {
+margin-right: 10px;
+}
+ #side-menu .nav-link {/*
+display: flex;*/
+flex: 100%;/*
+flex-direction: row-reverse;*/
+align-content: center;
+align-items: center;
+i {
+margin:0 5px;
+}
+i.left-icon {
+margin-right: 0;
+margin-left: 10px;
+}
+}
+ .input-group-addon:not(:last-child) {
+border-right: 1px solid rgba(200, 212, 249, 0.2);
+}
+ .input-group-addon:not(:first-child) {
+border-right: 0 none;
+}
+.pull-right .dropdown-menu{ right: auto; left: 0; .dropdown-item{/*display: flex;flex: 100%; flex-direction: row-reverse;*/}}
+.d-flex {/* flex-direction: row-reverse;*/}
+.container_wizard.wizard-thin .stepwizard .stepwizard-step a {text-align: right}
+.container_wizard.wizard-thin .stepwizard .stepwizard-step a span.btn-round{float: right}
+.flexslider {direction: ltr}     
+.timeline .media:before { right: 25px;}
+}
+}
+/* Layout css ends */

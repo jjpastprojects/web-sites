@@ -1,0 +1,46 @@
+/*==============================================*/
+/*========== Social profile cover images=========*/
+/*==============================================*/
+.social-profile-cover, .customer-profile-cover {
+	position: relative;
+	height: 400px;
+	color: #fff;
+    p, h2, h3, h4, h5, h6{ color: #ffffff;}
+ .social-profile-pic {
+width: 120px;
+height: 120px;
+overflow: hidden;
+border: 0;
+@include round(6px);
+@include shadow(0, 5px, 10px, 0, rgba(0, 0, 0, 0.4));
+margin:0 20px 0 10px;
+img {
+width:100%;
+height: auto;
+min-height: 100%;
+}
+}
+ &> .container {
+}
+}
+.customer-profile-cover {
+	height: 170px;
+background: lighten($main-background, 1%)
+}
+.btn-outline-white {
+	border: 1px solid #ffffff;
+	background: transparent;
+	color: #fff;
+ &:hover, &.active {
+background: #ffffff;
+color: #666666
+}
+}
+dl.full-width {
+ dd {
+margin-bottom: 15px;
+}
+dt {
+	margin-bottom: 5px;
+}
+}

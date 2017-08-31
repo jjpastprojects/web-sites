@@ -1,0 +1,60 @@
+body{
+    /*=======================*/
+    /* Sidebar right css */
+    /*=======================*/
+        & > .sidebar-right, & > .container > .sidebar-right {
+     right: 0;
+    @include shadow(-2px, 0px, 5px, 0px, rgba(0, 0, 0, 0.1));
+     .progressprofile {
+     padding:0.5em 1.0em;
+    color: $sidebar-fontcolor1;
+    position: relative;
+    margin-top: 20px;
+         h2, h3, h4, h5, h6{color: $sidebar-fontcolor1;}     
+     * {
+    margin: 0;
+    position: relative;
+    z-index: 2
+    }
+     p {
+    color: $sidebar-fontcolor2;
+    font-size: 11px;
+    text-transform: uppercase
+    }
+     figure {
+    width:50px;
+    margin: 15px auto;
+    height: 50px;
+    overflow: hidden;
+    @include round(50px)
+    }
+     figure img {
+    width: 100%;
+    }
+     .user-details {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    right: 0;
+    }
+     .progress_profile {
+    z-index: 1;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    clear: both;
+    }
+    }
+     .title-nav {
+    font-size: 16px;
+    line-height: 40px;
+    color: $sidebar-fontcolor1;
+    padding:0.5em 1.0em;
+    text-transform: uppercase
+    }
+            
+    }    
+    
+}

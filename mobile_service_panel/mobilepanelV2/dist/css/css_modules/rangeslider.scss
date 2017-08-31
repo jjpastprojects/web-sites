@@ -1,0 +1,61 @@
+/*==============================================*/
+/* ================range slider================ */
+/*==============================================*/
+.rangeslider {
+	display: block;
+@include round(3px);
+}
+.rangeslider {
+background:lighten($main-background, 15%);
+	position: relative;
+}
+.rangeslider__fill {
+@extend .rangeslider;
+	position: absolute;
+    background:darken($fontcolor1, 10%);
+}
+.rangeslider--horizontal {
+	height: 10px;
+	width: 100%;
+.rangeslider__fill {
+top: 0;
+height: 100%;
+}
+.rangeslider__handle {
+	top: -10px;
+	touch-action: pan-y;
+	-ms-touch-action: pan-y;
+}
+}
+.rangeslider--vertical {
+	width: 10px;
+	min-height: 150px;
+	max-height: 100%;
+.rangeslider__fill {
+bottom: 0;
+width: 100%;
+}
+.rangeslider__handle {
+	left: -10px;
+	touch-action: pan-x;
+	-ms-touch-action: pan-x;
+}
+}
+.rangeslider--disabled {
+	opacity: 0.4;
+}
+.rangeslider__handle {
+	color: #222222;
+	cursor: pointer;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	background: #ffffff;
+@include shadow( 0, 0, 8px, 0, rgba(0, 0, 0, 0.3));
+@include round(50%);
+	vertical-align: middle;
+	text-align: center;
+	line-height: 28px;
+	font-size: 10px;
+}

@@ -1,0 +1,92 @@
+/*=======================================*/
+/*====== Full calendar custom CSS ======*/
+/*=======================================*/
+.fc-toolbar {
+	margin-bottom: 0;
+	padding: 0px;
+	vertical-align: middle;
+	line-height: 50px;
+	height: 50px;
+	border-bottom: 1px solid $bordercolor;
+}
+.fc-event {
+	cursor: pointer;
+	border: 0;
+	border-radius: 0;
+	margin: 0;
+	padding: 5px 10px;
+	font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 1px;
+	box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 0px 3px 10px 0 rgba(0, 0, 0, 0.15);
+ .fc-title {
+margin-left: 10px;
+}
+}
+.fc-toolbar h2 {
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 50px;
+}
+.fc-toolbar button {
+	line-height: 50px;
+	vertical-align: middle;
+	padding: 0 13px;
+	border-radius: 0 !important;
+	border: 0;
+	height: 50px;
+	background: rgba(0,0,0,0);
+	margin: 0;
+	text-transform: uppercase;
+ color: $fontcolor1;
+	box-shadow: none;
+	font-weight: 300;
+	text-shadow: none;
+	font-size: 12px;
+}
+.fc-view-container {
+	background: transparent;
+}
+.fc th {
+	border-color: $bordercolor;
+	padding: 0 10px;
+	line-height: 50px;
+	font-size: 14px;
+	font-weight: 400;
+}
+.fc-unthemed .fc-row.fc-widget-header {
+	margin-top: -1px;
+}
+.fc-toolbar .fc-state-active, .fc-toolbar .ui-state-active {
+	z-index: 4;
+	background: rgba(0, 0, 0, 0.4);
+}
+.fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-content, .fc-unthemed .fc-popover, .fc-unthemed .fc-list-view, .fc-unthemed .fc-list-heading td {
+	border-color: $bordercolor;
+}
+.fc-time-grid .fc-slats td {
+	height: 2em
+}
+.fc-unthemed td.fc-widget-content.fc-today {
+@extend .gradient;
+}
+.fc-event {
+@include round(3px);
+}
+.fc-event, .fc-event-dot {
+	color: #ffffff !important;
+	min-height: 10px;
+}
+.fc-unthemed .fc-divider, .fc-unthemed .fc-popover .fc-header, .fc-unthemed .fc-list-heading td {
+@include gradient(rgba(#2ec7cb, 0.4), rgba($blue, 0.4));
+	color: #ffffff;
+}
+.fc-other-month {
+background:  rgba($fontcolor3, 0.2);
+}
+.fc-unthemed .fc-list-empty {
+background-color:  rgba($fontcolor3, 0.3);
+}

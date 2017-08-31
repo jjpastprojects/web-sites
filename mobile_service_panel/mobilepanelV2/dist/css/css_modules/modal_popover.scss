@@ -1,0 +1,37 @@
+/*==============================================*/
+/*========== Modal and popovers ==============*/
+/*==============================================*/
+.modal.dark_bg {
+ .modal-dialog {
+ .modal-content {
+ background: lighten($main-background, 10%);
+color: $fontcolor1;
+ .modal-header {
+color:#ffffff;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+button.close {
+color: #ffffff
+}
+}
+ .modal-footer {
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+}
+}
+}
+.modal {
+ .modal-dialog {
+ .modal-content {
+ color: #666666;
+ .modal-header {
+color:#222222;
+}
+}
+}
+}
+.popover {
+	color: #666666;
+ .popover-title {
+color: #222222
+}
+}

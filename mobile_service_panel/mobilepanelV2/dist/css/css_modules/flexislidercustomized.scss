@@ -1,0 +1,283 @@
+
+/* ====================================================================================================================*/
+/* Customized flexislider css for Adminuz template start here */
+/* ====================================================================================================================*/
+
+/*
+ * jQuery FlexSlider v2.6.3
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ *
+ */
+/* ====================================================================================================================
+ * FONT-FACE
+ * ====================================================================================================================*/
+ 
+.flex-container a:hover, .flex-slider a:hover {
+	outline: none;
+}
+.slides, .slides > li, .flex-control-nav li, .flex-direction-nav li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.flex-pauseplay span {
+	text-transform: capitalize;
+}
+.flexslider {
+	padding: 0;
+	margin: 15px 0;
+	zoom: 1;
+@include round(0px);
+	-webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+	border: 0;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+ .slides {
+ height: 1%;
+display: block;
+zoom: 1;
+background:  none;
+ img {
+width: 100%;
+display: block;
+height: auto;
+-moz-user-select: none;
+}
+ & > li {
+ display: none;
+-webkit-backface-visibility: hidden;
+background:   rgba(0, 0, 0, 0.0);
+ &:first-child {
+display: block;
+}
+}
+        :after {
+content: "\0020";
+display: block;
+clear: both;
+visibility: hidden;
+line-height: 0;
+height: 0;
+}
+}
+:hover {
+ .flex-direction-nav .flex-prev {
+opacity: 0.7;
+left: 10px;
+}
+.flex-direction-nav .flex-prev:hover {
+	opacity: 1;
+}
+.flex-direction-nav .flex-next {
+	opacity: 0.7;
+	right: 10px;
+}
+}
+.activity-block {
+	margin: 0
+}
+}
+.flex-viewport {
+	max-height: 2000px;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+.no-js .flexslider .slides > li:first-child {
+	display: block;
+}
+.loading .flex-viewport {
+	max-height: 300px;
+}
+.carousel li {
+	margin-right: 5px;
+}
+.flex-direction-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	text-align: right;
+	padding: 10px 15px;
+@include gradient-activity( rgba(0, 0, 0, 0.0), rgba($main-background, 0.8), darken($main-background, 2%) );
+	width: 140px;
+ a {
+ text-decoration: none;
+display: inline-block;
+width: 40px;
+height: 40px;
+top: 40%;
+z-index: 10;
+overflow: hidden;
+cursor: pointer;
+color: rgba(0, 0, 0, 0.8);
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+display: inline-block;
+font: normal normal normal 14px/1 FontAwesome;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+border: 1px solid darken($fontcolor1, 12%);
+color: $fontcolor1;
+text-shadow: none;
+font-size: 16px;
+text-align: center;
+vertical-align: middle;
+line-height: 40px;
+ &:before {
+display: inline-block;
+content: "\f104";
+display: block;
+}
+}
+a.flex-next:before {
+	content: "\f105";
+}
+li {
+	display: inline-block;
+	top: 42%;
+	position: relative;
+}
+.flex-next {
+	border-radius: 0 50px 50px 0;
+	-ms-border-radius: 0 50px 50px 0;
+	-moz-border-radius: 0 50px 50px 0;
+	-webkit-border-radius: 0 50px 50px 0;
+}
+.flex-prev {
+	border-radius: 50px 0 0 50px;
+	-ms-border-radius: 50px 0 0 50px;
+	-moz-border-radius: 50px 0 0 50px;
+	-webkit-border-radius: 50px 0 0 50px;
+}
+}
+.flexslider:hover .flex-direction-nav .flex-disabled {
+	cursor: default;
+	z-index: -1;
+}
+.flex-pauseplay {
+ a {
+ display: block;
+width: 20px;
+height: 20px;
+position: absolute;
+bottom: 5px;
+left: 10px;
+opacity: 0.8;
+z-index: 10;
+overflow: hidden;
+cursor: pointer;
+color: #000;
+ &:before {
+font-family: "flexslider-icon";
+font-size: 20px;
+display: inline-block;
+content: '\f004';
+}
+        :hover {
+opacity: 1;
+}
+}
+}
+.flex-pauseplay a .flex-pauseplay a:hover {
+	opacity: 1;
+}
+.flex-pauseplay a.flex-play:before {
+	content: '\f003';
+}
+.flex-control-nav {
+	width: 100%;
+	position: absolute;
+	bottom: -40px;
+	text-align: center;
+ li {
+ margin: 0 6px;
+display: inline-block;
+zoom: 1;
+*display: inline;
+ a {
+ width: 11px;
+height: 11px;
+display: block;
+background: #666;
+background: rgba(0, 0, 0, 0.5);
+cursor: pointer;
+text-indent: -9999px;
+-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+-o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+@include round(20px);
+            :hover {
+background: #333;
+background: rgba(0, 0, 0, 0.7);
+}
+}
+ a.flex-active {
+background: #000;
+background: rgba(0, 0, 0, 0.9);
+cursor: default;
+}
+}
+}
+.flex-control-thumbs {
+	margin: 5px 0 0;
+	position: static;
+	overflow: hidden;
+	padding: 0;
+ li {
+width: 25%;
+float: left;
+margin: 0;
+}
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+	opacity: .7;
+	cursor: pointer;
+	-moz-user-select: none;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+        :hover {
+opacity: 1;
+}
+}
+.flex-active {
+	opacity: 1;
+	cursor: default;
+}
+}
+ @media screen and (max-width: 860px) {
+.flex-direction-nav .flex-prev {
+	opacity: 1;
+	left: 10px;
+}
+.flex-direction-nav .flex-next {
+	opacity: 1;
+	right: 10px;
+}
+}
+
+/* =====================================================================*/
+/* =================Customized flexislider css ends here=============== */
+/* ====================================================================*/

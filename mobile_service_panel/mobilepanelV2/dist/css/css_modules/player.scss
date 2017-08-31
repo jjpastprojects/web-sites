@@ -1,0 +1,117 @@
+/*==============================================*/
+/* ============ playerfixed bottom ============ */
+/*==============================================*/
+.player-bottom {
+ .wrapper-content {
+margin-bottom: 135 + $footerheight;
+}
+ &>.sidebar-right, &> .sidebar-left {
+padding-bottom: 100 + $footerheight;
+}
+.fixed-bottom {
+ .activity-block {
+ .background-image {
+ opacity: 0.4;
+ img {
+width:100%;
+height: auto;
+max-height: none;
+margin-top: -30%;
+}
+}
+ .progress {
+ top:-15px;
+bottom: auto;
+margin: 0;
+background: rgba(0, 0, 0,0.3);
+height: 8px;
+ .progress-bar {
+height: 8px;
+.trackerball {
+top: 0
+}
+}
+}
+}
+}
+}
+.audioplayer {
+	display: none;
+ &.show {
+display: block
+}
+}
+.playnow {
+	cursor: pointer
+}
+.playerwrapper {
+	z-index: 5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	top: 25px;
+	width: 100%;
+	max-width: 480px;
+	margin: 0 auto;
+ .playercontrols {
+ width:100%;
+max-width: 480px;
+ .btn {
+ i {
+vertical-align: middle;
+margin: 0;
+display: inline-block
+}
+}
+ .playPrev, .playNext {
+ opacity: 0.9;
+height: 60px;
+width: 60px;
+line-height: 60px;
+text-align: center;
+padding: 0;
+margin: 0 10px;
+vertical-align: middle;
+}
+ .play, .pause {
+ opacity: 1;
+height: 80px;
+width: 80px;
+line-height:80px;
+text-align: center;
+padding: 0;
+margin: 0 10px;
+vertical-align: middle;
+ i {
+ margin:0 auto;
+                :before {
+content:"\f04b";
+vertical-align: middle;
+}
+}
+}
+ .pause {
+ i:before {
+content:"\f04c";
+}
+}
+ .voice {
+ width: 60px;
+text-align: left;
+ i {
+ &:before {
+content: "\f028"
+}
+}
+}
+ .voice.on i {
+ &:before {
+content: "\f026"
+}
+}
+}
+}
+#swipebox-overlay, #swipebox-bottom-bar, #swipebox-top-bar {
+background: rgba(darken($main-background, 14%), 0.9);
+}

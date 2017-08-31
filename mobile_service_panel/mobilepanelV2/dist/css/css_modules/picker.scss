@@ -1,0 +1,14 @@
+/*==============================================*/
+/*==================picker css==================*/
+/*==============================================*/
+.datepicker {
+ tr td, tr th {
+padding:5px 8px;
+}
+}
+.fc-time-grid-container, .fc-day-grid-container, .fc-time-grid {
+	position: relative;
+	z-index: 1;
+	overflow: visible !important;
+	height: auto !important;
+}

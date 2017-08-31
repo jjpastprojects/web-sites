@@ -1,0 +1,18 @@
+/*------js tree updates for dark theme --------*/
+.jstree-default .jstree-node, .jstree-default .jstree-icon {
+    background-image: url($file-explorer-image);
+}
+.jstree-default .jstree-node {
+    background-position: -292px -4px;
+    background-repeat: repeat-y;
+}
+.jstree-default .jstree-clicked, .jstree-default .jstree-hovered {
+    background: rgba(255, 255, 255, 0.28);
+}
+.jstree-icon.fa{ background: none}
+.jstree-default .jstree-wholerow-clicked {
+    background: rgba(255, 225, 117, 0.3);
+}
+.jstree-default .jstree-wholerow.jstree-wholerow-hovered {
+    background: rgba(92, 92, 255, 0.3);
+}

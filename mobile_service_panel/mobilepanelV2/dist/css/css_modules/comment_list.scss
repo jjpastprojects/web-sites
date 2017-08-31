@@ -1,0 +1,75 @@
+/*=======================*/
+/* comment list css */
+/*=======================*/
+.comment-list {
+	overflow-y: auto;
+color: $fontcolor1;
+ & > .media {
+ color:$fontcolor3;
+text-decoration: none;
+padding:15px 0em;
+position: relative;
+ &:last-child {
+border-bottom: 0
+}
+ .message_userpic {
+width: 30px;
+height: 30px;
+@include round(3px);
+overflow: hidden;
+margin-right: 15px;
+position: relative;
+ .user-status {
+height: 8px;
+width: 8px;
+display: block;
+position: absolute;
+right: 0px;
+top: 0px;
+@include round(5px);
+@include shadow(-2px, 0px, 5px, 0px, rgba(0, 0, 0, 0.2));
+border: 1px solid #ffffff;
+}
+}
+ h6 {
+color:$fontcolor1;
+ a {
+color:$fontcolor2;
+font-weight: 600;
+}
+ small {
+color:$fontcolor3;
+}
+}
+ .description {
+color:$fontcolor2;
+margin-top: 10px;
+font-size: 13px
+}
+ .form-check {
+margin-top: 5px;
+margin-right: 10px;
+}
+}
+.media.active h6 {
+	text-decoration: line-through
+}
+.comment {
+ border:1px solid $bordercolor;
+background: transparent;
+	padding: 10px;
+	margin: 0;
+    
+ &:last-child {
+border-bottom: 1px solid $bordercolor;
+}
+.form-control {
+	background: transparent;
+color:$fontcolor1;
+	border: 0;
+ &:focus {
+border:0
+}
+}
+}
+}

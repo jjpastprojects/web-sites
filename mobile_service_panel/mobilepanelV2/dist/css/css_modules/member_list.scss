@@ -1,0 +1,152 @@
+/*=======================*/
+/* member list css */
+/*=======================*/
+.member-list {
+ color: $fontcolor1;
+ & .media {
+ width: 100%;
+float:left;
+display: block;
+margin: 10px 0;
+color:$fontcolor3;
+text-decoration: none;
+padding:13px;
+position: relative;
+text-align: center;
+     
+background: set-color($main-background);
+     
+ &:nth-child(3n) {
+margin-right: 0;
+}
+ .message_userpic {
+width: 40px;
+height: 40px;
+line-height: 40px;
+font-size: 30px;     
+@include round(20px);
+overflow: hidden;
+margin:0 auto 15px auto;
+position: relative;
+display: inline-block;
+ .user-status {
+height: 8px;
+width: 8px;
+display: block;
+position: absolute;
+right: 11%;
+top: 11%;
+@include round(5px);
+@include shadow(-2px, 0px, 5px, 0px, rgba(0, 0, 0, 0.2));
+border: 1px solid #ffffff;
+}
+ &.large {
+width: 120px;
+height: 120px;
+@include round(60px);
+margin-top: 20px
+}
+ &.medium {
+width: 80px;
+height: 80px;
+@include round(40px);
+margin-top:10px
+}
+}
+ h6 {
+color:$fontcolor1;
+word-break: break-all;
+@extend .truncate;
+small {
+color:$fontcolor3;
+}
+}
+ .description {
+color:$fontcolor2;
+margin-top: 10px;
+font-size: 13px
+}
+ .form-check {
+margin-top: 5px;
+}
+ .overlay {
+position: absolute;
+height: 100.01%;
+width: 100%;
+padding: 10px;
+vertical-align: middle;
+display: flex;
+left: 0;
+top: 0px;
+display: block;
+opacity: 0;
+text-align: center;
+background: rgba(0, 0, 0, 0.3);
+z-index: 9;
+ .btn {
+padding: 0;
+height: 40px;
+width: 40px;
+line-height: 40px;
+text-align: center;
+margin-top: 5px;
+ i {
+margin: 0;
+}
+}
+}
+ .media-body {
+width: 100%;
+z-index: 2;
+position: relative
+}
+ &:hover {
+ @extend .gradient;
+ .description, h6, p{
+color: $fontcolor1;
+}
+ .overlay {
+opacity: 1;
+display: block
+}
+}
+ .background {
+opacity: 0.3
+}
+ .followers {
+ border-top:1px solid $bordercolor;
+padding-top: 10px;
+ h4 {
+margin-bottom: 0;
+small {
+font-size: 14px;
+font-weight: 300
+}
+};
+ > div {
+ border-right:1px solid $bordercolor;
+ &:last-child {
+border-right: none
+}
+}
+}
+ &.bg-success, &.bg-danger, &.bg-warning, &.bg-secondary, &.bg-info, &.bg-primary {
+ color:#ffffff;
+ h6 {
+color:#ffffff;
+}
+ p {
+color:#ffffff;
+}
+ span {
+color:#ffffff;
+}
+ div {
+border-color:rgba(255, 255, 255, 0.59)
+}
+}
+}
+.media.active h6 {
+	text-decoration: line-through
+}
+}

@@ -1,0 +1,97 @@
+/*==============================================*/
+/*==================== Tables =================*/
+/*==============================================*/
+.table thead th {
+	border-bottom: 0
+}
+.table th, .table td, .table thead th, .table tbody td {
+border-color: $bordercolor;
+}
+.table th{color: $fontcolor1; font-weight: 400}
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+table {
+ tr td img.gridpic {
+vertical-align: middle;
+height:26px;
+width:26px;
+@include round(20px);
+margin-right: 10px;
+}
+}
+.dataTables_wrapper {
+ .dataTable {
+width: 100% !important;
+border-bottom:1px solid $bordercolor;
+.btn-sm {
+padding: 0.40rem 0.5rem;
+vertical-align: middle
+}
+img.gridpic {
+vertical-align: middle;
+height:26px;
+width:26px;
+@include round(20px);
+margin-right: 10px;
+}
+ td, th {
+padding: 8px 13px 5px 13px;
+line-height:22px;
+align-content: center
+}
+}
+label {
+	display: flex;
+	align-items: center;
+input, select {
+width: auto;
+margin: 0 10px;
+}
+}
+.text-right {
+ label {
+display: flex;
+align-items: center;
+text-align: right;
+justify-content: flex-end;
+}
+}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+	bottom: 2px;
+}
+    div.dataTables_paginate ul.pagination{ 
+        display: inline-block; 
+        width:auto;
+        margin:5px auto 0 auto !important;
+        float: none;
+        li{ float:left;}
+    }
+}
+
+/*------------------ footable -------------*/
+.fooicon-sort:before { content: "\f0dc"; color:$blue;}
+.fooicon{ font: normal normal normal 14px/1 FontAwesome !important; }
+.fooicon-sort-asc:before{ content: "\f160"}
+.fooicon-sort-desc:before {content: "\f161";}
+.footable-paging{ 
+    .pagination{ 
+        li{
+            &:first-child{ a{ @include round(3px 0 0 3px);}}
+            &:last-child{ a{ @include round(0 3px 3px 0);}}
+            &:hover a{ background:#ffffff !important; color: #000000 !important;}
+            &.active a{ background:$blue !important; color: #ffffff !important;}
+        }
+        li.footable-page, .footable-page-nav{ 
+            .footable-page-link{position: relative; display: block; padding: 0.5rem 0.75rem; margin-left: -1px; line-height: 1.25; border: 1px solid #ddd; background: lighten($main-background, 2%); color:lighten($fontcolor1, 50%); border-color: lighten($main-background, 6%);}
+        }
+        .footable-page-nav.disabled{        
+            .footable-page-link { background: lighten($main-background, 2%); color:darken($fontcolor1, 15%); border-color: lighten($main-background, 6%)}
+             &:hover a{ background: lighten($main-background, 2%) !important;  color:darken($fontcolor1, 15%) !important;}
+        }
+    }
+}
+.footable-paging-center{ .pagination{ display: block; width: 100%; text-align: center;li { display:inline-block !important} } }
+.table .table{ background: lighten($main-background, 4%);}

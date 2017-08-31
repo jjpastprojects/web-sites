@@ -1,0 +1,30 @@
+.sidebar-right, .sidebar-left {
+width:  $sidebar_width;
+	top: 0;
+	display: block;
+	min-height: 100%;
+	height: 100%;
+	z-index: 9;
+@include transition(0.5s, ease, all);
+}
+body > .sidebar-right, body > .sidebar-left, body > .container > .sidebar-right, body > .container > .sidebar-left {
+	padding-top: 60px;
+background: lighten($sidebar-background,1%);
+	position: fixed;
+	overflow-y: auto;
+    
+    .media{ 
+        color: $sidebar-fontcolor3; 
+        border-color:rgba($bordercolor, 0.4);
+        p,.description { color: $sidebar-fontcolor2; }
+        h1,h2, h3, h4, h5, h6{ color: $sidebar-fontcolor1; }        
+    }
+    hr{ border-color:rgba($bordercolor, 0.4)}
+    
+    
+    /* Track */
+    &::-webkit-scrollbar-track {@include round(5px); background: darken($sidebar-background, 4%);}
+    /* Handle */
+    &::-webkit-scrollbar-thumb {-webkit-border-radius: 5px; border-radius: 5px; background: lighten($sidebar-background, 8%);}
+    &::-webkit-scrollbar-thumb:window-inactive { background: darken($sidebar-background,4%);}
+}

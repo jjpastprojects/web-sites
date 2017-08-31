@@ -1,0 +1,47 @@
+/*=======================*/
+/*=======Mixins==========*/
+/*=======================*/
+@mixin shadow($x, $y, $s, $f, $color, $inset:"") {
+ -webkit-box-shadow: $x $y $s $f $color #{$inset};
+ -moz-box-shadow: $x $y $s $f $color #{$inset};
+ -ms-box-shadow: $x $y $s $f $color #{$inset};
+ box-shadow: $x $y $s $f $color #{$inset};
+}
+@mixin round($radius) {
+ -webkit-border-radius: $radius;
+ -moz-border-radius: $radius;
+ -ms-border-radius: $radius;
+ border-radius: $radius;
+}
+@mixin transition($duration, $type, $element) {
+ -webkit-transition: $duration $type $element;
+ -moz-transition: $duration $type $element;
+ -ms-transition: $duration $type $element;
+ transition: $duration $type $element;
+}
+ @mixin gradient($color1, $color2) {
+ background: $color1;
+ background: -moz-linear-gradient(left, $color1 0%, $color2 100%);
+ background: -webkit-linear-gradient(left, $color1 0%, $color2 100%);
+ background: linear-gradient(to right, $color1 0%, $color2 100%);
+ color:#ffffff;
+}
+@mixin gradient-activity($color1, $color2, $color3) {
+ background: $color1;
+ background: -moz-linear-gradient(left, $color1 0%, $color2 30%, $color3 100%);
+ background: -webkit-linear-gradient(left, $color1 0%, $color2 30%, $color3 100%);
+ background: linear-gradient(to right, $color1 0%, $color2 30%, $color3 100%);
+ color: lighten($fontcolor1, 50%);
+ .progress-bar {
+background: lighten($color1, 10%)
+}
+}
+
+@function set-color($bgcolorset) {
+  @if (lightness($bgcolorset) > 50) {
+    @return darken($main-background, 4%); // Lighter backgorund, return dark color
+  } @else {
+    @return lighten($main-background, 4%); // Darker background, return light color
+  }
+}
+ 

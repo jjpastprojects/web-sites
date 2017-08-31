@@ -1,0 +1,9 @@
+/*----- dragable sortable css -------*/
+.sortable-chosen{ background: lighten($main-background, 10%)}
+.list-group-item-success{ color: darken($green, 20%); background: lighten($green, 20%);}
+.list-group-item-info{ color: darken($teal, 20%); background: lighten($teal, 20%);}
+.list-group-item-danger{ color: darken($red, 20%); background: lighten($red, 20%);}
+.list-group-item-warning{ color: darken($yellow, 20%); background: lighten($yellow, 20%);}
+.user_list{ min-height: 80px; width: 100%; display: block; text-align: center}
+.dragable_img{ width: 80px; height: 80px; display: inline-block; margin: 10px; @include  round(50px); overflow: hidden}
+.dragable_img img{ width: 100%;}

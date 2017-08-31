@@ -1,0 +1,40 @@
+
+/*=======================*/
+/*======Variables=======*/
+/*=======================*/
+// Start with assigning color names to specific hex values. 
+$white:  #fff !default;
+$black:  #000 !default;
+$red:    #ff6262 !default;
+$orange: #f0ad4e !default;
+$yellow: #ffb803 !default;
+$green:  #15d4be !default;
+$blue:   #6c8bef !default;
+$teal:   #22bfed !default;
+$pink:   #ff5b77 !default;
+$purple: #613d7c !default;
+
+//base colors 
+$main-background: #252d47;
+$fontcolor1: lighten($main-background, 100%);
+$fontcolor2: lighten($main-background, 55%);
+$fontcolor3: lighten($main-background, 45%);
+$colorlink: $blue;
+
+//sidebar colors 
+$sidebar-background: #252d47;
+$sidebar-fontcolor1: lighten($main-background, 100%);
+$sidebar-fontcolor2: lighten($main-background, 55%);
+$sidebar-fontcolor3: lighten($main-background, 45%);
+$sidebar-colorlink: $blue;
+
+
+//forms field colors
+$bordercolor: lighten($main-background, 15%);
+
+$sidebar_width: 270px;
+$footerheight:40px;
+
+.gradient {
+    @include gradient(#2ec7cb, $blue)
+}

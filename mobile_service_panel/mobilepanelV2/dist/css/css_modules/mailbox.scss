@@ -1,0 +1,72 @@
+/*==============================================*/
+/*================= Mailbox css================= */
+/*==============================================*/
+.mailbox {
+	overflow: hidden
+}
+.mailboxnav {
+	width: 200px !important;
+@include transition(0.5s, ease, all);
+	border-right: 1px solid $bordercolor;
+ nav {
+ margin: 10px auto;
+ div {
+ margin: 2px auto;
+width: 100%;
+ .nav-link {
+color: $fontcolor1;
+}
+ &.active .nav-link, .nav-link:hover {
+background:rgba(160, 160, 160, 0.1);
+color: $fontcolor1;
+}
+}
+}
+}
+.maillist {
+	border-right: 1px solid $bordercolor;
+.list-unstyled {
+overflow-y: auto
+}
+}
+.status-warning {
+border-left: 4px solid $orange !important;
+}
+.status-success {
+	border-left: 4px solid #2cc4cd !important;
+}
+.status-info {
+border-left: 4px solid $teal !important;
+}
+.status-danger {
+border-left: 4px solid $red !important;
+}
+.status-primary {
+border-left: 4px solid $blue !important;
+}
+.status.warning {
+background:$orange !important;
+}
+.status {
+@include round(3px);
+	padding: 0 10px;
+	line-height: 26px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #ffffff;
+}
+.status.warning {
+background: $orange;
+}
+.status.success {
+	background: #2cc4cd;
+}
+.status.info {
+background:$teal;
+}
+.status.danger {
+background:$red;
+}
+.status.primary {
+background:$blue;
+}

@@ -1,0 +1,15 @@
+/*=======================*/
+/*======Menus classes=====*/
+/*=======================*/
+body.menuclose .sidebar-left {
+left: - ($sidebar_width+10);
+}
+body.menuclose .wrapper-content {
+	margin-left: 0px;
+}
+body.menuclose-right .sidebar-right {
+right: - ($sidebar_width+10);
+}
+body.menuclose-right .wrapper-content {
+	margin-right: 0px;
+}

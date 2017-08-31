@@ -1,0 +1,45 @@
+/*==============================================*/
+/*=============  Notes css  ====================*/
+/*==============================================*/
+.notes {
+	padding: 0.75rem 1.25rem;
+	margin-bottom: 1.5rem;
+	border: 1px solid transparent;
+	border-radius: 0;
+}
+.notes.notes-warning {
+background: lighten($orange, 28%);
+border-left: 4px solid $orange;
+color:darken($orange, 35%);
+}
+.notes.notes-success {
+	background: lighten(#2cc4cd, 28%);
+	border-left: 4px solid #2cc4cd;
+	color: darken(#2cc4cd, 35%);
+}
+.notes.notes-info {
+background:lighten($teal, 28%);
+border-left: 4px solid $teal;
+color:darken($teal, 35%);
+}
+.alert.alert-primary {
+background:lighten($blue, 8%);
+color:lighten($blue, 35%);
+}
+.notes.notes-danger {
+background:lighten($red, 28%);
+border-left: 4px solid $red;
+color:darken($red, 35%);
+}
+.notes.notes-primary {
+background:lighten($blue, 28%);
+border-left: 4px solid $blue;
+color:darken($blue, 35%);
+}
+.options-mail {
+	width: 100%;
+	display: block;
+	float: left;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	padding: 10px 0
+}

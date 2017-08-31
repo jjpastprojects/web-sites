@@ -1,0 +1,131 @@
+/*==============================================*/
+/*========== Full screen and search ==============*/
+/*==============================================*/
+.fullscreen {
+	height: 100%;
+	overflow: hidden;
+ .full-screen-container.fullscreen {
+position: fixed;
+top: 0;
+left: 0;
+z-index: 99;
+margin: 0;
+height: 100%;
+width: 100%;
+}
+.wrapper-content {
+	z-index: 99
+}
+.navbar-fixed {
+	z-index: 10
+}
+.sidebar-left, .sidebar-right {
+	z-index: 9
+}
+.card-block {
+	max-width: 1380px;
+	margin: 0 auto;
+	width: 100%;
+	overflow-y: auto
+}
+.worldmap, #mixedchartjs, canvas {
+	height: auto !important
+}
+.comment-list, .media-list, .project-list, .user-list {
+	max-height: none;
+	overflow-y: visible;
+	height: auto
+}
+.project-list .col-8 {
+	width: 25%;
+	flex: 0 0 25%;
+	margin: 10px 0
+}
+.hide {
+	display: block !important
+}
+}
+.searchshow {
+	height: 100%;
+	overflow: hidden
+}
+.search-block {
+ .close-btn {
+position: absolute;
+height: 80px;
+width: 80px;
+line-height: 60px;
+text-align: center;
+right: 0px;
+top: 0px;
+font-size: 30px;
+padding: 0;
+     z-index: 9
+}
+ position: fixed;
+height: 100%;
+width: 100%;
+overflow: auto;
+top:0;
+left: 0;
+background: rgba( darken($main-background, 4%), 0.95);
+z-index: 999;
+display: none;
+.search-block-form {
+	padding: 15px;
+	width: 100%;
+	position: relative;
+    margin-top: 40px;
+ input[type='text'] {
+font-weight:200;
+width: 100%;
+font-size: 34px;
+line-height: 60px;
+padding: 10px 20px;
+border: 0;
+@include round(0);
+border-bottom: 1px solid $bordercolor;
+background: transparent;
+color: $fontcolor1;
+}
+.btn {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	line-height: 80px;
+	text-align: center;
+	right: 15px;
+	top: 15px;
+	font-size: 30px;
+	padding: 0
+}
+}
+}
+.page-link {
+background: lighten($main-background, 2%);
+color:$fontcolor1;
+border-color:$bordercolor;
+}
+.page-item.disabled .page-link {
+background: lighten($main-background, 2%);
+color:$fontcolor3;
+border-color: $bordercolor;
+}
+.progress-circle strong {
+	position: absolute;
+	top: 50px;
+	margin-top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+    color:$fontcolor2;
+	font-weight: 400;
+ i {
+font-size: 50%;
+}
+}
+.nav-item {
+	position: relative
+}

@@ -1,0 +1,153 @@
+body{
+    /*=======================*/
+/* Sidebar left css */
+/*=======================*/
+    & > .sidebar-left, & > .container > .sidebar-left {
+ left: 0;
+@include shadow(2px, 0px, 5px, 0px, rgba(0, 0, 0, 0.1));
+ .nav-link {
+ color: $sidebar-fontcolor1;
+padding:0.5em 1.8em;
+position: relative;
+ i {
+margin-right: 10px;
+width: 20px;
+ &.left-icon {
+ float: left;
+height: 30px;
+line-height: 28px;
+width: 30px;
+margin-right: 10px;
+color: $sidebar-fontcolor1;
+font-size: 12px;
+text-align: center;
+vertical-align: middle;
+ &.circle {
+@include round(15px);
+background: rgba(0, 0, 0,0.1);
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+ &.square {
+background: rgba(0, 0, 0,0.1);
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+}
+}
+}
+ .nav li .nav li .nav-link {
+color: $sidebar-fontcolor2;
+padding-left: 3em
+}
+ .nav li .nav li .nav li .nav-link {
+color: $sidebar-fontcolor3;
+padding-left: 3em
+}
+ .nav-link.active,  .nav-link:hover {
+@extend .gradient;
+color: #ffffff !important;
+}
+.nav-link:hover { opacity: 0.9}
+.nav li .nav {
+display: none
+}
+ .nav li .nav li .nav {
+display: none
+}
+ .nav.in li.active .nav {
+display: block
+}
+ .nav.in li.active .nav.in li.active .nav {
+display: block
+}
+ & > .nav > li {
+line-height: 28px;
+}
+.nav-third-level{
+    li a{ padding-left:4em  !important;}
+}
+.title-nav {
+font-size: 16px;
+line-height: 40px;
+color: $sidebar-fontcolor1;
+padding:0.5em 1.90em;
+text-transform: uppercase
+}
+ .menudropdown i {
+ float: right;
+margin-right: 0;
+text-align: center;
+vertical-align: middle;
+height: 28px;
+width: 12px;
+line-height: 28px;
+}
+ .menudropdown.show {
+color: $sidebar-fontcolor1;
+.menudropdown.show {
+color: $sidebar-fontcolor1;
+}
+}
+ .menudropdown.show i.fa-angle-down {
+transform: rotate(180deg);
+-ms-transform: rotate(180deg);
+-webkit-transform: rotate(180deg);
+-moz-transform: rotate(180deg);
+}
+    h1, h2, h3, h4, h5{ color: $sidebar-fontcolor1}        
+}
+    
+}
+.meeting-subject {
+color: $sidebar-fontcolor1;
+	line-height: 22px;
+	display: inline-block;
+	margin: 10px 0
+}
+.user-menu-items {
+ .btn-group {
+ width: 100%;
+ .btn {
+    border: 0;
+    background: darken($sidebar-background, 4%);
+    color: $sidebar-fontcolor3;
+    padding:2em;
+    width: 100%;
+    text-align: left;
+     @extend .truncate;
+ .message_userpic {
+width: 40px;
+height: 40px;
+}
+ .media-body {
+max-width: 150px;
+@extend .truncate;
+ span {
+     display: block;
+color: $sidebar-fontcolor1;
+@extend .truncate
+}    
+} 
+
+}
+ .btn.dropdown-toggle::after {
+margin-top: 15px;
+}
+}
+.dropdown-menu {
+	left: 50%;
+	width: 80%;
+	margin-left: -40%;
+ &:before {
+content: " ";
+height: 8px;
+width: 8px;
+position: absolute;
+left: 50%;
+border-left:8px solid transparent;
+border-right: 8px solid transparent;
+border-bottom: 8px solid #ffffff;
+margin-left: -9px;
+margin-top:-16px;
+}
+}
+}

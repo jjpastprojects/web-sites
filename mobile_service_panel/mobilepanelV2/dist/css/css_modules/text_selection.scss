@@ -1,0 +1,38 @@
+/*==============================================*/
+/*=========Text selecton colors =============*/
+/*==============================================*/
+.success::selection {
+background: $green;
+	color: #ffffff
+}
+.danger::selection {
+background: $red;
+	color: #ffffff
+}
+.warning::selection {
+background: $orange;
+	color: #ffffff
+}
+.info::selection {
+background: $teal;
+	color: #ffffff
+}
+.primary::selection {
+background: $blue;
+	color: #ffffff
+}
+.context-menu-list {
+	border: 0;
+ li {
+line-height:28px
+}
+.context-menu-icon:before {
+color: $blue;
+}
+.context-menu-item.context-menu-hover {
+background: $blue;
+ &.context-menu-icon:before {
+color: #ffffff;
+}
+}
+}

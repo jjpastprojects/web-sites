@@ -1,0 +1,57 @@
+/*==============================================*/
+/*================Services Block================*/
+/*==============================================*/
+.serviceblock {
+ color:$fontcolor1;
+ .block {
+ background: lighten($main-background, 4%);
+padding: 20px;
+position: relative;
+height:  100%;
+     h3, h4, h5{color:$fontcolor3;}
+     p{color:$fontcolor2;}
+ figure {
+margin: -20px -20px 20px -20px;
+}
+ .hide {
+display: none
+}
+ i {
+text-align: center;
+font-size: 26px;
+line-height: 50px;
+padding: 0;
+height: 50px;
+width: 50px;
+display: block;
+position: absolute;
+right: 0;
+bottom: 0;
+background: $fontcolor3;
+color: #ffffff;
+}
+ &:hover {
+ background: $fontcolor3;
+color:#ffffff;
+box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+-ms-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+ .hide {
+display: block !important
+}
+ figure {
+display: none
+}
+ i {
+color:#222222;
+background: #FFFFFF
+}
+ a {
+color:#ffffff;
+}
+     h3, h4, h5{color:$fontcolor1;}
+     p{color:$fontcolor1;}
+}
+}
+}

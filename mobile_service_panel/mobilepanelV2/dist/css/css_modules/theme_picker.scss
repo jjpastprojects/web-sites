@@ -1,0 +1,8 @@
+/*---------------- Theme picker ----------------*/
+.color_pick_table{ border: 0;  th,td{ border: 0 none;} }
+.color_pick{ width: 115px; margin-bottom: 5px; @include round(3px);border: 1px solid #cccccc}
+.color_pick+span{ margin-bottom: 15px; display: inline-block}
+.color_pick_table .nav-tabs li{ width: 33%; text-align: center}
+.color_pick_table .nav-tabs li img{  margin: 0 auto; border: 1px solid #cccccc}
+.color_pick_table .tab-content{ border:1px solid rgba(0, 0, 0, 0.15); margin-top: 10px}
+
