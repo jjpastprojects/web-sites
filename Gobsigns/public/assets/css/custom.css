@@ -1,0 +1,104 @@
+.small {font-size:10px;}
+
+.badge-success {
+  background-color: #5cb85c;
+}
+.badge-warning {
+  background-color: #f0ad4e;
+}
+.badge-danger {
+  background-color: #d9534f;
+}
+.badge-info {
+  background-color: #5bc0de;
+}
+form.form-inline {
+  display: inline;
+}
+.popover > * {
+text-align:justify;
+}
+div.dataTables_scrollBody thead th, div.dataTables_scrollBody thead td { line-height: 0; opacity:0.0; width: 0px; height:0px;
+.easyWizardSteps {list-style:none;width:100%;overflow:hidden;margin:0;padding:0;border-bottom:1px solid #ccc;margin-bottom:20px}
+.easyWizardSteps li {font-size:18px;display:inline-block;padding:10px;color:#B0B1B3;margin-right:20px;}
+.easyWizardSteps li span {font-size:24px}
+.easyWizardSteps li.current {color:#000}
+.easyWizardButtons {overflow:hidden;padding:10px;}
+.easyWizardButtons button, .easyWizardButtons .submit {cursor:pointer}
+.easyWizardButtons .prev {float:left}
+.easyWizardButtons .next, .easyWizardButtons .submit {float:right}
+
+/** vertical tab stars **/
+.tabs-left {
+	  margin-top: 3rem;
+	}
+
+	.nav-tabs {
+	  border-bottom: 0;
+	}
+	.nav-tabs li {
+	  float: none;
+	  margin: 0;
+	}
+	.nav-tabs li a {
+	  margin-right: 0;
+	  border: 0;
+	  background-color: #1B1E24;
+	}
+	.nav-tabs li a:hover {
+	  background-color: #1B1E24;
+	}
+	.nav-tabs .glyphicon {
+	  color: #fff;
+	}
+	.nav-tabs .active .glyphicon {
+	  color: #333;
+	}
+
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	  border: 0;
+	}
+
+	.tab-content {
+	  margin-left: 45px;
+	}
+	.tab-content .tab-pane {
+	  display: none;
+	  background-color: #fff;
+	  padding: 1.6rem;
+	  overflow-y: auto;
+	}
+	.tab-content .active {
+	  display: block;
+	}
+/** vertical tab ends **/
+
+/** tree view starts **/
+/** tree view ends **/
+
+/************************************************/
+/************** Created by Lucas ****************/
+/************** Created Date : 28/06/2016 *******/
+/************** Accounting Area *****************/
+/************************************************/
+
+.daterangepicker .calendar.left {
+	position: relative;
+}
+
+.daterangepicker .calendar.right {
+	position: relative;
+}
+
+.daterangepicker.ltr .calendar.left {
+	position: relative;
+}
+
+.daterangepicker.ltr .calendar.right {
+	position: relative;
+}
+
+
+/************************************************/
+/* ============================================ */
+/************************************************/
