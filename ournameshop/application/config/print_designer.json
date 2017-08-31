@@ -1,0 +1,188 @@
+{
+	"AngillaTattoo":{
+		"name":"Angilla Tattoo",
+		"print_size":190,
+		"preview_size":20,
+		"file":"AngillaTattoo.ttf",
+		"family":"Angilla-Tattoo",
+		"web_font":true
+	},
+
+	"opensans_regular":{
+		"name":"OpenSans Regular",
+		"print_size":190,
+		"file":"OpenSans-Regular.ttf",
+		"family":"OpenSans-Regular",
+		"web_font":true
+	},
+
+	"book_shelves":{
+		"name":"Book Shelves",
+		"print_size":190,
+		"preview_size":20,
+		"file":"book_shelves.ttf",
+		"family":"Book-Shelves",
+		"web_font":true
+	},
+
+	"verdana":{
+		"name":"Verdana",
+		"print_size":190,
+		"preview_size":20,
+		"file":null,
+		"family":"Verdana",
+		"web_font":false
+	},
+
+	"tnr":{
+		"name":"Times New Roman",
+		"print_size":190,
+		"preview_size":20,
+		"file":null,
+		"family":"Times New Roman",
+		"web_font":false
+	},
+
+	"dear_lovely":{
+		"name":"Dear Lovely",
+		"print_size":190,
+		"file":"dear_lovely.ttf",
+		"family":"Dear-Lovely",
+		"web_font":true
+	},
+
+	"krinkes_regular":{
+		"name":"Krinkes Regular",
+		"print_size":190,
+		"file":"KrinkesRegular.ttf",
+		"family":"Krinkes-Regular",
+		"web_font":true
+	},
+
+	"morning_sunshine":{
+		"name":"Morning Sunshine",
+		"print_size":190,
+		"file":"morning_sunshine.ttf",
+		"family":"Morning-Sunshine",
+		"web_font":true
+	},
+
+	"oswald_bold":{
+		"name":"Oswald Bold",
+		"print_size":190,
+		"file":"Oswald-Bold.ttf",
+		"family":"Oswald-Bold",
+		"web_font":true
+	},
+
+	"southern_aire":{
+		"name":"Southern Aire",
+		"print_size":190,
+		"file":"SouthernAire.ttf",
+		"family":"Southern-Aire",
+		"web_font":true
+	},
+
+	"arial":{
+		"name":"Arial",
+		"print_size":190,
+		"file":null,
+		"family":"Arial, Helvetica, sans-serif",
+		"web_font":false
+	},
+
+	"comic_sans":{
+		"name":"Comic Sans",
+		"print_size":190,
+		"file":null,
+		"family":"Comic Sans MS, cursive, sans-serif",
+		"web_font":false
+	},
+
+	"impact":{
+		"name":"Impact",
+		"print_size":190,
+		"file":null,
+		"family":"Impact, Charcoal, sans-serif",
+		"web_font":false
+	},
+
+	"courier_new":{
+		"name":"Courier New",
+		"print_size":190,
+		"file":null,
+		"family":"Courier New, Courier, monospace",
+		"web_font":false
+	},
+
+	"lucida_console":{
+		"name":"Lucida Console",
+		"print_size":190,
+		"file":null,
+		"family":"Lucida Console, Monaco, monospace",
+		"web_font":false
+	},
+
+	"black_jack":{
+		"name":"Black Jack","print_size":190,
+		"file":"black_jack.ttf",
+		"family":"Black-Jack",
+		"web_font":true
+	},
+
+	"cac_champagne":{
+		"name":"Cac Champagne",
+		"print_size":190,
+		"file":"cac_champagne.ttf",
+		"family":"Cac-Champagne",
+		"web_font":true
+	},
+
+	"capture_it":{
+		"name":"Capture it",
+		"print_size":190,
+		"file":"Capture_it.ttf",
+		"family":"Capture-it",
+		"web_font":true
+	},
+
+	"ostrich_bold":{
+		"name":"Ostrich Bold",
+		"print_size":190,
+		"file":"ostrich-bold.ttf",
+		"family":"Ostrich-Bold",
+		"web_font":true
+	},
+
+	"pacifico":{
+		"name":"Pacifico",
+		"print_size":190,
+		"file":"Pacifico.ttf",
+		"family":"Pacifico",
+		"web_font":true
+	},
+
+	"seasrn":{
+		"name":"SEASRN",
+		"print_size":190,
+		"file":"SEASRN__.ttf",
+		"family":"Seasrn",
+		"web_font":true
+	},
+
+	"tangerine_bold":{
+		"name":"Tangerine Bold",
+		"print_size":190,
+		"file":"Tangerine_Bold.ttf",
+		"family":"Tangerine-Bold",
+		"web_font":true
+	},
+
+	"windsong":{
+		"name":"Windsong",
+		"print_size":190,
+		"file":"Windsong.ttf",
+		"family":"Windsong",
+		"web_font":true
+	}
+}

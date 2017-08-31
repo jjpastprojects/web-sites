@@ -1,0 +1,182 @@
+.customer-order .order-logo img {
+	width: 100%;
+}
+
+.margin-top {
+	margin-top: 15px;
+}
+
+/*.product-form .inner {
+	background: rgba(131, 170, 231, 0.8);
+}*/
+
+.product-form img.surface {
+	width: 100%;
+}
+
+.no-margin-top {
+	margin-top: 0 !important;
+}
+
+.bordered {
+	border: solid 1px #ddd;
+}
+
+.bordered.border-red {
+	border-color: #f00;
+}
+
+.popover {
+	max-width: 400px;
+}
+
+.domain-suffix {
+	padding-top: 30px;
+}
+
+.nav-brand img {
+	max-width: 142px;
+}
+
+.relative {
+	position: relative;
+}
+
+.listing-image {}
+
+.listing-image .logo-preview {
+	width: 140px;
+	height: 97px;
+
+	background: rgba(127, 127, 127, .8);
+	position: absolute;
+	top:0;
+	left: 0
+}
+
+.listing-image .logo-preview {
+/*.listing-image .logo-preview.t-shirt,
+.listing-image .logo-preview.hoodies,
+.listing-image .logo-preview.bags,
+.listing-image .logo-preview.mugs {*/
+	left: 70px;
+    top: 108px;
+}
+
+.surface-items ul {
+	padding-left: 0;
+	list-style-type: none;
+	list-style-image: none;
+}
+.surface-items .item {
+    /*margin-bottom: 20px;*/
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+
+}
+
+.surface-items .item .inner {
+    position: relative;
+}
+
+.surface-items .item .img {
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.surface-items.collection {
+	margin-top: 20px;
+}
+
+.surface-items.collection .item .img img.surface {
+	height: 215px;
+}
+
+.surface-items .item .img .tpl-thumb {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.surface-items.collection .item .img .tpl-thumb.t-shirt {
+	left: 70px;
+    top: 60px;
+    width: 64px;
+}
+
+.surface-items.collection .item .img .tpl-thumb.hoodies {
+	top: 65px;
+    left: 69px;
+    width: 60px;
+}
+
+.surface-items.collection .item .img .tpl-thumb.phone-case {
+	width: 96px;
+    top: 23px;
+    left: 55px;
+}
+
+.surface-items.collection .item .img .tpl-thumb.posters {
+	width: 70px;
+    top: 55px;
+    left: 80px;
+}
+
+
+.surface-items.collection .item .img .tpl-thumb.apron {
+	width: 90px;
+    top: 103px;
+    left: 58px;
+}
+
+
+.surface-items.collection .item .img .tpl-thumb.mugs {
+	width: 125px;
+    top: 69px;
+    left: 25px;
+}
+
+.surface-items.collection .item .img .tpl-thumb.bib {
+	width: 101px;
+    top: 104px;
+    left: 58px;
+}
+
+.surface-items.collection .item .img .tpl-thumb.bags {
+	width: 80px;
+    top: 102px;
+    left: 62px;
+}
+
+.campaign-preview-product .surface {
+	width: 200px;
+	max-width: 200px;
+}
+
+.campaign-preview-product .tpl-thumb {
+	position: absolute;
+	top: 64px;
+    left: 83px;
+    width: 63px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

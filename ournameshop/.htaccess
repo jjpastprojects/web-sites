@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteCond $1 !^(index\.php|images|robots\.txt|css|js)
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+AuthType Basic
+AuthName "Area-52"
+AuthUserFile /home/lastnamecompany/.passwd
+Order allow,deny
+Allow from 37.54.71.117
+Allow from 54.219.154.50
+Allow from 94.179.177.168
+Allow from 162.209.60.177
+Satisfy any
+Require valid-user

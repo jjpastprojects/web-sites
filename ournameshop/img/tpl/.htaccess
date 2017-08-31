@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "Auth"
+AuthUserFile /home/lastnamecompany/.passwd
+Require user andre
+Order allow,deny
+Allow from all
+Satisfy any
