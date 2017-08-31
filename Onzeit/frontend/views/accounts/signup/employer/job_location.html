@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row wrapper wrapper-content padding-top-70">
+        <div class="col-sm-12 title">
+            <h1>Job Location</h1>
+        </div>
+        <div class="col-sm-offset-3 col-sm-6">
+            <div class="col-sm-12 ibox ibox-custom">
+                <div class="col-sm-12 ibox-title border-bottom">
+                    <h5>Where is the work site for this position?</h5>
+                </div>
+                <div class="col-sm-12 ibox-content">
+                    <form class="m-t" role="form" action="#signup/employer/job_description">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" placeholder="Street facing business name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" placeholder="Position manager contact name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" placeholder="Job site street address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" placeholder="Job site unit or suite number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" placeholder="Job site society" required>
+                        </div>
+
+                        <div class="form-group">
+                            <select class="select2_demo_3 form-control input-custom" id="states" required></select>
+                            <script type="text/javascript" language="javascript">print_state("states", 239, "Job site state");</script>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" placeholder="Job site zip code" required>
+                        </div>            
+
+                        <div class="form-group">
+                            <input type="email" class="form-control input-custom" placeholder="Supervisor Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" data-mask="(999) 999-9999" placeholder="Job site office phone" ng-model="jso_phone" required>
+                            <span class="help-block">(999) 999-9999</span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" data-mask="(999) 999-9999" placeholder="Supervisor cell phone" ng-model="sc_phone" required>
+                            <span class="help-block">(999) 999-9999</span>
+                        </div>
+
+                        <div class="form-group text-center no-margin">
+                            <div class="col-sm-6">
+                                <a ui-sref="signup.employer_payment_reference" class="btn btn-lg btn-default btn-block btn-custom-block margin-top-10">Back</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-lg btn-success btn-custom-xlg margin-top-10">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

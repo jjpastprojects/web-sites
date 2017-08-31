@@ -1,0 +1,70 @@
+<fieldset>
+    <h2>Positions</h2>
+
+    <div class="row wrapper wrapper-content">
+        <div class="form-group">
+            Start date
+        </div>
+
+        <div>
+            <label> 
+            <input icheck type="checkbox" ng-model="food_service" ng-value="food_service" id="{{name}}" name="favorite">
+            Food service industry 
+            </label>
+        </div>
+        
+
+        <div>
+            <label> 
+            <input icheck type="checkbox" ng-model="warhousing" ng-value="warhousing" id="{{name}}" name="favorite">
+            Warehousing / order picking
+            </label>
+        </div>
+        
+        <div>
+            <label> 
+            <input icheck type="checkbox" ng-model="industrial" ng-value="industrial" id="{{name}}" name="favorite">
+            Light industrial / fork lift operator
+            </label>
+        </div>
+
+        <div>
+            <label> 
+            <input icheck type="checkbox" ng-model="construction" ng-value="construction" id="{{name}}" name="favorite">
+            Construction
+            </label>
+        </div>
+
+        <div>
+            <label> 
+            <input icheck type="checkbox" ng-model="office_work" ng-value="name" id="{{name}}" name="favorite">
+            Office work
+            </label>
+        </div>
+
+        <div>
+            <label> 
+            <input icheck type="checkbox" ng-model="hospitality" ng-value="name" id="{{name}}" name="favorite">
+            Hospitality
+            </label>
+        </div>
+
+        <div>
+            <label> 
+            <input icheck type="checkbox" ng-model="supervisor" ng-value="name" id="{{name}}" name="favorite">
+            Supervisor / manager
+            </label>
+        </div>
+
+        <div>
+            <label> 
+            <input icheck type="checkbox" ng-model="miscel" ng-value="name" id="{{name}}" name="favorite">
+            Miscellaneous
+            </label>
+        </div>
+
+
+    </div>
+    <a ui-sref="settings.register_wizard.step_four" class="btn btn-default">Previous</a>
+    <a ui-sref="settings.availability" class="btn btn-primary">Choose</a>
+</fieldset>

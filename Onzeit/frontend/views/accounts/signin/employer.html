@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row wrapper wrapper-content padding-top-70">
+        <div class="col-sm-12 title">
+            <h1>Welcome to Onzeit</h1>
+        </div>
+        <div class="col-sm-offset-3 col-sm-6">
+            <div class="ibox ibox-custom text-center">
+                <div class="ibox-content">
+                    <form class="m-t" role="form">
+                        <div class="form-group text-center padding-bottom-10 margin-bottom-20 border-bottom">
+                            <a class="btn btn-success btn-facebook btn-custom">
+                                <i class="fa fa-facebook"> </i> Sign In with Facebook
+                            </a>
+                        </div>
+            
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" placeholder="Username" ng-model="vm.username" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control input-custom" placeholder="Password" ng-model="vm.password" required="">
+                        </div>
+
+                        <button class="btn btn-lg btn-primary btn-custom-xlg margin-top-10" ng-click="vm.login()">Login</button>
+
+                        <div class="text-center margin-top-10">
+                            <a ui-sref="forgot_password"><small>Forgot password?</small></a>
+                        </div>
+
+                        <div class="margin-top-10 text-center">
+                            <p style="font-size:15px;">Do not have an account? <a ui-sref="signup.employer">Create An Account</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

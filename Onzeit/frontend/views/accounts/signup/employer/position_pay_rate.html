@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row wrapper wrapper-content padding-top-70">
+        <div class="col-sm-12 title">
+            <h1>Position pay rate</h1>
+        </div>
+        <div class="col-sm-offset-3 col-sm-6">
+            <div class="col-sm-12 ibox ibox-custom">
+                <div class="col-sm-12 ibox-content">
+                    <form class="m-t" role="form" action="#dashboards/dashboard">
+                        <p>
+                            Employer : {{employer_name}}
+                        </p>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control input-custom" placeholder="Position" required>
+                        </div>
+
+                        <p>
+                            Enter the amount you would like to pay for hour for this position at your company. This rate can be changed at any time. Workers compensation will be calculated next and added to this rate.
+                        </p>
+
+                        <div class="form-group">
+                            <input type="number" class="form-control input-custom" placeholder="Pay rate($)" required>
+                        </div>
+
+                        <div class="form-group text-center no-margin">
+                            <div class="col-sm-6">
+                                <a ui-sref="signup.employer_job_description" class="btn btn-lg btn-default btn-block btn-custom-block margin-top-10">Back</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-lg btn-success btn-block btn-custom-block margin-top-10">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
