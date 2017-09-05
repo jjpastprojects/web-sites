@@ -1,0 +1,6 @@
+suites:
+    learn:
+        src_path: /opt/lampp/htdocs/findJobs/app/Lem
+        spec_path: /opt/lampp/htdocs/findJobs/tests
+        namespace: Lem
+        psr4_prefix: Lem

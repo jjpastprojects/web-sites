@@ -1,0 +1,33 @@
+// the first main purpose is learning the right way to do thing
+
+when user register raise a event
+when user register, recieve an email
+when page concern a user, he receice an email
+finish english languages files
+make interface that all repository implements
+make all name in different repository match
+when implements class add all methods
+vim english word offline
+make a resume and porfilio
+
+//maybe
+comment  Controllers
+comment  views
+
+//after production
+the right place to put the good that change the langep ///	Lang::setlocale(Session::get('locale'));
+translate english -> francais
+translate english -> arabe
+
+
+//need internet
+check if when user register or login or logout a event fire
+check code before execute it with eval
+make you zsh you default bash
+read md file in vim
+fix tinker
+
+//other
+start list site to find information for your site
+start list all variable that user may need
+clear .vimrc from uncessary stuff
