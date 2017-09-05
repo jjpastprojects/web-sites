@@ -1,0 +1,27 @@
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Projection</th>
+      <th>Game Date</th>
+      <th>Home</th>
+      <th>Away</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projections.each do |proj| %>
+      <tr>
+        <td><%= proj.player.name %></td>
+        <td><%= link_to proj.fp.to_s, projection_projection_by_stats_path(proj) %></td>
+        <td><%= proj.scheduled_game.start_date.in_time_zone("EST") %></td>
+        <td><%= proj.scheduled_game.home_team.name %></td>
+        <td><%= proj.scheduled_game.away_team.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

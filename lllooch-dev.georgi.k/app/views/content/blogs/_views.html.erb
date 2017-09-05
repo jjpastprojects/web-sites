@@ -1,0 +1,35 @@
+<script type="text/html" data-view="posts">
+  <ul class="blogs" data-type="posts"></ul>
+</script>
+
+<script type="text/html" data-view="post">
+  <div class="blog-wrap blog-<%%= color %>" data-blog="post">
+    <a href="<%%= url %>" class="blog-border">
+      <div class="shadow"></div>
+    </a>
+
+    <div class="blog-img">
+      <img src="<%%= picture %>"/>
+    </div>
+
+    <div class="blog-info">
+      <div class="blog-info-wrap">
+        <h2>
+          <%%= title %>
+        </h2>
+
+        <div class="blog-desc">
+          <%%= announce %>
+        </div>
+
+        <div class="blog-more">
+          <%% _.each(categories, function(i) { %>  <a href="#<%%= i[1] %>"><%%= i[0] %></a> <%% }); %>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<%# LOADER %>
+<script type="text/html" data-view="posts-empty">
+</script>

@@ -1,0 +1,37 @@
+<%- model_class = Setting -%>
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to plus_icon + ' Добавить',
+        new_admin_setting_path,
+        :class => 'btn' %>
+  </div>
+
+  <h1>Параметры</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      <th width="60px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @settings.each do |setting| %>
+      <tr>
+        <td>
+          <%= setting.key %>
+          <%= content_tag :div, content_tag(:small, setting.value, class: 'muted') %>
+        </td>
+        <td>
+          <%= link_to pencil_icon,
+              edit_admin_setting_path(setting), :class => 'btn btn-mini' %>
+          <%= link_to trash_icon(true),
+              admin_setting_path(setting),
+              :method => :delete,
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

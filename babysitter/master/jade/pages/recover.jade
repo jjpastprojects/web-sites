@@ -1,0 +1,24 @@
+.block-center.mt-xl.wd-xl
+  // START panel
+  .panel.panel-dark.panel-flat
+    .panel-heading.text-center
+      a(ui-sref="page.login")
+        img#logo.block-center(src='app/img/logo.svg', alt='Image')
+    .panel-body
+      p.text-center.pv RESET YOUR PASSWORD
+      form.form-validate(role='form', name="recoverForm", novalidate='')
+        p.text-center Enter your email to be sent instructions for resetting your password.
+        .form-group.has-feedback
+          label.text-muted Email address
+          input.form-control(type='email', name='email', placeholder='Enter email', autocomplete="off", ng-model="recover.email", required='')
+          span.fa.fa-envelope.form-control-feedback.text-muted
+          span.text-danger(ng-show="recoverForm.email.$dirty && recoverForm.email.$error.required") This field is required
+          span.text-danger(ng-show="recoverForm.email.$dirty && recoverForm.email.$error.email") This field must be a valid email address
+        button.btn.btn-primary.btn-block(type='submit') Reset
+            
+  // END panel
+  .p-lg.text-center
+    span &copy; 
+    span(ng-bind="app.year") 
+    span  - 
+    span(ng-bind="app.name")

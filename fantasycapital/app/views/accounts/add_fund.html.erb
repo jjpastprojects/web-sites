@@ -1,0 +1,174 @@
+<div class="addfunds" data-stripe-action="card">
+  <div class="addfunds-popup">
+    <div class="popupTitle">
+      <h2 class="pull-left">ADD FUNDS</h2>
+      <button data-dismiss="modal" class="btnClose" type="button">X</button>
+    </div>
+    <p>To play FantasyCapital for real money you need to add funds to your account. Don’t worry, you can withdraw your
+      money at any time for free.</p>
+
+    <div class="addfunds-content">
+      <div class="deposit-amount">
+        <% cc = current_user.credit_cards.where(is_default: true).first
+           if cc == nil %>
+        <div class="pull-left">
+          Need to add a credit card first
+        </div><br/><br/><br/>
+        <% end %>
+        <div class="deposit-item pull-left">
+          <div class="pull-left">
+            In whole dollar amounts &nbsp;$&nbsp;
+          </div>
+          <div class="pull-left">
+            <input type="text" class="form-control" id="depositAmount" style="width: 50px; height: 23px;" /> 
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="addfunds-form form-horizontal">
+        <div class="form-group">
+          <label for="payment_type" class="col-sm-4 control-label payment-type-label">* Payment Type</label>
+          <div class="col-sm-7 payment-type-wrapper">
+            <input type="radio" name="payment_type" id="credit_card" value="credit" checked="checked"> Credit Card&nbsp;&nbsp;
+            <input type="radio" name="payment_type" id="paypal" value="paypal"> Paypal&nbsp;&nbsp;
+            <input type="radio" name="payment_type" id="dwolla" value="dwolla"> Dwolla&nbsp;&nbsp;
+          </div>
+        </div>
+        <div class="form-group for-credit">
+          <label for="creditcard_type" class="col-sm-4 control-label">* Credit Card Type</label>
+          <div class="col-sm-4">
+            <select class="form-control" id="creditcard_type" name="creditcard_type">
+              <option selected="selected">Visa</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="full_name" class="col-sm-4 control-label">* Credit Card Number</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" data-payload="number"
+                   <% if cc != nil %>
+                   value="xxxxxxxxxxxx<%= cc.last_4 %>"
+                   <% end %>
+                   >
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="exp_date" class="col-sm-4 control-label">* Exp. Date (mm/yyy)</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" data-payload="exp_month">
+          </div>
+          <div class="col-sm-1">
+            /
+          </div>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" data-payload="exp_year"> 
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="cvv" class="col-sm-4 control-label">* CVV</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" data-payload="cvc">
+          </div>
+          <label class="col-sm-3 format"><a href="#">What is this?</a></label>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="full_name" class="col-sm-4 control-label">* Full Name</label>
+          <div class="col-sm-4">
+            <input type="text" class="form-control" data-payload="name">
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="street_address" class="col-sm-4 control-label">* Street Address</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" data-payload="address_line1">
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="street_address2" class="col-sm-4 control-label">Street Address 2</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" data-payload="address_line2">
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="city" class="col-sm-4 control-label">* City</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" data-payload="address_city">
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="zip" class="col-sm-4 control-label">* Zip/Postal Code</label>
+          <div class="col-sm-3">
+            <input type="text" class="form-control" data-payload="address_zip">
+          </div>
+          <div class="col-sm-4 for-credit">
+            <select class="form-control" id="country" name="country">
+              <option selected="selected">United States</option>
+              <option>Canada</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="state" class="col-sm-4 control-label">* State</label>
+          <div class="col-sm-3">
+            <select class="form-control" id="state" name="state" data-payload="address_state">
+              <option selected="selected">Arizona</option>
+            </select>
+          </div>
+          <div class="col-sm-4">
+            <a href="#">Is your state missing?</a> 
+          </div>
+        </div>
+
+        <div class="form-group for-credit">
+          <label for="phone" class="col-sm-4 control-label">* Phone</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control">
+          </div>
+          
+        </div>
+
+        <div class="form-group for-credit">
+          <div style="display:none;" class="col-sm-offset-4 col-sm-10 error-container has-error"></div>
+        </div>
+        
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-2">
+
+            <% if cc != nil %>
+            <button id="existingDeposit" type="submit" class="btn btn-default btn-deposit">Deposit</button>
+            <% end %>
+          </div>
+          <div class="col-sm-4">
+            <button id="stripeSubmit" type="submit" class="btn btn-default btn-deposit">Add CC + Deposit</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  //$(document).on("ready page:load", function () {
+      window.initializeStripeForm();
+
+      $('input[name="payment_type"]').change(function(){
+        if($(this).val() == 'credit'){
+          $('.for-credit').show();
+        }else{
+          $('.for-credit').hide();
+        }
+      });
+  //});
+</script>

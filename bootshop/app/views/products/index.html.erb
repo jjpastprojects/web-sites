@@ -1,0 +1,71 @@
+
+<div class="navbar navbar-inverse">
+     <div class="navbar-inner">
+      <div class="container">
+ 
+       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+       </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+
+
+       <a class="brand" href="#">HOME</a>
+       <a class="brand" href="#">About us</a>
+       <p align="right">
+        <% if user_signed_in? %>
+        <%= link_to 'sign_out', destroy_user_session_path, :method => :delete %> <br></br>
+        
+        <% else %>
+        <%= link_to 'sign_in', new_user_session_path %>
+        <% end %>
+         </p>
+
+         <!-- Everything you want hidden at 940px or less, place within here -->
+       <div class="nav-collapse collapse">
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+       </div>
+ 
+      </div>
+    </div>
+  </div>
+
+<p class="text-center" style="font-size:20px"> <strong>Listing Products</strong></p>
+
+</p>
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <%if current_user.has_role? :admin%>
+    <th></th>
+    <th></th>
+    <th></th>
+    <%end%>
+  </tr>
+
+<% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.price %></td>
+    <td><%= product.quantity %></td>
+    <%if current_user.has_role? :admin%>
+      <td><%= link_to 'Show', product, :class=> "btn btn-info" %></td>
+      <td><%= link_to 'Edit', edit_product_path(product), :class=> "btn btn-primary" %></td>
+      <td><%= link_to 'Destroy', product, :class=> "btn btn-danger" ,method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <%end%>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+
+<%if current_user.has_role? :admin%>
+<%= link_to 'New Product', new_product_path, :class=> "btn btn-primary" %>
+<%end%>
+<%= render "layouts/footer" %>

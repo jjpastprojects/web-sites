@@ -1,0 +1,91 @@
+<div class="page-header">
+  <h1>Заказы</h1>
+</div>
+
+<% if @orders.present? %>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th width="40px">ID</th>
+    <th width="20%">Клиент</th>
+    <th width="10%">Контакты</th>
+    <th>Товары</th>
+    <th width="15%">Доставка</th>
+    <th width="15%">Оплата</th>
+    <th width="10%">Сумма</th>
+    <th width="60px"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+      <tr>
+        <td>
+          <%= order.id %>
+        </td>
+        <td>
+          <%= order.client.full_name if order.client.present? %>
+          <%= content_tag :div do %>
+            <%= order.order_status.name if order.order_status.present? %>
+          <% end %>
+        </td>
+
+        <td>
+          <% if order.client.present? %>
+            <%= order.client.phone %>
+            <br />
+            <%= order.client.email %>
+          <% end %>
+        </td>
+
+        <td>
+          <% order.items.each do |item| %>
+              <%= content_tag :div do %>
+                <%= content_tag :small, (item.quantity.to_s + '&times;').html_safe %> <%= item.good.name %>
+              <% end %>
+          <% end %>
+
+          <%= content_tag :strong, ('На сумму: ' + number_to_currency(order.items_price, precision: 0, unit: 'р.')) %>
+        </td>
+
+        <td>
+          <%= order.delivery_type.name if order.delivery_type.present? %>
+          <% if order.delivery_type.weight > 0 %> 
+            <%= content_tag :div do %>
+              Адрес: 
+              <%= order.zip unless order.zip.nil? %>
+              <%= order.country unless order.country.nil? %>
+              <%= order.region unless order.region.nil? %>
+              <%= order.city unless order.city.nil? %>
+              <%= order.street unless order.street.nil? %>
+              <%= order.street_number unless order.street_number.nil? %>
+              <%= "- " + order.site unless order.site.nil? %>
+            <% end %>
+          <% end %>
+        </td>
+
+        <td>
+          <%= order.payment_type.name if order.payment_type.present? %>
+        </td>
+
+        <td>
+          <%= number_to_currency(order.full_price, precision: 0, unit: 'р.') %>
+        </td>
+
+        <td>
+          <%#= link_to pencil_icon,
+                      edit_admin_order_path(order), :class => 'btn btn-mini' %>
+          <%= link_to trash_icon(true),
+                      admin_order_path(order),
+                      :method => :delete,
+                      :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<% else %>
+    <div class="alert alert-notice">
+        Нет заказов
+    </div>
+<% end %>

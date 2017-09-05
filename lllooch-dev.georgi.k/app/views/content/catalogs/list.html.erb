@@ -1,0 +1,67 @@
+<%= content_for :extra_scripts do %>
+    <%= render partial: 'views' %>
+<% end %>
+
+<%= content_for :footer_scripts do %>
+    <script type="text/javascript">
+        var fetchUrl = "<%= catalog_fetch_path %>";
+        $(document).on('page:load ready', function () {
+            $('a[data-category]').each(function () {
+                $(this).attr('href', '#' + $(this).data('category'));
+            });
+        });
+    </script>
+
+    <%= javascript_include_tag "backbone/catalog" %>
+<% end %>
+
+<div class="showroom" data-action="showroom">
+  <% if !defined? controls or (defined? controls and controls != false) %>
+      <ul class="showroom-controls" data-action="middle">
+        <li>
+          <div class="showroom-control" data-showroom="control">
+            <i class="control control-left"></i>
+          </div>
+        </li>
+        <li>
+          <div class="showroom-control" data-showroom="control" data-showroom-control="right">
+            <i class="control control-right"></i>
+          </div>
+        </li>
+      </ul>
+  <% end %>
+
+  <div class="showroom-slide loading" data-showroom="slide" style="margin-left:60px">
+    <div class="loading-wrap" data-showroom="loading">
+      <div class="loading">
+        <div class="wrap">
+          <div class="loader">
+            <%= image_tag "content/product-loader.gif" %>
+          </div>
+
+          <%= T "Загружается..." %>
+        </div>
+      </div>
+    </div>
+    <div data-region="goods"></div>
+
+    <%= render 'promo', :promo => promo if defined? promo %>
+
+    <% if false && @items %>
+        <div class="showroom-items">
+          <% @items.each_with_index do |item, i| %>
+
+              <% if i % 2 == 0 %>
+                  <div class="showroom-col" data-showroom="item-col">
+              <% end %>
+
+              <%= render 'item', :item => item %>
+
+              <% if i % 2 == 1 %>
+                  </div>
+              <% end %>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+</div>

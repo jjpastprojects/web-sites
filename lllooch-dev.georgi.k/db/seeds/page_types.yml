@@ -1,0 +1,29 @@
+- name: Контент
+  method: content
+
+- name: Список
+  method: list  
+
+- name: Список/элемент
+  method: list_with_items
+
+- name: Элемент
+  method: item
+
+- name: Выбор языка
+  method: languages_select
+
+- name: Корзина
+  method: cart
+
+- name: Предзаказ
+  method: preorder
+
+- name: Заказ
+  method: order
+
+- name: Спасибо за заказ
+  method: order_done
+
+- name: Спасибо за предзаказ
+  method: preorder_done

@@ -1,0 +1,105 @@
+//
+// FOOTER
+//
+
+// Certifications
+.footer-certifications {
+
+  .footer-badges {
+    margin: 0 auto;
+    padding: rem-calc(15 0);
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: rem-calc(0 5);
+    }
+
+    @media #{$large-up} {
+      text-align: right;
+      margin: rem-calc(0 -5 0 0);
+      padding: rem-calc(30 0);
+    }
+
+    .sa-badge {
+      width: rem-calc(90);
+
+      @media #{$small-only} {
+        margin: 0 auto rem-calc(20);
+        display: block;
+      }
+      @media #{$medium-up} {
+        width: rem-calc(130);
+      }
+    }
+    .course-badge {
+      width: rem-calc(50);
+
+      @media #{$small-only} {
+        margin: 0 auto rem-calc(20);
+      }
+      @media #{$medium-up} {
+        position: relative;
+        width: rem-calc(70);
+      }
+    }
+    .pmi-badge {
+      width: rem-calc(90);
+
+      @media #{$small-only} {
+        margin: 0 auto;
+        display: block;
+      }
+      @media #{$medium-up} {
+        width: rem-calc(130);
+      }
+    }
+  }
+}
+
+// Copyright
+.content-info {
+  background: $gray-light;
+  border-top: 1px solid darken($gray-light, 8%);
+  padding: rem-calc(20 0);
+
+  @media #{$medium-up} {
+    padding: rem-calc(12 0);
+  }
+
+  p {
+    font-size: rem-calc(11);
+    margin: 0;
+    text-align: center;
+  }
+  .copyright {
+
+    @media #{$medium-up} {
+      text-align: left;
+    }
+    a {
+      color: $blue;
+      white-space: nowrap;
+    }
+  }
+  .links {
+
+    @media #{$small-only} {
+      margin-bottom: rem-calc(10);
+    }
+    @media #{$medium-up} {
+      text-align: right;
+      float: right;
+    }
+    a {
+      display: inline-block;
+      color: $gray-dark;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

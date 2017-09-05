@@ -1,0 +1,525 @@
+//
+// Home
+//
+
+.home {
+
+  //
+  // HERO
+  //
+  .hero {
+    overflow: hidden;
+
+    .no-touch & .promo {
+      img {
+        transition: transform 0.5s;
+        -webkit-backface-visibility: hidden;
+      }
+      &:nth-child(odd) .promo-link:hover  {
+        img {
+          transform: rotate(5deg) translateZ(0);
+        }
+      }
+      &:nth-child(even) .promo-link:hover  {
+        img {
+          transform: rotate(-5deg) translateZ(0);
+        }
+      }
+    }
+    .promo {
+      text-align: center;
+
+      @media #{$small-only} {
+        float: none;
+        margin: 0 auto;
+        max-width: rem-calc(400);
+      }
+    }
+    .promo-link {
+      display: block;
+    }
+    .promo-image {
+      margin: 0 auto;
+      max-width: rem-calc(340);
+      padding: 0;
+
+      img {
+        border-radius: 50%;
+        border: 1px solid $gray-light;
+      }
+    }
+    .promo-details {
+      margin: rem-calc(25 0);
+      padding: 0;
+    }
+    .promo-heading {
+      border-bottom: 1px solid $gray-light;
+      border-top: 1px solid $gray-light;
+      color: $blue;
+      display: block;
+      margin: rem-calc(0 0 10);
+      padding: rem-calc(5 0);
+      text-transform: uppercase;
+    }
+    .promo-description {
+      color: $gray;
+      font-size: rem-calc(13);
+      font-weight: $font-weight-light;
+      line-height: 1.2;
+      margin: rem-calc(0 0 6);
+    }
+    .promo-link-text {
+      color: $blue-light;
+      display: block;
+      font-size: rem-calc(12);
+      text-transform: uppercase;
+
+      @media #{$medium-up} {
+        font-size: rem-calc(13);
+      }
+    }
+  }
+
+  //
+  // CLASS SEARCH
+  //
+  .class-search {
+    background: $gray-light;
+    padding: rem-calc(20 0 30);
+
+    @media #{$large-up} {
+      padding: rem-calc(30 0 40);
+    }
+
+    .heading {
+      margin: rem-calc(0 0 10);
+      text-align: center;
+
+      @media #{$large-up} {
+        margin: rem-calc(0 0 20);
+      }
+    }
+    .class-search-form {
+      margin: 0 auto;
+      width: rem-calc(260);
+      @include clearfix;
+
+      @media #{$medium-only} {
+        width: rem-calc(560);
+      }
+      @media #{$large-up} {
+        margin: 0 auto;
+        width: rem-calc(660);
+      }
+    }
+    fieldset {
+      border: none;
+      margin: 0;
+      padding: 0;
+
+      @media #{$medium-up} {
+        float: left;
+      }
+      &.group-1 {
+        width: rem-calc(260);
+
+        @media #{$medium-only} {
+          width: rem-calc(300);
+        }
+        @media #{$large-up} {
+          width: rem-calc(400);
+        }
+      }
+      &.group-2 {
+        width: rem-calc(260);
+      }
+    }
+    .zip-field {
+      border: 1px solid $gray;
+      box-shadow: none;
+      color: $blue;
+      margin: 0;
+      outline: none;
+      width: 100%;
+
+      @include placeholder {
+        text-transform: uppercase;
+      }
+      @media #{$small-only} {
+        border-bottom: none;
+        @include placeholder {
+          text-align: center;
+        }
+      }
+      @media #{$medium-up} {
+        border-right: none;
+      }
+    }
+    .select2.select2-container {
+      float: left;
+      text-transform: uppercase;
+      width: rem-calc(175);
+    }
+    .search-submit {
+      float: left;
+      font-size: rem-calc(14);
+      height: rem-calc(37);
+      line-height: rem-calc(37);
+      padding: rem-calc(0);
+      text-align: center;
+      width: rem-calc(130);
+    }
+  }
+
+  //
+  // CTA & NEWS SECTION
+  //
+  .cta-news {
+    background: $blue;
+  }
+
+  //
+  // SIGNUP FORM
+  //
+  .signup-form {
+    background: $blue-light;
+    padding: rem-calc(20 30);
+
+    @media #{$medium-up} {
+      padding: rem-calc(35 50);
+    }
+    @media #{$large-up} {
+      float: left;
+      transform: skew(-10deg);
+      width: 50%;
+
+      .inside {
+        transform: skew(10deg);
+      }
+    }
+
+    h2 {
+      background: white;
+      color: $blue-light;
+      font-size: rem-calc(13);
+      letter-spacing: 0;
+      padding: rem-calc(10);
+      transform: skew(-10deg);
+      @include gotham;
+
+      span {
+        display: block;
+        transform: skew(10deg);
+      }
+
+      @media #{$medium-up} {
+        font-size: rem-calc(15);
+        margin: rem-calc(0 0 20 -16);
+        padding: rem-calc(15 10 15 20);
+      }
+      @media #{$large-up} {
+        width: 110%;
+      }
+
+    }
+
+    // Form styles
+    #gform_wrapper_2 {
+
+      @media #{$medium-up} {
+        height: 100%;
+        overflow: hidden;
+        padding: rem-calc(0 0 0 50);
+        position: relative;
+
+        &:after {
+          background: $blue-light;
+          bottom: rem-calc(-30);
+          content: '';
+          display: block;
+          position: absolute;
+          right: rem-calc(-20);
+          top: 0;
+          transform: rotate(10deg);
+          width: rem-calc(100);
+          z-index: 2;
+        }
+      }
+
+      // Validation
+      .validation_error {
+        background: $yellow;
+        border: none;
+        color: $blue;
+        font-size: rem-calc(12);
+        font-weight: $font-weight-normal;
+        line-height: 1.3;
+        margin: rem-calc(0 0 10);
+        padding: rem-calc(12);
+
+        @media #{$medium-up} {
+          font-size: rem-calc(14);
+          padding: rem-calc(12 80 12 12);
+        }
+      }
+      .gfield.gfield_error {
+        background: none;
+        border: none;
+        padding: 0;
+        color: $yellow;
+
+        .ginput_container {
+          margin: 0;
+        }
+        input {
+          border: none;
+          border-left: 5px solid $blue;
+          color: $green;
+
+          @include placeholder {
+            color: $green;
+          }
+        }
+      }
+      .gfield_description.validation_message {
+        color: white;
+        font-size: rem-calc(13);
+        font-weight: $font-weight-normal;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .form-illustration {
+      position: absolute;
+      width: rem-calc(80);
+
+      @media #{$small-only} {
+        margin: rem-calc(5 0 0 -10);
+      }
+      @media #{$medium-up} {
+        width: rem-calc(108);
+      }
+    }
+    .gform_description {
+      color: white;
+      display: block;
+      font-size: rem-calc(12);
+      line-height: 1.2;
+      padding: rem-calc(0 0 0 85);
+
+      @media #{$small-only} {
+        min-height: rem-calc(60);
+        max-width: rem-calc(400);
+      }
+      @media #{$medium-only} {
+        font-size: rem-calc(14);
+        max-width: rem-calc(550);
+        padding: rem-calc(20 60 30 80);
+      }
+      @media #{$large-up} {
+        font-size: rem-calc(14);
+        padding: rem-calc(20 60 20 80);
+      }
+    }
+    .gfield_label {
+      @extend .show-for-sr;
+    }
+    input[type=text],
+    input[type=email] {
+      border: none;
+      padding: rem-calc(0 12);
+      transition: border 0.2s;
+
+      &:focus,
+      &:active {
+        background: white;
+        border-left: 5px solid $blue;
+      }
+
+      @media #{$small-only} {
+        font-size: rem-calc(14);
+        margin: rem-calc(0 0 5);
+      }
+      @media #{$medium-up} {
+        height: rem-calc(50);
+        line-height: rem-calc(50);
+      }
+      @media #{$large-up} {
+        font-size: rem-calc(14);
+        padding: rem-calc(0 50 0 20);
+      }
+      @include placeholder {
+        color: $gray-dark;
+        text-transform: uppercase;
+      }
+    }
+    .gform_footer {
+      margin: 0;
+      padding: rem-calc(10 0 0 0);
+
+      @media #{$medium-up} {
+        padding: rem-calc(0 90 0 0);
+        text-align: right;
+      }
+    }
+    .gform_button {
+      background: $gray-dark;
+      padding-right: rem-calc(40);
+
+      &:focus {
+        background: $blue;
+        outline: none;
+      }
+
+      @media #{$small-only} {
+        font-size: rem-calc(12);
+        padding: rem-calc(8 16);
+      }
+    }
+    .gform_ajax_spinner {
+      margin: rem-calc(2 0 0);
+      right: 15%;
+      position: absolute;
+      width: rem-calc(40);
+
+      @media #{$medium-up} {
+        left: 10%;
+        margin: rem-calc(10 0 0);
+      }
+    }
+
+  }
+
+  //
+  // RECENT NEWS
+  //
+  .recent-news {
+    padding: rem-calc(20 30);
+
+    @media #{$medium-up} {
+      padding: rem-calc(35 50);
+    }
+    @media #{$large-up} {
+      float: left;
+      padding: rem-calc(35 50 10);
+      width: 50%;
+    }
+
+    h2 {
+      background: white;
+      color: $blue;
+      font-size: rem-calc(13);
+      letter-spacing: 0;
+      padding: rem-calc(10);
+      transform: skew(-10deg);
+      @include gotham;
+
+      span {
+        display: block;
+        transform: skew(10deg);
+      }
+
+      @media #{$medium-up} {
+        font-size: rem-calc(15);
+        margin: rem-calc(0 0 20);
+        padding: rem-calc(15 10 15 20);
+      }
+      @media #{$large-up} {
+        margin: rem-calc(0 0 20 20);
+        width: 110%;
+      }
+
+    }
+
+    .news-content {
+
+      @media #{$large-up} {
+        padding-left: rem-calc(20);
+      }
+    }
+
+    .headline {
+      font-size: rem-calc(15);
+      line-height: 1.2;
+      margin: rem-calc(0 0 6);
+      @include gotham(500, true);
+
+      a {
+        color: white;
+      }
+      @media #{$medium-up} {
+        font-size: rem-calc(18);
+      }
+    }
+    .updated {
+      color: $yellow;
+      display: block;
+      font-size: rem-calc(11);
+      margin: rem-calc(0 0 15);
+      text-transform: uppercase;
+
+      @media #{$medium-up} {
+        font-size: rem-calc(14);
+      }
+    }
+    .story-thumb {
+      float: left;
+      margin: rem-calc(0 15 5 0);
+      padding: 0;
+
+      @media #{$small-only} {
+        width: rem-calc(80);
+      }
+    }
+    p {
+      color: white;
+      font-size: rem-calc(12);
+      font-weight: 400;
+      line-height: 1.3;
+      @include gotham(400, true);
+
+      @media #{$medium-up} {
+        font-size: rem-calc(14);
+      }
+      a {
+        color: $yellow;
+        font-weight: 800;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+    }
+
+    .slick-dots {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background: white;
+        border-radius: 50%;
+        height: rem-calc(12);
+        margin: rem-calc(0 5);
+        outline: none;
+        overflow: hidden;
+        padding: 0;
+        text-indent: -99em;
+        width: rem-calc(12);
+      }
+      .slick-active button {
+        background: $yellow;
+      }
+    }
+    .slick-slide {
+      outline: none;
+    }
+
+  }
+
+}

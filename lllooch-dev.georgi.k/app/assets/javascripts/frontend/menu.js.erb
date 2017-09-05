@@ -1,0 +1,31 @@
+var Toggler = function(el) {
+	var item   = $('[data-toggle-item=' + el.data('toggle') + ']'),
+		opened = item.hasClass('active')
+	;
+
+	var toggle = function() {
+		opened = !opened;
+		item.toggleClass('active', opened);
+		if (opened)
+			item.find('input[data-focus]').focus();
+	};
+
+	el.click(function(e) {
+		toggle();
+		e.preventDefault();
+		return false;
+	});
+
+	$('body').click(function(e) {
+		if (opened && !$(e.target).closest(item).size() )
+		{
+			toggle();
+		}
+	})
+}
+
+$(document).on('ready page:load', function() {
+	$('[data-action=toggle]').each(function() {
+		new Toggler($(this));
+	});	
+});

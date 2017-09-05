@@ -1,0 +1,45 @@
+<div>
+  <div class="clear">&nbsp;</div>
+
+  <div class="filter_row">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Games</h4>
+      </div>
+      <div class="col-md-8">
+        <span class="green"><a href="#">Join More Contest »</a></span>
+        <span class="green"><%= link_to 'View my Lineups', lineups_path %></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="live-contests-dest">
+    <table class="contestHead table sortable">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th data-defaultsort="desc">Game date</th>
+        <th class="srt-live-in">Start / Ext ID</th>
+        <th>Home</th>
+        <th>Away</th>
+        <th>Status</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @games.each do |game| %>
+          <tr>
+            <td><%= game.id %></td>
+            <td><%= game.playdate %></td>
+            <td><%= game.scheduledstart %><br><%= game.ext_game_id %></td>
+            <td><%= game.home_team.teamalias %></td>
+            <td><%= game.away_team.teamalias %></td>
+            <td><%= game.status %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>

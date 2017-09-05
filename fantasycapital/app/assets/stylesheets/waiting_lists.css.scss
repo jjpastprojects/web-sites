@@ -1,0 +1,98 @@
+$transparency: 0.5;
+
+#splash_index, #waiting_lists_show {
+  background: image-url('splash_bg.png') no-repeat fixed 100% bottom #555555 !important;
+  background: image-url('splash_bg.jpg') no-repeat fixed bottom center #555555 !important     \9;
+  background: image-url('splash_bg.jpg') no-repeat fixed bottom 100% #555555 /IE9 !important;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'droid_sansregular';
+
+  h2 {
+    margin: 15px 0;
+  }
+
+  .logo-container {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    img {
+      width: 600px;
+    }
+  }
+
+  .email-form{
+    padding: 15px;
+  }
+
+  .email-form .form-control {
+    width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    height: 40px;
+  }
+
+  .playnow-box {
+    margin: 0 auto;
+    background-color: #121212;
+    background-color: #000;
+    width: 630px;
+    padding: 30px;
+    background: rgb(0, 0, 0) transparent;
+    background: rgba(0, 0, 0, $transparency);
+    // For version of IE
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.3em;
+    }
+
+    ul {
+      margin-top: 30px;
+      margin-left: 75px;
+      width: 500px;
+      text-align: left;
+    }
+
+    li {
+      width: 50%;
+      float: left;
+      line-height: 1.5em;
+      color: #0FEA6C;
+      font-size: 16px;
+      span {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .join-button {
+    border: none;
+    padding: 20px 0;
+    width: 350px;
+    color: #ffffff;
+    background-color: #0FEA6C;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-family: 'droid_sansbold';
+    font-size: 25px;
+  }
+
+  .social-footer-container {
+    position: fixed;
+    padding-top: 15px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: rgb(0, 0, 0) 0.2;
+    background: rgba(0, 0, 0, 0.2);
+    a {
+      color: #ffffff;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+  }
+}
+

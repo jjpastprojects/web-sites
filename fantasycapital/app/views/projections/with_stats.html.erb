@@ -1,0 +1,32 @@
+<table class="table table-striped sortable">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Game</th>
+      <th class="text-right">Projection</th>
+      <% @stats.each do |stat| %>
+        <th class="text-right" width="9%"><%= stat %></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projections.each do |proj| %>
+      <tr>
+        <td><%= link_to proj.player.name, stats_by_game_projections_path(player_id: proj.player.id) %></td>
+        <td><%= proj.scheduled_game.start_date.in_time_zone("EST") %></td>
+        <td class="text-right"><%= link_to "%.2f" % (proj.fp || -99 ), projection_projection_by_stats_path(proj), style: 'font-size:20px;' %></td>
+        <% @stats.map {|s| stat_of(proj, s)}.each do |stat| %>
+          <% if stat %>
+            <td class="text-right"><%= link_to "%.3f" % (stat.fp || -99), projection_projection_by_stat_projection_by_stat_and_games_path(proj, stat) %></td>
+          <% else %>
+            <td></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

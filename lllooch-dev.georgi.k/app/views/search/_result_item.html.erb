@@ -1,0 +1,22 @@
+<li>
+	<div class="picture">
+		<%= image_tag item[:picture], :width => 240, :height => 240, :alt => '' %>
+	</div>
+
+	<div class="desc">
+		<div class="location">
+			<a href="<%= item[:url] %>">
+				<%= item[:location] %>
+			</a>
+		</div>
+
+
+		<div class="title">
+			<%= item[:title] %>
+		</div>
+
+		<div class="content">
+			<%= item[:content].html_safe %>
+		</div>
+	</div>
+</li>

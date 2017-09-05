@@ -1,0 +1,48 @@
+var Middle = function(el) {
+	var images = el.filter('img');
+
+	var center = function(height) {
+		el.css({
+			top: '50%',
+			marginTop: height ? height : (-1 * el.height()/2)
+		});
+        el.addClass('centered').hide().fadeIn();
+	};
+
+	el.on('middle', function () {
+		center();
+	});
+
+	if (images.size())
+	{
+		images.each(function() {
+			var img = $(this),
+				interval
+			;
+			img.load(function() {
+				if (!img.height())
+				{
+					img.hide();
+					interval = setInterval(function() {
+						if (img.height() > 0)
+						{
+							center();
+							img.show();
+							clearInterval();	
+						}
+					}, 100);
+				}
+
+				center();
+			});
+		});
+	}
+
+	center();
+};
+
+$(document).on('ready page:load', function() {
+	$('[data-action=middle]').each(function() {
+		new Middle($(this));
+	});
+});

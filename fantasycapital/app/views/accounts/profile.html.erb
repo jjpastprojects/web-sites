@@ -1,0 +1,72 @@
+<%= render partial: 'shared/account_heading' %>
+
+<div class="container information grey_bottom_border">
+  <div class="col-md-5">
+    <h4><strong>PERSONAL INFORMATION</strong></h4>
+  </div>
+  <div class="col-md-7">
+    <h4><strong>CONTEST FUNDS</strong></h4>
+  </div>
+</div>
+<div class="clearfix">&nbsp;</div>
+
+<div class="container informationdetails grey_bottom_border">
+  <div class="col-md-5">
+    <table class="table-responsive personalinformation" width="100%">
+      <tbody>
+      <tr>
+        <td><strong>Username</strong></td>
+        <td><%= current_user.email %></td>
+      </tr>
+
+      <tr>
+        <td><strong>Email</strong></td>
+        <td><%= current_user.email %></td>
+      </tr>
+
+      <tr>
+        <td><strong>Address</strong></td>
+        <td>89 Burlington Road<br>
+          Unionville, CT 06085
+          <div class="clearfix">&nbsp;</div>
+          <a href="#"><span class="green">Edits »</span></a></td>
+      </tr>
+
+      <tr>
+        <td><strong>Settings</strong></td>
+        <td><strong>Not Tracked</strong>
+
+          <div class="clearfix">&nbsp;</div>
+          <a href="#"><span class="green">Update »</span></a><br>
+
+          <div class="clearfix">&nbsp;</div>
+          <a href="#"><span class="green">Edit Blocked Users »</span></a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-7 accountdetails">
+    <h5 class="grey_bottom_border"><strong>ACCOUNT DETAILS</strong></h5>
+
+    <div class="col-md-10 grey_bottom_border">
+      <div class="col-md-9"><strong>Balance:</strong></div>
+      <div class="col-md-3"><%= number_to_currency(current_user.account_balance) %></div>
+    </div>
+    <div class="clearfix">&nbsp;</div>
+    <br>
+    <h5 class="grey_bottom_border"><strong>BONUS DETAILS</strong></h5>
+
+    <div class="col-md-10 grey_bottom_border">
+      <div class="col-md-9"><strong>Pending Balance:</strong></div>
+      <div class="col-md-3">$0.00</div>
+    </div>
+  </div>
+</div>
+<div class="clearfix">&nbsp;</div><br>
+
+
+<div class="submitTeam"><input type="submit" name="submit" value="DEPOSIT"><br>
+  <%= image_tag "secure_payment.png" %>
+</div>
+<div class="clearfix">&nbsp;</div>

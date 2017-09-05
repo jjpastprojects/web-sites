@@ -1,0 +1,9 @@
+= sportsdata-client
+
+This library provides an API client to Sports Data LLC for gathering statistics.
+
+== Copyright
+
+Copyright (c) 2014 Kenneth. See LICENSE.txt for
+further details.
+

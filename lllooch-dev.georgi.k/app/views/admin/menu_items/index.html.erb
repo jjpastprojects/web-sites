@@ -1,0 +1,107 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to plus_icon + ' Добавить',
+        new_admin_menu_menu_item_path,
+        :class => 'btn' %>
+  </div>
+
+  <h1>Правка элементов меню: <%= @menu.name %></h1>
+</div>
+
+<%= tabs [[:main, 'Основное', {active: false, path: edit_admin_menu_path(@menu)}], [:items, 'Элементы', {active: true}]] %>
+
+<% if @menu_items.empty? %>
+  <div class="well">
+    Опаньки.. А элементов-то у этого меню нету :(
+  </div>
+<% else %>
+  <table class="table table-hover table-stripped table-nested" data-type="nested" data-nested-url="<%= order_admin_menu_items_path %>">
+    <thead>
+      <tr>
+        <th>
+          Элемент
+        </th>
+        <th width="30%">
+          Ссылка
+        </th>
+        <th width="30%">
+          Страница
+        </th>
+        <th width="60px"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @menu_items.each do |item| %>
+        <tbody data-nested="item" data-nested-id="<%= item.id %>">
+          <tr>
+            <td>
+              <%= item.name %>
+            </td>
+
+            <td>
+              <%= content_tag :div do %>
+                <%= content_tag :small do %>
+                  <%= content_tag :span, 'lllooch.ru/', class: :muted %><%= item.url %>
+                <% end %>
+              <% end %>
+            </td>
+
+            <td>
+              <%= link_to item.page.name, edit_admin_page_path(item.page) if item.page %>
+            </td>
+
+            <td>
+              <%= link_to pencil_icon,
+                  edit_admin_menu_menu_item_path(@menu, item), :class => 'btn btn-mini' %>
+
+              <%= link_to trash_icon(true),
+                  admin_menu_menu_item_path(@menu, item),
+                  :method => :delete,
+                  :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                  :class => 'btn btn-mini btn-danger' %>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="drop-helper<%= ' empty' if item.items.empty? %>">
+              <table class="table table-condenced" data-type="nested" data-nested-url="<%= order_admin_menu_items_path %>">
+                <% item.items.each_with_index do |subitem, index| %>
+                  <tbody data-nested="item" data-nested-id="<%= subitem.id %>">
+                    <tr>
+                      <td>
+                        <%= subitem.name %>
+                      </td>
+
+                      <td<%= ' width=30%' if index == 0 %>>
+                        <%= content_tag :div do %>
+                          <%= content_tag :small do %>
+                            <%= content_tag :span, 'lllooch.ru/', class: :muted %><%= subitem.url %>
+                          <% end %>
+                        <% end %>
+                      </td>
+
+                      <td<%= ' width=30%' if index == 0 %>>
+                        <%= link_to subitem.page.name, edit_admin_page_path(subitem.page) if subitem.page %>
+                      </td>
+
+                      <td<%= ' width=60px' if index == 0 %>>
+                        <%= link_to pencil_icon,
+                            edit_admin_menu_menu_item_path(@menu, subitem), :class => 'btn btn-mini' %>
+
+                        <%= link_to trash_icon(true),
+                            admin_menu_menu_item_path(@menu, subitem),
+                            :method => :delete,
+                            :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                            :class => 'btn btn-mini btn-danger' %>
+                      </td>
+                    </tr>
+                  </tbody>
+                <% end %>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

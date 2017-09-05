@@ -1,0 +1,47 @@
+<div class="logo-container">
+  <%= image_tag 'big_logo.png', alt: 'Fantasy capital logo' %>
+</div>
+
+<div class="playnow-box">
+
+  <h1>
+    The Ultimate Daily<br/>
+    Fantasy Sports Experience
+  </h1>
+
+  <ul>
+    <li><span>Immediate Action</span></li>
+    <li><span>Passionate Community</span></li>
+    <li><span>Maximum Control</span></li>
+    <li><span>Intense Competition</span></li>
+    <li><span>Fast Payouts</span></li>
+    <li><span>Unbeatable Value</span></li>
+  </ul>
+
+  <div class="clearfix"></div>
+
+  <div class="email-form">
+    <%= form_for @waiting_list do |f|  %>
+      <%= f.email_field :email, autofocus: true, required: true, placeholder: 'Your email address', class: 'form-control' %>
+      <%= f.hidden_field :invited_by_token %>
+      <%= f.submit 'JOIN BETA GROUP', class: 'join-button' %>
+    <% end %>
+  </div>
+</div>
+
+<div class="social-footer-container">
+  <%= link_to 'https://twitter.com/fantasycapital' do %>
+    <%= image_tag 'twitter.jpg', alt: 'Fantasy capital Twitter page' %>
+    Twitter
+  <%end %>
+
+  <%= link_to 'https://www.facebook.com/pages/Fantasy-Capital/217352488447037' do %>
+    <%= image_tag 'facebook.jpg', alt: 'Fantasy capital Facebook page' %>
+    Facebook
+   <% end %>
+
+  <%= link_to 'https://plus.google.com/b/113355143365224061494/113355143365224061494/posts' do %>
+    <%= image_tag 'gplus.jpg', alt: 'Fantasy capital Google Plus page' %>
+    Google+
+  <% end %>
+</div>

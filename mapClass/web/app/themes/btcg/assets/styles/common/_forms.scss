@@ -1,0 +1,21 @@
+
+//
+// Buttons
+//
+button,
+.button {
+  font-size: rem-calc(14);
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  @media #{$large-up} {
+    font-size: rem-calc(16);
+  }
+}
+
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}

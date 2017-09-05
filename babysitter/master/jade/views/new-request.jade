@@ -1,0 +1,100 @@
+h3 Create a New Babystting Request
+  small Complete the form below to create and send a babysitting request to your village.
+
+// START panel
+form(role='form')
+.panel.panel-default
+  .panel-body
+    
+    .form-group(ng-controller='DatepickerDemoCtrl as dpick')
+                label.col-sm-12.control-label.sr-only Date
+                .col-sm-12
+                  p.input-group
+                    input.form-control(type='text', name="date", required='', uib-datepicker-popup='{{dpick.format}}', ng-model='dpick.date', is-open='dpick.opened', min-date='dpick.minDate', max-date="'2019-12-22'", uib-datepicker-options='dpick.dateOptions', date-disabled='dpick.disabled(date, mode)', close-text='Close')
+                    span.input-group-btn
+                      button.btn.btn-default(type='button', ng-click='dpick.open($event)')
+                        em.fa.fa-calendar
+                  span.text-danger(ng-show="form.validateInput('date', 'required')") This field is required
+      .form-group.col-sm-6(ng-controller='TimepickerDemoCtrl as tpick')
+                label.col-sm-2.control-label Start
+                .col-sm-6
+                  uib-timepicker(name="StartTime", required='', ng-model='tpick.mytime', ng-change='tpick.changed()', hour-step='tpick.hstep', minute-step='tpick.mstep', show-meridian='tpick.ismeridian')
+                  span.text-danger(ng-show="form.validateInput('StartTime', 'required')") This field is invalid
+       .form-group.col-sm-6(ng-controller='TimepickerDemoCtrl as tpick')
+                label.col-sm-2.control-label End
+                .col-sm-6
+                  uib-timepicker(name="EndTime", required='', ng-model='tpick.mytime', ng-change='tpick.changed()', hour-step='tpick.hstep', minute-step='tpick.mstep', show-meridian='tpick.ismeridian')
+                  span.text-danger(ng-show="form.validateInput('EndTime', 'required')") This field is invalid
+    .form-group.col-sm-12
+          label.col-sm-2.control-label.sr-only(for='location') Babysitting Location
+          .col-sm-12
+            label.radio-inline.c-radio
+                input(type='radio', name='location' value='1',checked='checked')
+                span.fa.fa-circle
+                | Drop Off
+            label.radio-inline.c-radio
+                input(type='radio', name='location', value='1.5')
+                span.fa.fa-circle
+                | My House
+    .form-group.col-sm-12
+          label.col-sm-12.control-label.sr-only Select Children
+          .col-sm-12
+            // iterate through each child in account
+            label.checkbox-inline.c-checkbox
+              input#inlineCheckbox1(type='checkbox', value='child1')
+              span.fa.fa-check
+              |  Joey
+            label.checkbox-inline.c-checkbox
+              input#inlineCheckbox2(type='checkbox', value='child2')
+              span.fa.fa-check
+              |  Stevie
+            label.checkbox-inline.c-checkbox
+              input#inlineCheckbox3(type='checkbox', value='child3')
+              span.fa.fa-check
+              |  Susie
+    .form-group.col-sm-12
+            label.col-sm-12.control-label.sr-only Notes and special requests
+            .col-sm-12
+                  textarea.form-control(rows="10")
+                    | Notes and special requests (optional)
+    .form-group.col-sm-12
+          label.col-sm-2.control-label.sr-only(for='sendto') Send to entire village or select villagers
+          .col-sm-12
+            label.radio-inline.c-radio
+                input(type='radio', name='sendto' value='0',checked='checked')
+                span.fa.fa-circle
+                | Entire Village
+            label.radio-inline.c-radio
+                input(type='radio', name='sendto', value='1')
+                span.fa.fa-circle
+                | Select Villagers
+    .form-group.col-sm-12
+          label.col-sm-12.control-label.sr-only Select Villagers
+          .col-sm-12
+            // if sendto=1, iterate through each villager
+            label.checkbox-inline.c-checkbox
+              input#inlineCheckbox1(type='checkbox', value='villager1')
+              span.fa.fa-check
+              |  June
+            label.checkbox-inline.c-checkbox
+              input#inlineCheckbox2(type='checkbox', value='villager2')
+              span.fa.fa-check
+              |  Jane
+            label.checkbox-inline.c-checkbox
+              input#inlineCheckbox3(type='checkbox', value='villager3')
+              span.fa.fa-check
+              |  Jude
+// END panel
+.panel.panel-default
+  .panel-body
+    .form-group
+          // Points = ((EndTime - StartTime) + If(Date=(Fri,Sat,Sun), 1, 0) + If(#children > 1, 1, 0)) * location
+          label.col-sm-12.control-label This request is worth
+          .col-sm-12
+            // Can increase points, cannot decrease below calculated value
+            select.form-control(name='PointValue')
+              option 6
+              option 7
+              option 8
+          | Points
+    button.btn.btn-sm.btn-default(type='submit') Submit

@@ -1,0 +1,145 @@
+.unwrap
+  .bg-cover(style="background-image: url(app/img/profile-bg.jpg)")
+    .p-xl.text-center.text-white
+      img.img-thumbnail.img-circle.thumb128(src='app/img/user/09.jpg', alt="Image")
+      h3.m0 Ted Berry
+      p Lead director
+      p Proin metus justo, commodo in ultrices at, lobortis sit amet dui. Fusce dolor purus, adipiscing a tempus at, gravida vel purus. 
+  .text-center.bg-gray-dark.p-lg.mb-xl
+    .row.row-table
+      .col-xs-4.br
+        h3.m0 400
+        p.m0 
+          span.hidden-xs Profile 
+          span Views
+      .col-xs-4.br
+        h3.m0 2000
+        p.m0 Likes
+      .col-xs-4
+        h3.m0 100
+        p.m0 Following
+  // START row
+.row
+  .col-sm-12
+    // START panel
+    .panel.panel-default
+      .panel-body
+        form(role='form')
+                .col-sm-6
+                  .form-group
+                    label.sr-only(for='input-FirstName') First Name
+                    input.form-control(type='text', name='FirstName', placeholder='First name')
+                .col-sm-6
+                  .form-group
+                    label.sr-only(for='input-LastName') Last Name
+                    input.form-control(type='text', name='LastName', placeholder='Last name')
+                .col-sm-12
+                        .form-group
+                          label.col-sm-2.control-label Gender
+                          .col-sm-10
+                            label.radio-inline.c-radio
+                              input#inlineradio1(type='radio', name="Gender", value='Female', checked)
+                              span.fa.fa-circle
+                              |  Female
+                            label.radio-inline.c-radio
+                              input#inlineradio2(type='radio', name="Gender", value='Male')
+                              span.fa.fa-circle
+                              |  Male
+                .col-sm-12
+                    .form-group
+                        label.sr-only(for='input-birthday') Date of Birth
+                        input.form-control(type='text', name='birthday', masked="", data-inputmask="'mask': '99/99/9999'", placeholder="Birthday")
+                .col-sm-6
+                    .form-group
+                        label.sr-only(for='input-SpouseFirstName') Spouse's First Name
+                        input.form-control(type='text', name='SpouseFirstName', placeholder="Spouse's first name")
+                .col-sm-6
+                    .form-group
+                        label.sr-only(for='input-SpouseLastName') Spouse's last Name
+                        input.form-control(type='text', name='SpouseLastName', placeholder="Spouse's last name")
+                .col-sm-12
+                    .form-group
+                        label.sr-only(for='input-Address1') Address
+                        input.form-control(type='text', name='Address1', placeholder='Address')
+                .col-sm-12
+                    .form-group
+                        label.sr-only(for='input-Address2') Address
+                        input.form-control(type='text', name='Address2', placeholder='Suite, Apartment #, etc.')
+                .col-sm-6
+                    .form-group
+                        label.sr-only(for='input-City') City
+                        input.form-control(type='text', name='City', placeholder='City')
+                .col-xs-6.col-sm-3
+                    .form-group
+                        label.sr-only(for='input-State') State
+                        select.form-control(name='State')
+                          option Ohio
+                          option Other state 1
+                          option Other state 2
+                          option Other state 3
+                .col-xs-6.col-sm-3
+                    .form-group
+                        label.sr-only(for='input-ZipCode') Zip/Postal Code
+                        input.form-control(type='text', name='ZipCode', placeholder='Zip/Postal Code')
+                .col-sm-12
+                    .form-group
+                        label.sr-only(for='input-Email') Email address
+                        input.form-control(type='email', name="Email" placeholder='Enter email', autocomplete="off", ng-model="login.account.email", required='')
+                 .col-xs-3
+                     .form-group
+                        label.sr-only(for='input-PhoneType') Phone Type
+                        select.form-control(name='PhoneType')
+                          option Mobile
+                          option Home
+                          option Work
+                .col-xs-9
+                    .form-group
+                        label.sr-only(for='input-Phone') Phone number
+                        input.form-control(type='text', name='Phone', masked="", data-inputmask="'mask': '(999) 999-9999'", placeholder="Phone number")
+
+            
+          .col-xs-12
+            button.btn.btn-sm.btn-default(type='submit') Submit
+    // END panel
+    
+.row
+  .col-sm-12
+    // START panel
+    .panel.panel-default
+      .panel-heading Add Child
+      .panel-body
+        form(role='form')
+                .col-sm-6
+                  .form-group
+                    label.sr-only(for='input-FirstName') First Name
+                    input.form-control(type='text', name='FirstName', placeholder='First name')
+                .col-sm-6
+                        .form-group
+                          label.col-sm-4.control-label Gender
+                          .col-sm-8
+                            label.radio-inline.c-radio
+                              input#inlineradio1(type='radio', name="Gender", value='Female', checked)
+                              span.fa.fa-circle
+                              |  Girl
+                            label.radio-inline.c-radio
+                              input#inlineradio2(type='radio', name="Gender", value='Male')
+                              span.fa.fa-circle
+                              |  Boy
+                 .col-sm-12
+                    .form-group
+                        label.sr-only(for='input-birthday') Date of Birth
+                        input.form-control(type='text', name='birthday', masked="", data-inputmask="'mask': '99/99/9999'", placeholder="Birthday")
+                .col-sm-12
+                  .form-group
+                    label.sr-only(for='input-Notes') Allergies and special considerations
+                    input.form-control(type='text', name='Notes', placeholder='Allergies and special considerations (optional)')
+                .col-sm-12
+                    .form-group
+                    .col-xs-4
+                      label.control-label Potty Trained?
+                      .col-xs-8
+                        label.checkbox.checkbox-inline
+                          input#inlineCheckbox1(type='checkbox', name='PottyTrained', value='yes')
+                          |  I am potty trained
+            .col-xs-12
+                button.btn.btn-sm.btn-default(type='submit') Submit

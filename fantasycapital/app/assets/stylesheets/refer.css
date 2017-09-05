@@ -1,0 +1,87 @@
+.earningSection {
+    padding: 15px 10px;
+    margin: 15px 0
+}
+
+.earningSection h1 {
+    padding-right: 20px;
+}
+
+.earningSection h1.border {
+    border-right: 1px solid #CCCCCC;
+}
+
+.earningSection span {
+    font-size: 13px;
+}
+
+.earningSection .green {
+}
+
+@media (max-width: 768px) {
+    .earningSection h1 {
+        padding-right: 0px;
+    }
+
+    .earningSection h1.border {
+        border-right: none;
+        width: 100%
+    }
+
+    .earningSection .list-inline > li {
+        padding: 5px
+    }
+
+    .earningSection span {
+        margin: 0
+    }
+}
+
+.inviteFriend {
+    background: #565656;
+    border-radius: 10px;
+    padding: 15px 20px;
+    width: auto;
+}
+
+.inviteFriend h2, .inviteFriend h4 {
+    color: #fff
+}
+
+.inviteFriend .list-inline li {
+    margin: 10px 0 20px 0
+}
+
+.inviteFriend p {
+    color: #a7a7a7
+}
+
+.inviteFriend h3 {
+    color: #a7a7a7;
+    font-size: 18px;
+}
+
+.inviteFriend input[type=text], .inviteFriend textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc9c9;
+    color: #8e8e93;
+    padding: 5px 10px;
+}
+
+.inviteFriend input.submit {
+    float: left;
+    margin: 0px 10px 10px 0px
+}
+
+a.greylink {
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .inviteFriend .dark_grey {
+        background: none
+    }
+}

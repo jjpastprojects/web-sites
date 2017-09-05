@@ -1,0 +1,20 @@
+<li<%= ' class=active' if @current_menu_item == item.path or current_url?(send(item.path)) or (!item.items.empty? and item.items.select{|a| current_url?(send(a.path))}.size > 0) %>>
+  <% unless item.items.empty? %>
+    <div>
+      <%= item.title %>
+    </div>
+    <ul class="b-submenu">
+      <% item.items.each do |subitem| %>
+        <li<%= ' class=active' if current_url?(send(subitem.path)) %>>
+          <a href="<%= send subitem.path %>">
+            <%= subitem.title %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <a href="<%= send item.path unless item.path.nil? %>">
+      <%= item.title %>
+    </a>
+  <% end %>
+</li>

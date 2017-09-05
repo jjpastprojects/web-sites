@@ -1,0 +1,529 @@
+@import 'variables';
+
+// Place all the styles related to the entries controller here.
+// Place all the styles related to the entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.teamDraft {
+  background: #505e6c;
+  color: #fff;
+  padding: 30px 20px 60px 20px !important;
+  border-radius: 10px 10px 0 0 !important;
+  margin: 0;
+
+  h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+
+    &.bold {
+      font-family: 'droid_sansbold';
+      float: left;
+      margin: 0;
+    }
+  }
+
+  h4 {
+    font-size: 21px;
+    float: left;
+    padding: 2px 15px 0 15px;
+  }
+
+  p {
+    color: #e3eaf0;
+    font-size: 14px;
+    padding: 5px 0;
+
+    strong.green {
+      margin: 0;
+    }
+  }
+}
+.timingschedule {
+  background: none repeat scroll 0 0 #2e363e;
+  border-radius: 0 0 10px 10px;
+  color: #FFFFFF;
+  padding: 15px 20px;
+  font-size: 18px;
+
+  strong {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+}
+
+.contestlive {
+  background: none repeat scroll 0 0 #2e363e;
+  border-radius: 10px;
+  float: right;
+  font-family: 'droid_sansregular';
+  font-size: 23px;
+  margin: 0 0 20px 0;
+  padding: 10px 20px;
+  font-weight: normal;
+
+  strong {
+    font-size: 20px;
+    font-family: 'droid_sansbold';
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teamDraft h4 {
+    float: none;
+    padding: 10px 0;
+  }
+  .teamDraft h1.bold {
+    float: none;
+  }
+}
+
+.col-md2 {
+  width: 48%;
+  float: left;
+  padding: 0 0 0 10px;
+
+  ul.dropdownsport {
+    clear: both;
+    margin: 15px 0 65px;
+    padding: 0;
+
+    li {
+      list-style: none;
+      float: left;
+      width: 44%;
+    }
+
+    .dropdownlogin {
+      padding: 5px 10px 0;
+      color: #555555;
+      font-family: 'droid_sansbold';
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md2 {
+    float: none;
+    margin: 20px 0
+  }
+}
+
+#filterSport {
+  width: auto;
+  border: none;
+
+  li {
+    background: $theme-header-dark;
+    border: none;
+    border-radius: none;
+    text-transform: uppercase;
+    font-family: 'droid_sansbold';
+
+    a {
+      color: #fff;
+      font-size: 17px;
+      padding: 12px;
+      border: none;
+      border-radius: none;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &.active {
+      background: $theme-header-normal;
+      border: none;
+      border-radius: none;
+
+      a {
+        background: none;
+        border: none;
+      }
+    }
+  }
+}
+
+table.no-margin-bottom {
+  margin-bottom: 0px;
+}
+
+table.tab {
+  font-family: 'droid_sansregular';
+  width: 100%;
+
+  .position strong {
+    color: #505e6c;
+  }
+
+  strong  {
+    color: #e3eaf0;
+  }
+
+  strong.home-team {
+    color: $theme-header-dark;
+  }
+
+  thead tr th {
+    background: $theme-header-normal;
+    padding: 10px 0 10px 15px;
+    color: $theme-light-grey1;
+    font-weight: bold;
+  }
+
+  .player-link {
+    color: $theme-medium-grey1;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  tbody tr td {
+    font-size: 13px;
+    padding: 5px 15px 5px 0px;
+
+    .green {
+      font-size: 13px;
+      padding: 0 0 0 10px;
+      margin: 0
+    }
+  }
+}
+
+.tab-pane a.add-to-lineup{
+  text-decoration: none;
+  color: #fff;
+  &:hover{
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+table.tab a[class$="-lineup"] {
+  text-decoration: none;
+  color: #fff;
+  &:hover{
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+$gradient-start: $theme-alternate-green;
+$gradient-stop: $theme-green;
+
+table.tab tbody tr td.scroll-dist {
+  width: 5px;
+  padding: 0;
+  margin: 0;
+}
+table.tab tbody tr td.action-icon, table.tab > tbody > tr > td.action-icon {
+  /*background: none repeat scroll 0 0 #0FEA6C !important;*/
+  color: #FFFFFF;
+  font-family: arial;
+  font-size: 26px;
+  width: 16px;
+  padding: 0 12px;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom,
+    color-stop(0, $gradient-start),
+    color-stop(1, $gradient-stop)
+  );
+  background-image: -o-linear-gradient(bottom,      $gradient-start 0%, $gradient-stop 100%);
+  background-image: -moz-linear-gradient(bottom,    $gradient-start 0%, $gradient-stop 100%);
+  background-image: -webkit-linear-gradient(bottom, $gradient-start 0%, $gradient-stop 100%);
+  background-image: -ms-linear-gradient(bottom,     $gradient-start 0%, $gradient-stop 100%);
+  background-image: linear-gradient(to bottom,      $gradient-start 0%, $gradient-stop 100%);
+}
+
+table.tab > tbody > tr > td, table.tab > thead > tr > th {
+  border-top: none;
+  border-bottom: none;
+}
+
+table.tab tbody tr {
+
+  td {
+    vertical-align: middle;
+  }
+  td span {
+    padding: 0 0 0 10px;
+  }
+  &.lineup-item{
+    td{
+      border-right: 1px solid #d1d1d1;
+    }
+  }
+  td:first-child span {
+    border-left: 0
+  }
+}
+
+
+.col-md2 .col-lg-6 {
+  padding: 0
+}
+
+.col-md2 .col-lg-6 h4 {
+  font-size: 17px;
+  margin: 20px 0 24px;
+}
+
+div.lineups .col-md-4 {
+  /*padding-right: 7px;
+  padding-left: 7px;*/
+}
+
+.submitTeam {
+  width: 300px;
+  margin: 0 auto
+}
+
+.submitTeam input[type=submit] {
+  background: none repeat scroll 0 0 #2e363e;
+  border: medium none;
+  color: #0FEA6C;
+  font-family: 'droid_sansbold';
+  font-size: 28px;
+  padding: 10px 25px;
+}
+a#clear-lineups{
+
+  &:focus, &:hover{
+    text-decoration: none;
+  }
+}
+
+.player-stats.pointer {
+  cursor: pointer;
+}
+
+#new_lineup > div.col-md2 > div.lineups-push-block {
+    float: left;
+    height: 33px;
+    display: block;
+    width: 100%;
+}
+
+.entries_index table, 
+.entries_index table th {
+    text-align: left;
+}
+
+.container .opponent-team {
+  margin: 0;
+  padding: 0;
+}
+
+#filter_player option {
+  font-family: Courier, monospace;
+}
+
+
+#entries-section {
+  min-height: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+#entries-empty {
+    background: url("/assets/white-star.jpg") no-repeat center center;
+    width: 100%;
+    height: 400px;
+}
+@media (max-width: 991px) {
+  #entries-empty {
+    height: 400px;
+  }
+}
+#entries-empty h2 {
+  padding-top: 330px;
+}
+@media (max-width: 991px) {
+  #entries-empty h2 {
+     padding-top: 330px;
+  }
+}
+#entries-empty h2, h3 {
+    text-align: center;
+    font-family: "oswald-regular";
+    text-transform: uppercase;
+    color: #c6c6c6;
+}
+
+.fantasy-subheader-black {
+  margin-left: -20px;
+  margin-right: -20px;
+  background-color: #22272D;
+  color: #0FEA6C;
+  font-family: "oswald-regular";
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+.fantasy-subheader-black > div {
+  height: 140px;
+}
+@media (max-width: 991px) {
+  .fantasy-subheader-black > div {
+    height: auto;
+  }
+}
+.fantasy-subheader-black .subheader .padding {
+  margin: 40px 0 0 20px;
+}
+.fantasy-subheader-black h3 {
+  color: #fff;
+  font-size: 36px;
+  margin-top: 40px;
+}
+.fantasy-subheader-black .subheader h3 {
+  text-align: left;
+  color: #0FEA6C;
+  font-size: 36px;
+}
+.fantasy-subheader-black .subheader p {
+  text-align: left;
+  color: #A9ABAC;
+}
+@media (max-width: 991px) {
+  .fantasy-subheader-black .subheader h3,
+  .fantasy-subheader-black .subheader p {
+    text-align: center;
+  }
+}
+.fantasy-subheader-black p {
+  margin-top: 3px;
+  color: #A9ABAC;
+  text-align: center;
+  margin-bottom:40px;
+}
+.fantasy-subheader-black h3.green, 
+.fantasy-subheader-black p.green {
+  color: #0FEA6C;
+  text-align: center;
+}
+.fantasy-table {
+  font-family: "oswald-regular";
+  font-weight: bold;
+  font-size: 16px;
+}
+.fantasy-table tbody {
+  color: #505E6C;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: normal;
+}
+.drafting-header-row{
+ 
+  border-bottom: 1px solid #DDDFE2;
+  margin-bottom: 40px;
+}
+.drafting-header-row h1 {
+  color: #14F089;
+  font-family: "oswald-regular";
+  font-size: 44px;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+.drafting-header-row p {
+  color: #555;
+  margin-bottom: 0px;
+}
+.drafting-header-row p a  {
+  color: #14F089;
+}
+.drafting-header-row p:last-child {
+  margin-bottom: 40px;
+}
+.drafting-info-row {
+  background-color: #F1F4F5;
+  margin-top: 16px;
+  color: #2E363E;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 20px;
+  background-image: image-url('drafting-header-bg-ball.png');
+  background-repeat: no-repeat;
+  background-position: -56px -14px;
+}
+@media (max-width: 991px) {
+  .drafting-info-row {
+    padding: 25px 0px;
+  }
+}
+.drafting-info-row h3 {
+  font-family: "oswald-regular";
+  font-size: 44px;
+  color: #2E363E;
+}
+.drafting-info-row h6 {
+  font-family: "oswald-regular";
+  font-size: 17px;
+  font-weight: bold; 
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+.drafting-info-row .small-margin-top {
+  margin-top: 6px;
+}
+.drafting-info-row .live-border {
+  color: #8F9599;
+  border: 2px solid #8F9599;
+  font-family: "oswald-regular";
+  font-size: 24px;
+  padding: 0px 6px;
+  float: right;
+  margin-top: 4px
+}
+.drafting-info-row .contest-time {
+  text-align: center;
+  color: #A2A6A9;
+}
+@media (max-width: 991px) {
+  .drafting-info-row .contest-time {
+    text-align: left;
+    color: #2E363E;
+  }
+}
+
+.drafting-info-row .contest-prefix {
+  text-align: center;
+  color: #A2A6A9;
+  line-height: 44px;
+}
+
+.drafting-change-padding .first {
+  padding-left: 25px;
+  padding-right: 5px;
+}
+
+.drafting-change-padding .second {
+  padding-left: 5px;
+  padding-right: 25px;
+}
+
+.drafting-time-section .second {
+  width: auto;
+  padding: 0px;
+}
+
+.drafting-time-section .third {
+  padding-left: 5px;
+  padding-right: 25px;
+  text-align: left; 
+}
+
+.drafting-entries-border {
+  border-bottom: 1px solid #999;
+}
+
+.drafting-subheader-bold {
+  font-weight: bold;
+  letter-spacing: -1px;
+}

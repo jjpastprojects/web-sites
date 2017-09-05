@@ -1,0 +1,96 @@
+@import 'variables';
+
+/*Footer Area*/
+footer {
+  border-top: solid 2px $theme-green;
+  background: image-url('footer-bg.png') no-repeat center center;
+  padding: 30px 10px 45px;
+  width: 100%;
+  margin: 60px 0 0 0;
+}
+
+.footerContainer {
+
+  .logo-row {
+    margin-bottom: 20px;
+  }
+
+  .company-section, .support-section, .contact-section {
+    float: left;
+    width: 33.333333%;
+    padding-left: 0px;
+  }
+
+  .partners-section{
+    padding-left: 0px;
+  }
+
+  .partner-links img {
+    margin: 0 25px 25px 0;
+  }
+
+  li.social-links a:hover, li.partner-links a:hover {
+    text-decoration: none;
+  }
+
+  li.social-links img {
+    margin: 0 15px 15px 0;
+
+  }
+
+  li.item-header {
+    color: #8b8d8f;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  li {
+    list-style: none;
+      margin: 5px 0;
+    a {
+      color: $theme-green;
+    }
+  }
+}
+
+div.zzfooterContainer {
+  margin: 0 auto;
+  min-height: 180px;
+  ul {
+    margin: 25px 0 0;
+    padding: 0;
+    &.left {
+
+      li {
+        float: left;
+        width: 50%;
+        list-style: none;
+
+        a {
+          color: $theme-green;
+          font-size: 17px;
+        }
+      }
+    }
+
+    &.right {
+      li {
+        float: left;
+        list-style: none;
+        margin: 10px 0 10px 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  div.footerContainer {
+    ul.left, ul.right {
+      li {
+        float: none;
+      }
+    }
+
+  }
+}
+
+

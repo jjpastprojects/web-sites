@@ -1,0 +1,30 @@
+<div class="form-group">
+  <label class="col-lg-5 control-label">Bank Account</label>
+  <div class="col-lg-5">
+    <p class="form-control-static">
+      <%= @bank_account.name %> (xxxxxx-<%= @bank_account.last_4 %>)
+      <input type="hidden" id="bank_id" name="bank_id" value="<%= @bank_account.id %>" />
+    </p>
+  </div>
+</div>
+<div class="clearfix"></div>
+
+<div class="form-group">
+  <label class="col-lg-5 control-label">Amount</label>
+  <div class="col-lg-5">
+    <input type="text" id="amount" class="form-control" autocomplete="off"/>
+  </div>
+</div>
+
+<button type="button" id="withdrawal" class="btn btn-large btn-primary pull-right">
+  Withdraw
+</button>
+
+
+<% content_for :after_js do %>
+  <script type="text/javascript">
+    $(document).on("ready page:load", function () {
+      Account.initBankWithdrawal();
+    });
+  </script>
+<% end %>

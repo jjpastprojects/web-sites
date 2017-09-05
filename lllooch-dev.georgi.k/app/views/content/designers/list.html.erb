@@ -1,0 +1,23 @@
+<div class="designers">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <h1>
+        <%= @current_page.title %>
+      </h1>
+
+      <%= @current_page.content.html_safe if @current_page.content %>
+
+
+      <% @designers.each do |d, index| %>
+        <div class="span2">
+          <a href="<%= designers_item_path d %>" class="designers-item">  
+            <img src="<%= image_url d.avatar.url(:preview) %>" />
+            <div class="title">
+              <%= d.name %>
+            </div>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

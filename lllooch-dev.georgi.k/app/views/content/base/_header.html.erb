@@ -1,0 +1,57 @@
+<div class="g-header">
+	<table class="b-header">
+		<tr>
+			<td width="150px">
+				<a href="<%= (defined? catalog_path) ? catalog_path() : '/' %>" class="b-logo"></a>
+			</td>
+
+			<td class="space"></td>
+
+			<td width="1px">
+				<%= render 'content/menu/menu' %>
+			</td>
+
+			<td class="space"></td>
+
+			<td width="1px" class="hide-on-small-desktops">
+				<table class="phones b-header-phone">
+					<tr>
+						<td>
+							<i class="icon icon-phone"></i>
+						</td>
+						<td>
+							<% if phones %>
+								<% phones.each do |phone| %>
+									<%= content_tag :div, phone %>
+								<% end %>
+							<% end %>
+							
+						</td>
+				</table>
+			</td>
+
+			<td class="space"></td>
+
+			<td width="1px">
+				<%= render 'content/languages/languages' %>
+			</td>
+
+			<td class="space small"></td>
+
+			<td width="60px">
+				<a href="#" class="b-search-link" data-action="toggle" data-toggle="search-form">
+					<i class="icon icon-search"></i>
+				</a>
+
+				<ul class="b-search" data-toggle-item="search-form">			
+					<form action="<%= search_path %>">
+						<input type="text" name="q" data-focus />
+						<button>
+							<i class="icon icon-search"></i>
+						</button>
+					</form>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</div>

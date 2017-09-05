@@ -1,0 +1,38 @@
+doctype html
+html(lang="en", data-ng-app="komae")
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+
+    meta(name='description', content='{{app.description}}')
+    meta(name='keywords', content='babysitting exchange, trusted childcare, free babystting, free childcare, babysitting co-op')
+
+    title(data-ng-bind="::pageTitle()") Komae - Exchange Babysitting with Your Friends!
+    // Bootstrap styles
+    link(rel='stylesheet', href='app/css/bootstrap.css', data-ng-if="!app.layout.isRTL")
+    link(rel='stylesheet', href='app/css/bootstrap-rtl.css', data-ng-if="app.layout.isRTL")
+    // Application styles
+    link(rel='stylesheet', href='app/css/app.css', data-ng-if="!app.layout.isRTL")
+    link(rel='stylesheet', href='app/css/app-rtl.css', data-ng-if="app.layout.isRTL")
+    // Themes
+    link(rel='stylesheet', ng-href='{{app.layout.theme}}', data-ng-if="app.layout.theme")
+    // Icons
+    link(rel='shortcut icon', href='app/img/favicon.ico', type='image/x-icon')
+    link(rel='icon', href='app/img/favicon.ico', type='image/x-icon')
+    link(rel='icon', href='app/img/favicon-196x196.png', type='image/png', sizes='196x196')
+    link(rel='icon', href='app/img/favicon-128x128.png', type='image/png', sizes='128x128')
+    link(rel='icon', href='app/img/favicon-96x96.png', type='image/png', sizes='96x96')
+    link(rel='icon', href='app/img/favicon-32x32.png', type='image/png', sizes='32x32')
+    link(rel='icon', href='app/img/favicon-16x16.png', type='image/png', sizes='16x16')
+
+  body.layout-boxed(data-ng-class="{ 'layout-fixed' : app.layout.isFixed, 'aside-collapsed' : app.layout.isCollapsed, 'layout-fs': app.useFullLayout, 'hidden-footer': app.hiddenFooter, 'layout-h': app.layout.horizontal, 'aside-float': app.layout.isFloat, 'offsidebar-open': app.offsidebarOpen, 'aside-toggled': app.asideToggled}")
+
+    // div(data-preloader) save for loading into dashboard only.  hidden for dev
+
+    .wrapper(data-ui-view="", data-autoscroll='false')
+
+    script(src='app/js/base.js')
+    script(src='app/js/app.js')
+    //- templates:js
+    //- endinject

@@ -1,0 +1,5 @@
+- name: Наличными
+  key: PaymentType::Cash
+
+- name: Безналичный расчет
+  key: PaymentType::Noncash

@@ -1,0 +1,43 @@
+<div>
+  <div class="clear">&nbsp;</div>
+
+  <div class="filter_row">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Users</h4>
+      </div>
+      <div class="col-md-8">
+        <span class="green"><a href="#">Join More Contest »</a></span>
+        <span class="green"><%= link_to 'View my Lineups', lineups_path %></span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="live-contests-dest">
+    <table class="contestHead table sortable">
+      <thead>
+      <tr>
+        <th>Username</th>
+        <th >Email</th>
+        <th data-defaultsort="desc">Created at</th>
+        <th>Last Login</th>
+        <th>Admin?</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @users.each do |user| %>
+          <tr>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+            <td><%= user.last_sign_in_at %></td>
+            <td><%= user.created_at %></td>
+            <td><%= user.admin %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>

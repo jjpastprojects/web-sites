@@ -1,0 +1,245 @@
+<!-- <div class='jumbotron team teamDraft'>
+  <div class='contestlive'>
+    <strong> Contest Live In</strong>
+    <%= countdown_tag @contest.start_at %>
+  </div>
+  <h1>Draft Your Team</h1>
+
+  <p>
+    Choose from the available players below, and submit your team.
+    <br/>
+    You can edit your team at any time until the game starts.
+  </p>
+
+  <p>
+    <strong class='green'>Full Contest Rules & Prizes »</strong>
+  </p>
+
+  <h1 class="bold"><%= @contest.sport %></h1>
+  <h4>(Mon-Thurs) [5 step 1 Tix Gtd.]</h4>
+
+  <h1 class='bold'> <%= number_to_currency @contest.prizepool, precision: 0 %> Prize Pool</h1>
+</div>
+
+<p class='timingschedule'>
+  <strong>Start Time:</strong>
+  October 14,2013 at 8:40pm EST
+  <strong>Entry Fee:</strong>
+  <%= contest_entry_fee @contest %>
+  <strong>Entries:</strong>
+  <span class='green'>564/Uni »</span>
+</p>
+
+<div class='welcomeNote'>SELECT THE BEST TEAM WITHOUT EXCEEDING THE SALARY CAP.</div> -->
+<div class='row drafting-info-row'>
+  <div class='col-md-3'>
+    <div class='row drafting-change-padding'>
+      <div class='col-xs-6 first'>
+        <h3 class='text-right'>NBA</h3>
+      </div>
+      <div class='col-xs-6 second'>
+        <h6>50/50</h6>
+        <p class="small-margin-top"><strong>12-31-2014</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-5'>
+    <div class='row hidden-xs hidden-sm drafting-change-padding'>
+      <div class='col-xs-3 first'>
+        <h3 class='text-right'>$9</h3>
+      </div>
+      <div class='col-xs-9 second'>
+        <h6>PRIZE POOL</h6>
+        <p class="small-margin-top">Entry fee: <strong>$1</strong> Entries: <strong class='drafting-entries-border'>15/100</strong></p>
+      </div>
+    </div>
+    <div class='row hidden-md hidden-lg drafting-change-padding'>
+      <div class='col-xs-6 first'>
+        <h3 class='text-right'>$9</h3>
+      </div>
+      <div class='col-xs-6 second'>
+        <h6>PRIZE POOL</h6>
+        <p class="small-margin-top">Entry fee: <strong>$1</strong> Entries: <strong>15/100</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class='col-md-4'>
+    <div class='row hidden-xs hidden-sm drafting-time-section'>
+      <div class='col-xs-4 first'>
+        <p class='live-border'>LIVE</p>
+      </div>
+      <div class='col-xs-2 second'>
+        <p class='contest-prefix'>in</p>
+      </div>
+      <div class='col-xs-6 third'>
+        <h3>4:12:24</h3>
+        <p class='contest-time'>8:40pm EST</p>
+      </div>
+    </div>
+    <div class='row hidden-md hidden-lg'>
+      <div class='col-xs-6'>
+        <h3 class='text-right'>LIVE in</h3>
+      </div>
+      <div class='col-xs-6'>
+        <h3 class='text-left'>4:12:24</h3>
+        <p class='contest-time'>8:40pm EST</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='row drafting-header-row'>
+  <div class='col-md-12 text-center'>
+    <h1>DRAFT YOUR TEAM</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+    <p> sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><a href='#'>Full contest rules and prizes &gt;&gt;</a></p>
+  </div>  
+</div>
+
+
+
+<div class='col-md2 '>
+  <h2 class='drafting-subheader-bold'>AVAILABLE PLAYERS</h2>
+  <ul class='dropdownsport'>
+    <li>
+      <div class='styled-select'>
+
+        <%= select :filter, :player, options_for_select(collection_for_sports_options), {include_blank: "ALL GAMES"} %>
+
+      </div>
+    </li>
+    <li>
+      <input placeholder="Search" type="text" id="js-draft-search">
+    </li>
+  </ul>
+
+  <ul id='filterSport' class='nav nav-tabs'>
+    <li class="active">
+      <a href="#ALL">ALL</a>
+    </li>
+    <% @positions.each do |position| %>
+        <li>
+          <%= link_to position.name, "##{position.name} " %>
+        </li>
+    <% end %>
+  </ul>
+  
+  <div class="js-draft-emitter">
+    <table class="tab lineup table striped-grid no-margin-bottom">
+      <thead>
+        <tr>
+          <th class="position">POS</th>
+          <th class="player">PLAYER</th>
+          <th class="opp">OPP</th>
+          <th class="salary">SALARY</th>
+          <th class="ffpg">FPPG</th>
+          <th class="add">&nbsp;</th>
+          <th class="scroll-dist">&nbsp;</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+  <!-- render drafting table body with all players -->
+
+  <div class="tab-content same-height js-draft-receiver padding-right">
+    <div class='tab-pane active' id="ALL">
+      <table class='tab lineup table sortable striped-grid'>
+        <thead class="hide">
+        <tr>
+          <th class="position">POS</th>
+          <th data-defaultsort="asc" class="player">PLAYER</th>
+          <th class="opp">OPP</th>
+          <th class="salary" data-defaultsort="desc">SALARY</th>
+          <th class="ffpg">FPPG</th>
+          <th class="add">&nbsp;</th> 
+          <th class="scroll-dist">&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody id="lineup-eligible-players-el">
+          <!-- filled in via bootstrap -->
+          <!-- < render partial: 'lineups/lineup_player', collection: @contest.eligible_players, as: :player %> -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <p class='green'>Export to CSV »</p>
+</div>
+<!-- right half of screen - chosen lineup -->
+<%= form_for @lineup do |f| %>
+    <div class='col-md2'>
+      <h2 class='drafting-subheader-bold'>LINEUP</h2>
+
+      <div class='col-lg-6'>
+        <h4>
+          <strong> AVG. REM./PLAYER:</strong>
+          <span id='avg-rem-salary' class="currency">
+            <%= number_to_currency consumed_salary(@lineup), precision: 0 %>
+          </span>
+        </h4>
+      </div>
+      <div class='col-lg-6'>
+        <h4 class="salary-wrapper">
+          <strong> REM./SALARY:</strong>
+          <span id='contest-salary-cap' class="currency" data-salary=<%= @contest.salary_cap %>>
+             <%= number_to_currency @contest.salary_cap - consumed_salary(@lineup), precision: 0 %>
+          </span>
+        </h4>
+      </div>
+      <div class="lineups-push-block"></div>
+      <!-- render chosen lineup -->
+
+      <table class='tab same-height striped-grid'>
+        <thead>
+        <tr>
+          <th>POS</th>
+          <th>PLAYER</th>
+          <th>OPP</th>
+          <th>SALARY</th>
+          <th>FPPG</th>
+          <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%= f.fields_for :lineup_spots do |spot_form| %>
+            <% spot = spot_form.object %>
+            <% position = spot.sport_position %>
+            <%= content_tag :tr, id: dom_id(spot), class: 'lineup-spot', data: {sport_position_name: position.name, player_id: spot.player_id, spot: spot.spot} do %>
+              <td class="position">
+                <strong><span><%= position.name %> </span></strong>
+                <%= spot_form.hidden_field :sport_position_id %>
+                <%= spot_form.hidden_field :spot %>
+              </td>
+              <td class='player val player-stats'>
+                <span class="player-link"></span>
+                <%= spot_form.hidden_field :player_id %>
+              </td>
+              <td class='opp val'>
+                <span>&nbsp;</span>
+              </td>
+              <td class='salary val'>
+                <span class="currency">&nbsp;</span>
+              </td>
+              <td class='fppg val'>
+                <span>&nbsp;</span>
+              </td>
+              <td class='action-icon'><%= link_to 'x', '#_', class: 'remove-from-lineup', data: {lineup_spot: spot.spot} %> </td>
+            </tr>
+          <% end %>
+        <% end %>
+        </tbody>
+      </table>
+      <%= link_to 'Import »', '#_', class: 'green', id: 'import-lineups' %>
+      <%= link_to 'Clear »', '#_', class: 'green', id: 'clear-lineups' %>
+    </div>
+
+    <%= f.hidden_field :sport %>
+    <%= f.hidden_field :contest_id_to_enter %>
+    <div class='clear'> &nbsp;</div>
+    <div class='submitTeam'>
+      <%= f.submit 'SUBMIT TEAM', disable_with: 'Please wait...' %>
+    </div>
+<% end %>
+

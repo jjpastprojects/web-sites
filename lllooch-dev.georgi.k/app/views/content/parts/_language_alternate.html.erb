@@ -1,0 +1,3 @@
+<% languages.all.each do |l| %>
+    <link rel="alternate" hreflang="<%= l.slug %>" href="http://lllooch.ru<%= url_for(locale: l.slug) %>/" />
+<% end %>

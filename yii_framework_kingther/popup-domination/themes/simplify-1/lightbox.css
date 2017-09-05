@@ -1,0 +1,449 @@
+@import url("../popreset.css");
+
+.popup-dom-lightbox-wrapper .clear {
+	clear: both;
+}
+
+
+.popup-dom-lightbox-wrapper {
+	height: 100%;
+	min-height: 350px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+
+.popup-dom-lightbox-wrapper .lightbox-overlay{
+	background-image:url('images/bg-trans.png');
+	height: 100%;
+	min-height: 350px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.popup-dom-lightbox-wrapper .powered {
+	clear: both;
+	text-align: center;
+	margin-top: 0px;
+	padding: 0px;
+	display: block;
+}
+
+.popup-dom-lightbox-wrapper .powered a {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #000;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	padding: 0px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	text-decoration: none;
+}
+
+.popup-dom-lightbox-wrapper .powered a:hover {
+	text-decoration: underline;
+}
+
+
+
+.popup-dom-lightbox-wrapper .lightbox-close {
+	float: right;
+	background-image: url('images/lightbox-close.png');
+	background-image: url('../lightbox-close-ie.png')\0/ !important;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	margin-top: 22px;
+	*position: relative;
+	*top: 35px;
+	*margin-bottom: 0px;
+	margin-right: 22px;
+	height: 32px;
+	width: 30px;
+	background-size: 100%;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-close:hover {
+	background-position: left top;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-close span {
+	display: none;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main {
+	color: #fff;
+	width: 688px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-top {
+	width: 100%;
+	min-height: 115px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius:	15px 15px 0 0;
+	background-repeat: no-repeat;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-top-content {
+	background-position: center bottom;
+	padding: 20px 0px 0px;
+	color: #000;
+	text-align: center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-top .lightbox-heading {
+	font-style: italic;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 35px;
+	font-weight: 600;
+	font-style: italic;
+	line-height: 32px;
+	padding-top: 10px;
+	color: white;
+	margin-bottom: 10px;
+	margin-left: 20px
+	text-align: center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-top .lightbox-subheading {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	padding-top: 10px;
+	font-weight: 200;
+	color: white;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-top img {
+	float: right;
+	margin-right: 50px;
+	margin-top: 30px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-bottom .bullet-listx {
+	margin: 30px 20px 30px 30px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-bottom ul.bullet-list {
+	list-style: none;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-bottom ul.bullet-list li {
+	font-size: 20px;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	background-image: url('images/bullet.png');	
+	background-position: 0px 12px;
+	background-repeat: no-repeat;
+	padding-left: 35px;
+	margin-bottom: 5px;
+	line-height: 33px;
+	color : #2f323b;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom {
+	height: 68px;
+	margin-left: 11px;
+	width: 100%;
+	height: 230px;
+	border-radius: 0 0 15px 15px;
+}
+
+
+.popup-dom-lightbox-wrapper .lightbox-bottom {
+	background-color: white;
+	background-position: left bottom;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 50px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom .secure {
+	font-size: 11px;
+	background-image: url('images/lightbox-secure.png');
+	background-repeat: no-repeat;
+	font-style: italic;
+	padding-left: 22px;
+	margin-top: 10px;
+	margin-left: 5px;
+	line-height: 17px;
+	text-shadow: 0px 1px 0px #fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #d2d0d0;
+	float:left;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-content {
+	float: left;
+	width: 55%
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-content .green-ticks {
+	list-style: none;
+	margin-top: 20px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-content .green-ticks li {
+	background-image: url('images/green-tick.png');
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	font-family: Georgia, Garamond, Times, serif;
+	color: #002753;
+	font-weight: normal;
+	letter-spacing: -1px;
+	text-shadow: 0px 1px 0px #fff;
+	background-position: left center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-content .discover {
+	background-image: url('images/discover.png');
+	background-repeat: no-repeat;
+	height: 12px;
+	width: 176px;
+}	
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-content .discover span {
+	display: none;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-signup-panel {
+	margin: 30px 0 0 -25px;
+	padding-right: 50px;
+}
+
+.lightbox-clear {
+	clear: both;
+}
+.popup-dom-lightbox-wrapper .lightbox-bottom form, .popup-dom-lightbox-wrapper .lightbox-bottom .form {
+	margin-left: 20px;
+	margin-right: auto;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="text"] {
+	background-image: url('images/lightbox-text-box.png');
+	border: 0px;
+	line-height: 20px;
+	height: 20px;
+	padding-right: 10px;
+	padding-top: 10px;
+	float: left;
+	margin: 2px 8px 10px 3px;
+	background-repeat: no-repeat;
+	padding-bottom: 10px;
+	width: 230px;
+	font-family: Georgia, Garamond, Times, serif;
+	font-size: 14px;
+	padding-left: 10px;
+	background-color: transparent;
+	background-position: left top;
+	outline: none;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="text"].email {
+	background-position: left bottom;
+	float: left;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"] {
+	background-repeat: no-repeat;
+	width: 255px;
+	height: 47px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent;
+	border: none;
+	font-size: 15px;
+	color: #fff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #000;
+	text-transform: uppercase;
+	line-height: 45px;
+	float: left;
+	text-align: center;
+}
+
+.popup-dom-lightbox-wrapper  .lightbox-right-content {
+	width: 45%;
+	float: left;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"]:hover {
+	background-position: left center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"]:active {
+	background-position: left bottom;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-blue .lightbox-top {
+	background-image: url('images/blue-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-blue .lightbox-top-text p.heading {
+	color: #005ba2;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-blue .lightbox-top {
+	background-image: url('images/bright-blue-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-green .lightbox-top {
+	background-image: url('images/bright-green-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-green .lightbox-top-text p.heading {
+	color: #00bd13;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-orange .lightbox-top {
+	background-image: url('images/bright-orange-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-orange .lightbox-top-text p.heading {
+	color: #cd6c03;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-red .lightbox-top {
+	background-image: url('images/bright-red-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-red .lightbox-top-text p.heading {
+	color: #e00000;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-turquoise .lightbox-top {
+	background-image: url('images/bright-turquoise-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-turquoise .lightbox-top-text p.heading {
+	color: #00aeaf;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-dark-blue .lightbox-top {
+	background-image: url('images/dark-blue-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-dark-blue .lightbox-top-text p.heading {
+	color: #040d61;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-dark-purple .lightbox-top {
+	background-image: url('images/dark-purple-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-dark-purple .lightbox-top-text p.heading {
+	color: #55056a;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-grape .lightbox-top {
+	background-image: url('images/grape-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-grape .lightbox-top-text p.heading {
+	color: #930056;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-green .lightbox-top {
+	background-image: url('images/green-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-green .lightbox-top-text p.heading {
+	color: #10a618;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-purple .lightbox-top {
+	background-image: url('images/bright-purple-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-purple .lightbox-top-text p.heading {
+	color: #8200b6;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-orange .lightbox-top {
+	background-image: url('images/orange-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-orange .lightbox-top-text p.heading {
+	color: #8e5002;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-red .lightbox-top {
+	background-image: url('images/red-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-red .lightbox-top-text p.heading {
+	color: #a30000;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-turquoise .lightbox-top {
+	background-image: url('images/turquoise-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-turquoise .lightbox-top-text p.heading {
+	color: #027171;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-black .lightbox-top {
+	background-image: url('images/black-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-black .lightbox-top-text p.heading {
+	color: #393939;
+	text-shadow: none;
+}
+
+
+
+
+
+/* The Button Designs
+=======================
+*/
+
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].red-button {
+	background-image: url('images/buttons/red-button.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].dark-red-button {
+	background-image: url('images/buttons/dark-red-button.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].orange-button {
+	background-image: url('images/buttons/orange-button.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].dark-orange-button {
+	background-image: url('images/buttons/dark-orange-button.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].green-button {
+	background-image: url('images/buttons/green-button.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].dark-green-button {
+	background-image: url('images/buttons/dark-green-button.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].blue-button {
+	background-image: url('images/buttons/blue-button.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].dark-blue-button {
+	background-image: url('images/buttons/dark-blue-button.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-bottom input[type="submit"].purple-button {
+	background-image: url('images/buttons/dark-blue-button.png');
+}

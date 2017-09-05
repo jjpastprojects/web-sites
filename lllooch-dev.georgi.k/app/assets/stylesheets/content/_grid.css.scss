@@ -1,0 +1,46 @@
+@include row('.row');
+
+.row {
+	margin-left: -30px;
+
+	*[class*=span] {
+		margin-left: 30px;
+		float: left;	
+	}
+	.span2 {
+		width: 385px;
+	}
+
+	.span4 {
+		width: 160px;
+	}
+
+  .pull-right {
+    float: right;
+  }
+
+  .pull-left {
+    margin-left: 30px;
+    float: left;
+  }
+}
+
+@include row(".row-fluid");
+
+.container-fluid {
+	margin: 0 80px;
+
+	.row-fluid {
+		*[class*=span] {
+			float: left;	
+		}
+
+		.span2 {
+			width: 20%;
+		}
+
+		.span6 {
+			width: 60%;
+		}
+	}	
+}

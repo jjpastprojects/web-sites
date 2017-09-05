@@ -1,0 +1,14 @@
+<script type="text/template" id="entry-summary-template">
+    <tr data-entry-id="<%= entry.get('id') %>" data-game-ids="<%= entry.get_game_ids() %>">
+        <td class="position"><%= position %></td>
+        <td><img alt="User" class="user" src="<%= user_img %>"></td>
+        <td><span class="green"><%= entry.get('username') %></span></td>
+        <td><span class="entry-min-remaining"> <%= entry.min_left() %></span>
+            <progress class="entry-progress-bar" value="<%= entry.min_left() %>" max="<%= entry.total_gamelength() %>"></progress>
+        </td>
+        <td class="fantasypoints"><%= entry.get_total_score() %></td>
+        <!--<td>$300K NFL Bomb Entry</td>-->
+        <td><!--1st Prize $500, etc --></td>
+        <!--<td>< number_to_currency(@contest.prize, unit: '$') %> < @contest.sport %> < @contest.contest_type %></td>-->
+    </tr>
+</script>

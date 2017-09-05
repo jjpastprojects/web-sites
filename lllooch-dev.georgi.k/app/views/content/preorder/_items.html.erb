@@ -1,0 +1,9 @@
+<ul class="order-items">
+	<li class="order-heading">
+		<%= T "Ваш заказ:" %>
+	</li>
+	
+	<% items.each do |item| %>
+		<%= render 'content/order/item', :item => item %>
+	<% end %>
+</ul>

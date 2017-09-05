@@ -1,0 +1,31 @@
+<table class="table table-striped sortable">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Game</th>
+      <% @stats.each do |stat| %>
+        <th class="text-right" width="11%"><%= stat %></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games_played.each do |gp| %>
+      <tr>
+        <td><%= gp.player.name %></td>
+        <td><%= gp.game.start_date.in_time_zone("EST") %></td>
+        <% player_stats = Projection::Stat.where(player: gp.player, game: gp.game).all %>
+        <% @stats.map {|s| lookup_stat(player_stats, gp.game.stats_event_id, gp.player, s)}.each do |stat| %>
+          <% if stat %>
+            <td class="text-right"><%= "%.2f" % stat.stat_value %></td>
+          <% else %>
+            <td></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

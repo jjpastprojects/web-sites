@@ -1,0 +1,105 @@
+<%= render 'shared/topbar' %>
+
+<header>
+  <div class='container'>
+    <h1 class='logo'>
+      <%= link_to root_path do%>
+        <%= image_tag 'main_logo.png', alt: 'Fantasy Capital' %>
+        <em>Daily Fantasy Sports</em>
+       <% end %>
+    </h1>
+
+    <% if current_user %>
+      <div class='balanceBlock'>
+        <div class="top-border"></div>
+        <strong>Your Balance</strong>
+        <strong class='ajax-modal pull-right' id='add-fund' data-url="<%= add_fund_accounts_path %>">
+          Add Funds
+          <i class="glyphicon glyphicon-plus"></i>
+        </strong>
+        <h1>
+          <sup>$</sup>
+          <%= number_to_currency(current_user.account_balance, unit: '') %>
+        </h1>
+      </div>
+    <% end %>
+
+    <div style="clear:both;"></div>
+    <div class='navbar navbar-default capitalnavbar' role="navigation">
+      <div class='navbar-header'>
+        <button class='navbar-toggle' data-target=".mainMenu" data-toggle="collapse" type="button">
+          <span class='sr-only'>Toggle navigation</span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+      </div>
+      <div class='navbar-collapse collapse mainMenu'>
+        <ul class='nav navbar-nav'>
+          <li class='<%= menu_classes 'home' %>'>
+            <div class="padding">
+              <%= link_to 'Home', root_path %>
+              <div class="line"></div>
+            </div>
+            <div class="arrow-down"></div>
+          </li>
+          <li class='<%= menu_classes 'entries' %>'>
+            <div class="padding">
+              <%= link_to 'Entries', entries_path, :class => ("require-signin" unless user_signed_in?) %>
+              <div class="line"></div>
+            </div>
+          </li>
+          <!--
+          <li class='<%= menu_classes 'lineups' %>'>
+            <div class="padding">
+              <%= link_to 'Lineups', lineups_path, :class => ("require-signin" unless user_signed_in?) %>
+              <div class="line"></div>
+            </div>
+          </li>
+          <li class='<%= menu_classes 'leaderboard' %>'>
+            <div class="padding">
+              <%= link_to 'Leaderboard', users_leadboard_path, :class => ("require-signin" unless user_signed_in?) %>
+              <div class="line"></div>
+            </div>
+          </li>
+          -->
+          <li class='<%= menu_classes 'rules' %>'>
+            <div class="padding">
+              <%= link_to 'Rules/Faq', rules_faq_pages_path, :class => ("require-signin" unless user_signed_in?) %>
+              <div class="line"></div>
+            </div>
+          </li>
+          <li class='<%= menu_classes 'account' %>'>
+            <div class="padding">
+              <%= link_to 'Account', profile_accounts_path, :class => ("require-signin" unless user_signed_in?) %>
+              <div class="line"></div>
+            </div>
+          </li>
+          <li class="welcome-box">
+            <% if user_signed_in? %>
+            <div class="welcome-text">
+              <a href="javascript:void(0)">
+                Welcome, <span class="first-name"><%= current_user.username%></span>
+              </a>
+            </div>
+
+            <ul class="usermenu">
+              <li>
+                <a href="/users/sign_out" data-method="delete" class="sign-out">
+                  Log Out
+                </a>
+              </li>
+            </ul>
+            <% else %>
+              <!--<%= link_to "SIGN UP" , new_user_registration_path, :class => 'link' %>
+              <a href="#" class="link">/</a>
+              <%= link_to "SIGN IN" , new_user_session_path, :class => 'link' %>
+              <span class="arrow">&#10095;</span>-->
+              <%= link_to "JOIN NOW" , '/', :class => 'link require-signin' %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

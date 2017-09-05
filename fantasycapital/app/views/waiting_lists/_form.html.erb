@@ -1,0 +1,9 @@
+<h1>Join our club.</h1>
+
+<%= form_for @waiting_list do |f|  %>
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, required: true %>
+    <%= f.hidden_field :invited_by_token %>
+
+    <%= f.submit 'JOIN BETA GROUP' %>
+<% end %>

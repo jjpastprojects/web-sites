@@ -1,0 +1,33 @@
+<script type="text/template" id="player-template">
+    <tr class="<%= model.hasGameStarted() ? "" : "gray" %>" data-player-id="<%= model.get('id') %>" data-game-id="<%= model.getGameID() %>">
+        <td><h1 class="role"><%= position %></h1></td>
+        <td><strong class="player-name"> <%= model.name() %> </strong>
+
+            <p class="player-score">
+                <% if (model.getTeam() === model.getHomeTeam()) { %>
+                    <strong><%= model.getHomeTeam() %></strong> <%= model.getHomeTeamScore() %> @ <%= model.getAwayTeam() %> <%= model.getAwayTeamScore() %><br><%= model.getMinutesRemaining() %>
+                <% } else { %>
+                    <%= model.getHomeTeam() %> <%= model.getHomeTeamScore() %> @ <strong><%= model.getAwayTeam() %></strong> <%= model.getAwayTeamScore() %><br><%= model.getMinutesRemaining() %>
+                <% } %>
+                <!--<strong>POR</strong> 109 @ <strong>MIN</strong> 120 FINAL-->
+            </p>
+            <p class="player-record-row">
+                      <span class="player-record">
+                          <%= model.get('rtstats') %>&nbsp;
+                        <!--99 P, 0 R, 0 A, 0 S, 0 B, 0 T -->
+                      </span>
+            </p>
+        </td>
+        <td>
+            $<span class="salary"><%= model.get('salary') %></span> <br>
+            SALARY
+        </td>
+        <td><!-- 27.5% <br>
+            OWNED -->
+       
+                <%= percent %> %<br> OWNED
+
+        </td>
+        <td><h1 class="score"><%= parseFloat(model.get('currfps')) %></h1></td>
+    </tr>
+</script>

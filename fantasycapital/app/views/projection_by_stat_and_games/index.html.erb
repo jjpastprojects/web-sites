@@ -1,0 +1,27 @@
+<ol class="breadcrumb">
+  <li><%= link_to @projection_by_stat.projection.player.name, projection_projection_by_stats_path(@projection_by_stat.projection) %></a></li>
+  <li><%= link_to @projection_by_stat.stat_name, projection_projection_by_stat_projection_by_stat_and_games_path(@projection_by_stat.projection, @projection_by_stat) %></a></li>
+</ol>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Stat</th>
+      <th>Projection</th>
+      <th>Projection(weighted)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projection_by_stat_and_games.each do |pbsg| %>
+      <tr>
+        <td><%= pbsg.criteria %></td>
+        <td><%= link_to pbsg.fp.to_s, projection_projection_by_stat_projection_by_stat_and_game_projection_breakdowns_path(pbsg.projection_by_stat.projection, pbsg.projection_by_stat, pbsg) %></td>
+        <td><%= pbsg.weighted_fp %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

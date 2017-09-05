@@ -1,0 +1,177 @@
+h3
+
+  | Home
+  small {{ 'dashboard.WELCOME' | translate:{ appName: app.name } }}  !
+
+// START Widgets
+.row
+  .col-lg-3
+    
+    // START loader widget
+    .panel.panel-default
+      .panel-body
+        a.text-muted.pull-right(href="#"): em.fa.fa-arrow-right
+        .text-info Average Monthly Uploads
+        canvas.center-block(classyloader="", data-percentage="70", data-speed="20", data-font-size="40px", data-diameter="70", data-line-color="{{colorByName('info')}}", data-remaining-line-color="rgba(200,200,200,0.4)", data-line-width="10", data-rounded-line="true")
+        .text-center(sparkline="", data-bar-color="{{colorByName('info')}}", data-height="30", data-bar-width="5", data-bar-spacing="2", values="5,4,8,7,8,5,4,6,5,5,9,4,6,3,4,7,5,4,7")
+      .panel-footer
+        p.text-muted
+          em.fa.fa-upload.fa-fw
+          span This Month
+          span.text-dark 1000 Gb
+    // END loader widget
+  .col-lg-3
+    // START messages and activity
+    .panel.panel-default
+      .panel-heading
+        .panel-title Latest activities
+      // START list group
+      .list-group
+        // START list group item
+        .list-group-item
+          .media-box
+            .pull-left
+              span.fa-stack
+                em.fa.fa-circle.fa-stack-2x.text-purple
+                em.fa.fa-cloud-upload.fa-stack-1x.fa-inverse.text-white
+            .media-box-body.clearfix
+              small.text-muted.pull-right.ml 15m
+              .media-box-heading
+                a(href="#").text-purple.m0 NEW FILE
+              p.m0: small
+                a(href="#") Bootstrap.xls
+        // END list group item
+
+        // START list group item
+        .list-group-item
+          .media-box
+            .pull-left
+              span.fa-stack
+                em.fa.fa-circle.fa-stack-2x.text-info
+                em.fa.fa-file-text-o.fa-stack-1x.fa-inverse.text-white
+            .media-box-body.clearfix
+              small.text-muted.pull-right.ml 2h
+              .media-box-heading
+                a(href="#").text-info.m0 NEW DOCUMENT
+              p.m0: small
+                a(href="#") Bootstrap.doc
+        // END list group item
+
+        // START list group item
+        .list-group-item
+          .media-box
+            .pull-left
+              span.fa-stack
+                em.fa.fa-circle.fa-stack-2x.text-danger
+                em.fa.fa-exclamation.fa-stack-1x.fa-inverse.text-white
+            .media-box-body.clearfix
+              small.text-muted.pull-right.ml 5h
+              .media-box-heading
+                a(href="#").text-danger.m0 BROADCAST
+              p.m0
+                a(href="#") Read
+        // END list group item
+
+        // START list group item
+        .list-group-item
+          .media-box
+            .pull-left
+              span.fa-stack
+                em.fa.fa-circle.fa-stack-2x.text-success
+                em.fa.fa-clock-o.fa-stack-1x.fa-inverse.text-white
+            .media-box-body.clearfix
+              small.text-muted.pull-right.ml 15h
+              .media-box-heading
+                a(href="#").text-success.m0 NEW MEETING
+              p.m0
+                small On 
+                  em 10/12/2015 09:00 am
+        // END list group item
+      // END list group
+      // START panel footer
+      .panel-footer.clearfix
+        a(href='#').pull-left
+          small Load more
+      // END panel-footer
+    // END messages and activity
+  .col-lg-6
+    .panel.panel-default
+      .panel-heading
+        .pull-right.label.label-danger 5
+        .pull-right.label.label-success 12
+        .panel-title Team messages
+      
+      // START list group
+      scrollable.list-group(height="230")
+        // START list group item
+        a.list-group-item(href='#')
+          .media-box
+            .pull-left
+              img.media-box-object.img-circle.thumb32(src="app/img/user/02.jpg", alt="Image")
+            .media-box-body.clearfix
+              small.pull-right 2h
+              strong.media-box-heading.text-primary 
+                span.circle.circle-success.circle-lg.text-left
+                | Catherine Ellis
+              p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla...
+        // END list group item
+        // START list group item
+        a.list-group-item(href='#')
+          .media-box
+            .pull-left
+              img.media-box-object.img-circle.thumb32(src="app/img/user/03.jpg", alt="Image")
+            .media-box-body.clearfix
+              small.pull-right 3h
+              strong.media-box-heading.text-primary 
+                span.circle.circle-success.circle-lg.text-left
+                | Jessica Silva
+              p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla facilisi.
+        // END list group item
+        // START list group item
+        a.list-group-item(href='#')
+          .media-box
+            .pull-left
+              img.media-box-object.img-circle.thumb32(src="app/img/user/09.jpg", alt="Image")
+            .media-box-body.clearfix
+              small.pull-right 4h
+              strong.media-box-heading.text-primary 
+                span.circle.circle-danger.circle-lg.text-left
+                | Jessie Wells
+              p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla...
+        // END list group item
+        // START list group item
+        a.list-group-item(href='#')
+          .media-box
+            .pull-left
+              img.media-box-object.img-circle.thumb32(src="app/img/user/12.jpg", alt="Image")
+            .media-box-body.clearfix
+              small.pull-right 1d
+              strong.media-box-heading.text-primary 
+                span.circle.circle-danger.circle-lg.text-left
+                | Rosa Burke
+              p.mb-sm: small Cras sit amet nibh libero, in gravida nulla. Nulla...
+        // END list group item
+        // START list group item
+        a.list-group-item(href='#')
+          .media-box
+            .pull-left
+              img.media-box-object.img-circle.thumb32(src="app/img/user/10.jpg", alt="Image")
+            .media-box-body.clearfix
+              small.pull-right 2d
+              strong.media-box-heading.text-primary 
+                span.circle.circle-danger.circle-lg.text-left
+                | Michelle Lane
+              p.mb-sm: small Mauris eleifend, libero nec cursus lacinia...
+        // END list group item
+      // END list group
+      // START panel footer
+      .panel-footer.clearfix
+        .input-group
+          input.form-control.input-sm(type='text', placeholder='Search message ..')
+          span.input-group-btn
+            button.btn.btn-default.btn-sm(type='submit')
+              i.fa.fa-search
+      // END panel-footer
+
+  // END dashboard sidebar
+// END Widgets

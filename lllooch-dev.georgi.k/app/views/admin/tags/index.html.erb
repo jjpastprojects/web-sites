@@ -1,0 +1,42 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to plus_icon + ' Добавить',
+        new_admin_tag_path,
+        :class => 'btn' %>
+
+  </div>
+  <h1>Теги</h1>
+</div>
+
+<% if @tags.empty? %>
+  <div class="well">
+    Опаньки.. а тегов-то и нету :(
+  </div>
+<% else %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Тег</th>
+        <th></th>
+        <th width="60px"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tags.each do |tag| %>
+        <tr>
+          <td><%= tag.name %></td>
+          <td><%= tag.goods.size if tag.goods %></td>
+          <td>
+            <%= link_to pencil_icon,
+                        edit_admin_tag_path(tag), :class => 'btn btn-mini' %>
+            <%= link_to trash_icon(true),
+                        admin_tag_path(tag),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-mini btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

@@ -1,0 +1,132 @@
+.form-vertical {
+	margin: 0;
+	border: {
+		top: 1px solid #d7d7d7;
+	}
+}
+
+
+
+form {
+	font-size: 14px;
+
+	a {
+		color: inherit;
+	}
+
+	h2 {
+		font-size: 21px;
+      .cart & {
+        font-size: 30px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+    }
+
+
+	
+	h2.styled {
+		font: {
+			size: 30px;
+			weight: normal;
+		}
+		letter-spacing: -2px;
+		line-height: 40px;
+		text-transform: uppercase;
+		margin: 0 0 20px;
+	}
+
+	.form-row {
+		margin-bottom: 15px;
+	}
+
+	.form-block {
+		margin-bottom: 25px;
+	}
+
+	label {
+		display: block;
+		font-size: 14px; 
+		margin-bottom: 7px;
+	}
+
+  .iradio_minimal {
+    margin: 1px 4px 0 0;
+    background-image: image-url('content/icheck-minimal.png');
+  }
+
+  .radio-label {
+    label {
+      display: inline;
+    }
+
+    .iradio_minimal {
+      float: left;
+    }
+
+    margin-bottom: 7px;
+  }
+
+	.select-wrap {
+		select {
+			width: 100%;
+		}
+	}
+
+	.input-wrap {
+		margin-right: 22px;
+
+		input {
+			border: 1px solid #b6b6b6;
+			background: none;
+			font-size: 13px;
+			width: 100%;
+			padding: 3px 10px;
+			height: 31px;
+			color: #888;
+
+          &.invalid {
+            border-color: #ff6767;
+            color: #ff6767;
+          }
+		}
+	}
+
+	@include inline_list(".text-group");
+	@include inline_list(".radio-group");
+
+	.text-group {
+		margin-left: -8px;
+
+		& > li {
+			margin-left: 8px;
+		}
+
+		&.size-1 {
+			& > li {
+				width: 79px;
+			}
+		}
+
+		&.size-2 {
+			& > li {
+				width: 120px;
+			}
+		}
+
+		line-height: 37px;
+	}
+
+	.radio-group {
+      padding-left: 10px;
+
+		& > li.text {
+			padding-right: 10px;
+		}
+
+		& > li {
+			padding-right: 20px;
+		}
+		margin-bottom: 15px;
+	}
+}

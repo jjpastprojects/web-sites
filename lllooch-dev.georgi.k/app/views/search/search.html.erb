@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="search-results">
+    <h1>
+      Поиск: <a href=""><%= @query %></a>
+    </h1>
+
+    <% if @results.empty? %>
+      По вашему запросу ничего не найдено.
+    <% else %>
+      <ul class="search-results-items">
+        <% @results.each do |r| %>
+          <%= render :partial => 'result_item', :locals => { :item => r } %>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>

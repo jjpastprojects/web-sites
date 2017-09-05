@@ -1,0 +1,113 @@
+ <br>
+  <h2>REFER FRIENDS FOR CASH</h2>
+  <div class="light_grey earningSection">
+    <div class="container">
+      <ul class="list-inline">
+        <li>
+          <ul class="list-inline border">
+            <li><span class="strong">EARNED THIS MONTH:</span></li>
+            <li>
+              <h1 class="border">$0.00</h1>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="list-inline">
+            <li><span class="strong">UNPAID EARNINGS:</span></li>
+            <li>
+              <h1 class="border">$0.00</h1>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="list-inline">
+            <li><span class="strong">CURRENT RATE:</span></li>
+            <li>
+              <h1>20%</h1>
+            </li>
+            <li><a href="#"><span class="green">Payment History »</span></a></li>
+            <li><a href="#"><span class="green">Learn more »</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+ <div class="container inviteFriend">
+    <div class="col-md-6">
+      <h2>INVITE FRIENDS</h2>
+      <div class="clearfix">&nbsp;</div>
+      <h4>SHARE YOUR LINK</h4>
+      <ul class="list-inline">
+        <li><a href="#"><%= image_tag "tw.png" %></a></li>
+        <li><a href="#"><%= image_tag "fb.png" %></a></li>
+        <li><a href="#"><%= image_tag  "gplus.png" %></a></li>
+      </ul>
+      <h4>COPY YOUR PERSONAL URL:</h4>
+      <div class="clearfix">&nbsp;</div>
+      <a href="http://FantasyCapital.com/r/Showpony" class="dark_grey greylink">http://FantasyCapital.com/r/Showpony</a>
+      <div class="clearfix">&nbsp;</div>
+      <br>
+      <p>Post your link on Facebook, Twitter or anywhere else. Everytime you send a referral to our site through YOUR link, and they play in any contest, you earn a share of th cost of the entry.</p>
+    </div>
+    <div class="col-md-6">
+      
+        <%= form_tag("/waiting_lists/inviting", :method => "post") do %>
+
+        <h4>INVITE BY MAIL</h4>
+        <div class="clearfix">&nbsp;</div>
+        <h3>TO:</h3>
+
+        <%= text_field(:invite, :emails, placeholder: 'Enter emails (seperate with commas or spaces)...')%>
+        
+        <h3>MESSAGE:</h3>
+        
+        <%= text_area(:invite, :message, rows: 5, placeholder: "Write a personal message (500 characters max).")%>
+        
+        <div class="clearfix">&nbsp;</div>
+        <%= submit_tag "Send"%>
+        <p>NOTE: Email will always include your personal URL, so we can credit you.</p>
+
+        <% end %>
+    </div>
+  </div>
+
+  <div class="clearfix">&nbsp;</div>
+  <strong>TRANSACTIONS DETAILS</strong>
+  <div class="clearfix">&nbsp;</div>
+  <div class="container fantasytabs">
+    <ul class="nav nav-tabs">
+      <li><a href="#home" data-toggle="tab">PENDING</a></li>
+      <li><a href="#profile" data-toggle="tab">ACTIVE</a></li>
+      <li><a href="#messages" data-toggle="tab">INACTIVE</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="home">
+        <table class="table-responsive refer">
+
+          <tbody><tr><th>FRIENDS</th>
+            <th>STATUS</th>
+            <th>LAST INVITE SENT</th>
+            <th>NUMBER OF TIME SENT</th>
+          </tr></tbody></table>
+        <p>You do not have any transactions in the selected time period.</p>
+      </div>
+      <div class="tab-pane" id="profile"><table class="table-responsive refer">
+
+        <tbody><tr><th>FRIENDS</th>
+          <th>STATUS</th>
+          <th>LAST INVITE SENT</th>
+          <th>NUMBER OF TIME SENT</th>
+        </tr></tbody></table>
+        <p>You do not have any transactions in the selected time period.</p></div>
+      <div class="tab-pane" id="messages"><table class="table-responsive refer">
+
+        <tbody><tr><th>FRIENDS</th>
+          <th>STATUS</th>
+          <th>LAST INVITE SENT</th>
+          <th>NUMBER OF TIME SENT</th>
+        </tr></tbody></table>
+        <p>You do not have any transactions in the selected time period.</p></div>
+    </div>
+  </div>

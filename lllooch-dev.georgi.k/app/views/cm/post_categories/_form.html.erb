@@ -1,0 +1,35 @@
+<%= language_prompt %>
+
+<%= simple_form_for [:cm, @category], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= form_errors f %>
+
+  <%= tabs [[:main, 'Основное'], [:meta, 'META']] %>
+
+  <%= tab_contents do %>
+    <%= tab_pane :main, {active: true} do %>
+      <%= f.input :name %>
+      <%= f.input :slug if @category.id %>
+      <%= f.association :parent, 
+          collection: PostCategory.with_translations('ru').select{|c| c != @category}, 
+          include_blank: 'Отсутствует' if false %>
+
+    <% end %>
+
+    <%= tab_pane :meta do %>
+      <% Globalize.with_locale(@locale.slug) do %>
+        <%= f.input :title %>
+        <%= f.input :heading %>
+        <%= f.input :keywords %>
+        <%= f.input :description %>
+      <% end %>
+    <% end %>
+  <% end %>
+
+  <%= language_input f %>
+
+  <div class="form-actions">
+    <%= f.button :submit, save_or_update(@category), :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                cm_post_categories_path, :class => 'btn' %>
+  </div>
+<% end %>

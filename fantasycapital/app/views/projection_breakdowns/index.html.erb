@@ -1,0 +1,32 @@
+<ol class="breadcrumb">
+  <li><%= link_to @projection_by_stat_and_game.projection_by_stat.projection.player.name, projection_projection_by_stats_path(@projection_by_stat_and_game.projection_by_stat.projection) %></a></li>
+  <li><%= link_to @projection_by_stat_and_game.projection_by_stat.stat_name, projection_projection_by_stat_projection_by_stat_and_games_path(@projection_by_stat_and_game.projection_by_stat.projection, @projection_by_stat_and_game.projection_by_stat) %></a></li>
+  <li class="active"><%= link_to @projection_by_stat_and_game.criteria, projection_projection_by_stat_projection_by_stat_and_game_projection_breakdowns_path(@projection_by_stat_and_game.projection_by_stat.projection, @projection_by_stat_and_game.projection_by_stat, @projection_by_stat_and_game) %></a></li>
+</ol>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Stat</th>
+      <th>Player</th>
+      <th>Date</th>
+      <th>Team 1</th>
+      <th>Team 2</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_breakdowns.each do |pb| %>
+      <tr>
+        <td><%= pb.stat.stat_value %></td>
+        <td><%= pb.stat.player.name %></td>
+        <td><%= pb.stat.game.start_date %></td>
+        <td><%= pb.stat.game.team.name %></td>
+        <td><%= pb.stat.game.opponent_team.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

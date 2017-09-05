@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+</head>
+<body style="line-height:1.5">
+<table style="border-collapse:collapse;margin:0;padding:0;background-color:#1a979c;height:100%!important;width:100%!important" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" valign="top" style="margin:0;padding:20px;border-top:0;height:100%!important;width:100%!important">
+
+<table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse;border:0">
+<tbody>
+<tr>
+  <td align="center" valign="top">
+
+    <table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse;background-color:#ffffff;border-top:0;border-bottom:0">
+      <tbody>
+      <tr>
+        <td valign="top" style="padding-top:9px">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+            <tbody>
+            <tr>
+              <td valign="top">
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse">
+                  <tbody>
+                  <tr>
+
+                    <td valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;color:#606060;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left">
+                      Спасибо за предзаказ на сайте <a href="http://lllooch.ru" target="_blank">lllooch.ru</a>!
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </td>
+</tr>
+<tr>
+
+  <td align="center" valign="top">
+
+    <table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse;background-color:#fafafa;border-top:0;border-bottom:0">
+      <tbody>
+      <tr>
+        <td valign="top">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+            <tbody>
+            <tr>
+              <td valign="top" style="padding:0px">
+                <table align="left" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                  <tbody>
+                  <tr>
+                    <td valign="top" style="padding-right:0px;padding-left:0px;padding-top:0;padding-bottom:0;text-align:center">
+
+
+                      <img src="http://lllooch.ru/order.jpg" align="center" alt="" width="600" style="max-width:800px;padding-bottom:0;display:inline!important;vertical-align:bottom;border:0;outline:none;text-decoration:none">
+
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </td>
+</tr>
+
+<tr>
+  <td align="center" valign="top">
+
+    <table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse;background-color:#fafafa;border-top:0;border-bottom:0">
+      <tbody>
+      <tr>
+        <td valign="top">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+            <tbody>
+            <tr>
+              <td valign="top">
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse">
+                  <tbody>
+                  <tr>
+
+                    <td valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:18px;color:#111111;font-family:Helvetica;font-size:15px;line-height:150%;text-align:left">
+
+                      <h2 style="margin:0;padding:0;display:block;font-family:Helvetica;font-size:26px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;text-align:left;color:#000000!important">
+                        Здравствуйте, <%= @order.full_name %>!
+
+                      </h2>
+
+                      <br>
+
+                      <p style="margin:1em 0;padding:0;color:#111111;font-family:Helvetica;font-size:15px;line-height:150%;text-align:left">
+                        Вы заказали:
+                      </p>
+
+                      <table style="width:100%;border-collapse:collapse">
+                        <tbody>
+                        <% @order.items.each do |item| %>
+                            <tr>
+                              <td>
+                                <a href="http://lllooch.ru/ru/goods/<%= item.good_slug %>" style="word-wrap:break-word;color:#6dc6dd;font-weight:normal;text-decoration:underline" target="_blank">
+                                  <%= item.good_name %>
+                                </a>
+                              </td>
+                              <td align="right"><%= item.quantity %> шт.</td>
+                              <td width="150px" align="right"><%= number_to_currency(item.price, precision: 0, unit: T("руб.")) %></td>
+                            </tr>
+                        <% end %>
+
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                          <td>&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                          <td>Общая сумма</td>
+                          <td>&nbsp;</td>
+                          <td align="right"><%= number_to_currency(@order.full_price, precision: 0, unit: T("руб.")) %></td>
+                        </tr>
+                        </tbody>
+                      </table>
+
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+            <tbody>
+            <tr>
+              <td style="padding:18px">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top-width:2px;border-top-style:solid;border-top-color:#1a979c;border-collapse:collapse">
+                  <tbody>
+                  <tr>
+                    <td>
+                      <span></span>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+            <tbody>
+            <tr>
+              <td valign="top">
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse">
+                  <tbody>
+                  <tr>
+
+                    <td style="padding-top:9px;padding-left:18px;padding-bottom:18px;padding-right:18px">
+
+                      <table border="0" cellpadding="18" cellspacing="0" width="100%" style="border:1px solid #999999;background-color:#ebebeb;border-collapse:collapse">
+                        <tbody>
+                        <tr>
+                          <td valign="top" style="font-size:13px;line-height:200%;color:#111111;font-family:Helvetica;text-align:left">
+                            Наши менеджеры свяжутся с Вами по телефону
+                            <strong><a href="tel:<%= @order.phone %>" value="<%= @order.phone %>" target="_blank"><%= @order.phone %></a></strong>.
+                          </td>
+                        </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </td>
+</tr>
+<tr>
+  <td align="center" valign="top">
+
+    <table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse:collapse;background-color:#1a979c;border-top:0;border-bottom:0">
+      <tbody>
+      <tr>
+        <td valign="top" style="padding-bottom:9px">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse">
+            <tbody>
+            <tr>
+              <td valign="top">
+
+                <table align="left" border="0" cellpadding="0" cellspacing="0" width="366" style="border-collapse:collapse">
+                  <tbody>
+                  <tr>
+
+                    <td valign="top" style="padding-top:9px;padding-left:18px;padding-bottom:9px;padding-right:0;color:#eeeeee;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left">
+
+                      <strong>Адрес</strong>:<br>
+                      143402, Московская область, 65-66 км МКАД,&nbsp;<br>
+                      Крокус Сити Холл (корпус 3), ООО «ЛЛЛДизайн»<br>
+                      <br>
+                      <strong>Телефоны</strong>:<br>
+                      <a href="tel:%2B7%20%28495%29%20212%2006%2065" value="+74952120665" target="_blank">+7 (495) 212
+                        06 65</a><br>
+                      8 <a href="tel:%28800%29%20555%2099%2057" value="+18005559957" target="_blank">(800) 555 99 57</a>&nbsp;<br>
+                      <br>
+                      <strong>e-mail</strong>:&nbsp;<a href="mailto:sales@lllooch.ru" style="outline:0px;line-height:1.45em;word-wrap:break-word;color:#f5f5dc;font-weight:normal;text-decoration:underline" target="_blank">sales@lllooch.ru</a>&nbsp;
+
+                      <div>&nbsp;</div>
+
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <table align="right" border="0" cellpadding="0" cellspacing="0" width="197" style="border-collapse:collapse">
+                  <tbody>
+                  <tr>
+
+                    <td valign="top" style="padding-top:9px;padding-right:18px;padding-bottom:9px;padding-left:0;color:#eeeeee;font-family:Helvetica;font-size:11px;line-height:125%;text-align:left">
+
+                      <% if false %>
+                          <a href="https://www.facebook.com/lllooch" style="word-wrap:break-word;color:#f5f5dc;font-weight:normal;text-decoration:underline" target="_blank"><img align="none" height="32" style="width:32px;min-height:32px;border:0;outline:none;text-decoration:none" width="32"></a>
+                      <% end %>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </td>
+</tr>
+</tbody>
+</table>
+
+</td>
+</tr>
+</table>
+
+</body>
+</html>

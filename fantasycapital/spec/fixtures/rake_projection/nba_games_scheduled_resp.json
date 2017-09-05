@@ -1,0 +1,43 @@
+[
+    {
+        "venue": {
+            "id": "446e0f70-beea-5104-903f-fb65985711a1",
+            "name": "Sleep Train Arena"
+        },
+        "home": {
+            "name": "Sacramento Kings",
+            "alias": "SAC",
+            "id": "583ed0ac-fb46-11e1-82cb-f4ce4684ea4c"
+        },
+        "away": {
+            "name": "San Antonio Spurs",
+            "alias": "SAS",
+            "id": "583ecd4f-fb46-11e1-82cb-f4ce4684ea4c"
+        },
+        "id": "fb5e8630-fb9c-4173-9674-ddd48ef2bc78",
+        "status": "scheduled",
+        "home_team": "583ed0ac-fb46-11e1-82cb-f4ce4684ea4c",
+        "away_team": "583ecd4f-fb46-11e1-82cb-f4ce4684ea4c",
+        "scheduled": "2014-03-22T02:00:00+00:00"
+    },
+    {
+        "venue": {
+            "id": "792ec100-691e-5e16-8ef8-79b2b6ee38ba"
+        },
+        "home": {
+            "name": "Los Angeles Lakers",
+            "alias": "LAL",
+            "id": "583ecae2-fb46-11e1-82cb-f4ce4684ea4c"
+        },
+        "away": {
+            "name": "Washington Wizards",
+            "alias": "WAS",
+            "id": "583ec8d4-fb46-11e1-82cb-f4ce4684ea4c"
+        },
+        "id": "797e4a9d-8e14-4272-b15e-59af6fd403b7",
+        "status": "scheduled",
+        "home_team": "583ecae2-fb46-11e1-82cb-f4ce4684ea4c",
+        "away_team": "583ec8d4-fb46-11e1-82cb-f4ce4684ea4c",
+        "scheduled": "2014-03-22T02:30:00+00:00"
+    }
+]

@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="designer">
+    <h1>
+      <%= @designer.name %>
+    </h1>
+
+    <h2>
+      <%= @designer.motto %>
+    </h2>
+
+    <div class="designer-info">
+      <% if @designer.avatar %>
+        <div class="designer-pic">
+          <img src="<%= image_url(@designer.avatar.url(:preview)) %>" />
+        </div>
+      <% end %>
+
+      <%= @designer.content.html_safe if @designer.content %>
+    </div>
+    
+    <%= render 'projects', :projects => @designer.all_projects if @designer.all_projects %>
+  </div>
+</div>

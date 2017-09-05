@@ -1,0 +1,25 @@
+
+AddDefaultCharset utf-8
+
+# For security reasons, Option followsymlinks cannot be overridden.
+#Options +FollowSymLinks
+Options +SymLinksIfOwnerMatch
+IndexIgnore */*
+RewriteEngine on
+
+# Make the backend accessible via url: http://site/backend.
+RewriteRule ^backend backend.php
+
+# If a directory or a file exists, use it directly.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise forward it to index.php.
+RewriteRule . index.php
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 217.69.141.182
+deny from 217.69.139.200

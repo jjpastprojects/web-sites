@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= page_title %></title>
+  <!--Le HTML5 shim, for IE6-8 support of HTML elements-->
+  <!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+  <script src="//https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+  <![endif]-->
+
+  <%= tag :meta, :name => 'stripe-key', :content => Rails.configuration.stripe[:publishable_key] %>
+
+  <%= javascript_include_tag 'https://d3dy5gmtp8yhk7.cloudfront.net/2.1/pusher.min.js' %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <%= yield :head %>
+  <%= javascript_include_tag 'https://js.stripe.com/v1/' %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+</head>
+
+<body class='<%=page_class%>' id='<%= page_id %>'>
+<%= render 'layouts/admin_header' %>
+<div class='container capitalcontent'>
+  <%= yield %>
+</div>
+<%= render 'shared/footer' %>
+</body>
+
+<%= yield :after_js %>
+
+</html>

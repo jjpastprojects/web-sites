@@ -1,0 +1,9 @@
+Template Name: Multiple Fields Template
+Colors: White[white:#ffffff] | Blue[blue:#005ba2] | Green[green:#10a618] | Orange[orange:#d07400] | Red[red:#a30000]
+Preview Size: 400x389
+Preview Ext: jpg
+NumberExtraInputs: 2
+Fields: Title[id:title,max:50]|Form Header[id:form_header,max:15]|Short Paragraph[id:short_paragraph,type:textarea,max:160]|Footer Security Note[id:footer_note,max:60]|Name Default Value[id:name_default,default_val:Your First Name...]|Email Default Value[id:email_default,default_val:Your Email Address...]|Custom Input 1 Default Value[id:custom1_default,default_val:Your Phone Number...]|Custom Input 2 Default Value[id:custom2_default,default_val:Your Address...]|Submit Button[id:submit_button,max:26,default_val:FREE INSTANT ACCESS]
+List Items: 4
+Button Colors: Red[red]|Green[green]|Orange[orange]|Blue[blue]
+Center: Y

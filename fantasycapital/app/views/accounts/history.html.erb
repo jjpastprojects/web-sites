@@ -1,0 +1,141 @@
+<%= render partial: 'shared/account_heading' %>
+
+
+<div class="pull-left showtransactions"><strong>TRANSACTIONS DETAILS</strong></div>
+<div class="styled-select pull-right">
+  <select>
+    <option>LAST 7 DAYS</option>
+    <option>ALL</option>
+    <option>ALL TIME</option>
+  </select>
+</div>
+<div class="pull-right showtransactions"><strong>Show Transactions From</strong>&nbsp;</div>
+<div class="clearfix">&nbsp;</div><br>
+<div class="container fantasytabs">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#alltransactions" data-toggle="tab">ALL TRANSACTIONS</a></li>
+
+    
+    <li class=""><a href="#winnings" data-toggle="tab">WINNINGS</a></li>
+    <li class=""><a href="#entryfees" data-toggle="tab">ENTRY FEES</a></li>
+    <li class=""><a href="#withdrawals" data-toggle="tab">WITHDRAWALS</a></li>
+    <li class=""><a href="#cashdeposits" data-toggle="tab">CASH DEPOSITS</a></li>
+    <li class=""><a href="#bonusawards" data-toggle="tab">BONUS AWARDS</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane active" id="alltransactions">
+      <table class="table-responsive refer">
+        <tbody>
+        <tr>
+          <th>DATE</th>
+          <th>TYPE</th>
+          <th>AMOUNT</th>
+          <th>CONFIRMATION CODE</th>
+          <th>DESCRIPTION</th>
+          <th>STATUS</th>
+        </tr>
+        <% @transactions.each do |ttt| %>
+        <tr>
+          <th><%= ttt.created_at %></th>
+          <th><%= ttt.get_type_name %></th>
+          <th><%= Float(ttt.amount_in_cents)/100.0 %></th>
+          <th><%= ttt.id %></th>
+          <th>--</th>
+          <th>--</th>
+        </tr>
+        <% end %>
+        </tbody>
+      </table>
+      <p>You have <%= @transactions.length %> transactions.</p>
+    </div>
+    <div class="tab-pane" id="winnings">
+      <table class="table-responsive refer">
+        <tbody>
+        <tr>
+          <th>DATE</th>
+          <th>TYPE</th>
+          <th>AMOUNT</th>
+          <th>CONFIRMATION CODE</th>
+          <th>DESCRIPTION</th>
+          <th>STATUS</th>
+        </tr>
+        </tbody>
+      </table>
+      <p>You do not have any transactions in the selected time period.</p>
+    </div>
+    <div class="tab-pane" id="entryfees">
+      <table class="table-responsive refer">
+        <tbody>
+        <tr>
+          <th>DATE</th>
+          <th>TYPE</th>
+          <th>AMOUNT</th>
+          <th>CONFIRMATION CODE</th>
+          <th>DESCRIPTION</th>
+          <th>STATUS</th>
+        </tr>
+        </tbody>
+      </table>
+      <p>You do not have any transactions in the selected time period.</p>
+    </div>
+    <div class="tab-pane" id="withdrawals">
+      <table class="table-responsive refer">
+        <tbody>
+        <tr>
+          <th>DATE</th>
+          <th>TYPE</th>
+          <th>AMOUNT</th>
+          <th>CONFIRMATION CODE</th>
+          <th>DESCRIPTION</th>
+          <th>STATUS</th>
+        </tr>
+        </tbody>
+      </table>
+      <p>You do not have any transactions in the selected time period.</p>
+    </div>
+    <div class="tab-pane" id="cashdeposits">
+      <table class="table-responsive refer">
+        <tbody>
+        <tr>
+          <th>DATE</th>
+          <th>TYPE</th>
+          <th>AMOUNT</th>
+          <th>CONFIRMATION CODE</th>
+          <th>DESCRIPTION</th>
+          <th>STATUS</th>
+        </tr>
+        </tbody>
+      </table>
+      <p>You do not have any transactions in the selected time period.</p>
+    </div>
+    <div class="tab-pane" id="bonusawards">
+      <table class="table-responsive refer">
+        <tbody>
+        <tr>
+          <th>DATE</th>
+          <th>TYPE</th>
+          <th>AMOUNT</th>
+          <th>CONFIRMATION CODE</th>
+          <th>DESCRIPTION</th>
+          <th>STATUS</th>
+        </tr>
+        </tbody>
+      </table>
+      <p>You do not have any transactions in the selected time period.</p>
+    </div>
+  </div>
+</div>
+<!--/Transactions Details-->
+<div class="clearfix">&nbsp;</div>
+<div class="pull-left"><a href="#"><span class="green">&lt; Back to My Account</span></a></div>
+<div class="pull-right"><a href="#"><span class="green">Deposit »</span></a> &nbsp;<a href="#"><span class="green">Withdraw »</span></a>
+</div>
+<div class="clear">&nbsp;</div>
+<p>
+  Above are all of the transactions associated with your account, including depositis, withdrawals, transfers to fund
+  games, payouts and bonuses. If you have any questions on your account history, please contact
+  <a href="#">support@fantasycapital.com</a>
+</p>

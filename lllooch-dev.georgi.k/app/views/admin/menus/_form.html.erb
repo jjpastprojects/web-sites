@@ -1,0 +1,20 @@
+<%= simple_form_for [:admin, @menu], :html => { :class => 'form-horizontal' } do |f| %>
+  <% options = {} %>
+  <% options[:path] = admin_menu_menu_items_path(@menu) if @menu.id %>
+  <% options[:disabled] = true unless @menu.id %>
+
+  <%= tabs [[:main, 'Основное'], [:items, 'Элементы', options]] %>
+
+  <%= tab_contents do %>
+    <%= tab_pane :main, {active: true} do %>
+      <%= f.input :name %>
+      <%= f.input :key %>
+    <% end %>
+  <% end %>
+
+  <div class="form-actions">
+    <%= f.button :submit, save_or_update(@menu), :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+        admin_menus_path, :class => 'btn' %>
+  </div>
+<% end %>

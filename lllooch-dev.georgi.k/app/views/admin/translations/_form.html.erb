@@ -1,0 +1,18 @@
+<%= language_prompt %>
+
+<%= simple_form_for [:admin, @translation], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= form_errors f %>
+
+  <% Globalize.with_locale(@locale.slug) do %>
+    <%= f.input :value %>
+  <% end %>
+
+  <%= language_input f %>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+        admin_translations_path, :class => 'btn' %>
+  </div>
+<% end %>
+  

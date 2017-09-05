@@ -1,0 +1,29 @@
+ru:
+  errors:
+    messages:
+      extension_white_list_error: 'неверный формат файла!'
+  simple_form:
+    "да": 'Да'
+    "нет": 'Нет'
+    required:
+      text: 'Обязательное поле'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Найдены следующие ошибки:"
+    # Labels and hints examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+

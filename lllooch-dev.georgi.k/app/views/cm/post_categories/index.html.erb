@@ -1,0 +1,79 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to (plus_icon + ' Категория'),
+            new_cm_post_category_path,
+            :class => 'btn' %>
+    <%= link_to (plus_icon + ' Пост'),
+            new_cm_post_path,
+            :class => 'btn' %>
+  </div>
+  <h1>Блоги</h1>
+</div>
+
+<div class="row">
+  <div class="span9">
+    <% if @items.empty? %>  
+      <div class="well">
+        Опаньки.. А постов-то и нету :(
+      </div>
+    <% else %>
+      <table class="table table-striped" data-type="nested" data-nested-url="<%= order_cm_posts_path %>">
+        <thead>
+          <tr>
+            <th>Пост</th>
+            <th width="30%">Категория</th>
+            <th width="60px"></th>
+          </tr>
+        </thead>
+        <tbody>        
+          <% @items.each do |post| %>
+            <tr data-nested="item" data-nested-id="<%= post.id %>">
+              <td>
+                <%= with_pic post, post.picture %>
+              </td>
+              <td>
+                <%= post.categories.map(&:name).join(', ') if post.categories %>
+              </td>
+              <td>
+                <%= link_to pencil_icon,
+                    edit_cm_post_path(post), :class => 'btn btn-mini' %>
+
+                <%= link_to trash_icon(true),
+                    cm_post_path(post),
+                    :method => :delete,
+                    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                    :class => 'btn btn-mini btn-danger' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+
+  <div class="span3">
+    <ul class="nav nav-tabs nav-stacked" data-type="nested" data-nested-url="<%= order_cm_post_categories_path %>">
+      <li<%= ' class=active' if !@collection %>>
+        <%= link_to('Все посты', cm_post_categories_path) %>
+      </li>
+      <% @collections.each do |collection| %>
+        <li<%= ' class=active' if @collection && @collection == collection %> data-nested="item" data-nested-id="<%= collection.id %>">
+          <div class="controls">
+            <%= link_to(pencil_icon,
+                edit_cm_post_category_path(collection), :class => 'btn btn-link') %>
+
+            <%= link_to(trash_icon,
+                cm_post_category_path(collection),
+                :method => :delete,
+                :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                :class => 'btn btn-link') %>
+          </div>
+          
+            <%= link_to (collection.name + tag(:br) + content_tag(:small, collection.path, class: :muted)).html_safe,   
+                items_cm_post_category_path(collection) %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

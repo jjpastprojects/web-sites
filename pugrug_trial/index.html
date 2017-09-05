@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="pugrug" >
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pugrug Trial</title>
+
+  <script>document.write('<base href="' + document.location + '" />');</script>
+
+  <!--
+      Include all library files
+   -->
+  <script charset="utf-8" src="lib/angular-1.5.8/angular.min.js"></script>
+  <script charset="utf-8" src="lib/ui-bootstrap-0.14.3/ui-bootstrap.min.js"></script>
+  <script charset="utf-8" src="lib/angular-ui-router-0.3.1/angular-ui-router.min.js"></script>
+
+  <!--
+      Include all module javascript file
+   -->
+  <script charset="utf-8" src="modules/login/login.js"></script>
+
+
+  <!--
+      Application.js file contains the all the js files under modules folder
+   -->
+  <script charset="utf-8" src="angular-init.js"></script>
+
+  <!--
+      Directives file
+   -->
+  <script charset="utf-8" src="modules/directives/sidebar.js"></script>
+
+
+  <!--
+      Include all css files
+   -->
+  <link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap.css"/>
+  <link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.css"/>
+  <link rel="stylesheet" href="modules/directives/sidebar.css"/>
+
+
+  <!--
+      Include all Font files
+   -->
+
+  <!--
+      include app.css
+   -->
+  <link rel="stylesheet" href="app.css"/>
+
+</head>
+
+<body ng-controller="AppCtrl" class="app">
+
+  <!-- header section -->
+  <div ng-include="'modules/_layout/header.html'"></div>
+
+
+  <!-- Module Section : Individual module will be included here-->
+  <div ui-view></div>
+
+  <!-- footer section -->
+  <div ng-include="'modules/_layout/footer.html'"></div>
+
+
+  <!-- SideBar -->
+  <menu visible="visible" alignment="left">
+    <menu-item hash="first-page">First Page></menu-item>
+    <menu-item hash="second-page">Second Page></menu-item>
+    <menu-item hash="third-page">Third Page></menu-item>
+  </menu>
+
+</body>
+</html>

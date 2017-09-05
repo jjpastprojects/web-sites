@@ -1,0 +1,2 @@
+#web: cd master && npm install && node_modules/bower/bin/bower install && node ../../master/node_modules/gulp/bin/gulp build && cd .. && npm install && node server.js
+web:  node server.js

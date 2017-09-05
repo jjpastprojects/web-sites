@@ -1,0 +1,25 @@
+<div class="comments">
+	<h1><%= T "Комментарии" %></h1>
+
+	<ul class="comments-list">
+		<% unless post.comments.empty? %>
+			<% post.comments.each do |c| %>
+				<li>
+					<div class="comment-info">
+						<div class="comment-author">
+							<%= c.author %>
+						</div>
+
+						<div class="comment-ts">
+							<%= c.created_at %>
+						</div>
+					</div>
+
+					<div class="comment-content">
+						<%= c.content %>
+					</div>
+				</li>
+			<% end %>
+		<% end %>
+	</ul>
+</div>

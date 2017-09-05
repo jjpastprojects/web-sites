@@ -1,0 +1,262 @@
+
+<div class="signin-popup">
+  <%= form_for(@user, url: "/users", html: {id: "user_form"}) do |f| %>
+    <h2>LOGIN OR REGISTER</h2>
+    <div class="errors"></div>
+    <div class="form-group">
+      <label for="user_username">*Username</label>
+      <input type="text" id="user_username" name="user[username]" class="form-control">
+    </div>
+    <div class="form-group">
+      <input type="radio" id="is_login" name="login_or_register" checked="checked" value="login" class="login-or-register" tabindex="-1">
+      <label for="is_login">Yes, I already have a new password</label>
+    </div>
+    <div class="form-group">
+      <input type="radio" id="is_register" name="login_or_register" value="register" class="login-or-register"  tabindex="-1">
+      <label for="is_register">No, I am a new customer</label>
+    </div>
+
+
+    <div class="form-group for-register">
+      <label for="user_first_name">*First Name</label>
+      <input type="text" id="user_first_name" name="user[first_name]" class="form-control">
+    </div>
+    <div class="form-group for-register">
+      <label for="user_last_name">*Last Name</label>
+      <input type="text" id="user_last_name" name="user[last_name]" class="form-control">
+    </div>
+    <div class="form-group for-register">
+      <label for="user_email">*Email</label>
+      <input type="email" id="user_email" name="user[email]" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="user_password_reg">*Password</label>
+      <input type="password" id="user_password" name="user[password]" class="form-control">
+    </div>
+    <div class="form-group for-register">
+      <label for="user_password_confirmation">*Password Confirmation</label>
+      <input type="password" id="user_password_confirmation" name="user[password_reg]" class="form-control">
+    </div>
+    <div class="form-group for-register">
+      <label for="user_country">*Country</label>
+      <%= f.country_select :country, {priority: %w(US CA)}, class: "form-control" %>
+    </div>
+
+    <div class="form-group for-register">
+      <label for="user_state">*State</label>
+      <%= render partial: 'subregion_select', locals: {parent_region: f.object.country} %>
+    </div>
+
+    <div class="form-group for-register">
+      <input type="checkbox" id="agree_terms" name="agree_terms" class="checkbox">
+      <label for="agree_terms">I agree the <a href="#" class="green">Terms of Use</a> and the <a href="#" class="green">Privacy Policy</a></label>
+    </div>
+
+    <div class="form-group for-register">
+      <input type="checkbox" id="agree_age" name="agree_age" class="checkbox">
+      <label for="agree_age">I confirm that I am at least 18 years of age. Must be 19 years of age in Alabama and Nebraska.</label>
+    </div>
+
+    <div class="form-group">
+      <input type="button" class="btn btn-default btn-login for-login" value="LOGIN">
+      <input type="button" class="btn btn-default btn-register for-register" value="REGISTER">
+      <input type="button" class="btn btn-default btn-cancel" data-dismiss="modal" value="CANCEL">
+    </div>
+
+    <div class="form-group for-login">
+      <a href="#" class="green">Forgot your password?</a>
+    </div>
+  <% end %>
+
+</div>
+
+<script>
+
+// this script shouldn't be put inline
+
+"use strict";
+/*globals jQuery, util */
+
+(function ($) {
+  
+  $("select#user_country").change(function () {
+    var country_code, select_wrapper, url;
+    select_wrapper = $("#user_state_wrapper");
+    $("select", select_wrapper).attr("disabled", true);
+    country_code = $(this).val();
+    url = "/users/subregion_options?parent_region=" + country_code;
+    select_wrapper.load(url);
+  });
+
+  //switching the screen login<->register
+  $("input[name=\"login_or_register\"]").change(function (){
+    if( $(this).val() == "login" ){
+      $(".for-register").hide();
+      $(".for-login").show();
+    }else{
+      $(".for-login").hide();
+      $(".for-register").show();
+    }
+  });
+
+
+  function toggleSpinner() {
+    $(".ajax-loader").stop(true, true).fadeToggle("slow");
+  }
+  function wrap(str) {
+    return "<div>" + str + "</div>";
+  }
+
+
+  var $node = {
+    username:     $("#user_username"),
+    firstName:    $("#user_first_name"),
+    lastName:     $("#user_last_name"),
+    email:        $("#user_email"),
+    password:     $("#user_password"),
+    confirmation: $("#user_password_confirmation"),
+    state:        $("#user_state"),
+    country:      $("#user_country"),
+    terms:        $("#agree_terms"),
+    age:          $("#agree_age")
+  };
+
+  var text = {
+    username:       "Please enter username!",
+    firstName:      "Please enter first name!",
+    lastName:       "Please enter last name!",
+    email:          "Please enter valid email!",
+    password:       "Please enter valid password( 6 ~ 15 chars, at least one number )!",
+    confirmation:   "Please enter password confirmation!",
+    passwordMatch:  "Password confirmation does not match to password!",
+    state:          "Please enter/select a state!",
+    stateForbidden: "Does not allow to play in this state!",
+    terms:          "You must agree to the Terms of Use and the Privacy Policy!",
+    age:            "You must agree to the Age and Location Policy!"
+  };
+
+  $(".btn-login").on("click", function () {
+    var url = "/users/sign_in";
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: $("#user_form").serialize(),
+      beforeSend: function(){
+
+        var msg = "";
+        if( !$node.username.val() ) {
+          msg += wrap(text.username);
+        }
+
+        if( !$node.password.val() ) {
+          msg += wrap(text.password);
+        }
+
+        $(".errors").html(msg);
+        if (msg){
+          return false;
+        } else {
+          toggleSpinner();
+        }
+        
+      },
+      error: function () {
+        toggleSpinner();
+      },
+      success: function () {
+        // do not toggle the spinner on success
+        // console.log("login success");
+        // console.log(data);
+        window.location.href = window.target_url;
+      },
+      statusCode: {
+        404: function() {
+          // console.log("page not found" );
+        },
+        401: function (){
+          // console.log(data);
+          $(".errors").html("Invalid username or password!");
+        }
+      },
+      dataType: "json"
+    });
+  });
+
+  $(".btn-register").click(function (){
+    var url = "/users";
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: $("#user_form").serialize(),
+      beforeSend: function(){
+
+        function assert(condition, text) {
+          if (condition) {
+            msg += wrap(text);
+          }
+        }
+
+        var msg = "";
+        var forbiddenStates = ["AZ", "IA", "MT", "LA", "WA"];
+
+        assert(!$node.username.val(), text.username);
+        assert(!$node.firstName.val(), text.firstName);
+        assert(!$node.lastName.val(), text.lastName);
+        assert(!$node.email.val(), text.email);
+        assert(!util.validate.password($node.password.val()), text.password);
+        assert(!$node.confirmation.val(), text.confirmation);
+        assert(
+          $node.confirmation.val() !== $node.password.val(),
+          text.passwordMatch
+        );
+        assert(!$node.state.val(), text.state);
+        assert(
+          $node.country.val() === "US" &&
+          $.inArray($node.state.val(), forbiddenStates) !== -1,
+          text.stateForbidden
+        );
+        assert(!$node.terms.is(":checked"), text.terms);
+        assert(!$node.age.is(":checked"), text.age);
+
+        $(".errors").html(msg);
+
+        if (msg.length > 0) {
+          return false;
+        } else {
+          toggleSpinner();
+        }
+      },
+      error: function () {
+        toggleSpinner();
+      },
+      success: function (){
+        // do not toggle the spinner on success
+        // console.log("register success");
+        // console.log(data);
+        window.location.href = window.target_url;
+      },
+      statusCode: {
+        422: function(data){
+          var res = $.parseJSON(data.responseText);
+          // console.log(data);
+          var msg = "";
+          if(res && res.errors){
+            
+            $.each(res.errors, function (key, value){
+              msg += wrap(key + " " + value);
+            });
+          }
+          $(".errors").html(msg);
+        },
+        500: function (){
+          // console.log(data);
+        }
+      },
+      dataType: "json"
+    });
+  });
+
+})(jQuery);
+
+</script>
+

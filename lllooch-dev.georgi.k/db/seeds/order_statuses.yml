@@ -1,0 +1,11 @@
+- name: Новый
+  priority: 1
+  type: OrderStatus::New
+
+- name: Закрыт
+  priority: 2
+  type: OrderStatus::Done
+
+- name: Отменен
+  priority: 999
+  type: OrderStatus::Canceled

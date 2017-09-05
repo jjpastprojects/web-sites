@@ -1,0 +1,45 @@
+<div>
+  <div class="clear">&nbsp;</div>
+
+  <div class="filter_row">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Entries</h4>
+      </div>
+      <div class="col-md-8">
+        <!--<span class="green"><a href="#">Join More Contest »</a></span>-->
+        <!--<span class="green"><%= link_to 'View my Lineups', lineups_path %></span>-->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="">
+    <table class="table sortable">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th data-defaultsort="desc">Contest ID</th>
+        <th>Contest Date</th>
+        <th>Final Entry Position</th>
+        <th>Final Entry Score</th>
+        <th>Game IDs</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @entries.each do |entry| %>
+          <tr>
+            <td><%= entry.id %></td>
+            <td><%= entry.contest.id %></td>
+            <td><%= entry.contest.contestdate %></td>
+            <td><%= entry.final_pos %></td>
+            <td><%= entry.final_score %></td>
+            <td><%= entry.games.pluck(:id) %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,8 @@
+Template Name: Subscribe Clean 5
+Colors: Default[default] | Blue[blue:#005ba2] | Red[red:#651F17] | Bright Red[bright-red:#C6320E] | Bright Green[bright-green:#5CC32C] | Bright Purple[bright-purple:#A94196] | Bright Turq[bright-turq:#61CFDE] | Bright Orange[bright-orange:#DC8621] | Bright Blue[bright-blue:#1F5BD7] | Dark Blue[dark-blue:#1A4567] | Grape[grape:#76254D] | Green[green:#2F5C17] | Turq[turq:#3A8080] | Orange[orange:#964911] | Black[black:#000]
+Preview Size: 667x375
+Preview Ext: png
+Fields: Title[id:title,max:50,default_val:SUPER SECRET SALE]|Short Paragraph[id:short_paragraph,max:250,default_val:Just another subheadline 2 line.]|Footer Security Note[id:footer_note,max:60,default_val:*by leaving your email address you're also subscribing to our blog newsletter]|Email Default Value[id:email_default,default_val:Your Email Address...]|Image[id:image,type:image,max_w:349,max_h:221]|Submit Button[id:submit_button,max:12,default_val:Enter To Win]
+List Items: 4
+Button Colors: Default[default] | Blue[blue] | Red[red] | Bright Red[bright-red] | Bright Green[bright-green] | Bright Purple[bright-purple] | Bright Turq[bright-turq] | Bright Orange[bright-orange] | Bright Blue[bright-blue] | Dark Blue[dark-blue] | Grape[grape] | Green[green] | Turq[turq] | Orange[orange] | Black[black]
+Center: Y

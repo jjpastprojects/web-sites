@@ -1,0 +1,260 @@
+ru:
+
+  navigation:
+    blogs:
+      title: Выберите категорию блога
+      helper: Теги
+    catalog:
+      title: Выберите категорию товара
+      helper: Категории
+
+  Languages: "Языки"
+  Menus: "Меню"
+  Templets: "Шаблоны"
+  Settings: "Параметры"
+  Designers: "Дизайнеры"
+  Posts: "Блоги"
+  Goods: "Товары"
+
+  prompt:
+    language: Выберите язык
+    templet: Выберите шаблон
+
+
+  helpers:
+    links:
+      cancel: Отмена
+      back: Назад
+      edit: Правка
+      destroy: Удалить
+      new: Добавить
+
+  activerecord:
+    model:
+      category:
+        one: "Категория"
+        other: "Категории"
+
+      language:
+        one: "Язык"
+        other: "Языки"
+
+      menu_item: 
+        one: "Элемент меню"
+        other: "Элементы меню"
+
+      menu:
+        one: "Меню"
+        other: "Меню"
+
+      designer:
+        one: "Дизайнер"
+        other: "Дизайнеры"
+
+      post:
+        one: "Блог"
+        other: "Блоги"
+
+      good:
+        one: "Товар"
+        other: "Товары"
+
+      templet:
+        one: "Шаблон"
+        other: "Шаблоны"
+
+      setting:
+        one: "Параметр"
+        other: "Параметры"
+
+    attributes:
+      category:
+        name: "Категория"
+        parent: "Родитель"
+        slug: "Путь"
+        title: "Название"
+        heading: "Заголовок"
+        keywords: "Ключевые слова"
+        description: "Описание"
+
+      post:
+        name: "Пост"
+        announce: "Вкратце"
+        blog_color: "Цвет фона"
+        post_category: "Категория"
+        publish: "Дата публикации"
+        slug: "Путь"
+        title: "Название"
+        heading: "Заголовок"
+        keywords: "Ключевые слова"
+        description: "Описание"
+        content: "Содержание"
+
+      design_item:
+        name: Проект
+        icon: Ярлык
+        picture: Картинка
+
+      delivery_type:
+        name: Название
+        type: Тип
+        is_active: Доступен
+        price: Стоимость
+        payment_types: Типы оплаты
+        layout: Шаблон
+        conditions: Условия доставки
+        hint: Подсказка
+
+      order_status:
+        name: Название
+        type: Тип
+
+      payment_type:
+        name: Название
+        type: Тип
+        is_active: Доступен
+
+      language:
+        name: "Язык"
+        slug: "Путь"
+
+      designer:
+        photo: "Фото"
+        name: "Как зовут"
+        title: "Название"
+        heading: "Заголовок"
+        keywords: "Ключевые слова"
+        description: "Описание"
+
+      menu:
+        name: "Меню"
+        key: "Псевдоним"
+        language: "Язык"
+
+      menu_item: 
+        page: "Страница"
+        menu_item: "Уровень"
+        name: "Элемент"
+        title: "Название"
+        url: "Произвольная ссылка"
+
+      good_file:
+        name: "Название"
+        type: "Тип"
+        src: "Файл"
+
+      good_file/pdf:
+          name: "Название"
+          type: "Тип"
+          src: "Файл"
+
+      good:
+        bg: Цвет текста меню
+        name: "Товар"
+        article: Артикул
+        tags: "Теги"
+        no_shadow: "Градиент (тень сверху)"
+        designer: "Дизайнер"
+        goods: "Дополнительные товары"
+        good_category: "Категория"
+        on_main: "Показывать на главной"
+        slug: "Путь"
+        price: "Цена"
+        title: "Название"
+        good_weight: Вес, г
+        is_preorder_only: Только предзаказ
+        good_volume: Объем, см³
+        heading: "Заголовок"
+        keywords: "Ключевые слова"
+        description: "Описание"
+        material: "Материал"
+        parameters: "Характеристики"
+        announce: "Короткое описание"
+        content: "Описание товара"
+        additional: "Описание после материалов"
+        material_type_text: Характеристики товара, текст
+        picture: Рекламный вид
+        thumb: Картинка в каталоге
+        logo: Логотип
+        logo_desc: Логотип в описании товара
+        portrait: Рекламный вид (портретная)
+        landscape: Рекламный вид (портретная)
+        panorama: Панорама
+        panorama_ipad: Панорама для iPad
+        picture_alignment: Выравнивание
+        property_type: Свойства товара
+
+      good_lang:
+        name: "Наименование"
+        slug: "Путь"
+        price: "Цена"
+        logo: "Логотип"
+        description: "Описание"
+        meta_title: "Заголовок страницы"
+        meta_keywords: "Ключевые слова"
+        meta_description: "Описание"
+
+      templet: 
+        name: "Шаблон"
+        src: "Путь к файлу"
+
+      setting:
+        key: "Переменная"
+        value: "Значение"
+
+      page: 
+        name: "Страница"
+        page_type: "Тип страницы"
+        url: "Ссылка"
+        title: "Название"
+        heading: "Заголовок"
+        keywords: "Ключевые слова"
+        description: "Описание"
+        content: "Содержание"
+
+      material:
+        name: "Материал"
+        title: "Название"
+        description: "Описание"
+
+      three60:
+        name: "3D-просмотр"
+        is_reverted: "В другую сторону"
+        src: "Превью"
+        zip: "Файлы"
+
+      tag:
+        name: "Тег"
+        title: "Название"
+
+      good_option:
+        name: Опция
+        price: Цена
+
+      translation:
+        key: Ключ
+        value: Перевод
+
+      property_type:
+        name: "Тип"
+
+      property:
+        name: "Свойство"
+
+      variant:
+        name: Название
+        suffix: Артикул (суффикс)
+        price: Цена варианта
+        picture: Картинка
+        material: Материал
+        material_name: Тип материала
+        is_material: Отображать образец материала?
+
+      post_block/picture:
+        picture: Картинка
+
+      post_block/html:
+        content: Конент
+
+      post_block/embed:
+        content: Код видео

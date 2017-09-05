@@ -1,0 +1,66 @@
+// Place all the styles related to the Account controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#creditcard {
+  .error {
+    color: #A94442;
+  }
+  .hidden-section {
+    display: none;
+  }
+  .display-value {
+    font-weight: bold;
+    color: #555;
+  }
+}
+
+.addfunds-popup{
+  padding: 10px;
+
+  .deposit-amount{
+    padding: 10px 5px;
+    background: #e8f2f3;
+    margin-bottom: 20px;
+
+    .deposit-item {
+      padding: 5px 10px;
+      border: 1px solid #d1d1d1;
+      border-radius: 20px;
+      margin-right: 10px;
+      background: #fff;
+      font-size: 14px;
+      height: 34px;
+      input#deposit_custom_amount{
+        height: 23px;
+        width: 50px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .addfunds-form{
+    label{
+      font-size: 14px;
+      font-weight: bold;
+
+      &.format{
+        font-weight: 100;
+      }
+    }
+
+    .payment-type-wrapper{
+      font-weight: bold;
+    }
+
+    .payment-type-label{
+      padding-top: 0;
+    }
+
+    .btn-deposit{
+      background: #504A4A;
+      color: #fff;
+    }
+  }
+}
+

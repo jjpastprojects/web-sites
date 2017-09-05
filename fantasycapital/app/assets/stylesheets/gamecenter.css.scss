@@ -1,0 +1,353 @@
+.gamecenter{
+  padding: 10px 0 20px;
+
+} 
+
+ul.title {
+}
+
+ul.title li {
+  padding-right: 0px;
+  &:last-child{
+    padding-right: 0px;
+    float: right;
+    line-height: 40px;
+    color: #bbb;
+  }
+}
+
+ul.title li span {
+  font-size: 18px;
+}
+
+ul.title a {
+  font-family: 'droid_sansbold';
+  color: #339900;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.freerollbox {
+  padding: 15px 15px 5px;
+  border: none
+}
+
+.freerollbox .radio {
+  margin: 20px 0;
+  border: none
+}
+
+/*Table freeroll*/
+table.freeroll {
+  width: 100%;
+  tr:hover {
+    background-color:#ffe;
+    cursor:pointer;
+  }
+}
+
+table.freeroll tr th, table.freeroll tr td {
+  padding: 10px 10px;
+  border-top: 1px solid #bbbbbb;
+  text-align: right;
+}
+
+table.freeroll tr th {
+  color: #000;
+  font-family: 'droid_sansbold';
+  font-size: 18px;
+  padding: 10px
+}
+
+table.freeroll tr td {
+  color: #555555;
+  font-family: 'droid_sansregular';
+  font-size: 18px
+}
+
+table.freeroll tr td:nth-child(1) {
+  font-family: 'droid_sansbold';
+  font-weight: bold;
+  text-align: right;
+}
+
+table.freeroll tr td:nth-child(1):after {
+  content: ".";
+  font-size: 25px;
+}
+
+table.freeroll tr td:nth-child(2) {
+  font-family: 'droid_sansbold';
+}
+
+table.freeroll tr th:nth-child(3), table.freeroll tr td:nth-child(3) {
+  text-align: left
+}
+
+table.freeroll tr:last-child td {
+  border-bottom: 1px solid #bbb
+}
+
+table.freeroll tr td img {
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+@media (max-width: 768px) {
+  .freerollbox .radio {
+    height: 100%;
+  }
+  .freerollbox .radio .list-inline li {
+    float: none;
+    width: 100%;
+    text-align: left
+  }
+  table.freeroll tr th, table.freeroll tr td {
+    float: left;
+    width: 100%;
+    text-align: center
+  }
+  table.freeroll tr th:nth-child(3), table.freeroll tr td:nth-child(3) {
+    text-align: center
+  }
+}
+
+/*Status Table*/
+ul.freeroll_status {
+}
+
+ul.freeroll_status li {
+  margin: 0;
+  padding: 0;
+}
+
+table.status {
+  background: #2e363e;
+  font-family: 'droid_sansbold';
+  font-size: 11px;
+}
+
+table.status.thick {
+  font-size: 12px;
+}
+
+table.status tr td {
+  color: #999999;
+  padding: 4px 5px 2px;
+  text-align: center;
+}
+table.status.thick tr td {
+  color: #999999;
+  padding: 14px 14px 0px;
+  text-align: left;
+}
+
+table.status tr:nth-child(2) td {
+  padding: 0
+}
+table.status.thick tr:nth-child(2) td {
+  padding: 0px 14px 4px;
+  color: #606D75;
+}
+
+table.status tr.white td {
+  color: #fff;
+}
+
+table.status tr:last-child td span {
+  border-top: 1px solid #999999;
+  padding: 6px 36px 0px 0px;
+  font-style: italic;
+  color: #909396;
+}
+
+table.status.schedule {
+  padding: 0px;
+}
+
+/*Score Card*/
+.scorecard {
+  /*background: #eeeeee;*/
+  background: #758493;
+  padding: 10px;
+  width: 49%;
+  color: #fff;
+}
+
+.scorecard .panelOne {
+  /*background: #d6d6d6;*/
+  background: #2e363e;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.scorecard .panelThree {
+  background: #505e6c;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.scorecard strong.panelStrong {
+  /*color: #9d9d9d;*/
+  color: #fff;
+  font-size: 15px
+}
+
+.scorecard  h2.panelHeading {
+  /*border-top: 1px solid #9d9d9d;*/
+  border-top: 1px solid #e3eaf0;
+  font-size: 22px;
+  margin-top: 5px;
+  padding: 5px 0;
+  color: #e3eaf0;
+  margin-bottom: 0px;
+}
+
+.scorecard  .panelTwo {
+  .user{
+    margin-bottom: 0px;
+    line-height: 35px;
+    img {
+      border: 2px solid #BBBBBB;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      float: left
+    }
+
+    span{
+      font-size: 20px;
+    }
+  }
+  
+}
+
+.users-next{
+  margin: 10px 0;
+}
+
+p.quarters {
+  margin: 0px 0 0 0
+}
+
+/*Score Card Table*/
+.scorecard2 {
+  color: #555;
+  margin-top: 5px;
+  &.white{
+    background: #fff;
+  }
+
+}
+
+.lineup-row-template {
+  display:none;
+}
+.scorecardTable {
+  width: 100%;
+  border-collapse:separate;
+  border-spacing:0 5px;
+}
+
+#competitor-scorecard {
+  display:none;
+}
+
+.scorecardTable tr {
+  background: #eef0f1;
+}
+
+.scorecardTable tr td {
+  text-align: center;
+  font-size: 12x;
+  padding: 5px;
+  h1{
+    font-size: 20px;
+    &.role{
+      border-right: 1px solid;
+      line-height: 50px;  
+      width: 50px;
+    }
+  }
+
+  .player-score{
+    margin-bottom: 0;
+  }
+  .player-record-row {
+      text-transform: uppercase;
+      margin-bottom: 0;
+  }
+}
+
+.scorecardTable tr td:nth-child(2) {
+  text-align: left;
+  background: none
+}
+
+.scorecardTable tr td:last-child {
+  background: none;
+  width: 70px;
+}
+
+.scorecardTable tr td:first-child {
+  color: #b1b1b1
+}
+
+.scorecardTable tr td .col-md-9, .scorecardTable tr td .col-md-3 {
+}
+
+.scorecardTable tr td .col-md-9 {
+  text-align: left
+}
+
+.scorecardTable tr td h1.greeScore {
+  background: none repeat scroll 0 0 #0FEA6C;
+  color: #FFFFFF;
+  padding: 10px 5px;
+}
+
+progress {
+  border: 0;
+  height: 10px;
+  line-height: 20px;
+  margin-bottom: 5px;
+}
+
+progress::-webkit-progress-bar {  
+    /* style rules */  
+    background: #dad9d9;
+}  
+progress::-webkit-progress-value {  
+    /* style rules */  
+    background: #0fea6c;
+}  
+progress::-moz-progress-bar {  
+    /* style rules */  
+    background: #dad9d9;
+}
+
+@media (max-width: 768px) {
+  .scorecard {
+    width: 100%;
+    margin: 20px 0
+  }
+  .scorecardTable tr td {
+    padding: 5px;
+  }
+  .panelTwo {
+    margin: 10px;
+    text-align: center
+  }
+}
+
+.scorecardTable tr.gray {
+    background: #ccc;
+}
+.scorecard2 .gray {
+    color: gray;
+}
+.gamecenter-list-padding {
+  padding-left: 6px;
+}

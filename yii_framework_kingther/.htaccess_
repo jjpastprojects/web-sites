@@ -1,0 +1,22 @@
+
+AddDefaultCharset utf-8
+
+# For security reasons, Option followsymlinks cannot be overridden.
+#Options +FollowSymLinks
+Options +SymLinksIfOwnerMatch
+IndexIgnore */*
+RewriteEngine on
+
+# Make the backend accessible via url: http://site/backend.
+RewriteRule ^backend backend.php
+
+# If a directory or a file exists, use it directly.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Otherwise forward it to index.php.
+RewriteRule . index.php
+AuthType Basic
+AuthName "ChiroMonkey Beta"
+AuthUserFile "/home5/platopmc/.htpasswds/public_html/chiromonkey/passwd"
+require valid-user

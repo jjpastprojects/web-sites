@@ -1,0 +1,5 @@
+<div class="page-header">
+  <%= language_select unless @post_block.block_type == 'picture' %>
+  <h1>Правка блока: <%= @post_block.block_type %></h1>
+</div>
+<%= render :partial => 'form' %>

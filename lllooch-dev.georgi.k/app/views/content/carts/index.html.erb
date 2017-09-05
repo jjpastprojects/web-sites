@@ -1,0 +1,15 @@
+<div class="container cart big-select">
+  <h1>
+    Ваша корзина
+  </h1>
+
+  <% if @current_page.content.present? %>
+    <div class="content">
+      <%= @current_page.content.html_safe %>
+    </div>
+  <% end %>
+
+  <%= content_tag(:h2, T("Текст в корзине")) if T("Текст в корзине").present? %>
+
+  <%= render 'items', cart: @cart %>
+</div>

@@ -1,0 +1,46 @@
+<%- model_class = Menu -%>
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to plus_icon + ' Добавить',
+        new_admin_menu_path,
+        :class => 'btn' %>
+  </div>
+
+  <h1>Меню</h1>
+</div>
+
+<% unless @menus.empty? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Меню</th>
+        <th width="40%">Ключ</th>
+        <th width="20%" class="center">Элементы</th>
+        <th width="60px"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @menus.each do |menu| %>
+        <tr>
+          <td><%= menu.name %></td>
+          <td><%= menu.key %></td>
+          <td class="center"><%= link_to menu.items.size, admin_menu_menu_items_path(menu) %></td>
+          <td>
+            <%= link_to pencil_icon,
+                edit_admin_menu_path(menu), :class => 'btn btn-mini' %>
+                
+            <%= link_to trash_icon(true),
+                admin_menu_path(menu),
+                :method => :delete,
+                :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                :class => 'btn btn-mini btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="well">
+    Опаньки.. А меню-то и нету :(
+  </div>
+<% end %>

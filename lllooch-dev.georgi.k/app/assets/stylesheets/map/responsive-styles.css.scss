@@ -1,0 +1,75 @@
+@media (min-width: 1500px) {
+	.map {
+		max-width: 1400px;
+	}
+}
+
+@media (max-width: 1239px) {
+	body {
+		padding-top: 55px;
+		min-width: 1024px;
+	}
+
+	.container {
+		width: 964px;
+	}
+
+	.map {
+		background-image: image-url('map/bg-1024.jpg');
+        background-position: 15% center;
+		.languages-wrap {
+			position: absolute;
+			right: 30px;
+		}	
+	}
+
+	.logo {
+		background-image: image-url('map/logo-ipad.png');
+		width: 147px;
+		height: 35px;
+		left: 235px;
+		margin: -285px 0 0 -150px;
+	}
+
+	.motto {
+      font-size: 12px;
+      margin-top: -278px;
+      margin-left: 0;
+	}
+
+	.map {
+		//margin-top: -20px;
+
+		.languages-wrap {
+          margin-top: -108px;
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	body {
+		min-width: 768px;
+	}
+
+	.map {
+		background-image: image-url('map/bg-768.jpg');
+        background-position: 15% center;
+		.languages-wrap {
+			position: absolute;
+			right: 30px;
+            margin-top: -113px;
+		}
+
+		.motto {
+          font-size: 11px;
+          margin-left: 20px;
+          margin-top: -221px;
+		}
+	}
+
+	.logo {
+		left: 190px;
+		margin: -230px 0 0 -150px;
+	}	
+
+}

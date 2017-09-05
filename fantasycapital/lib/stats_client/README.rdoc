@@ -1,0 +1,7 @@
+= stats_client
+
+This stats client was built early in the project by Michael Lungo. It was built for the
+Stats.com API, which we stopped using early in the project.
+
+It is at this point deprecated. Kenneth created a simpler client in sportsdata-client, for the
+new sports data service.

@@ -1,0 +1,17 @@
+<a href="<%= goods_item_path(item.slug) %>" class="showroom-item" data-showroom="item">
+	<div class="showroom-item-pic">
+		<img src="<%= image_url(item.thumb.url(:preview)) %>" />
+	</div>
+
+	<div class="showroom-item-mask">
+		<div class="showroom-item-logo">
+			<table>
+				<tr>
+					<td>
+						<img src="<%= image_url(item.logo) %>" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</a>

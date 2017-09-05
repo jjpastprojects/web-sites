@@ -1,0 +1,37 @@
+<li>
+	<div class="blog-wrap blog-<%= blog.color.color %>">
+		<a href="<%= post_item_path blog.slug %>" class="blog-border">
+			<div class="shadow"></div>
+		</a>
+
+      <div class="blog-img">
+			<img src="<%= image_url blog.picture.url(:preview) %>" />
+		</div>
+
+		<div class="blog-info">
+			<div class="blog-info-wrap">
+				<h2>
+					<%= blog.title %>
+				</h2>
+
+				<div class="blog-desc">
+					<%= blog.announce.truncate(300).html_safe if blog.announce %>
+				</div>
+
+				<div class="blog-category">
+                  <% blog.categories.each do |c| %>
+					<a href="<%= blogs_item_path c.slug %>">
+						<%= c.name if c.present? %>
+					</a>
+                  <% end %>
+				</div>
+
+				<div class="blog-more">
+					<a href="<%= post_item_path blog.slug %>">
+						<%= T "Подробнее" %>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</li>

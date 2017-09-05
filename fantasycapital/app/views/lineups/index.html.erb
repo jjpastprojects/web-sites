@@ -1,0 +1,87 @@
+<div class="lineups">
+  <p>
+  <h2>MY LINEUPS</h2>
+  <div class="filter_row">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="styled-select_2">
+          <select>
+            <option>FILTER VIEW</option>
+            <option>ALL TIME</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <ul class="nav navbar-nav navbar-right capital-navbar-right">
+          <li class="dropdown createnewlineups">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span class="green line-height34">Create New Lineup »</span>
+            </a>
+          </li>
+          <li><a href="#" class="green global-player line-height34">Global Player Swap »</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="new-lineup-popup">
+      <div class="uparrow"><img src="/assets/arrow-top.png" alt=""></div>
+      <div class="container capitalcontent">
+        
+        <div class="capitalpopover">
+          <div class="popoverTitle">
+            <h2>CREATE NEW LINEUP</h2>
+            <button type="button" class="btnClose" data-dismiss="modal">X</button>
+          </div>
+          <p class="message" style="text-align:left">THERE ARE A FEW THINGS TO KNOW BEFORE YOU CAN BEGIN
+            BUILDINGG YOUR LINEUP. THE QUESTIONS BELOW HELP US DETERMINE WHICH PLAYERS ARE AVAILABLE FOR
+            DRAFTING IN THE NEXT STEP.</p>
+          <div class="lineup-item">
+            <div class="item-header">
+              <strong class="number">1</strong>
+              <h2 class="number">WHAT SPORT DO YOU WANT TO CREATE A LINEUP FOR?</h2>
+              <div class="clear"></div>
+            </div>
+            <ul class="choices sport-list">
+              <li><a href="javascript:void(0);">NFL</a></li>
+              <li><a href="javascript:void(0);" class="selected">NBA</a></li>
+              <li><a href="javascript:void(0);">CBB</a></li>
+              <li><a href="javascript:void(0);">NHL</a></li>
+            </ul>
+
+            <div class="clear">&nbsp;</div>
+          </div>
+
+          <div class="lineup-item">
+            <div class="item-header">
+              <strong class="number">2</strong>
+              <h2 class="number">THERE ARE MULTIPLE CONTEST START TIMES CURRRENTLY LISTED FOR THE SPORT YOU’VE
+                SELECTED. PLEASE SELECT A START TIME.</h2>
+              <div class="clear"></div>
+            </div>
+            <ul class="choices time-list">
+              <li><a href="javascript:void(0);">12/10 7:00PM (8 games)</a></li>
+              <li><a href="javascript:void(0);">12/10 7:00PM (9 games)</a></li>
+              <li><a href="javascript:void(0);">12/10 10:00PM (2 games) </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="buttonlineup">
+          <input type="button" value="CANCEL" class="button cancel"/>
+          <input type="button" value="CONTINUE" class="button continue"/>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <!--/Filter-->
+  <div class="clear">&nbsp;</div>
+
+  <div class="lineups-content">
+    <%= render partial: 'lineup', collection:  @lineups %>
+  </div>
+
+  <div class="col-md-4">
+    <!--<div class="gridbox">&nbsp;</div>-->
+  </div>
+</div>

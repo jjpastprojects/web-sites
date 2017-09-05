@@ -1,0 +1,66 @@
+<%= render partial: 'shared/account_heading' %>
+
+<h4 class="grey_bottom_border"><strong>ADD BANK ACCOUNT FORM</strong></h4>
+<div class="clearfix">&nbsp;</div>
+
+<%= form_tag("/withdraw", method: "post", 'data-stripe-action' => 'bankAccount') do %>
+
+  <div style="display:none;" class="error-container form-group has-error"></div>
+
+  <div class="form-group">
+    <label class="col-lg-5 control-label">Account Holder's Name</label>
+    <div class="col-lg-5">
+      <input type="text" data-payload="name" class="form-control" autocomplete="off"/>
+    </div>
+
+    <label class="col-lg-5 control-label">Account Holder's SSN</label>
+    <div class="col-lg-5">
+      <input type="text" data-payload="tax_id" class="form-control" autocomplete="off"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-5 control-label">Country</label>
+    <div class="col-lg-5">
+      <strong>USA</strong>
+      <input type="hidden" data-payload="country" value="US" />
+    </div>
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-5 control-label">Routing Number</label>
+    <div class="col-lg-5">
+      <input type="text" data-payload="routingNumber" class="form-control" autocomplete="off"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-5 control-label">Account Number</label>
+    <div class="col-lg-5">
+      <input type="text" data-payload="accountNumber" class="form-control" autocomplete="off"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-5 control-label">Account Type</label>
+    <div class="col-lg-5">
+      <select data-payload="type" class="form-control">
+        <option value="checking" selected>Checking</option>
+        <option value="savings">Savings</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="button" id="stripeSubmit" class="btn btn-large btn-primary pull-right">
+    Add Bank Account
+  </button>
+<% end %>
+
+<% content_for :after_js do %>
+  <script type="text/javascript">
+    $(document).on("ready page:load", function () {
+        window.initializeStripeForm();
+    });
+  </script>
+<% end %>

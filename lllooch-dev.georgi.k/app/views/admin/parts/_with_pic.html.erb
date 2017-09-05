@@ -1,0 +1,10 @@
+<div class="media">
+  <div class="pull-left">
+    <%= image_tag image.url(size), class: 'media-object img-polaroid' if image %>
+  </div>
+
+  <div class="media-body">
+    <%= item.name %>
+    <%= (tag(:br) + content_tag(:small, item.path, class: :muted)) if defined? item.path %>
+  </div>
+</div>

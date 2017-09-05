@@ -1,0 +1,32 @@
+<%= content_for :extra_scripts do %>
+    <%= render partial: 'views' %>
+<% end %>
+
+<%= content_for :footer_scripts do %>
+    <script type="text/javascript">
+        var fetchUrl = "<%= blog_fetch_path %>";
+        $(document).on('page:load ready', function () {
+            $('a[data-category]').each(function () {
+                $(this).attr('href', '#' + $(this).data('category'));
+            });
+        });
+    </script>
+
+    <%= javascript_include_tag "backbone/blog" %>
+<% end %>
+
+<div class="blogs-wrap loading" data-type="blogs">
+  <div class="loading-wrap" data-blog="loading">
+    <div class="loading">
+      <div class="wrap">
+        <div class="loader">
+          <%= image_tag "content/product-loader.gif" %>
+        </div>
+
+        <%= T "Загружается..." %>
+      </div>
+    </div>
+  </div>
+
+  <div data-region="posts"></div>
+</div>

@@ -1,0 +1,87 @@
+<md-content class="fill">
+  <md-toolbar color="primary" class="header">
+
+
+
+    <!-- This fills the remaining space of the current row -->
+    <!--<span class="example-fill-remaining-space"></span>-->
+
+    <!--<span>Right Aligned Text</span>-->
+
+
+      <!-- This fills the remaining space of the current row -->
+    <h3 class="title">
+      <a href="{{url}}"><span>{{title}}</span></a>
+    </h3>
+    <span class="fill"></span>
+    <span>georgi@small-e.com</span>
+
+
+    <!--<span class="fill"></span>-->
+    <!--<a md-button router-active [routerLink]=" ['./'] ">-->
+      <!--Index-->
+    <!--</a>-->
+    <!--<a md-button router-active [routerLink]=" ['./home'] ">-->
+      <!--Home-->
+    <!--</a>-->
+    <!--<a md-button router-active [routerLink]=" ['./about'] ">-->
+      <!--About-->
+    <!--</a>-->
+  </md-toolbar>
+
+  <md-content class="fill">
+
+    <md-sidenav-layout style="height: 100%;" >
+      <!--
+      I have issue: https://github.com/angular/angular/issues/9888
+      using custom directive inside md-sidenav-layout -->
+      <!--<left-nav></left-nav>-->
+      <md-sidenav #left (open)="mybutton.focus()" [opened]="true" mode="side" layout-padding class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+        <md-toolbar md-scroll-shrink>
+          <div class="md-toolbar-tools">
+            <h3>
+              <span><<</span>
+            </h3>
+          </div>
+        </md-toolbar>
+
+        <md-content role="navigation">
+          <ul class="side-menu">
+
+            <li *ngFor="let menu of menuItems" class="parent-list-item"
+                [ngClass]="{'parentActive': isMenuSelected(menu)}">
+
+              <menu-link [menu]="menu"  *ngIf="menu.type === 'link'"></menu-link>
+              <menu-toggle [menu]="menu" *ngIf="menu.type === 'toggle'"></menu-toggle>
+            </li>
+
+
+            <!--<li ng-repeat="section in vm.menu.sections" class="parent-list-item"-->
+                <!--ng-class="{'parentActive' : vm.isSectionSelected(section)}">-->
+              <!--<h2 class="menu-heading" ng-if="section.type === 'heading'"-->
+                  <!--id="heading_{{ section.name | nospace }}">-->
+                <!--{{section}}-->
+              <!--</h2>-->
+              <!--<menu-link section="section" ng-if="section.type === 'link'"></menu-link>-->
+              <!--<menu-toggle section="section" ng-if="section.type === 'toggle'"></menu-toggle>-->
+            <!--</li>-->
+          </ul>
+
+        </md-content>
+      </md-sidenav>
+      <md-content layout-padding >
+        <md-progress-bar mode="indeterminate" color="primary" *ngIf="loading"></md-progress-bar>
+        <router-outlet></router-outlet>
+        <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+        <md-divider></md-divider>
+        <button md-raised-button class="md-raised md-primary" (click)="left.toggle()">Toggle Left Sidenav</button>
+
+      </md-content>
+    </md-sidenav-layout>
+  </md-content>
+
+  <footer>
+    <span id="footerText">Footer</span>
+  </footer>
+</md-content>
+

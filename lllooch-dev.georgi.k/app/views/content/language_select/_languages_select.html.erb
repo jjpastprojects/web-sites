@@ -1,0 +1,17 @@
+<div class="languages-wrap">
+	<div class="languages-scroll">
+		<table class="languages-table">
+			<tr>
+				<td>
+					<ul class="languages">
+						<% languages.each do |lang| %>
+							<li>
+                              <%= link_to lang.native.mb_chars.downcase, catalog_path(lang.slug) %>
+							</li>
+						<% end %>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

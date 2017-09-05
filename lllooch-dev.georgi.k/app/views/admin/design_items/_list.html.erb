@@ -1,0 +1,35 @@
+<% if items.present? %>
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Проект</th>
+            <th width="60px"></th>
+          </tr>
+      </thead>
+
+      <tbody>
+      <% items.each do |i| %>
+        <tr>
+          <td>
+            <%= with_pic i, i.icon %>
+          </td>
+
+          <td>
+            <%= link_to pencil_icon,
+                        edit_admin_designer_design_item_path(i.designer, i), :class => 'btn btn-mini' %>
+
+            <%= link_to trash_icon(true),
+                        admin_designer_design_item_path(i.designer, i),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-mini btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% else %>
+    <div class="alert alert-notice">
+      Опаньки.. А тут-то пусто!
+    </div>
+<% end %>

@@ -1,0 +1,35 @@
+<script type="text/template" id="upcoming-contests-template">
+  <% if (upcomingContests.length > 0) { %>
+    <table class='contestHead main-grid table filter-result sortable fantasy-table'>
+      <thead>
+      <tr>
+        <th data-defaultsort="asc" class="srt-contest-name">ID</th>
+        <th data-defaultsort="asc" class="srt-sport">GAME</th>
+        <th data-defaultsort="asc" class="srt-live-in">STARTS IN</th>
+        <th data-defaultsort="asc" class="srt-entry-fee">ENTRY FEE</th>
+        <th data-defaultsort="asc">PRIZE POOL</th>
+        <th data-defaultsort="asc">ENTRIES</th>
+        <th data-defaultsort="disabled"></th>
+        <th data-defaultsort="disabled"></th>
+      </tr>
+      </thead>
+      
+      <tbody>
+        <% _(upcomingContests).each(function (contest) { %>
+        <tr class="upcomingcontest">
+          <td><%= contest.id %></td>
+          <td><%= contest.sport %></td>
+          <td data-time="<%= contest.contest_start %>"  class="js-time-count"><%= moment(contest.contest_start).format("hh:mm a") %></td>
+          <td><%= accounting.formatMoney(contest.entry_fee) %></td>
+          <td><%= accounting.formatMoney(contest.prize) %></td>
+          <td><%= contest.entries_count %>/<%= contest.max_entries %></td>
+          <td><a class="button" href="<%= contest.edit_path %>">EDIT</a></td>
+          <td><a class="button" href="<%= contest.view_path %>">VIEW</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p class="message">YOU HAVE NO UPCOMING CONTEST RIGHT NOW. JOIN MORE CONTEST NOW!</p>
+  <% } %>
+</script>

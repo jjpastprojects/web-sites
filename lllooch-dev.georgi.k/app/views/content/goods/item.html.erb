@@ -1,0 +1,304 @@
+<div class="b-product<%= ' can-order' if @language.is_default %>" data-action="product"<%= ' data-no-shadow=true' unless @good.no_shadow %><%= ' data-dark=true' if @good.bg == 'dark' %>>
+<div class="shadow"></div>
+
+<div class="media-dismiss" data-product-dismiss="media">
+  <i class="control control-dismiss"></i>
+</div>
+
+<div class="loading-wrap" data-product="loading">
+  <div class="loading">
+    <div class="wrap">
+      <div class="loader">
+        <%= image_tag "content/product-loader.gif" %>
+      </div>
+      <%= T "Загружается..." %>
+    </div>
+  </div>
+</div>
+
+<div class="product-content" data-product="content">
+<div class="media main-pic" data-product-cover="<%= @good.pictures.to_json %>">
+  <div data-cover="retina_landscape" style="background-position: <%= @good.picture_alignment || 'center' %>"></div>
+  <div data-cover="retina_portrait" style="background-position: <%= @good.picture_alignment || 'center' %>"></div>
+  <div class="hide-on-tablets show-on-desktop" data-cover="desktop" style="background-position: <%= @good.picture_alignment || 'center' %>"></div>
+  <div class="show-on-landscape" data-cover="landscape" style="background-position: <%= @good.picture_alignment || 'center' %>"></div>
+  <div class="show-on-portrait" data-cover="portrait" style="background-position: <%= @good.picture_alignment || 'center' %>"></div>
+</div>
+
+<% if @good.three60s %>
+    <div class="media three60" data-product-media="360">
+      <div class="padder">
+        <ul class="b-thumbs">
+          <% @good.three60s.each_with_index do |t, i| %>
+              <li data-show="threesixty<%= i %>">
+                <%= image_tag t.src.url(:thumb) %>
+              </li>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="three60-viewer" data-type="viewer" data-viewer="360">
+        <% @good.three60s.each_with_index do |t, i| %>
+            <script type="text/javascript">
+                var frames<%= i %> = [
+                    <%= raw t.items.map{|f| '\'' + f.src.url(:preview) + "'"}.join "," %>
+                ];
+            </script>
+
+            <div class="threesixty" data-type="threesixty" data-threesixty="threesixty<%= i %>" data-threesixty-frames="frames<%= i %>" data-threesixty-spinner="threesixty-spinner-<%= i %>">
+
+              <div class="threesixty-controls">
+                <div class="threesixty-control" data-threesixty-control="left"></div>
+                <div class="threesixty-control threesixty-control-right" data-threesixty-control="right"></div>
+              </div>
+
+              <div class="threesixty-spinner" id="threesixty-spinner-<%= i %>" data-threesixty="spinner">
+                <span>0%</span>
+              </div>
+
+              <ol class="threesixty-images" data-threesixty="images"></ol>
+            </div>
+        <% end %>
+      </div>
+    </div>
+<% end %>
+
+<% unless @good.vimeo.empty? %>
+    <div class="media video" data-product-media="video">
+      <div class="media-video-container">
+        <%= @good.vimeo.html_safe %>
+      </div>
+    </div>
+<% end %>
+
+<% if @good.panorama.file? %>
+    <div class="media pan" data-product-media="pan">
+      <% if @good.panorama_ipad.file? %>
+          <div class="hide-on-tablets show-on-desktop">
+      <% end %>
+
+      <%= image_tag @good.panorama.url(:picture) %>
+
+      <% if @good.panorama_ipad.file? %>
+          </div>
+
+          <div class="hide-on-desktop show-on-tablets">
+            <%= image_tag @good.panorama_ipad %>
+          </div>
+      <% end %>
+    </div>
+<% end %>
+
+<div class="padder">
+   <% if @good.name === "STARWIRE" %>
+      <div class="actioninfo">
+         <div class="title">
+                <span>акция!  </span>
+         </div>
+         <div class="description">
+           Успейте сделать предзаказ на долгожданную новинку лета 2014 - <br/>
+
+           дизайнерский удлиннитель <a href="#" onclick="jQuery('#cart').submit();">STARWIRE с 20% скидкой!</a>* <br/>
+
+           *Предложение действительно только до 30.06.2014
+         </div>
+      </div>
+    <% end %>
+
+
+  <div class="info">
+    <div class="info-block">
+      <div class="controls">
+        <div class="description_shade"></div>
+
+        <% if @good.name === "STARWIRE" %>
+            <div class="price">
+
+              <div class="oldprice">
+                  &nbsp;<%= @good.best_price %>&nbsp;
+              </div>
+              <div class="newprice">
+                  3360p.
+              </div>
+            </div>
+        <% else %>
+            <div class="price">
+                <%= @good.best_price %>
+            </div>
+        <% end %>
+
+        <div class="b-farrow small">
+          <div class="line l"></div>
+          <div class="line r"></div>
+          <div class="tip"></div>
+        </div>
+
+        <div class="buy">
+          <% if @good.is_preorder_only %>
+              <%= simple_form_for @good, url: preorder_form_path, html: {method: :post, name: 'cart', id: 'cart' } do |f| %>
+                  <%= f.input :id, as: :hidden %>
+
+                  <%= content_tag :button, '', type: :submit, class: 'btn-preorder' %>
+              <% end %>
+          <% else %>
+              <%= simple_form_for @good, url: cart_buy_path, html: {method: :post, name: 'cart', id: 'cart' } do |f| %>
+                  <%= f.input :id, as: :hidden %>
+
+                  <%= content_tag :button, '', type: :submit %>
+              <% end %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="description" data-product="description">
+        <div class="opener" data-product-toggle="description">
+
+
+          <i class="control control-up" > </i>
+
+
+          <i class="control control-down"></i>
+
+         <!-- <a href="#" class="b-search-link" data-action="toggle" data-toggle="search-form">  </a>-->
+
+
+        </div>
+
+        <div class="short" data-product-toggle="description">
+          <div class="logo">
+            <% if @good.logo_desc %>
+                <%= image_tag @good.logo_desc.url(:preview) %>
+            <% else %>
+                <%= @good.title %>
+            <% end %>
+          </div>
+
+          <div class="article">
+            <%= T "art" %>: <%= @good.article %>
+          </div>
+
+          <%= @good.announce.html_safe if @good.announce %>
+
+          <div class="b-farrow">
+            <div class="line l"></div>
+            <div class="line r"></div>
+            <div class="tip"></div>
+          </div>
+        </div>
+
+        <div class="long" data-action="scrollbar">
+          <% if @good.has_any_material_type? %>
+              <div class="block">
+                <div class="title smaller">
+                  <%= @good.material_type_text.present? ? @good.material_type_text : T('Типы материалов') %>
+                </div>
+                <ul class="b-thumbs material-types">
+                  <% @good.material_types.each do |t| %>
+                      <li>
+                        <%= image_tag t.material.url(:additional), data: {zoomify: t.material.url(:material), price: number_to_currency(t.price, precision: 0, unit: T("руб."))} %>
+                        <%= t.material_name %>
+                      </li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <% if @good.content %>
+              <div class="block">
+                <div class="html-safe">
+                  <%= @good.content.html_safe %>
+                </div>
+              </div>
+          <% end %>
+
+          <% unless @good.material.empty? %>
+              <div class="block">
+                <div class="title smaller">
+                  <%= T (@good.material.size == 1 ? "Материал" : "Материалы") %>
+                </div>
+                <%= (@good.material.map { |m| link_to(m.title, materials_path(anchor: m.id)) }.join ", ").html_safe %>
+              </div>
+          <% end %>
+
+          <% unless @good.designer.empty? %>
+              <div class="block">
+                <div class="title smaller">
+                  <%= T (@good.designer.size == 1 ? "Дизайнер" : "Дизайнеры") %>
+                </div>
+
+                <div class="block">
+                  <%= (@good.designer.map { |d| link_to d.name, designers_item_path(d) }.join ", ").html_safe %>
+                </div>
+              </div>
+          <% end %>
+
+          <% if @good.parameters.present? %>
+              <div class="block">
+                <div class="html-safe">
+                  <%= @good.parameters.html_safe %>
+                </div>
+              </div>
+          <% end %>
+
+          <% unless @good.files.empty? %>
+              <div class="block">
+                <div class="b-thumbs sizes">
+                  <div>
+                    <div class="title"><%= T "Файлы для скачивания" %></div>
+                    <% @good.files.each do |file| %>
+                        <li>
+                          <table class="vertical">
+                            <tr>
+                              <td>
+                                <i class="<%= file.file_type %>-icon"></i>
+                              </td>
+                              <td>
+                                <%= link_to file.name, file.src.url %>
+                              </td>
+                            </tr>
+                          </table>
+                        </li>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+          <% end %>
+
+          <% if @good.additional %>
+              <div class="block">
+                <div class="html-safe">
+                  <%= @good.additional.html_safe %>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="info-block info-block-features">
+      <ul class="features">
+        <% unless @good.three60s.empty? %>
+            <li data-product-media="360">
+              <i class="product-icon icon-360"></i><span><%= T "просмотр" %></span>
+            </li>
+        <% end %>
+
+        <% if @good.panorama.file? %>
+            <li data-product-media="pan">
+              <i class="product-icon icon-pan"></i><span><%= T "Панорама" %></span>
+            </li>
+        <% end %>
+
+        <% unless @good.vimeo.empty? %>
+            <li data-product-media="video">
+              <i class="product-icon icon-video"></i><span><%= T "Видео" %></span>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>

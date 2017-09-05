@@ -1,0 +1,7 @@
+Template Name: Popdom # 2
+Colors: Blue[blue:#005ba2] | Red[red:#651F17] | Bright Red[bright-red:#C6320E] | Bright Green[bright-green:#5CC32C] | Bright Purple[bright-purple:#A94196] | Bright Turq[bright-turq:#61CFDE] | Bright Orange[bright-orange:#DC8621] | Bright Blue[bright-blue:#1F5BD7] | Dark Blue[dark-blue:#1A4567] | Grape[grape:#76254D] | Green[green:#2F5C17] | Turq[turq:#3A8080] | Orange[orange:#964911] | Black[black:#000]
+Preview Size: 610x497
+Preview Ext: jpg
+Fields: Title[id:title,max:50,default_val:EXCLUSIVE<br />MARKETING REPORT,textarea:true]|Content Text[id:sub_text,max:190,default_val:Become a part of our private community and receive extra content that never gets published on the blog. Leave your email below to join the troops.]|Footer Security Note[id:footer_note,max:80,default_val:We never send SPAM or anything like that]|Name Default Value[id:name_default,default_val:Put your name here]|Email Default Value[id:email_default,default_val:Put your email here]|Submit Button[id:submit_button,max:15,default_val:Join Now]
+Button Colors: Default[default] | Red[red] | Blue[blue] | Bright Red[bright-red] | Bright Green[bright-green] | Bright Purple[bright-purple] | Bright Turq[bright-turq] | Bright Orange[bright-orange] | Bright Blue[bright-blue] | Dark Blue[dark-blue] | Grape[grape] | Green[green] | Turq[turq] | Orange[orange] | Black[black]
+Center: Y

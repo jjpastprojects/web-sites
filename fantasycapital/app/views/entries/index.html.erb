@@ -1,0 +1,164 @@
+
+<!--
+<div>
+
+  
+
+  <h2>MY ENTRIES</h2>
+  <div class="clear">&nbsp;</div>
+  <div class="filter_row">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>Live Contest</h4>
+      </div>
+
+      <div class="col-md-4"><span class="green"><a href="#">Join More Contest »</a></span></div>
+
+    </div>
+  </div>
+
+  <div class="live-contests-dest"></div>
+
+  <div class="filter_row">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Upcoming Contest</h4>
+      </div>
+      <div class="col-md-8">
+        <span class="green"><a href="#">Join More Contest »</a></span>
+        <span class="green"><%= link_to 'View my Lineups', lineups_path %></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="upcoming-contests-dest"></div>
+
+  <div class="filter_row">
+    <div class="row">
+      <div class="col-md-4">
+        <h4 class="line-height34">Completed Contest</h4>
+      </div>
+      <div class="col-md-8">
+        <ul>
+          <li>
+            <h4>Buy In</h4>
+          </li>
+          <li>
+            <div class="styled-select">
+              <select>
+                <option>ALL</option>
+                <option>ALL TIME</option>
+              </select>
+            </div>
+          <li>
+            <h4>Show Contest from</h4>
+          </li>
+          <li class="styled-select">
+            <select>
+              <option>ALL</option>
+              <option>ALL TIME</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="completed-contests-dest"></div>
+
+</div>
+-->
+<% content_for :banner do %>
+<script>
+
+  jQuery(document).on("ready page:load", function ($) {
+
+    var data = <%= @data.to_json.html_safe %>;
+    /*
+    data = {
+      "liveContests": [
+        {
+          "id": 22,
+          "sport": "NBA",
+          "start_at": "2003-03-17T20:44:04.984Z",
+          "end_at": "2004-03-17T20:44:04.984Z",
+          "entry_fee": "$1.0",
+          "prize": "$9.5",
+          "place": 814,
+          "results_path": "/entries/1",
+          "final_pos": 5,
+          "num_entries": 10
+        }
+      ],
+      "upcomingContests": [
+        {
+          "id": 53,
+          "sport": "NBA",
+          "complete": "2014-03-16 04:00:00",
+          "entry_fee": "$1.0",
+          "end_at": "2004-03-17T20:44:04.984Z",
+          "contest_start": "2015-03-17T20:44:04.984Z",
+          "prize": "$9.5",
+          "place": 814,
+          "entry_size": 100,
+          "entries_count": 3,
+          "max_entries": 10,
+          "results_path": "/entries/1",
+          "edit_path": "/entries/1/edit",
+          "view_path": "/entries/1/view"
+        }
+      ],
+      "completedContests": [
+        {
+          "id": 55,
+          "sport": "NBA",
+          "complete": "2014-03-16 04:00:00",
+          "entry_fee": "$1.0",
+          "prize": "$9.5",
+          "place": 814,
+          "won": "$0",
+          "results_path": "/entries/1"
+        },
+        {
+          "id": 56,
+          "sport": "NBA",
+          "complete": "2014-03-16 03:00:00",
+          "entry_fee": "$1.0",
+          "prize": "$2.5",
+          "place": 8114,
+          "won": "$0",
+          "results_path": "/entries/1"
+        },
+        {
+          "id": 5521,
+          "sport": "NBA",
+          "complete": "2014-03-16 05:00:00",
+          "entry_fee": "$1.0",
+          "prize": "$6.5",
+          "place": 86124,
+          "won": "$0",
+          "results_path": "/entries/1"
+        }
+      ]
+    };
+    */
+    var liveColl = new Main.Collections.LiveContestsCollection(data.liveContests)
+    var upcoColl = new Main.Collections.UpcomingContestsCollection(data.upcomingContests);
+    var compColl = new Main.Collections.CompletedContestsCollection(data.completedContests);
+
+    var tabsView = new Main.Views.EntriesTabsView({
+      liveCollection: liveColl, 
+      upcomingCollection: upcoColl, 
+      completedCollection: compColl
+    });
+    
+
+  });
+
+</script>
+
+<%= Rails.application.assets.find_asset('backbone/templates/entries-tabs-template.html').to_s.html_safe %>
+<%= Rails.application.assets.find_asset('backbone/templates/live-contests-template.html').to_s.html_safe %>
+<%= Rails.application.assets.find_asset('backbone/templates/upcoming-contests-template.html').to_s.html_safe %>
+<%= Rails.application.assets.find_asset('backbone/templates/completed-contests-template.html').to_s.html_safe %>
+<% end %>

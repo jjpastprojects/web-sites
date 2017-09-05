@@ -1,0 +1,24 @@
+<%= language_prompt %>
+
+<% form_action = if @menu_item.id then admin_menu_menu_item_path(@menu, @menu_item) else admin_menu_menu_items_path(@menu) end %>
+
+<%= simple_form_for @menu_item, :html => { class: 'form-horizontal' }, url: form_action do |f| %>
+  <%= f.input :name %>
+
+  <% Globalize.with_locale(@locale.slug) do %>    
+    <%= f.input :title %>
+    <%= f.association :menu_item, collection: MenuItem.where('menu_item_id is null').select{|i| i != @menu_item}, include_blank: 'Верхний уровень' %>
+  <% end %>
+
+  <%= f.input :url, as: :string %>
+
+  <%= f.association :page, collection: Page.with_translations('ru'), prompt: 'Выберите страницу' %>
+
+  <%= language_input f %>
+
+  <div class="form-actions">
+    <%= f.button :submit, save_or_update(@menu_item), :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                admin_menu_menu_items_path(@menu, @menu_item), :class => 'btn' %>
+  </div>
+<% end %>

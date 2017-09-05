@@ -1,0 +1,3782 @@
+{"statistics": {
+    "visitor": {
+        "hitting": {
+            "team": {
+                "onbase": {
+                    "h": "5",
+                    "s": "1",
+                    "d": "2",
+                    "t": "0",
+                    "hr": "2",
+                    "tb": "13",
+                    "bb": "9",
+                    "ibb": "0",
+                    "hbp": "0",
+                    "fc": "0",
+                    "roe": "0"
+                },
+                "runs": {
+                    "unearned": "0",
+                    "earned": "7",
+                    "total": "7"
+                },
+                "outcome": {
+                    "klook": "24",
+                    "kswing": "7",
+                    "ktotal": "31",
+                    "ball": "60",
+                    "iball": "0",
+                    "dirtball": "0",
+                    "foul": "0"
+                },
+                "outs": {
+                    "klook": "3",
+                    "kswing": "5",
+                    "ktotal": "8",
+                    "po": "1",
+                    "fo": "3",
+                    "fidp": "0",
+                    "go": "9",
+                    "gidp": "2",
+                    "lo": "3",
+                    "lidp": "0",
+                    "sacfly": "0",
+                    "sachit": "0"
+                },
+                "steal": {
+                    "caught": "1",
+                    "stolen": "0",
+                    "pct": "0.0"
+                },
+                "ab": "29",
+                "ap": "38",
+                "avg": ".172",
+                "lob": "11",
+                "pcount": "158",
+                "rbi": "7",
+                "abhr": "14.5",
+                "abk": "3.625",
+                "bip": "19",
+                "babip": "0.158",
+                "bbk": "1.125",
+                "bbpa": "0.237",
+                "gofo": "1.286",
+                "iso": "0.276",
+                "obp": "0.368",
+                "ops": "0.816",
+                "seca": "-0.069",
+                "slg": "0.448",
+                "xbh": "4"
+            },
+            "players": {
+                "player": [
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "1",
+                            "tb": "4",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "1",
+                            "ktotal": "3",
+                            "ball": "6",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "1",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "1",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "1",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "4",
+                        "ap": "4",
+                        "avg": ".250",
+                        "lob": "3",
+                        "pcount": "15",
+                        "rbi": "1",
+                        "abhr": "4.0",
+                        "abk": "4.0",
+                        "bip": "2",
+                        "babip": "0.0",
+                        "bbk": "0.0",
+                        "bbpa": "0.0",
+                        "gofo": "0.0",
+                        "iso": "0.75",
+                        "obp": "0.25",
+                        "ops": "1.25",
+                        "seca": "0.75",
+                        "slg": "1.0",
+                        "xbh": "1",
+                        "id": "6a918e41-3ea3-4c2f-aca7-d5a03c4608cb"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "362f22cd-0a3b-4dde-8ccb-d6a71bd93183"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "1",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "4",
+                            "kswing": "0",
+                            "ktotal": "4",
+                            "ball": "11",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "2",
+                            "ktotal": "2",
+                            "po": "1",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "1",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "4",
+                        "ap": "5",
+                        "avg": ".000",
+                        "lob": "1",
+                        "pcount": "31",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "2.0",
+                        "bip": "2",
+                        "babip": "0.0",
+                        "bbk": "0.5",
+                        "bbpa": "0.2",
+                        "gofo": "1.0",
+                        "iso": "0.0",
+                        "obp": "0.2",
+                        "ops": "0.2",
+                        "seca": "-0.25",
+                        "slg": "0.0",
+                        "xbh": "0",
+                        "id": "73d25ec2-2d4c-47e3-8491-3acaaad3d856"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "0",
+                            "ktotal": "2",
+                            "ball": "4",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "4",
+                            "gidp": "1",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "4",
+                        "ap": "4",
+                        "avg": ".000",
+                        "lob": "2",
+                        "pcount": "13",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "4",
+                        "babip": "0.0",
+                        "bbk": "0",
+                        "bbpa": "0.0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0.0",
+                        "ops": "0.0",
+                        "seca": "0.0",
+                        "slg": "0.0",
+                        "xbh": "0",
+                        "id": "b86f5bc8-8d60-44c9-8fd7-450fcb749929"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "17f41dd6-d2e9-41cf-83f3-7e6cd07f3171"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "1",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "1",
+                            "bb": "1",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "4",
+                            "kswing": "2",
+                            "ktotal": "6",
+                            "ball": "9",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "1",
+                            "fidp": "0",
+                            "go": "1",
+                            "gidp": "0",
+                            "lo": "1",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "1",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "4",
+                        "ap": "5",
+                        "avg": ".250",
+                        "lob": "0",
+                        "pcount": "21",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "4",
+                        "babip": "0.25",
+                        "bbk": "0",
+                        "bbpa": "0.2",
+                        "gofo": "0.5",
+                        "iso": "0.0",
+                        "obp": "0.4",
+                        "ops": "0.65",
+                        "seca": "-0.5",
+                        "slg": "0.25",
+                        "xbh": "0",
+                        "id": "40085c05-fa06-4eec-9f41-f0245980f6a0"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "d9ea99d4-3c15-4b23-8d40-9b92ecb78b8d"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "3de86485-c846-4551-99b3-c6ca509dc12d"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "0",
+                            "d": "1",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "2",
+                            "bb": "2",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "1",
+                            "ktotal": "3",
+                            "ball": "6",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "1",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "2",
+                        "ap": "4",
+                        "avg": ".500",
+                        "lob": "1",
+                        "pcount": "15",
+                        "rbi": "2",
+                        "abhr": "0",
+                        "abk": "2.0",
+                        "bip": "1",
+                        "babip": "1.0",
+                        "bbk": "2.0",
+                        "bbpa": "0.5",
+                        "gofo": "0.0",
+                        "iso": "0.5",
+                        "obp": "0.75",
+                        "ops": "1.75",
+                        "seca": "-0.5",
+                        "slg": "1.0",
+                        "xbh": "1",
+                        "id": "4a46a8f6-ee83-4712-b9e5-7bd2ae9d8fe6"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "3",
+                            "kswing": "0",
+                            "ktotal": "3",
+                            "ball": "3",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "2",
+                            "kswing": "1",
+                            "ktotal": "3",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "1",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "4",
+                        "ap": "4",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "14",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "1.333",
+                        "bip": "1",
+                        "babip": "0.0",
+                        "bbk": "0.0",
+                        "bbpa": "0.0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0.0",
+                        "ops": "0.0",
+                        "seca": "0.0",
+                        "slg": "0.0",
+                        "xbh": "0",
+                        "id": "3f38dbee-db39-48c9-8b30-d7347deccd19"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "0",
+                            "d": "1",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "2",
+                            "bb": "1",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "2",
+                            "total": "2"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "2",
+                            "ktotal": "4",
+                            "ball": "5",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "1",
+                            "fidp": "0",
+                            "go": "1",
+                            "gidp": "1",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "3",
+                        "ap": "4",
+                        "avg": ".333",
+                        "lob": "3",
+                        "pcount": "16",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "3",
+                        "babip": "0.333",
+                        "bbk": "0",
+                        "bbpa": "0.25",
+                        "gofo": "1.0",
+                        "iso": "0.334",
+                        "obp": "0.5",
+                        "ops": "1.167",
+                        "seca": "0.0",
+                        "slg": "0.667",
+                        "xbh": "1",
+                        "id": "f538dd01-59db-4f48-a464-450ef675298e"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "3",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "4",
+                            "kswing": "0",
+                            "ktotal": "4",
+                            "ball": "11",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "1",
+                            "kswing": "0",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "1",
+                        "ap": "4",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "20",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "1.0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "3.0",
+                        "bbpa": "0.75",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0.75",
+                        "ops": "0.75",
+                        "seca": "-3.0",
+                        "slg": "0.0",
+                        "xbh": "0",
+                        "id": "fadd12b6-4d2d-4e03-82d9-c5e8b6cb0b83"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "1",
+                            "tb": "4",
+                            "bb": "1",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "1",
+                            "kswing": "1",
+                            "ktotal": "2",
+                            "ball": "5",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "2",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "3",
+                        "ap": "4",
+                        "avg": ".333",
+                        "lob": "1",
+                        "pcount": "13",
+                        "rbi": "4",
+                        "abhr": "3.0",
+                        "abk": "0",
+                        "bip": "2",
+                        "babip": "0.0",
+                        "bbk": "0",
+                        "bbpa": "0.25",
+                        "gofo": "0.0",
+                        "iso": "1.0",
+                        "obp": "0.5",
+                        "ops": "1.833",
+                        "seca": "0.667",
+                        "slg": "1.333",
+                        "xbh": "1",
+                        "id": "ff750663-5eb3-4006-9d6a-2660397ff595"
+                    }
+                ]
+            }
+        },
+        "pitching": {
+            "team": {
+                "onbase": {
+                    "h": "13",
+                    "s": "10",
+                    "d": "1",
+                    "t": "0",
+                    "hr": "2",
+                    "tb": "20",
+                    "bb": "4",
+                    "ibb": "0",
+                    "hbp": "0",
+                    "fc": "0",
+                    "roe": "0"
+                },
+                "runs": {
+                    "unearned": "0",
+                    "earned": "6",
+                    "total": "6"
+                },
+                "outcome": {
+                    "klook": "19",
+                    "kswing": "16",
+                    "ktotal": "35",
+                    "ball": "49",
+                    "iball": "0",
+                    "dirtball": "3",
+                    "foul": "0"
+                },
+                "outs": {
+                    "klook": "2",
+                    "kswing": "4",
+                    "ktotal": "6",
+                    "po": "0",
+                    "fo": "10",
+                    "fidp": "0",
+                    "go": "7",
+                    "gidp": "0",
+                    "lo": "2",
+                    "lidp": "0",
+                    "sacfly": "0",
+                    "sachit": "0"
+                },
+                "steal": {
+                    "caught": "0",
+                    "stolen": "0"
+                },
+                "games": {
+                    "complete": "0",
+                    "win": "1",
+                    "loss": "0",
+                    "save": "1",
+                    "svo": "2",
+                    "hold": "1",
+                    "blown_save": "0",
+                    "qstart": "0",
+                    "shutout": "0"
+                },
+                "pcount": "164",
+                "error": "0",
+                "ip_1": "27",
+                "ip_2": "9.0",
+                "bf": "44",
+                "oba": "0.325",
+                "gofo": "0.583",
+                "lob": "23",
+                "era": "6.0",
+                "k9": "6.003",
+                "whip": "1.889",
+                "kbb": "1.5"
+            },
+            "players": {
+                "player": [
+                    {
+                        "onbase": {
+                            "h": "3",
+                            "s": "2",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "1",
+                            "tb": "6",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "5",
+                            "ktotal": "7",
+                            "ball": "7",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "2",
+                            "ktotal": "2",
+                            "po": "0",
+                            "fo": "2",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "0",
+                            "save": "1",
+                            "svo": "1",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "25",
+                        "error": "0",
+                        "ip_1": "4",
+                        "ip_2": "1.1",
+                        "bf": "7",
+                        "oba": "0.429",
+                        "gofo": "0.0",
+                        "lob": "6",
+                        "era": "6.75",
+                        "k9": "13.5",
+                        "whip": "2.25",
+                        "kbb": "0.0",
+                        "id": "3de86485-c846-4551-99b3-c6ca509dc12d"
+                    },
+                    {
+                        "onbase": {
+                            "h": "6",
+                            "s": "5",
+                            "d": "1",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "7",
+                            "bb": "3",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "3",
+                            "total": "3"
+                        },
+                        "outcome": {
+                            "klook": "13",
+                            "kswing": "7",
+                            "ktotal": "20",
+                            "ball": "34",
+                            "iball": "0",
+                            "dirtball": "1",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "1",
+                            "kswing": "2",
+                            "ktotal": "3",
+                            "po": "0",
+                            "fo": "8",
+                            "fidp": "0",
+                            "go": "7",
+                            "gidp": "0",
+                            "lo": "2",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0",
+                            "win": "1",
+                            "loss": "0",
+                            "save": "0",
+                            "svo": "0",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "105",
+                        "error": "0",
+                        "ip_1": "21",
+                        "ip_2": "7.0",
+                        "bf": "30",
+                        "oba": "0.222",
+                        "gofo": "0.7",
+                        "lob": "13",
+                        "era": "3.857",
+                        "k9": "3.861",
+                        "whip": "1.286",
+                        "kbb": "1.0",
+                        "id": "17f41dd6-d2e9-41cf-83f3-7e6cd07f3171"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "1",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "1",
+                            "ktotal": "3",
+                            "ball": "6",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "1",
+                            "kswing": "0",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "0",
+                            "save": "0",
+                            "svo": "1",
+                            "hold": "1",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "16",
+                        "error": "0",
+                        "ip_1": "1",
+                        "ip_2": "0.1",
+                        "bf": "2",
+                        "oba": "0.0",
+                        "gofo": "0.0",
+                        "lob": "2",
+                        "era": "0.0",
+                        "k9": "27.0",
+                        "whip": "3.0",
+                        "kbb": "1.0",
+                        "id": "d9ea99d4-3c15-4b23-8d40-9b92ecb78b8d"
+                    },
+                    {
+                        "onbase": {
+                            "h": "4",
+                            "s": "3",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "1",
+                            "tb": "7",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "2",
+                            "total": "2"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "3",
+                            "ktotal": "5",
+                            "ball": "2",
+                            "iball": "0",
+                            "dirtball": "2",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "0",
+                            "save": "0",
+                            "svo": "0",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "18",
+                        "error": "0",
+                        "ip_1": "1",
+                        "ip_2": "0.1",
+                        "bf": "5",
+                        "oba": "0.8",
+                        "gofo": "0.0",
+                        "lob": "2",
+                        "era": "54.0",
+                        "k9": "0.0",
+                        "whip": "12.0",
+                        "kbb": "0.0",
+                        "id": "362f22cd-0a3b-4dde-8ccb-d6a71bd93183"
+                    }
+                ]
+            }
+        },
+        "fielding": {
+            "team": {
+                "po": "27",
+                "a": "8",
+                "dp": "0",
+                "tp": "0",
+                "error": "0",
+                "tc": "35",
+                "fpct": "1.0"
+            },
+            "players": {
+                "player": [
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "4",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "4",
+                        "fpct": "1.0",
+                        "id": "4a46a8f6-ee83-4712-b9e5-7bd2ae9d8fe6",
+                        "rf": "4.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "0",
+                        "a": "2",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "2",
+                        "fpct": "1.0",
+                        "id": "6a918e41-3ea3-4c2f-aca7-d5a03c4608cb",
+                        "rf": "2.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "3de86485-c846-4551-99b3-c6ca509dc12d",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "6",
+                        "a": "1",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "7",
+                        "fpct": "1.0",
+                        "id": "f538dd01-59db-4f48-a464-450ef675298e",
+                        "rf": "7.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "2",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "2",
+                        "fpct": "1.0",
+                        "id": "73d25ec2-2d4c-47e3-8491-3acaaad3d856",
+                        "rf": "2.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "6",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "6",
+                        "fpct": "1.0",
+                        "id": "ff750663-5eb3-4006-9d6a-2660397ff595",
+                        "rf": "6.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "362f22cd-0a3b-4dde-8ccb-d6a71bd93183",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "2",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "2",
+                        "fpct": "1.0",
+                        "id": "17f41dd6-d2e9-41cf-83f3-7e6cd07f3171",
+                        "rf": "2.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "5",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "5",
+                        "fpct": "1.0",
+                        "id": "3f38dbee-db39-48c9-8b30-d7347deccd19",
+                        "rf": "5.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "d9ea99d4-3c15-4b23-8d40-9b92ecb78b8d",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "1",
+                        "a": "1",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "2",
+                        "fpct": "1.0",
+                        "id": "b86f5bc8-8d60-44c9-8fd7-450fcb749929",
+                        "rf": "2.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "1",
+                        "a": "4",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "5",
+                        "fpct": "1.0",
+                        "id": "40085c05-fa06-4eec-9f41-f0245980f6a0",
+                        "rf": "5.0"
+                    }
+                ]
+            }
+        },
+        "id": "93941372-eb4c-4c40-aced-fe3267174393",
+        "name": "Red Sox",
+        "runs": "7",
+        "hits": "5",
+        "errors": "0"
+    },
+    "home": {
+        "hitting": {
+            "team": {
+                "onbase": {
+                    "h": "13",
+                    "s": "10",
+                    "d": "1",
+                    "t": "0",
+                    "hr": "2",
+                    "tb": "20",
+                    "bb": "4",
+                    "ibb": "0",
+                    "hbp": "0",
+                    "fc": "0",
+                    "roe": "0"
+                },
+                "runs": {
+                    "unearned": "0",
+                    "earned": "6",
+                    "total": "6"
+                },
+                "outcome": {
+                    "klook": "19",
+                    "kswing": "16",
+                    "ktotal": "35",
+                    "ball": "49",
+                    "iball": "0",
+                    "dirtball": "3",
+                    "foul": "0"
+                },
+                "outs": {
+                    "klook": "2",
+                    "kswing": "4",
+                    "ktotal": "6",
+                    "po": "0",
+                    "fo": "10",
+                    "fidp": "0",
+                    "go": "7",
+                    "gidp": "0",
+                    "lo": "2",
+                    "lidp": "0",
+                    "sacfly": "0",
+                    "sachit": "0"
+                },
+                "steal": {
+                    "caught": "0",
+                    "stolen": "0",
+                    "pct": "0.0"
+                },
+                "ab": "40",
+                "ap": "44",
+                "avg": ".325",
+                "lob": "23",
+                "pcount": "164",
+                "rbi": "5",
+                "abhr": "20.0",
+                "abk": "6.667",
+                "bip": "32",
+                "babip": "0.344",
+                "bbk": "0.667",
+                "bbpa": "0.091",
+                "gofo": "0.583",
+                "iso": "0.175",
+                "obp": "0.386",
+                "ops": "0.886",
+                "seca": "0.075",
+                "slg": "0.5",
+                "xbh": "3"
+            },
+            "players": {
+                "player": [
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "0",
+                            "ktotal": "2",
+                            "ball": "3",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "1",
+                            "kswing": "0",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0"
+                        },
+                        "ab": "1",
+                        "ap": "1",
+                        "avg": ".000",
+                        "lob": "2",
+                        "pcount": "6",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "1.0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0.0",
+                        "bbpa": "0.0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0.0",
+                        "ops": "0.0",
+                        "seca": "0.0",
+                        "slg": "0.0",
+                        "xbh": "0",
+                        "id": "e47c2adc-7bcf-4d9d-aea3-efc24d5b52c8"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "1",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "1",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "1",
+                            "kswing": "7",
+                            "ktotal": "8",
+                            "ball": "3",
+                            "iball": "0",
+                            "dirtball": "1",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "1",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "2",
+                            "fidp": "0",
+                            "go": "1",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "5",
+                        "ap": "5",
+                        "avg": ".200",
+                        "lob": "4",
+                        "pcount": "19",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "5.0",
+                        "bip": "4",
+                        "babip": "0.25",
+                        "bbk": "0.0",
+                        "bbpa": "0.0",
+                        "gofo": "0.5",
+                        "iso": "0.0",
+                        "obp": "0.2",
+                        "ops": "0.4",
+                        "seca": "0.0",
+                        "slg": "0.2",
+                        "xbh": "0",
+                        "id": "617e6d98-d7dc-49ea-adbd-22e00e3ccc81"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "1",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "1",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "1",
+                            "kswing": "0",
+                            "ktotal": "1",
+                            "ball": "3",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "1",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "3",
+                        "ap": "3",
+                        "avg": ".333",
+                        "lob": "1",
+                        "pcount": "9",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "3",
+                        "babip": "0.333",
+                        "bbk": "0",
+                        "bbpa": "0.0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0.333",
+                        "ops": "0.666",
+                        "seca": "0.0",
+                        "slg": "0.333",
+                        "xbh": "0",
+                        "id": "029ba09e-9965-4497-b141-5bd8dedbad6a"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "e3d27135-822c-4969-ad06-b74aca0e1fbd"
+                    },
+                    {
+                        "onbase": {
+                            "h": "2",
+                            "s": "2",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "2",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "1",
+                            "kswing": "0",
+                            "ktotal": "1",
+                            "ball": "1",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "1",
+                            "fidp": "0",
+                            "go": "1",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "5",
+                        "ap": "5",
+                        "avg": ".400",
+                        "lob": "3",
+                        "pcount": "11",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "5",
+                        "babip": "0.4",
+                        "bbk": "0",
+                        "bbpa": "0.0",
+                        "gofo": "1.0",
+                        "iso": "0.0",
+                        "obp": "0.4",
+                        "ops": "0.8",
+                        "seca": "0.0",
+                        "slg": "0.4",
+                        "xbh": "0",
+                        "id": "6ac6fa53-ea9b-467d-87aa-6429a6bcb90c"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "1",
+                            "kswing": "1",
+                            "ktotal": "2",
+                            "ball": "2",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "3",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "3",
+                        "ap": "3",
+                        "avg": ".000",
+                        "lob": "1",
+                        "pcount": "8",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "3",
+                        "babip": "0.0",
+                        "bbk": "0",
+                        "bbpa": "0.0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0.0",
+                        "ops": "0.0",
+                        "seca": "0.0",
+                        "slg": "0.0",
+                        "xbh": "0",
+                        "id": "a14e17d4-a515-42ce-97f7-c85c64c9ae88"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "6b38220a-5490-485b-9e15-cf63d310ff91"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "c258e9cc-cc5d-4b14-a597-95013e10d92e"
+                    },
+                    {
+                        "onbase": {
+                            "h": "3",
+                            "s": "1",
+                            "d": "1",
+                            "t": "0",
+                            "hr": "1",
+                            "tb": "7",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "2",
+                            "total": "2"
+                        },
+                        "outcome": {
+                            "klook": "3",
+                            "kswing": "0",
+                            "ktotal": "3",
+                            "ball": "1",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "2",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "5",
+                        "ap": "5",
+                        "avg": ".600",
+                        "lob": "1",
+                        "pcount": "10",
+                        "rbi": "2",
+                        "abhr": "5.0",
+                        "abk": "0",
+                        "bip": "4",
+                        "babip": "0.5",
+                        "bbk": "0",
+                        "bbpa": "0.0",
+                        "gofo": "0.0",
+                        "iso": "0.8",
+                        "obp": "0.6",
+                        "ops": "2.0",
+                        "seca": "0.8",
+                        "slg": "1.4",
+                        "xbh": "2",
+                        "id": "78bbb2e3-487a-4f14-ad95-22dfae998a98"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "137cb0bd-1e01-4e8d-bdc5-aac0b3aa87bf"
+                    },
+                    {
+                        "onbase": {
+                            "h": "3",
+                            "s": "3",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "3",
+                            "bb": "1",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "1",
+                            "kswing": "2",
+                            "ktotal": "3",
+                            "ball": "9",
+                            "iball": "0",
+                            "dirtball": "1",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "1",
+                            "kswing": "0",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "4",
+                        "ap": "5",
+                        "avg": ".750",
+                        "lob": "1",
+                        "pcount": "24",
+                        "rbi": "1",
+                        "abhr": "0",
+                        "abk": "4.0",
+                        "bip": "3",
+                        "babip": "1.0",
+                        "bbk": "1.0",
+                        "bbpa": "0.2",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0.8",
+                        "ops": "1.55",
+                        "seca": "-0.25",
+                        "slg": "0.75",
+                        "xbh": "0",
+                        "id": "cbfa52c5-ef2e-4d7c-8e28-0ec6a63c6c6f"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "2",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "1",
+                            "kswing": "1",
+                            "ktotal": "2",
+                            "ball": "8",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "2",
+                            "gidp": "0",
+                            "lo": "1",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "3",
+                        "ap": "5",
+                        "avg": ".000",
+                        "lob": "2",
+                        "pcount": "21",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "3",
+                        "babip": "0.0",
+                        "bbk": "0",
+                        "bbpa": "0.4",
+                        "gofo": "2.0",
+                        "iso": "0.0",
+                        "obp": "0.4",
+                        "ops": "0.4",
+                        "seca": "-0.667",
+                        "slg": "0.0",
+                        "xbh": "0",
+                        "id": "97b88a83-f94e-4202-b49d-9e2ffab25919"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "454b4642-c1ad-4b8e-8728-0d8bb03051be"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "ab": "0",
+                        "ap": "0",
+                        "avg": ".000",
+                        "lob": "0",
+                        "pcount": "0",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "0",
+                        "babip": "0",
+                        "bbk": "0",
+                        "bbpa": "0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0",
+                        "ops": "0.0",
+                        "seca": "0",
+                        "slg": "0",
+                        "xbh": "0",
+                        "id": "a1b81659-9f06-4fd0-9d5d-78773435723c"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "1",
+                            "tb": "4",
+                            "bb": "1",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "4",
+                            "kswing": "3",
+                            "ktotal": "7",
+                            "ball": "10",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "2",
+                            "ktotal": "2",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "1",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "4",
+                        "ap": "5",
+                        "avg": ".250",
+                        "lob": "2",
+                        "pcount": "26",
+                        "rbi": "1",
+                        "abhr": "4.0",
+                        "abk": "2.0",
+                        "bip": "1",
+                        "babip": "0.0",
+                        "bbk": "0.5",
+                        "bbpa": "0.2",
+                        "gofo": "0.0",
+                        "iso": "0.75",
+                        "obp": "0.4",
+                        "ops": "1.4",
+                        "seca": "0.5",
+                        "slg": "1.0",
+                        "xbh": "1",
+                        "id": "f779a9fd-2e6a-4bd1-af96-13f16366ef3f"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "1",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "1",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "1",
+                            "kswing": "0",
+                            "ktotal": "1",
+                            "ball": "0",
+                            "iball": "0",
+                            "dirtball": "1",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "1",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0"
+                        },
+                        "ab": "2",
+                        "ap": "2",
+                        "avg": ".500",
+                        "lob": "2",
+                        "pcount": "5",
+                        "rbi": "1",
+                        "abhr": "0",
+                        "abk": "0",
+                        "bip": "2",
+                        "babip": "0.5",
+                        "bbk": "0",
+                        "bbpa": "0.0",
+                        "gofo": "0.0",
+                        "iso": "0.0",
+                        "obp": "0.5",
+                        "ops": "1.0",
+                        "seca": "0.0",
+                        "slg": "0.5",
+                        "xbh": "0",
+                        "id": "8ec56596-5b8b-41f8-88a7-384f20b8b6a7"
+                    },
+                    {
+                        "onbase": {
+                            "h": "1",
+                            "s": "1",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "1",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "1",
+                            "total": "1"
+                        },
+                        "outcome": {
+                            "klook": "3",
+                            "kswing": "2",
+                            "ktotal": "5",
+                            "ball": "9",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "1",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "1",
+                            "fidp": "0",
+                            "go": "2",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0",
+                            "pct": "0.0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "ab": "5",
+                        "ap": "5",
+                        "avg": ".200",
+                        "lob": "4",
+                        "pcount": "25",
+                        "rbi": "0",
+                        "abhr": "0",
+                        "abk": "5.0",
+                        "bip": "4",
+                        "babip": "0.25",
+                        "bbk": "0.0",
+                        "bbpa": "0.0",
+                        "gofo": "2.0",
+                        "iso": "0.0",
+                        "obp": "0.2",
+                        "ops": "0.4",
+                        "seca": "0.0",
+                        "slg": "0.2",
+                        "xbh": "0",
+                        "id": "ea7a7858-d7cf-4f4d-bea7-bfb86da44e78"
+                    }
+                ]
+            }
+        },
+        "pitching": {
+            "team": {
+                "onbase": {
+                    "h": "5",
+                    "s": "1",
+                    "d": "2",
+                    "t": "0",
+                    "hr": "2",
+                    "tb": "13",
+                    "bb": "9",
+                    "ibb": "0",
+                    "hbp": "0",
+                    "fc": "0",
+                    "roe": "0"
+                },
+                "runs": {
+                    "unearned": "0",
+                    "earned": "7",
+                    "total": "7"
+                },
+                "outcome": {
+                    "klook": "24",
+                    "kswing": "7",
+                    "ktotal": "31",
+                    "ball": "60",
+                    "iball": "0",
+                    "dirtball": "0",
+                    "foul": "0"
+                },
+                "outs": {
+                    "klook": "3",
+                    "kswing": "5",
+                    "ktotal": "8",
+                    "po": "1",
+                    "fo": "3",
+                    "fidp": "0",
+                    "go": "9",
+                    "gidp": "2",
+                    "lo": "3",
+                    "lidp": "0",
+                    "sacfly": "0",
+                    "sachit": "0"
+                },
+                "steal": {
+                    "caught": "0",
+                    "stolen": "0"
+                },
+                "games": {
+                    "complete": "0",
+                    "win": "0",
+                    "loss": "1",
+                    "save": "0",
+                    "svo": "0",
+                    "hold": "0",
+                    "blown_save": "0",
+                    "qstart": "0",
+                    "shutout": "0"
+                },
+                "pcount": "158",
+                "error": "0",
+                "ip_1": "27",
+                "ip_2": "9.0",
+                "bf": "38",
+                "oba": "0.172",
+                "gofo": "1.286",
+                "lob": "11",
+                "era": "7.0",
+                "k9": "8.001",
+                "whip": "1.556",
+                "kbb": "0.89"
+            },
+            "players": {
+                "player": [
+                    {
+                        "onbase": {
+                            "h": "5",
+                            "s": "1",
+                            "d": "2",
+                            "t": "0",
+                            "hr": "2",
+                            "tb": "13",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "3",
+                            "total": "3"
+                        },
+                        "outcome": {
+                            "klook": "4",
+                            "kswing": "1",
+                            "ktotal": "5",
+                            "ball": "11",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "2",
+                            "kswing": "0",
+                            "ktotal": "2",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "2",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "0",
+                            "save": "0",
+                            "svo": "0",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "37",
+                        "error": "0",
+                        "ip_1": "5",
+                        "ip_2": "1.2",
+                        "bf": "9",
+                        "oba": "0.556",
+                        "gofo": "0.0",
+                        "lob": "0",
+                        "era": "16.2",
+                        "k9": "10.8",
+                        "whip": "3.0",
+                        "kbb": "0.0",
+                        "id": "137cb0bd-1e01-4e8d-bdc5-aac0b3aa87bf"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "3",
+                            "kswing": "1",
+                            "ktotal": "4",
+                            "ball": "4",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "1",
+                            "ktotal": "1",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "2",
+                            "gidp": "0",
+                            "lo": "2",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "0",
+                            "save": "0",
+                            "svo": "0",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "14",
+                        "error": "0",
+                        "ip_1": "5",
+                        "ip_2": "1.2",
+                        "bf": "5",
+                        "oba": "0.0",
+                        "gofo": "1.0",
+                        "lob": "2",
+                        "era": "0.0",
+                        "k9": "5.4",
+                        "whip": "0.0",
+                        "kbb": "0.0",
+                        "id": "454b4642-c1ad-4b8e-8728-0d8bb03051be"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "0",
+                            "kswing": "1",
+                            "ktotal": "1",
+                            "ball": "3",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "0",
+                            "ktotal": "0",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "2",
+                            "gidp": "0",
+                            "lo": "1",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "0",
+                            "save": "0",
+                            "svo": "0",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "11",
+                        "error": "0",
+                        "ip_1": "3",
+                        "ip_2": "1.0",
+                        "bf": "3",
+                        "oba": "0.0",
+                        "gofo": "2.0",
+                        "lob": "0",
+                        "era": "0.0",
+                        "k9": "0.0",
+                        "whip": "0.0",
+                        "kbb": "0.0",
+                        "id": "c258e9cc-cc5d-4b14-a597-95013e10d92e"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "0",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "2",
+                            "kswing": "1",
+                            "ktotal": "3",
+                            "ball": "6",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "2",
+                            "ktotal": "2",
+                            "po": "0",
+                            "fo": "0",
+                            "fidp": "0",
+                            "go": "1",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "0",
+                            "save": "0",
+                            "svo": "0",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "17",
+                        "error": "0",
+                        "ip_1": "3",
+                        "ip_2": "1.0",
+                        "bf": "3",
+                        "oba": "0.0",
+                        "gofo": "0.0",
+                        "lob": "0",
+                        "era": "0.0",
+                        "k9": "18.0",
+                        "whip": "0.0",
+                        "kbb": "0.0",
+                        "id": "6b38220a-5490-485b-9e15-cf63d310ff91"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "8",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "4",
+                            "total": "4"
+                        },
+                        "outcome": {
+                            "klook": "12",
+                            "kswing": "3",
+                            "ktotal": "15",
+                            "ball": "31",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "1",
+                            "kswing": "0",
+                            "ktotal": "1",
+                            "po": "1",
+                            "fo": "2",
+                            "fidp": "0",
+                            "go": "2",
+                            "gidp": "2",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "1",
+                            "save": "0",
+                            "svo": "0",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "65",
+                        "error": "0",
+                        "ip_1": "8",
+                        "ip_2": "2.2",
+                        "bf": "14",
+                        "oba": "0.0",
+                        "gofo": "0.667",
+                        "lob": "7",
+                        "era": "13.5",
+                        "k9": "3.375",
+                        "whip": "3.0",
+                        "kbb": "0.13",
+                        "id": "a1b81659-9f06-4fd0-9d5d-78773435723c"
+                    },
+                    {
+                        "onbase": {
+                            "h": "0",
+                            "s": "0",
+                            "d": "0",
+                            "t": "0",
+                            "hr": "0",
+                            "tb": "0",
+                            "bb": "1",
+                            "ibb": "0",
+                            "hbp": "0",
+                            "fc": "0",
+                            "roe": "0"
+                        },
+                        "runs": {
+                            "unearned": "0",
+                            "earned": "0",
+                            "total": "0"
+                        },
+                        "outcome": {
+                            "klook": "3",
+                            "kswing": "0",
+                            "ktotal": "3",
+                            "ball": "5",
+                            "iball": "0",
+                            "dirtball": "0",
+                            "foul": "0"
+                        },
+                        "outs": {
+                            "klook": "0",
+                            "kswing": "2",
+                            "ktotal": "2",
+                            "po": "0",
+                            "fo": "1",
+                            "fidp": "0",
+                            "go": "0",
+                            "gidp": "0",
+                            "lo": "0",
+                            "lidp": "0",
+                            "sacfly": "0",
+                            "sachit": "0"
+                        },
+                        "steal": {
+                            "caught": "0",
+                            "stolen": "0"
+                        },
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0",
+                            "win": "0",
+                            "loss": "0",
+                            "save": "0",
+                            "svo": "0",
+                            "hold": "0",
+                            "blown_save": "0",
+                            "qstart": "0",
+                            "shutout": "0"
+                        },
+                        "pcount": "14",
+                        "error": "0",
+                        "ip_1": "3",
+                        "ip_2": "1.0",
+                        "bf": "4",
+                        "oba": "0.0",
+                        "gofo": "0.0",
+                        "lob": "2",
+                        "era": "0.0",
+                        "k9": "18.0",
+                        "whip": "1.0",
+                        "kbb": "2.0",
+                        "id": "e3d27135-822c-4969-ad06-b74aca0e1fbd"
+                    }
+                ]
+            }
+        },
+        "fielding": {
+            "team": {
+                "po": "27",
+                "a": "11",
+                "dp": "2",
+                "tp": "0",
+                "error": "0",
+                "tc": "38",
+                "fpct": "1.0"
+            },
+            "players": {
+                "player": [
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "2",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "2",
+                        "fpct": "1.0",
+                        "id": "a14e17d4-a515-42ce-97f7-c85c64c9ae88",
+                        "rf": "2.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "1",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "1",
+                        "fpct": "1.0",
+                        "id": "454b4642-c1ad-4b8e-8728-0d8bb03051be",
+                        "rf": "1.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "2",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "9",
+                        "a": "1",
+                        "dp": "2",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "10",
+                        "fpct": "1.0",
+                        "id": "f779a9fd-2e6a-4bd1-af96-13f16366ef3f",
+                        "rf": "5.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "e47c2adc-7bcf-4d9d-aea3-efc24d5b52c8",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "6b38220a-5490-485b-9e15-cf63d310ff91",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "1",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "1",
+                        "fpct": "1.0",
+                        "id": "ea7a7858-d7cf-4f4d-bea7-bfb86da44e78",
+                        "rf": "1.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "1",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "1",
+                        "fpct": "1.0",
+                        "id": "617e6d98-d7dc-49ea-adbd-22e00e3ccc81",
+                        "rf": "1.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "c258e9cc-cc5d-4b14-a597-95013e10d92e",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "e3d27135-822c-4969-ad06-b74aca0e1fbd",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "137cb0bd-1e01-4e8d-bdc5-aac0b3aa87bf",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "2",
+                        "a": "3",
+                        "dp": "2",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "5",
+                        "fpct": "1.0",
+                        "id": "97b88a83-f94e-4202-b49d-9e2ffab25919",
+                        "rf": "5.0"
+                    },
+                    {
+                        "games": {
+                            "start": "0",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "0"
+                        },
+                        "po": "1",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "1",
+                        "fpct": "1.0",
+                        "id": "8ec56596-5b8b-41f8-88a7-384f20b8b6a7",
+                        "rf": "1.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "2",
+                        "a": "4",
+                        "dp": "1",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "6",
+                        "fpct": "1.0",
+                        "id": "029ba09e-9965-4497-b141-5bd8dedbad6a",
+                        "rf": "6.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "8",
+                        "a": "2",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "10",
+                        "fpct": "1.0",
+                        "id": "cbfa52c5-ef2e-4d7c-8e28-0ec6a63c6c6f",
+                        "rf": "10.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "1",
+                            "finish": "0",
+                            "complete": "0"
+                        },
+                        "po": "0",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "0",
+                        "fpct": "0.0",
+                        "id": "a1b81659-9f06-4fd0-9d5d-78773435723c",
+                        "rf": "0.0"
+                    },
+                    {
+                        "games": {
+                            "start": "1",
+                            "play": "2",
+                            "finish": "1",
+                            "complete": "1"
+                        },
+                        "po": "1",
+                        "a": "0",
+                        "dp": "0",
+                        "tp": "0",
+                        "error": "0",
+                        "tc": "1",
+                        "fpct": "1.0",
+                        "id": "6ac6fa53-ea9b-467d-87aa-6429a6bcb90c",
+                        "rf": "0.0"
+                    }
+                ]
+            }
+        },
+        "id": "1d678440-b4b1-4954-9b39-70afb3ebbcfa",
+        "name": "Blue Jays",
+        "runs": "6",
+        "hits": "13",
+        "errors": "0"
+    },
+    "id": "c5b6cb3a-32f6-4441-9a5d-52380f28ef6c",
+    "status": "closed"
+}}

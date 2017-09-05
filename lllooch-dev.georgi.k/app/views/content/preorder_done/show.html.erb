@@ -1,0 +1,13 @@
+<div class="container order">
+  <h1>
+    <% if @order.type == 'Order::Preorder' %>
+        <%= T "Спасибо за предзаказ!" %>
+    <% end %>
+  </h1>
+
+  <% unless @current_page.content.empty? %>
+    <div class="content">
+      <%= @current_page.content.html_safe %>
+    </div>
+  <% end %>
+</div>

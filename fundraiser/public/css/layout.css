@@ -1,0 +1,167 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 23, 2014, 10:26:50 AM
+    Author     : Administrator
+*/
+
+body {
+    margin      : 0;
+    padding     : 0 0 50px 0;
+    font-family : "Helvetica", "Arial";
+    font-size   : 14px;
+    line-height : 18px;
+    cursor      : default;
+}
+
+a {
+    color : #ef7c61;
+}
+
+.container {
+    width    : 1200px;
+    position : relative;
+    margin   : 0 auto;
+    overflow: auto;
+}
+
+.header, .footer {
+    background  : #000;
+    line-height : 50px;
+    height      : 50px;
+    width       : 100%;
+    color       : #fff;
+}
+
+.header h1, .header a {
+    display : inline-block;
+}
+
+.header h1 {
+    margin      : 0px;
+    font-weight : normal;
+}
+
+.footer {
+    position : absolute;
+    bottom   : 0;
+}
+
+.content {
+    padding : 25px 0;
+}
+
+label, input, .error {
+
+    float  : left;
+    margin : 5px 0;
+}
+
+.error {
+    color : #ef7c61;
+}
+.login , .signup {
+    width: 560px;
+    float: left;
+    margin-right: 20px;
+    
+}
+
+.login .title, .signup .title{
+    text-align: center;
+    height: 115px;
+    background-color: rgb(211,219,182);
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.login .title span, .signup .title span{
+    font-size: 35px;
+    color : rgb(67,68,71);
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.login .row, .signup .row{
+    width: 94%;
+    display: inline-block;
+    margin-top: 10px;
+    padding-left:30px;
+}
+
+.login .row label, .signup .row label{
+    width: 210px;
+    float: none;
+    display: inline-block;
+    
+    font-size: 20px;
+  
+}
+
+.signup .row button{
+    height: 30px;
+}
+
+.login .row input, .signup .row input{
+    width: 300px;
+    height: 40px;
+    float: none;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    display: inline-block;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.login .row input[type="submit"] , .signup .row input[type="submit"] {
+    background-color: rgb(225,128,20);
+    height: 50px;
+}
+    
+.forgotpassword{
+    
+}
+
+.forgotpassword label{
+    margin-right: 10px;
+}
+
+.forgotpassword input[type="email"]{
+    margin-right: 10px;
+}
+
+.resetpassword{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resetpassword .row{
+    overflow: auto;
+}
+    
+.resetpassword label{
+    margin-right: 20px;
+}
+
+.resetpassword input[type="email"],.resetpassword input[type="password"]{
+    float: right;
+    width: 200px;
+}
+
+.resetpassword input[type="submit"]{
+    margin-left:auto;
+    margin-right: auto;
+    width: 100px;
+}

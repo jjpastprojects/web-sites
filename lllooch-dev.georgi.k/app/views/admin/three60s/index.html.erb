@@ -1,0 +1,50 @@
+<%- model_class = Three60 -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:type) %></th>
+      <th><%= model_class.human_attribute_name(:parent_id) %></th>
+      <th><%= model_class.human_attribute_name(:good_id) %></th>
+      <th><%= model_class.human_attribute_name(:src_file_name) %></th>
+      <th><%= model_class.human_attribute_name(:src_content_type) %></th>
+      <th><%= model_class.human_attribute_name(:src_file_size) %></th>
+      <th><%= model_class.human_attribute_name(:src_updated_at) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @three60s.each do |three60| %>
+      <tr>
+        <td><%= link_to three60.id, three60_path(three60) %></td>
+        <td><%= three60.type %></td>
+        <td><%= three60.parent_id %></td>
+        <td><%= three60.good_id %></td>
+        <td><%= three60.src_file_name %></td>
+        <td><%= three60.src_content_type %></td>
+        <td><%= three60.src_file_size %></td>
+        <td><%= three60.src_updated_at %></td>
+        <td><%= three60.name %></td>
+        <td><%=l three60.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_three60_path(three60), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      three60_path(three60),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_three60_path,
+            :class => 'btn btn-primary' %>

@@ -1,0 +1,42 @@
+[
+    {
+        "venue": {
+            "id": "24bb478e-eb31-5f8a-8c8d-07f513169ec1"
+        },
+        "home": {
+            "name": "Indiana Pacers",
+            "alias": "IND",
+            "id": "583ec7cd-fb46-11e1-82cb-f4ce4684ea4c"
+        },
+        "away": {
+            "name": "Orlando Magic",
+            "alias": "ORL",
+            "id": "583ed157-fb46-11e1-82cb-f4ce4684ea4c"
+        },
+        "id": "0b3d21c7-c13f-4ee8-8d9d-4f334754c7e4",
+        "status": "closed",
+        "home_team": "583ec7cd-fb46-11e1-82cb-f4ce4684ea4c",
+        "away_team": "583ed157-fb46-11e1-82cb-f4ce4684ea4c",
+        "scheduled": "2014-03-19T23:00:00+00:00"
+    },
+    {
+        "venue": {
+            "id": "b67d5f09-28b2-5bc6-9097-af312007d2f4"
+        },
+        "home": {
+            "name": "Miami Heat",
+            "alias": "MIA",
+            "id": "583ecea6-fb46-11e1-82cb-f4ce4684ea4c"
+        },
+        "away": {
+            "name": "Chicago Bulls",
+            "alias": "CHI",
+            "id": "583ec5fd-fb46-11e1-82cb-f4ce4684ea4c"
+        },
+        "id": "37d2a614-7e44-4eda-b215-8ec2a3741c52",
+        "status": "closed",
+        "home_team": "583ecea6-fb46-11e1-82cb-f4ce4684ea4c",
+        "away_team": "583ec5fd-fb46-11e1-82cb-f4ce4684ea4c",
+        "scheduled": "2014-03-20T00:00:00+00:00"
+    }
+]

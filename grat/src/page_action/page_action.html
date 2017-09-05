@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>wp-1click settings page</title>
+	<script type="text/javascript" src="../../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../../js/settings.js"></script>
+	<style type="text/css">
+		body {
+			padding: 10px;
+			height: auto;
+			font-family: Helvetica, Ubuntu, Arial, sans-serif;
+		}
+		#settings{
+			display: none;
+		}
+		#settings:target{
+			display: block;
+		}
+		#buttons{
+			display: none;
+		}
+		#buttons:target{
+			display: block
+		}
+
+
+		h1 {
+			font-size: 2em;
+		}
+		.template,.template2{
+			display: none !important;
+		}
+		.del{
+			display: inline-block;
+			color: #fa5853;
+			text-decoration: underline;
+			cursor: pointer
+		}
+		fieldset{
+			border: none;
+			padding: 0;
+			margin: 0
+		}
+		input{
+			font-size: 18px;
+			padding:2px 5px;
+		}
+		.name{
+			max-width: 100px;
+		}
+		.url{
+			width: 250px;
+		}
+		.button{
+			border: none;
+			background: #687dd9;
+			color: #fff;
+			cursor: pointer;
+			padding:10px;
+			font-size: 15px;
+			border-radius:2px;
+			display: inline-block;
+			text-decoration: none
+		}
+		.button:hover,.button:focus{
+			background: #5f6adb;
+		}
+		.button:active{
+			background: #3e4edb;
+		}
+		.setts{
+			float:left;
+			clear:both;
+		}
+		.install::after{
+			content : attr(data-name);
+			font-weight: bold;
+		}
+		#blog_buttons .button{
+			display: block !important;
+			max-width: 450px;
+			margin:5px 0;
+			text-align: center;
+			font-size: 1.8em;
+		}
+
+        #emails{
+            font-size: 16px;
+        }
+
+        .left{
+            display: inline-block;
+            width: 40%;
+        }
+
+        .right{
+            display: inline-block;
+            width: 43%;
+            float: right;
+
+        }
+
+
+	</style>
+</head>
+    <body>
+        <div id='left' class="left">
+            <img src="" />
+        </div>
+        <div class="right">
+            <br/>
+            <input type="text" value="" id="emails" /> <br/>
+            <input type="radio" name="option" value="thank you">Thank you!<br>
+            <input type="radio" name="option" value="happy birthday">Happy Birthday!<br>
+            <input type="radio" name="option" value="enjoy">Enjoy<br>
+            <input type="radio" name="option" value="custom">Custom<br>
+            <p>Thanks for the help moving yesterday!</p>
+            <p>-Susie</p>
+            <div style="text-align: center;" class="next">
+                <img src="" />
+            </div>
+
+
+        </div>
+    </body>
+</html>

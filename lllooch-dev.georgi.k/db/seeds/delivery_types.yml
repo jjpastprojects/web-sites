@@ -1,0 +1,11 @@
+- name: Шоурум
+  type: DeliveryType::Showroom
+
+- name: Курьером
+  type: DeliveryType::Courier
+
+- name: DPD
+  type: DeliveryType::Dpd
+
+- name: Деловые линии
+  type: DeliveryType::Dellin

@@ -1,0 +1,49 @@
+<div class="page-header">
+  <h1>Тестирование эквайринга</h1>
+</div>
+
+<% if @order %>
+    <form action="<%= @order.acquiring.url %>" method="post">
+      <table class="table">
+        <% @order.acquiring.params.each do |k, v| %>
+            <tr>
+              <td width="120px">
+                <%= k %>
+              </td>
+              <td>
+                <input type="text" name="<%= k.to_s.upcase %>" value="<%= v %>"/>
+              </td>
+            </tr>
+        <% end %>
+        <tr>
+          <td></td>
+          <td>
+            <button class="btn btn-primary">Проверить</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+<% else %>
+    <div class="b-acquiring">
+      <form>
+        <table class="table">
+          <tr>
+            <td width="150px">
+              Номер заказа
+            </td>
+
+            <td>
+              <input type="number" name="order" required="true"/>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              <button class="btn btn-primary">Сгенерировать форму</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+<% end %>

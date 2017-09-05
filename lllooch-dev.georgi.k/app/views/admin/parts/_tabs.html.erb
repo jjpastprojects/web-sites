@@ -1,0 +1,17 @@
+<%= content_tag :ul, class: 'nav nav-tabs', data: options[:data] do %>
+  <% items.each_with_index do |item, index| %>
+    <% options = item[2] || {} %>
+
+    <% html_class = [] %>
+    <% html_class << 'active' if (index == 0 && options[:active] != false) or options[:active] %>
+    <% html_class << 'disabled' if options[:disabled] %>
+
+    <%= content_tag :li, class: html_class.join(" ") do %>
+      <% if options[:path] %>
+        <%= link_to item[1], options[:path] %>
+      <% else %>
+        <%= link_to item[1], '#' + item[0].to_s, data: {toggle: 'tab'} %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

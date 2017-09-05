@@ -1,0 +1,192 @@
+<% content_for :banner do %>
+  <div class="capitalbanner">
+    <div class="banner"></div>
+    <div class="banner-elements">
+      <div class="row banner-circles hide visible-md visible-lg">
+        <div class="col-md-2 circle-small">
+          <img src="<%= image_path("marquee-1.png") %>">
+        </div>
+        <div class="col-md-3">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-2 circle-small">
+          <img src="<%= image_path("marquee-2.png") %>">
+        </div>
+        <div class="col-md-3">
+          <div class="line"></div>
+        </div>
+        <div class="col-md-2">
+          <img src="<%= image_path("marquee-3.png") %>">
+        </div>
+      </div>
+      <div class="row banner-text">
+        <div class="col-md-4">
+          <span class="hidden-md hidden-lg">1. Enter a contest</span>
+          <span class="hidden-xs hidden-sm">Enter a contest</span></div>
+        <div class="col-md-4">
+          <span class="hidden-md hidden-lg">2. Draft a team</span>
+          <span class="hidden-xs hidden-sm">Draft a team</span>
+        </div>
+        <div class="col-md-4 green big">
+          <span class="hidden-md hidden-lg">3. Win cash</span>
+          <span class="hidden-xs hidden-sm">Win cash</span>
+        </div>
+      </diV>
+      <div class="row banner-button hide">
+        <div class="col-md-12">
+          <a href="#" class="sign-up-free">Sign-up for free</a>
+        </div>
+      </div>
+    </div>
+    <div class="never-played-guide clearfix">
+      <div class="pull-left fc-logo"></div>
+      <div class="pull-left">
+        <h2>Never played daily fantasy sports?</h2>
+        <p>Check out latest blog post for the Fantasy Capital quick start guide &rarr;</p>
+      </div>
+      <div class="pull-right close-button">
+        <img src="<%= image_path("home-close-button-green.png") %>">
+      </div>
+    </div>
+  </div>
+<% end %>
+<!-- homepage -->
+<!-- <div class='welcomeNote'>Enter a Contest, then Draft a Team and Win Cash</div> -->
+<!--
+<div class="row filter-row">
+  <div class="col-md-6">
+    <div class="dropdown custom-dropdown">
+      <a href="#" class="dropdown-trigger" data-toggle="dropdown">
+        Showing: <span class="selected-sport">All sports</span>
+        <i class="glyphicon glyphicon-chevron-down"></i>
+      </a>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#_" class="filter" data-filter="all">All</a></li>
+        <% Contest.sport_names.each do |sport| %>
+          <li>
+            <a href="#_" class="filter" data-filter="<%= sport.downcase %>">
+              <%= sport %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <a class="join-link pull-right" href="#">
+      Start or join a private contest
+      <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+  </div>
+</div>
+-->
+<!--
+<div class="contest-help">
+  <p>50/50: Finish in the top half and win the prize</p>
+  <p>
+    H2H: Randomly matched one-on-one contests.
+    *If there is an odd number of entrants the last player sits out.
+  </p>
+</div>
+-->
+<div id="home-game-types" class="row fantasy-tabs">
+  <div class="col-md-7 heading border-bottom">Upcoming Games</div>
+  <div class="col-md-5 clearfix">
+    <div class="row game-filters">
+      <div class="col-md-4 border-right-none active public">Public</div>
+      <div class="col-md-4 border-right-none private">Private</div>
+      <div class="col-md-4 cornell">&nbsp;
+        <!--
+        <img src="<%= image_path("cornell-university-logo.jpg") %>">
+        -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="col-md-1 border-bottom padding-none">&nbsp;</div> -->
+</div>
+<div id="home-game-filters" class="table-filters-view">
+  <div id="home-filter-games">
+    <div class="row expand">
+      <div class="col-md-6 text-left"><span class="sign">-<span> Filter Games</div>
+      <div class="col-md-6 text-right reset-filters">Reset Filters</div>
+    </div>
+  </div>
+  <div id="home-filter-options" class="hide">
+    <div class="row">
+      <div class="col-md-2">
+        <p>Contest type</p>
+        <div class="relative">
+          <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">50/50</span>
+        </div>
+        <div class="relative">
+          <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">Head to Head</span>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <p>Sport</p>
+        <div class="relative">
+          <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">NBA</span>
+        </div>
+        <div class="relative">
+          <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">MLB</span>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <p>Live in</p>
+        <div class="relative">
+          <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">Next hour only</span>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <p>Entry</p>
+        <div class="row">
+          <div class="col-md-6">
+            <p><span class="light-grey no-margin">Min</span></p>
+            <input type="text" class="short" placeholder="eg. $1">
+          </div>
+          <div class="col-md-6">
+            <p><span class="light-grey no-margin">Min</span></p>
+            <input type="text" class="short">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<table id="home-contests" class='contestHead main-grid table filter-result'>
+  <thead>
+  <tr>
+    <th class="srt-sport" data-defaultsign="reversed">SPORT</th>
+    <th class="srt-contest-name" data-defaultsign="reversed">CONTEST <span class="light-gray">(?)</span></th>
+    <th class="srt-live-in" data-defaultsign="reversed">LIVE IN</th>
+    <th class="srt-entry-fee" data-defaultsign="reversed">ENTRY</th>
+    <th data-defaultsign="reversed">PRIZE</th>
+    <th data-defaultsign="reversed">ENTRIES</th>
+    <th data-defaultsort="disabled"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%= render partial: 'contest', collection: @contests %>
+  </tbody>
+</table>
+
+<script>
+  // this piece of code should be uncommented if the realtime functionality will be 
+  // available for the home page as well
+  /*
+  $(document).on('page:load ready', function () {
+    if ($('#home-contests').length > 0) {
+      window.homeContestsView = new Main.Views.HomeContestsView({
+        pusherkey: '<%= Rails.env.development? ? "86296472974842e38cce" : Pusher.key %>'
+      });
+    }
+  });
+  */
+
+  $(document).on("page:load ready", function () {
+    var tableFiltersView = new Main.Views.TableFiltersView();
+  });
+
+</script>

@@ -1,0 +1,54 @@
+h4.grey_bottom_border {
+    padding: 0 0 15px 0;
+}
+
+.withdrawal .col-md-9, .withdrawal .col-md-3 {
+    padding: 0
+}
+
+.withdrawal .col-md-9 {
+}
+
+.withdrawal .col-md-3 {
+    text-align: center
+}
+
+.withdrawal .col-md-3 p {
+    margin: 15px 0
+}
+
+.withdrawal h1 {
+    color: #b6b6b6;
+    margin: 20px 0
+}
+
+.radio {
+    border: none;
+    padding: 0;
+    margin: 20px 0 30px
+}
+
+@media (max-width: 768px) {
+    .withdrawal {
+        text-align: center
+    }
+
+    .radio {
+        height: 180px;
+    }
+
+    .radio img {
+        margin: 10px;
+    }
+
+    .list-inline li, .green {
+        margin: 0;
+        padding: 0
+    }
+
+    .withdrawal .radio ul.list-inline li {
+        float: none;
+        width: 100%;
+        margin: 10px 0
+    }
+}

@@ -1,0 +1,51 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to plus_icon + ' Добавить',
+        new_admin_language_path,
+        :class => 'btn' %>
+  </div>
+
+  <h1>Языки</h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Язык</th>
+      <th width="15%" class="center">По-умолчанию</th>
+      <th width="15%" class="center">Показывать</th>
+      <th width="5%"></th>
+      <th width="60px"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @languages.each do |language| %>
+      <tr>
+        <td>
+          <%= language.name %>
+          <%= tag(:br) + content_tag(:small, language.native, class: 'muted') if language.native %>
+        </td>
+
+        <td class="center">
+          <%= content_tag :i, '', class: 'icon icon-check' if language.is_default %>
+        </td>
+
+        <td class="center">
+          <%= content_tag :i, '', class: 'icon icon-check' if language.is_active %>
+        </td>
+
+        <td></td>
+
+        <td>
+          <%= link_to pencil_icon,
+              edit_admin_language_path(language), :class => 'btn btn-mini' %>
+          <%= link_to trash_icon(true),
+              admin_language_path(language),
+              :method => :delete,
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

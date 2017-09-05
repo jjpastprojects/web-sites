@@ -1,0 +1,65 @@
+<div class="page-header">
+  <h1>Предзаказы</h1>
+</div>
+
+<% if @orders.present? %>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th width="25%">Клиент</th>
+    <th width="20%">Контакты</th>
+    <th>Товары</th>
+    <th width="10%">Сумма</th>
+    <th width="60px"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @orders.each do |order| %>
+      <tr>
+        <td>
+          <%= order.client.full_name if order.client.present? %>
+          <%= content_tag :div do %>
+            <%= order.order_status.name if order.order_status.present? %>
+          <% end %>
+        </td>
+
+        <td>
+          <% if order.client.present? %>
+            <%= order.client.phone %>
+            <br />
+            <%= order.client.email %>
+          <% end %>
+        </td>
+
+        <td>
+          <% order.items.each do |item| %>
+              <%= content_tag :div do %>
+                <%= content_tag :small, (item.quantity.to_s + '&times;').html_safe %> <%= item.good.name %>
+              <% end %>
+          <% end %>
+
+          <%= content_tag :strong, ('На сумму: ' + number_to_currency(order.items_price, precision: 0, unit: 'р.')) %>
+        </td>
+
+        <td>
+          <%= number_to_currency(order.full_price, precision: 0, unit: 'р.') %>
+        </td>
+
+        <td>
+          <%#= link_to pencil_icon,
+                      edit_admin_order_path(order), :class => 'btn btn-mini' %>
+          <%= link_to trash_icon(true),
+                      admin_preorder_path(order),
+                      :method => :delete,
+                      :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<% else %>
+    <div class="alert alert-notice">
+        Нет заказов
+    </div>
+<% end %>

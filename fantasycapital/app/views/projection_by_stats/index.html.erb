@@ -1,0 +1,26 @@
+<ol class="breadcrumb">
+  <li><%= link_to @projection.player.name, projection_projection_by_stats_path(@projection) %></a></li>
+</ol>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Stat</th>
+      <th>Projection</th>
+      <th>Projection(weighted)</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projection_by_stats.each do |pbs| %>
+      <tr>
+        <td><%= pbs.stat_name %></td>
+        <td><%= link_to pbs.fp.to_s, projection_projection_by_stat_projection_by_stat_and_games_path(pbs.projection, pbs) %></td>
+        <td><%= pbs.weighted_fp %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

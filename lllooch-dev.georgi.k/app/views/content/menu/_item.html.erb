@@ -1,0 +1,56 @@
+<td>
+
+  <% if content_for?(:goods_dropdown) and @current_menu_item == item.path %>
+      <div class="active">
+        <div class="b-dropdown">
+          <div class="current active">
+            <%= item.title %>
+          </div>
+
+          <div class="dropdown">
+            <div class="wrap">
+              <div class="inner">
+                <%= yield :goods_dropdown %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <% else %>
+      <div<%= ' class=active' if @current_menu_item == item.path or current_url?(send(item.path)) or (!item.items.empty? and item.items.select { |a| current_url?(send(a.path)) }.size > 0) %>>
+        <% unless item.items.empty? %>
+            <div class="b-dropdown">
+              <div class="current">
+                <%= item.title %>
+              </div>
+
+              <div class="dropdown">
+                <div class="wrap">
+                  <div class="inner">
+                    <ul>
+                      <% item.items.each do |subitem| %>
+                          <li<%= ' class=active' if current_url?(send(subitem.path)) %>>
+                            <a href="<%= send subitem.path %>">
+                              <%= subitem.title %>
+                            </a>
+                          </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% else %>
+            <% if item.page.present? %>
+                <a href="<%= send item.path unless item.path.nil? %>">
+                  <%= item.title %>
+                </a>
+            <% else %>
+                <a href="<%= item.url %>">
+                  <%= item.title %>
+                </a>
+            <% end %>
+        <% end %>
+      </div>
+  <% end %>
+</td>

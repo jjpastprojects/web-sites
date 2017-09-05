@@ -1,0 +1,39 @@
+.comments {
+	border: 1px solid #b6b6b6;
+	margin-top: 50px;
+	padding: 30px;
+	@include block_list(".comments-list");
+
+	h1 {
+		padding: 0 0 30px;
+		text-transform: none;
+	}
+
+	.comments-list {
+		& > li {
+			margin-bottom: 40px;
+
+			@include row(".comment-info");
+
+			.comment-info {
+				margin-bottom: 20px;
+				font: {
+					weight: bold;
+				}
+			}
+
+			.comment-author {
+				float: left;
+			}
+
+			.comment-ts {
+				float: right;
+			}
+
+			.comment-content {
+				line-height: 1.7;
+			}
+		}
+	}
+	
+}

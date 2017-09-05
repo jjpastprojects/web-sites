@@ -1,0 +1,205 @@
+<div class='jumbotron team teamDraft'>
+  <div class='contestlive'>
+    <strong> Contest Live In</strong>
+    <%= content_livein_countdown @contest %>
+  </div>
+  <h1>Draft Your Team</h1>
+
+  <p>
+    Choose from the available players below, and submit your team.
+    <br/>
+    You can edit your team at any time until the game starts.
+  </p>
+
+  <p>
+    <strong class='green'>Full Contest Rules & Prizes »</strong>
+  </p>
+
+  <h1 class="bold"><%= @contest.sport %></h1>
+  <h4>(Mon-Thurs) [5 step 1 Tix Gtd.]</h4>
+
+  <h1 class='bold'> <%= number_to_currency @contest.prize %> Prize Pool</h1>
+</div>
+
+<p class='timingschedule'>
+  <strong>Start Time:</strong>
+  October 14,2013 at 8:40pm EST
+  <strong>Entry Fee:</strong>
+  <%= contest_entry_fee @contest %>
+  <strong>Entries:</strong>
+  <span class='green'>564/Uni »</span>
+</p>
+
+<div class='welcomeNote'>SELECT THE BEST TEAM WITHOUT EXCEEDING THE SALARY CAP.</div>
+<div class='col-md2'>
+  <h2>AVAILABLE PLAYERS</h2>
+  <ul class='dropdownsport'>
+    <li>
+      <div class='styled-select'>
+        <select>
+          <option>FILTER BY SPORT</option>
+          <option> ALL</option>
+        </select>
+      </div>
+    </li>
+    <li>
+      <input placeholder="Search" type="text"/>
+    </li>
+  </ul>
+
+  <ul id='filterSport' class='nav nav-tabs tabs'>
+    <% @positions.each do |position| %>
+        <li>
+          <%= link_to position.name, "##{position.name} ", data: {toggle: 'tab'} %>
+        </li>
+    <% end %>
+
+    <li>
+      <a data-toggle="tab" href="#ALL">ALL</a>
+    </li>
+  </ul>
+
+  <div class='tab-content'>
+    <% @positions.each.each do |position| %>
+      <div class='tab-pane' id="<%= position.name %>">
+        <table class='tab lineup'>
+          <thead>
+            <tr>
+              <th>POS</th>
+              <th>PLAYER</th>
+              <th>OPP</th>
+              <th>SALARY</th>
+              <th>FPPG</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% position.players.each do |player| %>
+              <%= content_tag :tr, id: dom_id(player), class: 'contest-player', data: {player_id: player.id, player_name: player.name, player_salary: 100, player_opp: 'Ind@SDD', player_fppg: 24.5, player_position: position.name} do %>
+                <td>
+                  <strong> <%= position.name %> </strong>
+                    <span>&nbsp;</span>
+                </td>
+                <td class='player'>
+                  <span class='green'><%= player.name %> </span>
+                </td>
+                <td class='opp'>
+                  <span>Ind@SDD</span>
+                </td>
+                <td class='salary'>
+                  <span>$8,500</span>
+                </td>
+                <td class='fppg'>24.5</td>
+                <td><%= link_to '+', '#_', class: 'add-to-lineup' %> </td>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% end %>
+    <div class='tab-pane' id="ALL">
+      <table class='tab lineup'>
+        <thead>
+        <tr>
+          <th>POS</th>
+          <th>PLAYER</th>
+          <th>OPP</th>
+          <th>SALARY</th>
+          <th>FPPG</th>
+          <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% Player.eager_load(:sport_position).all.each do |player| %>
+            <%= content_tag :tr, id: dom_id(player), class: 'contest-player', data: {player_id: player.id, player_name: player.name, player_salary: 100, player_opp: 'Ind@SDD', player_fppg: 24.5, player_position: player.sport_position.name} do %>
+                <td>
+                  <strong> <%= player.sport_position.name %> </strong>
+                  <span>&nbsp;</span>
+                </td>
+                <td>
+                  <span class='green'><%= player.name %> </span>
+                </td>
+                <td>
+                  <span>Ind@SDD</span>
+                </td>
+                <td>
+                  <span>$8,500</span>
+                </td>
+                <td>24.5</td>
+                <td><%= link_to '+', '#_', class: 'add-to-lineup' %> </td>
+            <% end %>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <p class='green'>Export to CSV »</p>
+
+  </div>
+</div>
+<%= form_for [@contest, @entry]  do |f| %>
+    <div class='col-md2'>
+      <h2>LINEUP</h2>
+
+      <div class='col-lg-6'>
+        <h4>
+          <strong> AVG. REM./PLAYER:</strong>
+          $5,555
+        </h4>
+      </div>
+      <div class='col-lg-6'>
+        <h4>
+          <strong> REM./SALARY:</strong>
+          $50,000
+        </h4>
+      </div>
+
+      <table class='tab'>
+        <thead>
+        <tr>
+          <th>POS</th>
+          <th>PLAYER</th>
+          <th>OPP</th>
+          <th>SALARY</th>
+          <th>FPPG</th>
+          <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <%= f.fields_for :lineups do |lineup_form| %>
+            <% position = lineup_form.object.sport_position %>
+            <tr class='lineup-item' id="lineup_<%= position.name %>">
+              <td>
+                <strong> <%= position.name %> </strong>
+                <%= lineup_form.hidden_field :sport_position_id %>
+              </td>
+              <td class='player val'>
+                <%= lineup_form.hidden_field :player_id %>
+              </td>
+              <td class='opp val'></td>
+              <td class='salary val'></td>
+              <td class='fppg val'></td>
+              <td><%= link_to 'x', '#_', class: 'remove-from-lineup', data: {position: position.name} %> </td>
+            </tr>
+        <% end %>
+        <tr>
+          <td>
+            <strong>ALL</strong>
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        </tbody>
+      </table>
+      <%= link_to 'Clear »', '#_', class: 'green', id: 'clear-lineups' %>
+    </div>
+
+    <div class='clear'> &nbsp;</div>
+    <div class='submitTeam'>
+      <%= f.submit 'SUBMIT TEAM', disable_with: 'Please wait...' %>
+    </div>
+<% end %>
+

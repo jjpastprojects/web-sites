@@ -1,0 +1,29 @@
+@import 'variables';
+
+.custom-dropdown {
+  padding: 10px 10px;
+  font-weight: bold;
+  float: left;
+  text-transform: uppercase;
+  background-color: $theme-dropdown-bg;
+  .dropdown-trigger {
+    color: #fff;
+    i {
+      margin: 0 10px;
+      color: $theme-green;
+    }
+  }
+  .selected-sport {
+    color: $theme-green;
+    border-right: solid 1px $theme-medium-grey1;
+    padding-right: 15px;
+    margin-left: 5px;
+  }
+  a {
+    color: $theme-green;
+  }
+  a:hover, a:focus {
+    text-decoration: none;
+  }
+}
+

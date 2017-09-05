@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= page_title %></title>
+    <meta charset="utf-8">
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag 'html5shiv.min.js' %>
+      <%= javascript_include_tag 'respond.min.js' %>
+    <![endif]-->
+
+    <%= tag :meta, :name => 'stripe-key', :content => Rails.configuration.stripe[:publishable_key] %>
+
+    <%= javascript_include_tag 'https://d3dy5gmtp8yhk7.cloudfront.net/2.1/pusher.min.js' %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= yield :head %>
+    <%= javascript_include_tag 'https://js.stripe.com/v1/' %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  </head>
+
+  <body class='<%=page_class%>' id='<%= page_id %>'>
+    <%= render 'shared/header' %>
+    <div class='container'>
+      <%= yield :banner %>
+      <div class="capitalcontent">
+        <% if flash[:notice] %>
+            <div class="alert alert-success"><%= flash[:notice] %></div>
+        <% end %>
+        <% if flash[:alert] %>
+            <div class="alert alert-danger"><%= flash[:alert] %></div>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'shared/footer' %>
+    <div class="ajax-loader" style="display:none;">
+      <img src="<%= image_path("ajax-loader.gif") %>">
+    </div>
+    <noscript>
+      <div class="no-js-banner">
+        <img src="<%= image_path("js-disabled-banner.gif") %>">
+      </div>
+    </noscript>
+    <%= yield :templates %>
+  </body>
+
+  <%= yield :after_js %>
+
+</html>

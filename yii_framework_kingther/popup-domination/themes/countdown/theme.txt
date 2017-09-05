@@ -1,0 +1,9 @@
+Template Name: Countdown
+Version: 1.0.3
+Min Version: 3.7
+Colors: Blue[blue:#005ba2] | Red[red:#651F17] | Bright Red[bright-red:#C6320E] | Bright Green[bright-green:#5CC32C] | Bright Purple[bright-purple:#A94196] | Bright Turq[bright-turq:#61CFDE] | Bright Orange[bright-orange:#DC8621] | Bright Blue[bright-blue:#1F5BD7] | Dark Blue[dark-blue:#1A4567] | Grape[grape:#76254D] | Green[green:#2F5C17] | Turq[turq:#3A8080] | Orange[orange:#964911] | Black[black:#000]
+Preview Size: 634x354
+Preview Ext: jpg
+Fields: Title[id:title,max:60,default_val:We are giving away 3 Design Videos! It could be you!]|Description Title[id:description_title,max:120,default_val:Hurry! Limited itme only]|Countdown End Date<br/><small><strong>Format Example:</strong>&nbsp;<small>10 September 2014 12:30PM</small><br/><small>Please adjust countdown to the server's time accordingly</small></small>[id:countdown_date,max:30,default_val:10 September 2014 12PM]|Button URL[id:button_url,max:1000,default_val:#]|Button Text[id:button_text,max:40,default_val:ENTER TO WIN]|Footer Note[id:footer_note,max:180,default_val:Just another line of paragraph will be placed here.]|Image Left[id:image_left,type:image,max_w:350,max_h:242]|As Seen In Image #1[id:as_seen_image_1,type:image,max_w:100,max_h:50]|As Seen In Image #2[id:as_seen_image_2,type:image,max_w:100,max_h:50]|As Seen In Image #3[id:as_seen_image_3,type:image,max_w:100,max_h:50]
+Button Colors: Default[default]
+Center: Y 

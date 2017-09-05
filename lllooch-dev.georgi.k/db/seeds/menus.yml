@@ -1,0 +1,17 @@
+- name: Основное меню
+  key: header
+  items: 
+    - name: Коллекция
+      page: Каталог
+
+    - name: Как купить
+      page: Как купить
+
+    - name: Кто мы
+      page: Кто мы
+
+    - name: Блог
+      page: Блоги
+
+    - name: Контакты
+      page: Контакты

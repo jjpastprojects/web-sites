@@ -1,0 +1,9 @@
+Template Name: Monthly Template #3 
+Colors: Green[green:#393939]
+Preview Size: 649x458
+Preview Ext: jpg
+NumberExtraInputs: 2
+Fields: Title[id:title,max:65]|Short Paragraph[id:short_paragraph,type:textarea,max:124]|Image[id:right_image,type:image,max_w:235,max_h:265]|Footer Security Note[id:footer_note,max:76]|Name Default Value[id:name_default,default_val:Your First Name...]|Email Default Value[id:email_default,default_val:Your Email Address...]|Custom Input 1 Default Value[id:custom1_default,default_val:Your Phone Number...]|Custom Input 2 Default Value[id:custom2_default,default_val:Your Address...]|Submit Button[id:submit_button,max:26,default_val:FREE INSTANT ACCESS]
+List Items: 5
+Button Colors: Red[red]|Green[green]|Orange[orange]|Blue[blue]|Purple[purple]
+Center: Y

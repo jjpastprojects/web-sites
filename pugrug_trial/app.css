@@ -1,0 +1,42 @@
+.app {
+    min-width: 320px;
+}
+
+.app .header {
+    height: 55px;
+    background-color: #d56565;
+    color: white;
+    padding: 17px 20px 17px;
+}
+
+.vertical-top {
+    vertical-align: top;
+}
+
+.app .header .title {
+    font-size: 20px;
+}
+
+.app .footer {
+    padding: 20px;
+    background-color: #333333;
+}
+
+.app .footer .logo {
+    font-size: 30px;
+    color: white;
+}
+
+.app .footer .small-logo {
+    font-size: 12px;
+    color: #f5f5f5;
+}
+
+.app .footer .line {
+    border-top-color: #d8d8d8;
+}
+
+.app .footer .link {
+    font-size: 15px;
+    color: #dcdcdc;
+}

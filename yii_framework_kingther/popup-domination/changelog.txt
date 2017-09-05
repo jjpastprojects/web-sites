@@ -1,0 +1,55 @@
+version 3.4.7.5
+- Fixed bug with analytics conversions being recorded in wrong place.
+- Fixed bug with display of custom field placeholder text using wrong input text under certain conditions.
+- Altered javascript file to deduce if browser is mobile device (tablets and smaller) and removed from server-side
+
+version 3.4.7.4
+- Removal of jQuery from the script call
+- jQuery is called if not already on the page
+- Navigation more consistent
+- Cookie added for a user subscribing so they wont see the pop-up again
+
+version 3.4.7.3
+- If any analytics are recorded graph shows minimum of 1% for readability, numbers on hover stay accurate.
+
+version 3.4.7.2
+- Analytics opt-in bug fixed
+
+version 3.4.7.1
+- Fixed GetResponse short_codes error
+- Fixed bug where sites that have facebook code on them already trigger popdom facebook code resulting in JS error
+
+version 3.4.7
+- Fixed bug affecting users who change the database prefix
+- Fixed bug with saving campaigns if PHP short_codes are off
+- Fixed version number bug
+- Fixed logout bug
+
+version 3.4.6
+- required security updates
+- Disable name bug fixed
+- Analytics for campaigns now resolved
+- Analytics for A/B testing now resolved
+
+version 3.4.5
+- Analytics bug resolved
+
+version 3.3
+- All IE 8 & & Bugs fixed
+- HTML form code problems fixed
+- Theme uploader updated to reduce failed upload
+
+version 3.2
+- Aweber api reconfigured (url re-direct instead of lightbox connection to aweber)
+- Mailing manager javascript bugs fixed
+
+version 3.1
+- Updated aweber api and fixed bugs
+- Button colour for certain templates fixed
+- IE 9 All bugs fixed (check your browsers not running in Compatibility Mode)
+- UI & UX bugs fixed
+- Campaign creation bugs fixed
+- mailing list bugs fixed
+
+version 3.0
+- Original version

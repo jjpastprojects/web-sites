@@ -1,0 +1,150 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; U) [Netscape]">
+    <title>Card Authorization</title>
+</head>
+<body text="#000000" bgcolor="#FFF5EE" link="#FF0000" vlink="#A52A2A" alink="#FF0000">
+&nbsp;
+<center><h1>e-Gateway card authorization test</h1></center>
+
+<form action="https://109.73.41.78:5443/cgi-bin/cgi_link" method="POST">
+    <table cols="2" width="100%">
+        <tbody><tr>
+            <td>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+            </td>
+
+            <td>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+            </td>
+
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+
+            <td>
+
+
+            </td></tr>
+
+        <tr>
+            <td>
+            </td>
+            <td>
+                <div align="left">provided by Internet Shop</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div align="right">Order amount:</div>
+            </td>
+
+            <td><input type="TEXT" name="AMOUNT" value="31.10" size="12" maxlength="12"></td>
+        </tr>
+
+        <tr>
+            <td>
+                <div align="right">Order currency:</div>
+            </td>
+            <td>
+                <select name="CURRENCY" size="1">
+                    <option value="840">USD</option>
+                    <option value="978">EUR</option>
+                    <option value="810">RUR 810</option>
+                    <option selected="" value="643">RUR 643</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div align="right">Order number:</div>
+            </td>
+            <td>
+
+
+                <select name="ORDER" size="1">
+                    <option value="1000001">1</option>
+                    <option value="1000002">2</option>
+                    <option value="1000003">3</option>
+                    <option value="1000004">4</option>
+                    <option value="1000005">5</option>
+                    <option value="1000006">6</option>
+                    <option value="1000007">7</option>
+                    <option value="1000008">8</option>
+                    <option value="1000009">9</option>
+                    <option value="1000012">12</option>
+                    <option value="1000013">13</option>
+                    <option value="1000014">14</option>
+                    <option value="1000015">15</option>
+                    <option value="1000016">16</option>
+                    <option value="1000017">17</option>
+                    <option value="1000018">18</option>
+                    <option value="1000019">19</option>
+                    <option value="1000022">22</option>
+                    <option value="1000023">23</option>
+                    <option value="1000024" selected>24</option>
+                    <option value="1000025">25</option>
+                    <option value="1000026">26</option>
+                    <option value="1000027">27</option>
+                    <option value="1000028">28</option>
+                    <option value="1000029">29</option>
+
+
+
+                </select>
+
+                <input type="TEXT" name="DESC" size="50" value="description" maxlength="50">
+            </td>
+            <td>
+                <input type="TEXT" name="EMAIL" size="50" value="ilya.doroshin@gmail.com" maxlength="50">
+                <input type="TEXT" name="MERCHANT" size="50" value="EPB3000E30001PB" maxlength="50">
+                <input type="TEXT" name="BACKREF" size="50" value="http://dev.lllooch.ru/payed" maxlength="50">
+                <input type="TEXT" name="MERCH_URL" size="255" value="http://dev.lllooch.ru/payed" maxlength="255">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div align="right">Merchant terminal:</div>
+            </td>
+            <td>
+                <input type="text" name="TERMINAL" size="8" value="CIS0ET14" maxlength="8">
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+
+            <td>
+                <br>
+                <select name="TRTYPE" size="1">
+                    <option value="0">AUTH</option>
+                    <option selected value="1">FIN</option>
+                </select>
+
+                <input type="TEXT" name="TIMESTAMP" size="14" value="20140130165700" maxlength="14" />
+                <input type="TEXT" name="NONCE" size="16" value="595ccd142a89a557" maxlength="32" />
+                <input type="TEXT" name="P_SIGN" value="A524F2026C6D8A6D8D7358A07C4C0F67A58BD6C7" />
+
+                <input type="SUBMIT" value="Approve" name="SEND_BUTTON">
+            </td>
+        </tr>
+        </tbody></table>
+
+    <br>&nbsp;
+
+</form></body></html>

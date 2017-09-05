@@ -1,0 +1,51 @@
+<% good = item.good if item.good %>
+<%
+   if good.name.downcase == 'starwire'
+     good.price = 3360
+   end
+%>
+<li class="cart-item<%= ' short' unless good.goods.present? and good.variants.present? %>" data-cart="item" data-price="<%= good.price %>" data-item-id="<%= item.id %>">
+  <div class="cart-item-remove">
+    <div class="cart-item-remove__btn">
+      <div class="control control-remove" data-cart-item="remove"></div>
+      <div>Удалить</div>
+    </div>
+  </div>
+
+  <div class="cart-item-info">
+    <div class="cart-item-pic">
+      <%= image_tag(good.thumb.url(:cart), data: {'cart-item' => "picture"}) %>
+    </div>
+
+    <div class="cart-item__wrap">
+      <div class="cart-item-title">
+        <%= good.title %>
+      </div>
+
+      <%= render 'variants', good: good, cart_item: item, variants: good.variants unless good.variants.empty? %>
+
+      <div class="cart-item-qnt">
+        <div class="cart-item-price" data-cart-item="price">
+            <%= number_to_currency(good.price, precision: 0, unit: 'р.') %>
+        </div>
+
+        <ul>
+          <li>
+            Количество
+          </li>
+
+          <li>
+            <div class="input-qnt" data-type="input-qnt">
+              <div class="input-qnt__control" data-input="control"></div>
+              <div class="input-qnt__control plus" data-input="control"></div>
+              <%# TODO input name %>
+              <%= form.input_field :quantity, data: {'cart-item' => 'quantity'}, type: 'string' %>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <%= render 'additionals', item: good.goods.sample unless good.goods.empty? %>
+    </div>
+  </div>
+</li>

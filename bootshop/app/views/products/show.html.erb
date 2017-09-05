@@ -1,0 +1,24 @@
+<%= render "layouts/navbar" %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @product.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @product.price %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @product.quantity %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_product_path(@product), :class=> "btn btn-primary" %> |
+<%= link_to 'Back', products_path, :class=> "btn"  %>
+<%= render "layouts/footer" %>

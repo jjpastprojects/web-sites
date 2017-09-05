@@ -1,0 +1,72 @@
+<%- model_class = PropertyType -%>
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to (plus_icon + ' Тип'),
+        new_admin_property_type_path,
+        :class => 'btn' %>
+
+    <%= link_to (plus_icon + ' Свойство'),
+        new_admin_property_path,
+        :class => 'btn' %>
+  </div>
+  <h1>Свойства товаров</h1>
+</div>
+
+<% @property_types.each do |property_type| %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          <%= property_type.name %>
+        </th>
+        <th width="60px">
+          <%= link_to pencil_icon,
+              edit_admin_property_type_path(property_type), :class => 'btn btn-mini' %>
+
+          <%= link_to trash_icon(true),
+              admin_property_type_path(property_type),
+              :method => :delete,
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-mini btn-danger' %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2" class="unstyled">
+          <% if property_type.properties.empty? %>
+            <div class="alert alert-warn">
+              Опаньки! а свойство-то и нету..
+            </div>
+          <% else %>
+            <table class="table table-striped">
+              <tbody>
+                <% property_type.properties.each_with_index do |property, i| %>
+                  <tr>
+                    <td>
+                      <%= property.name %>
+                    </td>
+                    <td<%= ' width=60px' if i == 0 %>>
+                      <%= link_to pencil_icon,
+                          edit_admin_property_path(property), :class => 'btn btn-mini' %>
+
+                      <%= link_to trash_icon(true),
+                          admin_property_path(property),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-mini btn-danger' %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          <% end %>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+
+<% end %>

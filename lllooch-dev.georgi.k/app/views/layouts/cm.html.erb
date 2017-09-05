@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Content Manager</title>
+  <link rel="shortcut icon" href="<%= image_url("content/favicon.ico") %>">
+  <%= stylesheet_link_tag    "admin", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "admin", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+<div class="container">
+
+  <%= nav_bar fixed: :top, responsive: true, inverse: true, dark: true do %>
+      <%= brand_link 'CMS', cm_root_path %>
+
+      <%= menu_group do %>
+          <%= menu_item "Блоги", cm_post_categories_path %>
+      <% end %>
+
+      <%= menu_group pull: :right do %>
+          <%= menu_item "Выход", '/' %>
+      <% end %>
+  <% end %>
+
+  <%= yield %>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<div>
+  <div class="clear">&nbsp;</div>
+
+  <div class="filter_row">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Contests</h4>
+      </div>
+      <div class="col-md-8">
+        <!--<span class="green"><a href="#">Join More Contest »</a></span>-->
+        <!--<span class="green"><%= link_to 'View my Lineups', lineups_path %></span>-->
+      </div>
+    </div>
+  </div>
+
+
+  <div class="">
+    <table class="table sortable">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Sport</th>
+        <th>Contest Date</th>
+        <th>Contest Type</th>
+        <th>Entry Fee</th>
+        <th>Prize</th>
+        <th>Number of Entries</th>
+        <th>Winners</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @contests.each do |contest| %>
+          <tr>
+            <td><%= contest.id %></td>
+            <td><%= contest.contestdate %></td>
+            <td><%= contest.sport %></td>
+            <td><%= contest.contest_type %></td>
+            <td><%= contest.entry_fee %></td>
+            <td><%= contest.prizepool %></td>
+            <td><%= contest.entries_count %></td>
+            <td>
+            <% contest.winnings.each do |win| %>
+
+                <%= win[0].lineup.user.username %>, <%= win[1] %><br>
+            <% end %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>

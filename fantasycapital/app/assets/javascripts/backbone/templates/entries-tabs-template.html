@@ -1,0 +1,109 @@
+<script type="text/template" id="entries-tabs-template">
+  <div id="entries-contest-types" class="row fantasy-tabs">
+    <div class="col-md-5 heading border-bottom">My Entries</div>
+    <div class="col-md-7 clearfix mp-right-reset">
+      <div class="row game-filters tabs-layout">
+        <div class="col-md-1 placeholder hidden-xs hidden-sm">&nbsp;</div>
+        <div class="col-md-3 border-right-none active live tab" data-type="live">
+          <span>Live</span>
+          <span class="numbers"><%= liveColl.length %></span>
+        </div>
+        <div class="col-md-4 border-right-none upcoming tab" data-type="upcoming">
+          <span>Upcoming</span>
+          <span class="numbers"><%= upcoColl.length %></span>
+        </div>
+        <div class="col-md-4 completed tab" data-type="completed">
+          <span>Completed</span>
+          <span class="numbers"><%= compColl.length %></span>
+        </div>
+      </div>
+      <div class="border-added hidden-xs hidden-sm">&nbsp;</div>
+    </div>
+    <!-- <div class="col-md-1 border-bottom padding-none">&nbsp;</div> -->
+  </div>
+  <div class="row fantasy-subheader hide">
+    <div class="col-xs-4 text-left">
+      <h5>Live contests</h5>
+    </div>
+    <div class="col-xs-8 text-right">
+      <a class="fc-btn-green">Enter more games</a>
+    </div>
+  </div>
+  <div class="row fantasy-subheader-black">
+    <div class="col-md-3 subheader">
+      <div class="padding">
+        <h3>Scoreboard</h3>
+        <p>Your games: <span class="date">April 30, 2014</span></p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h3>...</h3> 
+      <p>entries</p>
+    </div>
+    <div class="col-md-3">
+      <h3>...</h4>
+      <p>in play</p>
+    </div>
+    <div class="col-md-3">
+      <h3 class="green">...</h3>
+      <p class="green">currently winning</p>
+    </div>
+  </div>
+  <div id="entries-section" class="row">
+    <div id="entries-empty" class="col-md-12 hide">
+      <h2>You have no live contest right now.</h2>
+      <h3>Live contest will appear here once the games start.</h3>
+    </div>
+    <div id="entries-list" class="table-filters-view">
+      <div id="home-filter-games">
+        <div class="expand">+ Filter Games</div>
+        <div class="row hide">
+          <!-- -->
+        </div>
+      </div>
+      <div id="home-filter-options" class="hide">
+        <div class="row">
+          <div class="col-md-2">
+            <p>Contest type</p>
+            <div class="relative">
+              <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">50/50</span>
+            </div>
+            <div class="relative">
+              <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">Head to Head</span>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <p>Sport</p>
+            <div class="relative">
+              <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">NBA</span>
+            </div>
+            <div class="relative">
+              <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">MLB</span>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <p>Live in</p>
+            <div class="relative">
+              <span class="checkbox-toggle" data-value="false"></span><span class="light-grey">Next hour only</span>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <p>Entry</p>
+            <div class="row">
+              <div class="col-md-6">
+                <p><span class="light-grey no-margin">Min</span></p>
+                <input type="text" class="short" placeholder="eg. $1">
+              </div>
+              <div class="col-md-6">
+                <p><span class="light-grey no-margin">Min</span></p>
+                <input type="text" class="short">
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="fantasy-table-wrapper"><!-- innerView --></div>
+    </div>
+  </div>
+</script>

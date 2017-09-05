@@ -1,0 +1,50 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to (plus_icon + ' Тип'),
+                new_admin_delivery_type_path,
+                :class => 'btn' %>
+  </div>
+
+  <h1>Типы доставки</h1>
+</div>
+
+<% if @delivery_types.empty? %>
+    <div class="well">
+      Опаньки, ни одного типа доставки не найдено :(
+    </div>
+<% else %>
+    <table class="table table-striped" data-type="nested" data-nested-url="<%= order_admin_delivery_types_path %>">
+      <thead>
+      <tr>
+        <th width="35%">Тип доставки</th>
+        <th>Стоимость</th>
+        <th width="60px"></th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <% @delivery_types.each do |delivery_type| %>
+          <tr data-nested="item" data-nested-id="<%= delivery_type.id %>">
+            <td>
+              <%= delivery_type.name %>
+            </td>
+
+            <td>
+              <%= delivery_type.price %>
+            </td>
+
+            <td>
+              <%= link_to pencil_icon,
+                          edit_admin_delivery_type_path(delivery_type), :class => 'btn btn-mini' %>
+
+              <%= link_to trash_icon(true),
+                          admin_delivery_type_path(delivery_type),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-mini btn-danger' %>
+            </td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% end %>  

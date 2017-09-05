@@ -1,0 +1,30 @@
+<%= language_prompt %>
+
+<%= simple_form_for [:admin, @material], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= form_errors f %>
+
+  <%= tabs [[:main, 'Основное'], [:picture, 'Изображение']] %>
+
+  <%= tab_contents do %>
+    <%= tab_pane :main, {active: true} do %>
+      <%= f.input :name %>
+
+      <% Globalize.with_locale(@locale.slug) do %> 
+        <%= f.input :title %>
+        <%= f.input :description, as: :html %>
+      <% end %>
+    <% end %>
+
+    <%= tab_pane :picture do %>
+      <%= image_field @material, :picture, f, [300, 300], sizes: ['80x80', '300x300'] %>
+    <% end %>
+  <% end %>
+
+  <%= language_input f %>
+
+  <div class="form-actions">
+    <%= f.button :submit, save_or_update(@material), :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+        admin_materials_path, :class => 'btn' %>
+  </div>
+<% end %>

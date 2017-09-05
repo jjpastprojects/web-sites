@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title><%= meta[:title] %></title>
+  <meta name="viewport" content="width=device-width,maximum-scale=1">
+  <link rel="shortcut icon" href="<%= image_url("content/favicon.ico") %>">
+
+  <%= stylesheet_link_tag "content", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "shared/modernizr.min", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Roboto:400,500,700,900&subset=latin,cyrillic" %>
+  <%= csrf_meta_tags %>
+
+  <%= language_alternate %>
+
+  <%= tag(:meta, name: 'keywords', content: meta[:keywords]) if meta[:keywords] %>
+  <%= tag(:meta, name: 'description', content: meta[:description]) if meta[:description] %>
+
+</head>
+
+<body class="dark">
+
+<%= render 'header' %>
+<%= yield %>
+<%= render 'footer', :absolute => (true if @absolute_footer) %>
+
+<%= javascript_include_tag "frontend", "data-turbolinks-track" => true %>
+
+<% if S "counters" %>
+    <%= S("counters").html_safe %>
+<% end %>
+
+<%= yield :footer_scripts %>
+</body>
+</html>

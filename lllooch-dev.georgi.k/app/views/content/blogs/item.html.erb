@@ -1,0 +1,26 @@
+<% content_for :extra_scripts do %>
+<% end %>
+
+<div class="blogs-wrap" data-type="blogs">
+  <div class="loading-wrap" data-blog="loading">
+    <div class="loading">
+      <div class="wrap">
+        <div class="loader">
+          <%= image_tag "content/product-loader.gif" %>
+        </div>
+
+        <%= T "Загружается..." %>
+      </div>
+    </div>
+  </div>
+
+  <div data-region="posts">
+    <ul class="blogs" data-type="posts">
+      <% if @items.present? %>
+          <% @items.each do |i| %>
+              <%= render 'item', blog: i %>
+          <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+<div class="page-header">
+  <h1><%= @post.name %></h1>
+</div>
+
+<%= tabs [[:main, 'Основное', {active: false, path: edit_cm_post_path(@post, anchor: :main)}],
+          [:picture, 'Обложка', {active: false, path: edit_cm_post_path(@post, anchor: :picture)}],
+          [:meta, 'META', {active: false, path: edit_cm_post_path(@post, anchor: :meta)}], [:content, 'Контент', {active: true}]] %>
+
+<% if @post.blocks.present? %>
+  <div data-type="nested" data-nested-url="<%= order_cm_post_blocks_path(@post) %>">
+    <% @post.blocks.each do |b| %>
+        <div class="well" data-nested="item" data-nested-id="<%= b.id %>" data-toggle="collapse" data-target="#block<%= b.id %>">
+          <div class="pull-right">
+            <%= link_to pencil_icon,
+                        edit_cm_post_block_path(@post, b.id),
+                        :class => 'btn btn-mini' %>
+
+            <%= link_to trash_icon(true),
+                        cm_post_block_path(@post, b.id),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-mini btn-danger' %>
+          </div>
+
+          <div style="margin: -15px -13px 7px"><span class="label label-inverse"><%= b.block_type %></span></div>
+
+          <div class="collapse" id="block<%= b.id %>" style="display: block; min-height: 30px">
+              <% if 'picture' == b.block_type %>
+                <%= image_tag b.picture.url(:preview) %>
+              <% else %>
+                  <%= b.content.html_safe if b.content %>
+              <% end %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+<% else %>
+    <div class="well">
+      Пусто..
+    </div>
+<% end %>
+
+<div class="pull-left">
+  <%= simple_form_for PostBlock::Html.new(post: @post), url: url_for(controller: 'cm/post_blocks', action: :create, post_id: @post) do |b| %>
+      <% simple_fields_for 'post_block', b.object do |f| %>
+          <%= f.input :type, as: :hidden %>
+          <%= f.association :post, as: :hidden %>
+
+          <%= f.button :button, (content_tag(:i, '', class: 'icon icon-list-alt') + ' Контент').html_safe, :class => 'btn' %>&nbsp;
+      <% end %>
+  <% end %>
+</div>
+
+<div class="pull-left">
+  <%= simple_form_for PostBlock::Picture.new(post: @post), url: url_for(controller: 'cm/post_blocks', action: :create, post_id: @post) do |b| %>
+      <% simple_fields_for 'post_block', b.object do |f| %>
+          <%= f.input :type, as: :hidden %>
+          <%= f.association :post, as: :hidden %>
+
+          <%= f.button :button, (content_tag(:i, '', class: 'icon icon-picture') + ' Фото').html_safe, :class => 'btn' %>&nbsp;
+      <% end %>
+  <% end %>
+
+</div>
+
+<div class="pull-left">
+  <%= simple_form_for PostBlock::Embed.new(post: @post), url: url_for(controller: 'cm/post_blocks', action: :create, post_id: @post) do |b| %>
+      <% simple_fields_for 'post_block', b.object do |f| %>
+          <%= f.input :type, as: :hidden %>
+          <%= f.association :post, as: :hidden %>
+
+          <%= f.button :button, (content_tag(:i, '', class: 'icon icon-film') + ' Видео').html_safe, :class => 'btn' %>&nbsp;
+      <% end %>
+  <% end %>
+</div>

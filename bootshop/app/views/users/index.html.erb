@@ -1,0 +1,14 @@
+
+     <h1>Listing Products</h1>
+         <%#= link_to 'admin', users_path %>
+        <% @products.each do |product| %>
+  <tr>
+    <td><%= product.name %></td>
+    <td><%= product.price %></td>
+    <td><%= product.quantity %></td>
+    
+  </tr>
+<% end %>
+</table>
+
+

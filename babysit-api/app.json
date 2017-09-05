@@ -1,0 +1,8 @@
+{
+  "name": "Komae API",
+  "description": "A simple API for babysitting exchange app",
+  "repository": "",
+  "logo": "http://www.mykomae.com",
+  "keywords": ["node", "express", "static", "babysitting","exchange"],
+  "image": "heroku/nodejs"
+}

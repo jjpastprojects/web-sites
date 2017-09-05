@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <script>
+      $(function() {
+        $("form").submit();
+      });
+    </script>
+
+    <span style="padding-left: 100px">Перенаправление на сайт платёжного шлюза....</span>
+
+    <form action="https://109.73.41.78:5443/cgi-bin/cgi_link" method="POST">
+
+      <input TYPE="hidden" NAME="CURRENCY" SIZE="50" VALUE="<%= @config[:CURRENCY] %>"/>
+      <input type="hidden" name="TRTYPE" value="<%= @config[:TRTYPE] %>"/>
+      <input TYPE="hidden" NAME="AMOUNT" VALUE="<%= @config[:AMOUNT] %>"/>
+      <input TYPE="hidden" NAME="TERMINAL" SIZE="8" VALUE="<%= @config[:TERMINAL] %>" MAXLENGTH="8"></input>
+      <input TYPE="hidden" NAME="MERCH_URL" SIZE="255" VALUE="<%= @config[:MERCH_URL] %>" MAXLENGTH="255"></input>
+      <input TYPE="hidden" NAME="MERCHANT" SIZE="50" VALUE="<%= @config[:MERCHANT] %>" MAXLENGTH="50"></input>
+      <input TYPE="hidden" NAME="DESC" VALUE="Testing cards cases"/>
+      <input TYPE="hidden" NAME="BACKREF" VALUE="<%= @config[:BACKREF] %>"></input>
+      <input TYPE="hidden" NAME="ORDER" VALUE="<%= @config[:ORDER] %>"></input>
+      <input TYPE="hidden" NAME="TIMESTAMP" SIZE="14" VALUE="<%= @config[:TIMESTAMP] %>" MAXLENGTH="14">
+      <input TYPE="hidden" NAME="NONCE" SIZE="16" VALUE="<%= @config[:NONCE] %>" MAXLENGTH="32">
+      <input TYPE="hidden" NAME="P_SIGN" SIZE="00" VALUE="<%= @config[:P_SIGN] %>" MAXLENGTH="32"></input>
+      <input TYPE="hidden" NAME="EMAIL" VALUE="<%= @config[:EMAIL] %>"></input>
+
+    </form>
+  </body>
+
+</html>

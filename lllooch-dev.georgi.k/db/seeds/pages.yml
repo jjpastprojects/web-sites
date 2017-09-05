@@ -1,0 +1,30 @@
+- name: Главная
+  page_type: Главная
+
+- name: Блоги
+  url: blogs
+  page_type: Список/элемент
+
+- name: Запись в блоге
+  url: post
+  page_type: Элемент
+
+- name: Каталог
+  url: catalog
+  page_type: Список/элемент
+
+- name: Товар
+  url: goods
+  page_type: Элемент
+
+- name: Контакты
+  url: contacts
+  page_type: Контент
+
+- name: Как купить
+  url: buy
+  page_type: Контент
+
+- name: Кто мы
+  url: designers
+  page_type: Список/элемент

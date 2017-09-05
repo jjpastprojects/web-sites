@@ -1,0 +1,11 @@
+<a href="#" class="b-menu-link hide-on-full" data-action="toggle" data-toggle="header-menu">
+	<i class="icon icon-menu"></i>
+</a>
+
+<ul class="b-menu b-content-menu" data-toggle-item="header-menu">
+  <% if menu('header') %>
+  	<% menu('header').items.each do |item| %>
+  		<%= render 'content/menu/responsive_item', :item => item %>
+  	<% end %>
+  <% end %>
+</ul>

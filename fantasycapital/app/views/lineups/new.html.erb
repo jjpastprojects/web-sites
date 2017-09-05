@@ -1,0 +1,34 @@
+<!-- load backbone templates -->
+<%= Rails.application.assets.find_asset('backbone/templates/lineup-player-template.html').to_s.html_safe %>
+<!-- DONE loading backbone templates -->
+
+<%= render 'draft_team' %>
+
+<script type="text/javascript">
+    // populate games list from servers.
+
+    function init_colls(container) {
+        // this is called in lineup-form.js
+
+    container.contest = new Backbone.Model (<%= @contest.to_json.html_safe %>);
+    container.teams_coll = new Backbone.Collection;
+    container.teams_coll.reset(<%= @teams.to_json.html_safe %>);
+    container.sportpositions_coll = new Backbone.Collection;
+    container.sportpositions_coll.reset (<%= @sportpositions.to_json.html_safe %>);
+
+    container.games_coll = new Main.Collections.GamesCollection([],
+            {teams_coll: container.teams_coll});
+    container.games_coll.reset(<%= @games.to_json.html_safe %>);
+    container.players_coll = new Main.Collections.PlayersCollection([],
+                        {teams_coll: container.teams_coll, games_coll: container.games_coll,
+                         contest: container.contest, sportpositions_coll: container.sportpositions_coll});
+    container.players_coll.reset(<%= @players.to_json.html_safe %>);
+//    var entries_coll = new Main.Collections.EntriesCollection;
+//    entries_coll.reset(<%= @entries.to_json.html_safe %>);
+
+//    var playerscores_coll = new Main.Collections.PlayerScoresCollection;
+//    playerscores_coll.reset (<%= @playerscores.to_json.html_safe %>);
+    }
+
+</script>
+

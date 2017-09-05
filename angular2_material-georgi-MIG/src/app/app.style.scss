@@ -1,0 +1,122 @@
+@import "variables";
+
+html, body{
+  height: 100%;
+  background: #F4FAFA;
+}
+
+app {
+  min-height:$app-min-height;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
+md-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+md-sidenav {
+  width: $sidenav-width;
+}
+
+
+
+//Side Menu Class
+
+
+.side-menu, .side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.side-menu {
+  .menu-toggle-list {
+    background: #fff;
+    max-height: 300px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    -webkit-transition-property: max-height;
+    -moz-transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    -moz-transition-property: max-height;
+    transition: 0.75s cubic-bezier(0.35, 0, 0.25, 1);
+    transition-property: max-height;
+
+    a.link {
+      display: block;
+      padding: 0 20px 0 40px;
+      text-transform: none;
+      text-rendering: optimizeLegibility;
+      font-weight: 500;
+    }
+  }
+
+  a.link, a.toggle {
+    text-align: left;
+    display: block;
+  }
+
+  a.active {
+    color: deeppink;
+  }
+
+  .md-button-toggle .md-toggle-icon {
+    background-size: 100% auto;
+    display: inline-block;
+    margin: auto 0 auto auto;
+    width: 15px;
+    color: darkgray;
+    transition: transform .3s ease-in-out;
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+  }
+
+
+}
+
+
+
+
+button.active{
+  background: #fff;
+  color: #009688;
+}
+button.active:hover{
+  color: #fff;
+}
+
+.fill{
+  flex: 1 1 auto;
+}
+.app-state{
+  margin: 15px;
+  flex: 1;
+}
+.home{
+  flex: 1;
+}
+
+footer{
+  flex: 0 0 60px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.header a{
+  text-decoration: none;
+}
+
+md-sidenav[mode=side] {
+  background-color: md-color($md-accent, 500);
+}
+//md-sidenav[align=end] {
+//  background-color: md-color($md-warn, 500);
+//}

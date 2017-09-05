@@ -1,0 +1,221 @@
+
+/*Fantasy Capital Website Style Sheet for Header Footer Capital Content etc*/
+/*External Font for the Site*/
+@font-face {
+	font-family: 'droid_sansregular';
+	src: font-url('droidsans-webfont.eot');
+	src: font-url('droidsans-webfont.eot?#iefix') format('embedded-opentype'), font-url('droidsans-webfont.woff') format('woff'), font-url('droidsans-webfont.ttf') format('truetype'), font-url('droidsans-webfont.svg#droid_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'droid_sansbold';
+	src: font-url('droidsans-bold-webfont.eot');
+	src: font-url('droidsans-bold-webfont.eot?#iefix') format('embedded-opentype'), font-url('droidsans-bold-webfont.woff') format('woff'), font-url('droidsans-bold-webfont.ttf') format('truetype'), font-url('droidsans-bold-webfont.svg#droid_sansbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*Fantsy Tabs*/
+.fantasytabs {
+	width: 100%
+}
+.fantasytabs .nav-tabs {
+	border-bottom: 0;
+}
+.fantasytabs .nav-tabs > li {
+	float: left;
+	margin: 0 1px -1px 0;
+	background: #b2b2b2;
+	border-radius: 0;
+}
+.fantasytabs .nav-tabs > li:last-child {
+	margin: 0 0px 0 0;
+}
+.fantasytabs .nav-tabs > li > a {
+	margin-right: 2px;
+	line-height: 1.428571429;
+	font-family: 'droid_sansbold';
+	color: #565656;
+}
+.fantasytabs .nav-tabs > li > a:hover {
+	border-color: transparent;
+	color: #fff;
+}
+.fantasytabs .nav-tabs > li.active {
+	background: none
+}
+.fantasytabs .nav-tabs > li.active > a, .fantasytabs .nav-tabs > li.active > a:hover, .fantasytabs .nav-tabs > li.active > a:focus {
+	color: #fff;
+	cursor: default;
+	background: #D1D1D1;
+}
+.fantasytabs .nav-tabs.nav-justified {
+	width: 100%;
+	border-bottom: 0;
+}
+.fantasytabs .nav-tabs.nav-justified > li {
+	float: none;
+}
+.fantasytabs .nav-tabs.nav-justified > li > a {
+	margin-bottom: 5px;
+	text-align: center;
+}
+.fantasytabs .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+	top: auto;
+	left: auto;
+}
+ @media (min-width: 768px) {
+.fantasytabs .nav-tabs.nav-justified > li {
+	display: table-cell;
+	width: 1%;
+}
+.fantasytabs .nav-tabs.nav-justified > li > a {
+	margin-bottom: 0;
+}
+}
+.fantasytabs .nav-tabs.nav-justified > li > a {
+	margin-right: 0;
+	border-radius: 0px;
+}
+.fantasytabs .nav-tabs.nav-justified > .active > a, .fantasytabs .nav-tabs.nav-justified > .active > a:hover, .fantasytabs .nav-tabs.nav-justified > .active > a:focus {
+	border: 1px solid #dddddd;
+}
+ @media (min-width: 768px) {
+.fantasytabs .nav-tabs.nav-justified > li > a {
+	border-bottom: 1px solid #dddddd;
+	border-radius: 0px 0px 0 0;
+}
+.fantasytabs .nav-tabs.nav-justified > .active > a,  .fantasytabs .nav-tabs.nav-justified > .active > a:hover,  .fantasytabs .nav-tabs.nav-justified > .active > a:focus {
+	border-bottom-color: #ffffff;
+}
+}
+.fantasytabs .tab-content {
+	border: 2px solid #e8f2f3;
+	border-top: none;
+}
+.fantasytabs table.refer {
+	width: 100%;
+	font-family: 'droid_sansregular';
+	margin: 0;
+	padding: 0
+}
+.fantasytabs table.refer tr th {
+	background: #D1D1D1;
+	font-weight: normal;
+	padding: 10px 10px 5px;
+	color: #555555;
+}
+.fantasytabs table.refer tr td {
+	background: #fff
+}
+.fantasytabs .tab-content p {
+	padding: 10px;
+	background: #fff
+}
+/*Paypal Tab*/
+
+.paypaltabs {
+	width: 100%
+}
+.paypaltabs .nav-tabs {
+	border-bottom: 0 none;
+	margin: 0 auto;
+	width: 50%;
+}
+.paypaltabs .nav-tabs > li {
+	float: left;
+	margin: 0 1px -1px 0;
+	background: none;
+	border-radius: 0;
+}
+.paypaltabs .nav-tabs > li:last-child {
+	margin: 0 0px 0 0;
+}
+.paypaltabs .nav-tabs > li > a {
+	margin-right: 2px;
+	line-height: 1.428571429;
+	font-family: 'droid_sansbold';
+	color: #3794cc;
+	font-size: 16px;
+}
+.paypaltabs .nav-tabs > li > a:hover {
+	border-color: transparent;
+	color: #3794cc;
+}
+.paypaltabs .nav-tabs > li.active {
+	background: none
+}
+.paypaltabs .nav-tabs > li.active > a, .paypaltabs .nav-tabs > li.active > a:hover, .paypaltabs .nav-tabs > li.active > a:focus {
+	color: #000;
+	font-size: 16px;
+	cursor: default;
+	background: #e8f2f3;
+	border: 1px solid #E8F2F3;
+}
+.paypaltabs .nav-tabs.nav-justified {
+	width: 100%;
+	border-bottom: 0;
+}
+.paypaltabs .nav-tabs.nav-justified > li {
+	float: none;
+}
+.paypaltabs .nav-tabs.nav-justified > li > a {
+	margin-bottom: 5px;
+	text-align: center;
+}
+.paypaltabs .nav-tabs.nav-justified > .dropdown .dropdown-menu {
+	top: auto;
+	left: auto;
+}
+ @media (min-width: 768px) {
+.paypaltabs .nav-tabs.nav-justified > li {
+	display: table-cell;
+	width: 1%;
+}
+.paypaltabs .nav-tabs.nav-justified > li > a {
+	margin-bottom: 0;
+}
+}
+.paypaltabs .nav-tabs.nav-justified > li > a {
+	margin-right: 0;
+	border-radius: 0px;
+}
+.paypaltabs .nav-tabs.nav-justified > .active > a, .paypaltabs .nav-tabs.nav-justified > .active > a:hover, .paypaltabs .nav-tabs.nav-justified > .active > a:focus {
+	border: 1px solid #dddddd;
+}
+ @media (min-width: 768px) {
+.paypaltabs .nav-tabs.nav-justified > li > a {
+	border-bottom: 1px solid #dddddd;
+	border-radius: 0px 0px 0 0;
+}
+.paypaltabs .nav-tabs.nav-justified > .active > a,  .paypaltabs .nav-tabs.nav-justified > .active > a:hover,  .paypaltabs .nav-tabs.nav-justified > .active > a:focus {
+	border-bottom-color: #ffffff;
+}
+
+}
+.paypaltabs .tab-content {
+	border: 2px solid #e8f2f3;
+	border-top: none;
+	background: none repeat scroll 0 0 #E8F2F3;
+	padding: 30px;
+}
+.paypaltabs table.refer {
+	width: 100%;
+	font-family: 'droid_sansregular';
+	margin: 0;
+	padding: 0
+}
+.paypaltabs table.refer tr th {
+	background: #e8f2f3;
+	font-weight: normal;
+	padding: 10px 10px 5px;
+	color: #555555;
+}
+.paypaltabs table.refer tr td {
+	background: #fff
+}
+.paypaltabs .tab-content p {
+	padding: 10px;
+	background: #fff
+}
+@media (max-width: 768px) {.paypaltabs .tab-content { padding:5px}}

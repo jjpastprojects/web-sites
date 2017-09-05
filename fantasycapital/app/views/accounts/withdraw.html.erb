@@ -1,0 +1,87 @@
+<%= render partial: 'shared/account_heading' %>
+
+<h4 class="grey_bottom_border"><strong>WITHDRAWAL FORM</strong></h4>
+<div class="clearfix">&nbsp;</div>
+<div class="withdrawal">
+  <div class="col-md-9 grey_right_border">
+
+    <div class="col-md-5">
+      <h4><strong>Available for Withdrawal:</strong></h4>
+    </div>
+    <div class="col-md-3">
+      <h4>$<%= '%.2f' % current_user.account_balance %></h4>
+    </div>
+
+    <% if current_user.account_balance < 20.0 %>
+    <div class="clear">&nbsp;</div>
+    <h1>Your available funds do not meet the minimum
+      withdrawal requirement of the $20.00.</h1>
+    <% elsif current_user.bank_accounts.where(is_default: true).exists? == false %>
+    <div class="col-md-8">
+      Need to add a bank account
+    </div>
+    <% else %>
+
+    <div class="clearfix">&nbsp;</div>
+
+    <%= form_tag("/withdraw", method: "post", 'data-stripe-action' => 'bankAccount') do %>
+    <div style="display:none;" class="col-md-8 error-container form-group has-error"></div>
+    <div class="form-group">
+      <label class="col-md-5 control-label">Amount</label>
+      <div class="col-md-3">
+        <input type="text" id="transferAmount" class="form-control" autocomplete="off"/>
+      </div>
+    </div>
+    <br>
+    <button type="button" id="existingTransfer" class="col-md-8 btn btn-large btn-primary">
+      Withdraw
+    </button>
+    <% end %>
+    
+    <% end %>
+    <div class="clearfix">&nbsp;</div>
+    <br>
+  </div>
+  <div class="col-md-3"><br>
+    <% if current_user.bank_accounts.count == 0 %>
+    <%= link_to 'Add bank account', new_bank_account_path %>
+    <% else %>
+    <p><% acct = current_user.bank_accounts.where(is_default: true).first %>
+      Default Bank Account<br/>
+      Bank Name: <%= acct.name %><br/>
+      Account Number: XX<%= acct.last_4 %><br/>
+    </p>
+    </div>
+    <% end %>
+    <strong>Your Withdrawal Address:</strong><br>
+
+    <p>89 Burlington Road<br/>
+      Unionville, CT 06085</p>
+    <a href="#"><span class="green">Update Address »</span></a></div>
+</div>
+
+<div class="clearfix">&nbsp;</div>
+<br>
+<div class="pull-left"><a href="#"><span class="green">&lt; Back to My Account</span></a></div>
+<div class="clear">&nbsp;</div>
+<p>We offer withdrawal by Stripe Transfer<br>
+  Minimum withdrawal is $20<br>
+  Only real money is eligible for withdrawal, not bonus credits of any kind.<br>
+  For your security, all withdrawals are manually reviewed by our support team.<br>
+  Our Withdrawal Policy is to first refund any original deposit methods, then issue the remaining funds via PayPal or by
+  Check.</p>
+<p>
+  <strong>If you have lost or cancelled one of the credit or debit cards that you have issued in the
+    past to deposit on FantasyCapital, please notify <a href="#">support@fantasycapital.com</a> prior to requesting your
+    withdrawal.</strong>
+</p>
+
+
+
+<% content_for :after_js do %>
+  <script type="text/javascript">
+    $(document).on("ready page:load", function () {
+        window.initializeStripeForm();
+    });
+  </script>
+<% end %>

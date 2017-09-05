@@ -1,0 +1,35 @@
+<script type="text/template" id="completed-contests-template">
+  <% if (completedContests.length > 0) { %>
+    <table class='contestHead main-grid table filter-result sortable fantasy-table'>
+      <thead>
+      <tr>
+        <th data-defaultsort="asc" class="srt-contest-name">ID</th>
+        <th data-defaultsort="asc" class="srt-sport">GAME</th>
+        <th data-defaultsort="asc" class="srt-live-in">DATE</th>
+        <th data-defaultsort="asc" class="srt-entry-fee">ENTRY FEE</th>
+        <th data-defaultsort="asc">PRIZE POOL</th>
+        <th data-defaultsort="asc">PLACE</th>
+        <th data-defaultsort="asc">$WON</th>
+        <th data-defaultsort="disabled"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+        <% _(completedContests).each(function (contest) { %>
+        <tr class="completedcontest">
+          <td><%= contest.id %></td>
+          <td><%= contest.sport %></td>
+          <td><%= moment.utc(contest.complete).local().format("D/MM/YY") %></td>
+          <td><%= accounting.formatMoney(contest.entry_fee) %></td>
+          <td><%= accounting.formatMoney(contest.prize) %></td>
+          <td><%= contest.final_pos %></td>
+          <td><%= accounting.formatMoney(contest.won) %></td>
+          <td><a class="button" href="<%= contest.results_path %>">RESULTS</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p class="message">YOU HAVE NO FINISHED CONTEST RIGHT NOW. CONTEST WILL APPEAR HERE ONCE THE GAMES WILL BE FINISHED.</p>
+  <% } %>
+</script>

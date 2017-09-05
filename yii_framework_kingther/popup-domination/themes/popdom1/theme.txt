@@ -1,0 +1,7 @@
+Template Name: Popdom # 1
+Colors: Blue[blue:#005ba2] | Red[red:#651F17] | Bright Red[bright-red:#C6320E] | Bright Green[bright-green:#5CC32C] | Bright Purple[bright-purple:#A94196] | Bright Turq[bright-turq:#61CFDE] | Bright Orange[bright-orange:#DC8621] | Bright Blue[bright-blue:#1F5BD7] | Dark Blue[dark-blue:#1A4567] | Grape[grape:#76254D] | Green[green:#2F5C17] | Turq[turq:#3A8080] | Orange[orange:#964911] | Black[black:#000]
+Preview Size: 610x439
+Preview Ext: jpg
+Fields: Title[id:title,max:50,default_val:Leave your email address to get]|Form Header[id:form_header,max:50,default_val:EXCLUSIVE MARKETING REPORT]|Sub Form Header[id:sub_form_header,max:50,default_val:It's FREE for every subscriber]|Footer Security Note[id:footer_note,max:80,default_val:*by leaving your email address you're also subscribing to our blog newsletter]|Name Default Value[id:name_default,default_val:Put Your Name here]|Email Default Value[id:email_default,default_val:Put Your Email here]|Image[id:left_image,type:image,max_w:180,max_h:600]|Submit Button[id:submit_button,max:26,default_val:Send me FREE report]
+Button Colors: Default[default] | Red[red] | Blue[blue] | Bright Red[bright-red] | Bright Green[bright-green] | Bright Purple[bright-purple] | Bright Turq[bright-turq] | Bright Orange[bright-orange] | Bright Blue[bright-blue] | Dark Blue[dark-blue] | Grape[grape] | Green[green] | Turq[turq] | Orange[orange] | Black[black]
+Center: Y

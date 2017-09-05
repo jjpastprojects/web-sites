@@ -1,0 +1,20 @@
+<%= language_prompt %>
+
+<%= simple_form_for [:admin, @good_option], :html => { :class => 'form-horizontal' } do |f| %>
+  <%= form_errors f %>
+
+  <% Globalize.with_locale(@locale.slug) do %>
+    <%= f.input :name %>
+    <%= f.input :price, as: :string %>
+  <% end %>
+
+  <%= f.input :good_id, as: :hidden %>
+
+  <%= language_input f %>
+
+  <div class="form-actions">
+    <%= f.button :submit, save_or_update(@good_option), :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+        edit_admin_good_path(@good, anchor: "options"), :class => 'btn' %>
+  </div>
+<% end %>

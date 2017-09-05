@@ -1,0 +1,28 @@
+[
+    {
+        "scheduled_start": "2014-04-25T23:05:00Z",
+        "id": "01f85f19-7673-4397-aa2e-23c209f6eedc",
+        "season_type": "REG",
+        "status": "closed",
+        "visitor": "d52d5339-cbdd-43f3-9dfa-a42fd588b9a3",
+        "home": "d89bed32-3aee-4407-99e3-4103641b999a",
+        "venue": "bb062fb1-e268-412e-b3d2-2ddb6acc1822",
+        "tbd": "false",
+        "scheduled": "2014-04-25T23:05:00Z",
+        "home_team": "d89bed32-3aee-4407-99e3-4103641b999a",
+        "away_team": "d52d5339-cbdd-43f3-9dfa-a42fd588b9a3"
+    },
+    {
+        "scheduled_start": "2014-04-26T00:10:00Z",
+        "id": "159999a7-89f5-47ea-b39d-6215dc0869f9",
+        "season_type": "REG",
+        "status": "closed",
+        "visitor": "55714da8-fcaf-4574-8443-59bfb511a524",
+        "home": "dcfd5266-00ce-442c-bc09-264cd20cf455",
+        "venue": "3d13c8a7-283f-482b-ade1-441e25b6465d",
+        "tbd": "false",
+        "scheduled": "2014-04-26T00:10:00Z",
+        "home_team": "dcfd5266-00ce-442c-bc09-264cd20cf455",
+        "away_team": "55714da8-fcaf-4574-8443-59bfb511a524"
+    }
+]

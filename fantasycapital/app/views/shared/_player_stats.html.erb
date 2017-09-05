@@ -1,0 +1,96 @@
+  <% stats = PlayerStat::STATS_ALLOWED.keys %>
+  <div class="capitalcontent">
+    <div class="capitalpopup">
+      <div class="popupTitle">
+        <h2><%= @player.name %> &nbsp; </h2>
+        <h3><%= @player.team %>#<%= @player.sport_position.name %></h3>
+        <h3>Salary:</h3>
+        <h4><%= number_to_currency @player.salary.to_i, precision: 0 %></h4>
+        <button type="button" class="btnClose" data-dismiss="modal">X</button>
+      </div>
+      <h3>Next Gm:</h3>
+      <h4>Ten @Den (12/08 4:05 PM EST)</h4>
+      <!--<div class="draftPlayer">DRAFT PLAYER</div>-->
+      <%= content_tag :div, class: 'draftPlayer', data: {dismiss: 'modal', player_id: @player.id, player_name: @player.name, player_salary: @player.salary, player_opp: 'Ind@SDD', player_fppg: 24.5, player_position: @player.sport_position.name} do %>
+        DRAFT PLAYER
+      <% end %>
+
+      <div class="clear">&nbsp;</div>
+      <div>
+        <ul class="nav nav-tabs" id="filterSport">
+          <li class="active"><a href="#SUMMARY" data-toggle="tab">SUMMARY</a></li>
+          <li><a href="#MATCHUP" data-toggle="tab">MATCHUP</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="SUMMARY">
+            <table width="713" class="summarymatchup">
+              <thead>
+                <tr>
+                  <th width="180"></th>
+                <% stats.each do |v| %>
+                  <th width="100"><%= v %></th>
+                <% end %>
+                </tr>
+              </thead>
+              <tbody>
+                <% @summary.each do |key, stat_line| %>
+                  <tr>
+                    <td><%= key %></td>
+                  <% stats.each do |v| %>
+                    <th><%= number_with_precision(stat_line[v], precision: 2) %></th>
+                  <% end %>
+                  </tr>
+                <% end %>
+                
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane" id="MATCHUP">
+            <table width="713" class="summarymatchup">
+              <thead>
+                <tr>
+                  <th width="180">G</th>
+                <% stats.each do |v| %>
+                  <th width="100"><%= v %></th>
+                <% end %>
+                </tr>
+              </thead>
+              <tbody>
+                <% @matchup.each do |key, stat_line| %>
+                  <tr>
+                    <td><%= key %></td>
+                  <% stats.each do |v| %>
+                    <th><%= number_with_precision(stat_line[v], precision: 2) %></th>
+                  <% end %>
+                  </tr>
+                <% end %>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <br/>
+      <h2>LATEST PLAYER NEWS</h2>
+      <div class="clear">&nbsp;</div>
+      <p><strong>Dec 4</strong>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+      <p><strong>Dec 4</strong>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+    </div>
+  </div>
+
+  <script>
+    // BUGBUG: This is broken (need page:load signal for turbolinks). Also, what does it do??
+
+    // a click does another click, it's a workaround
+    // call should be used instead with a node as this parameter
+    // somefunction.call($(".something")[0])
+    // this should be investigated and reworked if possible as 
+    // inline scripts cause maintenance issues in js
+    $(document).on("ready page:load", function (){
+      $('.draftPlayer').on("click", function () {
+        $('#player_<%= @player.id %> .add-to-lineup').first().click();
+      });
+      
+    });
+  </script>

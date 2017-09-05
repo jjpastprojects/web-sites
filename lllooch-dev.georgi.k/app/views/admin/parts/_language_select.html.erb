@@ -1,0 +1,19 @@
+<div class="pull-right">
+  <ul class="nav nav-pills">
+    <li class="dropdown">
+      <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">
+        <%= locale_icon @locale%> <b class="caret"></b>
+      </a>
+
+      <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+        <% get_another_locale.each do |l| %>
+          <li<%= ' class=active' if @locale == l %>>
+            <% params[:locale] = l.slug %>
+
+            <%= content_tag(:a, locale_icon(l), href: get_path(route, params)) %>
+          </li>
+        <% end %>
+      </ul>
+    </li>
+  </ul>
+</div>

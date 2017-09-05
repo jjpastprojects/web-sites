@@ -1,0 +1,225 @@
+//
+// HEADER
+//
+
+// Utility Nav
+.utility-nav {
+  background: $gray-light;
+  border-bottom: 1px solid darken($gray-light, 12%);
+
+  .utility-icons {
+    font-size: rem-calc(13);
+    margin: rem-calc(0 0 0 -5);
+
+    a {
+      color: $gray;
+      display: inline-block;
+      line-height: rem-calc(21);
+      padding: rem-calc(0 5);
+      transition: color 0.2s;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  .login-link {
+    border-left: 1px solid darken($gray-light, 12%);
+    border-right: 1px solid darken($gray-light, 12%);
+    color: $gray-dark;
+    display: block;
+    float: right;
+    font-weight: 400;
+    font-size: rem-calc(11);
+    line-height: 1;
+    padding: rem-calc(5 10);
+    text-transform: uppercase;
+  }
+}
+
+// Main Header
+.header {
+  padding: rem-calc(20 0 30);
+  @include clearfix;
+
+  @media #{$medium-up} {
+    padding: rem-calc(30 0);
+  }
+
+  .logo {
+    display: block;
+    float: left;
+    width: rem-calc(270);
+
+    @media #{$small-only} {
+      width: rem-calc(200);
+    }
+  }
+
+  .menu-icon {
+    appearance: none;
+    background: none;
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+    cursor: pointer;
+    display: block;
+    float: right;
+    font-size: 0;
+    height: rem-calc(96);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    transition: background 0.3s;
+    width: rem-calc(96);
+    z-index: 1001;
+
+    @media #{$small-only} {
+      height: rem-calc(70);
+      top: rem-calc(-5);
+      width: rem-calc(70);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    strong {
+      color: $blue;
+      display: block;
+      font-size: rem-calc(14);
+      left: -51%;
+      opacity: 1;
+      position: absolute;
+      top: 43%;
+      text-transform: uppercase;
+      transition: opacity 0.2s;
+
+      @media #{$small-only} {
+        display: none;
+      }
+    }
+    &.is-active strong {
+      opacity: 0;
+    }
+    span {
+      background: $blue;
+      display: block;
+      position: absolute;
+      top: rem-calc(44);
+      left: rem-calc(18);
+      right: rem-calc(18);
+      height: rem-calc(8);
+      transition: background 0s 0.3s;
+
+      @media #{$small-only} {
+        left: rem-calc(10);
+        right: rem-calc(10);
+        height: rem-calc(5);
+        top: rem-calc(33);
+      }
+
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: $blue;
+        content: "";
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s, 0s;
+
+        @media #{$small-only} {
+          height: rem-calc(5);
+        }
+      }
+      &:before {
+        top: rem-calc(-20);
+        transition-property: top, transform;
+
+        @media #{$small-only} {
+          top: rem-calc(-14);
+        }
+      }
+      &:after {
+        bottom: rem-calc(-20);
+        transition-property: bottom, transform;
+
+        @media #{$small-only} {
+          bottom: rem-calc(-14);
+        }
+      }
+
+    }
+  }
+
+  /* active state, i.e. menu open */
+  .menu-icon.is-active {
+    background-color: white;
+  }
+  .menu-icon.is-active span {
+    background: none;
+  }
+  .menu-icon.is-active span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  .menu-icon.is-active span::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+  .menu-icon.is-active span::before,
+  .menu-icon.is-active span::after {
+    transition-delay: 0s, 0.3s;
+  }
+
+  //
+  // Navigation Menu
+  //
+  .main-navigation {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    .nav-container {
+      background: $blue;
+      background: rgba($blue, 0.9);
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      transition: opacity 1s;
+      top: 0;
+
+      h1 {
+        display: block;
+        color: white;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+        @include gotham;
+      }
+    }
+
+    &.is-active {
+      display: block;
+      opacity: 1;
+      z-index: 1000;
+
+      .nav-container {
+        opacity: 1;
+      }
+
+    }
+  }
+}

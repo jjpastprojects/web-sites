@@ -1,0 +1,125 @@
+@import 'shared/mixins';
+
+html, body {
+	height: 100%;
+	width: 100%;
+	color: #121212;
+	background: #fafafa;
+}
+
+.ps-container .ps-scrollbar-y {
+	width: 5px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+}
+
+.logo {
+	background: image-url('map/logo.png') no-repeat;
+	width: 191px;
+	height: 46px;
+	margin: -270px 0 0 -250px;
+	top: 50%;
+	left: 25%;
+	position: absolute;
+}
+
+.motto {
+    font-size: 14px;
+	width: 250px;
+	height: 22px;
+	margin: -258px 0 0 -15px;
+	top: 50%;
+	left: 25%;
+	display: block;
+	position: absolute;
+}
+
+.map-line {
+	position: absolute;
+	height: 200px;
+	margin-top: -45px;
+	border-bottom: 2px solid #1b979d; 
+	z-index: 2;
+	left: 0;
+	right: 0;
+	top: 50%;
+	background: image-url('map/line.png') center;
+}
+
+.map {
+    height: 100%;
+	background: image-url('map/bg.jpg') 45% center no-repeat #fafafa;
+	max-width: 1200px;
+    //padding-top: 70px;
+	margin: 0 auto;
+	position: relative;
+
+	.languages-wrap {
+		z-index: 3;
+		overflow: hidden;
+		margin: -83px 0 0 0;
+		position: absolute;
+		right: 0;
+		width: 190px;
+		top: 50%;
+		padding: 10px;
+		color: #111;
+		font-size: 13px;
+		height: 196px;
+	}
+
+	.languages-scroll {
+		overflow: hidden;
+		height: 100%;
+		position: relative;
+		margin-right: -10px;
+	}
+
+	.languages-table {
+		width: 100%;
+        height: 100%;
+        text-align: center;
+		border-collapse: collapse;
+
+		td {
+			vertical-align: center;
+			position: relative;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+			display: block;
+			&:hover {
+				color: #1b979d;
+			}
+		}
+
+		.hint {
+			position: absolute;
+			right: 10px;
+			padding: 0 10px;
+			text-transform: uppercase;
+		}
+	}
+
+	@include block_list(".languages");
+
+	.languages {
+		padding-right: 10px;
+		font-size: 120%;
+
+		& > li {
+			padding: 0 10px;
+			line-height: 29px;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
+}

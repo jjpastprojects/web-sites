@@ -1,0 +1,13 @@
+<div class="span4">
+	<div class="designer-project">
+    <% if project.is_a? DesignItem %>
+      <a href="<%= image_url project.picture.url(:original) %>" data-action="previewer">
+        <img src="<%= image_url project.icon.url(:preview) %>" >
+      </a>
+    <% else %>
+        <a href="<%= goods_item_path project.slug %>">
+            <img src="<%= image_url project.thumb.url(:preview) %>" />
+        </a>
+    <% end %>
+	</div>
+</div>

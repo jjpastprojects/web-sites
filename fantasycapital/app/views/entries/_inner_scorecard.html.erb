@@ -1,0 +1,26 @@
+<div class="col-md-2 panelOne"><strong class="panelStrong">POS</strong>
+
+  <h2 class="panelHeading current-position">1</h2>
+</div>
+<div class="col-md-8 panelTwo">
+  <p class="user"><%= image_tag "user.png" %> <span class="green username"></span></p>
+
+  <div class="clearfix"></div>
+  <p><span class="entry-min-remaining"></span> Minutes Remaining
+  <p><progress class="entry-progress-bar" value="0" max="48"></progress>
+  </p>
+</div>
+<div class="col-md-2 panelThree"><strong class="panelStrong">SCORE</strong>
+
+  <h2 class="panelHeading total-score"><%= @entry.get_total_score() %>XX</h2>
+</div>
+<div class="clearfix"></div>
+<!--Score Card-->
+<div class="mylineup-spots">
+  <div class="scorecard2">
+    <table class="scorecardTable" cellpadding="10" cellspacing="10">
+      <tbody class="scorecardBody"> <!-- filled in via ajax -->
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="page-header">
+  <h1>Тестовый стенд</h1>
+</div>
+
+<form action="<%= @config['URL'] %>" method="post">
+
+
+
+  <table>
+    <tr>
+      <td width="150px;">
+        Сумма платежа
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Описание платежа
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Backref
+      </td>
+
+      <td>
+
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        Email
+      </td>
+
+      <td>
+
+        <input TYPE="hidden" NAME="CURRENCY" SIZE="50" VALUE=""/>
+        <input type="hidden" name="TRTYPE" value="<%= @config['TRTYPE'] %>"/>
+        <input TYPE="text" NAME="AMOUNT" VALUE=""/>
+        <input TYPE="hidden" NAME="TERMINAL" SIZE="8" VALUE="<%= @config['TERMINAL'] %>" MAXLENGTH="8"></input>
+        <input TYPE="hidden" NAME="MERCH_URL" SIZE="255" VALUE="<%= @config['MERCH_URL'] %>" MAXLENGTH="255"></input>
+        <input TYPE="hidden" NAME="MERCHANT" SIZE="50" VALUE="<%= @config['MERCHANT'] %>" MAXLENGTH="50"></input>
+        <input TYPE="text" NAME="DESC" VALUE="Testing cards cases"/>
+        <input TYPE="text" NAME="BACKREF" VALUE="<%= @config['BACKREF'] %>"></input>
+        <input TYPE="hidden" NAME="TIMESTAMP" SIZE="14" VALUE="20130320111111" MAXLENGTH="14">
+        <input TYPE="hidden" NAME="NONCE" SIZE="16" VALUE="FFFFFFFFFFFFFFFF" MAXLENGTH="32">
+        <input TYPE="hidden" NAME="P_SIGN" SIZE="00" VALUE="" MAXLENGTH="32"></input>
+        <input TYPE="text" NAME="EMAIL" VALUE="<%= @config['EMAIL'] %>"></input>
+      </td>
+    </tr>
+
+    <% if false %>
+
+    <% end %>
+
+    <tr>
+      <td></td>
+      <td>
+        <button>Отправить</button>
+      </td>
+    </tr>
+
+
+  </table>
+
+
+</form>

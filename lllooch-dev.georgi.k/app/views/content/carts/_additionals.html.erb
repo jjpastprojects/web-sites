@@ -1,0 +1,27 @@
+<div class="cart-additionals">
+  <div class="title">
+    <%= T "Дополнительные продукты" %>
+  </div>
+
+  <ul class="cart-additionals-items">
+    <li class="cart-additional-item">
+      <div class="info">
+        <div class="pic">
+          <%= image_tag(item.thumb.url(:preview)) if item.thumb %>
+        </div>
+
+        <div class="title">
+          <%= item.title %>
+        </div>
+
+        <div class="desc">
+          <%= item.announce.html_safe if item.announce %>
+        </div>
+
+        <div class="buy">
+          <%= link_to(T('Добавить в корзину'), cart_get_buy_path(good: {'id' => item.id})) %>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

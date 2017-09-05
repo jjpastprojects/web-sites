@@ -1,0 +1,31 @@
+<div class="container">
+  <h1><%= @current_page.heading %></h1>
+  <% if @current_page.content %>
+    <div class="content">
+      <%= @current_page.content.html_safe %>
+    </div>
+  <% end %>
+
+  <div class="content">
+    <ul class="materials">
+      <% @materials.each do |m| %>
+        <li>
+          <a name="<%= m.id %>">
+          <div class="pic">
+            <a href="<%= m.picture.url %>" data-action="previewer" data-fancybox-group="materials">
+              <%= image_tag m.picture.url(:preview) %>
+            </a>
+          </div>
+
+          <div class="title">
+            <%= m.title %>
+          </div>
+
+          <div class="description">
+            <%= m.description.html_safe %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

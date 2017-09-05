@@ -1,0 +1,24 @@
+<tr class="contest <%= contest.sport.downcase %>" id='<%=dom_id(contest)%>'>
+  <td class='sport-name'>
+    <%= image_tag "sports/#{contest.sport.downcase}.png" %>
+    <%= contest.sport %>
+  </td>
+  <td class='contest-type'><%= contest.contest_type %></td>
+  <td data-value="<%= contest.contest_start %>">
+    <%= countdown_tag contest.start_at %>
+  </td>
+  <td class='entry-fee' data-value=<%= contest.entry_fee %>>
+    <%= contest_entry_fee contest %>
+   </td>
+  <td data-value=<%# contest.prizepool %> >
+    <%= number_to_currency(contest.prizepool, precision: 0) %>
+  </td>
+  <td class="entries-per-contest"><%= "#{contest.entries_count}/#{contest.max_entries}" %></td>
+  <td class="actions-column">
+    <% classname = (user_signed_in? ? "table-btn" : "table-btn require-signin") %>
+    <%= link_to new_lineup_path(contest_id: contest.id), class: classname do %>
+      enter 
+      <span>&#10095;</span>
+    <% end %>
+  </td>
+</tr>

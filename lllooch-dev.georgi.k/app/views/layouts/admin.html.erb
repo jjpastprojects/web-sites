@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin</title>
+  <link rel="shortcut icon" href="<%= image_url("content/favicon.ico") %>">
+  <%= stylesheet_link_tag    "admin", media: "all" %>
+  <%= javascript_include_tag "admin" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+    <div class="container">
+
+        <%= nav_bar fixed: :top, responsive: true, inverse: true, dark: true do %>
+            <%= brand_link 'CMS', admin_root_path %>
+
+            <%= menu_group do %>
+                <%= drop_down "Сайт" do %>
+                  <%= menu_item "Меню", admin_menus_path %>
+                  <%= menu_item "Страницы", admin_pages_path %>
+                <% end %>
+
+                <%= drop_down "Магазин" do %>
+                  <%= menu_item "Заказы", admin_orders_path %>
+                  <%= menu_item "Предзаказы", admin_preorders_path %>
+
+                  <%= menu_item "Типы доставки", admin_delivery_types_path %>
+                  <%= menu_item "Типы оплаты", admin_payment_types_path %>
+                  <%= menu_item "Статусы заказов", admin_order_statuses_path %>
+                <% end %>
+
+                <%= drop_down "Контент" do %>
+                  <%= menu_item "Каталог", admin_good_categories_path %>
+                  <%= menu_item "Дизайнеры", admin_designers_path %>
+                  <%= menu_item "Тэги", admin_tags_path %>
+                  <%= menu_item "Материалы", admin_materials_path %>
+                  <%= menu_item "Свойства товаров", admin_property_types_path %>
+                <% end %>
+
+                <%= drop_down "Настройки" do %>
+                  <%= menu_item "Языки", admin_languages_path %>
+                  <%= menu_item "Переводы", admin_translations_path %>
+                  <%= menu_item "Параметры", admin_settings_path %>
+                  <%= menu_item "Эквайринг", admin_acquiring_path %>
+                <% end %>
+            <% end %>
+
+            <%= menu_group pull: :right do %>
+                <%= menu_item "Выход", '/' %>
+            <% end %>
+        <% end %>
+
+        <%= yield %>
+    </div>
+</body>
+</html>

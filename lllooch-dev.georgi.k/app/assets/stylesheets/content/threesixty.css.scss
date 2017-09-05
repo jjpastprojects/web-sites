@@ -1,0 +1,159 @@
+/*
+  Sets the style of the image slider wrapper <div> to be centered horizontally and vertically.
+  It also sets its default dimensions and the overflowing hidden (to fix the IE image positioning bug).
+*/
+.threesixty {
+  display: none;
+  position:absolute;
+  /* This one fixes the IE positioning bug */
+  overflow:hidden;
+  top:100px;
+  left:0;
+  right: 0;
+  bottom: 150px;
+}
+.threesixty.active {
+  display: block;
+}
+/*
+  Defines the criteria for the max. 1024px wide tablets portrait mode and sets the image slider dimensions and centering according to it.
+*/
+//
+//@media  screen and (max-device-width: 1024px) and (orientation:portrait) {
+//  .threesixty {
+//    width:720px;
+//    height:450px;
+//    margin-left:-360px;
+//    margin-top:-225px;
+//  }
+//}
+///*
+//  Defines the criteria of the max. 480px wide mobiles' landscape mode and sets the image slider dimensions and centering according to it.
+//*/
+//@media  screen and (max-device-width: 480px) and (orientation:landscape),
+//        screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
+//  .threesixty {
+//    width:360px;
+//    height:225px;
+//    margin-left:-180px;
+//    margin-top:-113px;
+//  }
+//}
+///*
+//  Defines the criteria of the max. 480px wide mobiles' portrait mode and sets the image slider dimensions and centering according to it.
+//*/
+//@media  screen and (max-device-width: 480px) and (orientation:portrait),
+//        screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) {
+//  .threesixty {
+//    width:320px;
+//    height:200px;
+//    margin-left:-160px;
+//    margin-top:-100px;
+//  }
+//}
+/*
+  Makes the image slider invisible by default
+*/
+.threesixty-images {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+.threesixty-images > li {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  & > div {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+/*
+  Sets every image in the slider to be absolute positioned and dynamically sized.
+*/
+.threesixty img {
+  width:auto;
+  height:100%;
+  margin: 0;
+}
+/*
+  Sets the style of the visible current frame of the image slider animation
+*/
+.current-image {
+  visibility:visible;
+  width:100%;
+}
+/*
+  Sets the style of the visible "previous" frame of the image slider animation
+*/
+.previous-image {
+  visibility:hidden;
+  width:0;
+}
+/*
+  Sets the dimensions of the CanvasLoader placeholder <div>, it also centeres it horizontally and vertically inside the wrapper and makes it invisible by default
+*/
+.threesixty-spinner {
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:90px;
+  height:90px;
+  margin-left:-45px;
+  margin-top:-50px;
+  display:none;
+}
+/*
+  Sets the style of the percentage <span> of the preloader by setting its dimensions and centering it horizontally and vertically 
+*/
+.threesixty-spinner span {
+  position:absolute;
+  top:50%;
+  width:100%;
+  color:#333;
+  font:0.8em Arial, Verdana, sans;
+  text-align:center;
+  line-height:0.6em;
+  margin-top:-0.3em;
+}
+
+.threesixty-controls {
+  position: absolute;
+  z-index: 10;
+  left: 300px;
+  right: 300px;
+  height: 100%;
+}
+
+.threesixty-control {
+  position: absolute;
+  width: 35px;
+  height: 100px;
+  right: 100%;
+  top: 50%;
+  margin-top: -50px;
+  cursor: pointer;
+  background: image-url("content/threesixty-controls.png") 0 0 no-repeat;
+}
+
+.threesixty-control:hover {
+  background-position: 0 -100px;
+}
+
+.threesixty-control-right:hover {
+  background-position: -35px -100px;
+}
+
+.threesixty-control-right {
+  background-position: -35px 0;
+  right: auto;
+  left: 100%;
+}

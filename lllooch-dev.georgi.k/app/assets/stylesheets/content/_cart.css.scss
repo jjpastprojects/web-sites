@@ -1,0 +1,276 @@
+@include block_list(".cart-items");
+
+.big-select {
+  .select2-container {
+    .select2-choice {
+      line-height: 104px;
+      height: 104px;
+
+      .select2-arrow {
+        margin-top: 35px;
+      }
+
+      .variant-option {
+        margin: -1px 0;
+      }
+    }
+
+    .variant-option {
+
+      img {
+        display: block;
+        margin-right: 7px;
+        margin-left: -2px;
+      }
+    }
+  }
+}
+
+.cart {
+  padding-bottom: 100px;
+
+  h1 {
+    padding-left: 30px;
+  }
+
+  .cart-total {
+    padding: 20px;
+    text-align: right;
+    font-size: 16px;
+    border-bottom: 0;
+    font-weight: bold;
+    .upper {
+      text-transform: uppercase;
+    }
+  }
+
+  .cart-btn {
+    &.left {
+      float: left;
+    }
+
+    .btn {
+      text-align: center;
+      width: 320px;
+    }
+
+    a.btn {
+      padding: 0;
+    }
+
+    padding-top: 10px;
+    float: right;
+    margin-right: -30px;
+
+    form {
+      padding: 0;
+    }
+  }
+
+  @include row(".cart-item-btn");
+
+  form {
+    padding: 0 0 30px;
+    &.edit_cart {
+      padding-top: 0;
+    }
+  }
+
+  button[disabled=disabled] {
+    background: #666;
+  }
+}
+
+.cart-items {
+  & > li {
+    border-top: 1px solid #d7d7d7;
+  }
+
+  .cart-item {
+    padding: 30px 30px 30px 0;
+    position: relative;
+
+    &.short {
+      .cart-item-pic {
+        img {
+          width: 200px;
+          height: 200px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .cart-additionals {
+      //padding-top: 20px;
+    }
+
+    &.cart-item-btn {
+      padding-top: 20px;
+      &.no-border {
+        border-top: none;
+        padding-top: 0;
+      }
+    }
+  }
+
+  .cart-item-remove {
+    position: absolute;
+    top: 42px;
+    right: 20px;
+    cursor: pointer;
+
+    .control {
+      display: block;
+      margin-right: -29px;
+      float: right;
+    }
+  }
+
+  .cart-item-remove__btn {
+    font-size: 11px;
+    line-height: 21px;
+    padding-right: 29px;
+
+    div {
+      display: none;
+    }
+
+    &:hover {
+      div {
+        display: block;
+      }
+    }
+  }
+
+  .cart-item__wrap {
+    float: left;
+    width: 340px;
+  }
+
+  .cart-item-title {
+    font-weight: 900;
+    font-size: 30px;
+    padding: 0 0 25px;
+  }
+
+  .cart-item-pic {
+    margin-right: 30px;
+    width: 400px;
+    float: left;
+  }
+
+  .title {
+    font-size: 14px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  @include row(".cart-item-info");
+
+  .cart-options {
+    padding-bottom: 30px;
+    .title {
+      padding-bottom: 8px;
+    }
+    .cart-options-price {
+      float: right;
+    }
+
+    @include block_list(".cart-options-items");
+
+    .cart-options-items {
+      //margin-bottom: 40px;
+      & > li {
+        //margin-bottom: 9px;
+
+        .select2-container {
+          display: block;
+        }
+
+        select {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include block_list(".cart-additionals-items");
+
+  .cart-additionals-items > li.cart-additional-item {
+    margin-bottom: 30px;
+  }
+
+  .cart-additional-item {
+
+    @include row(".info");
+    .info {
+      padding-left: 120px;
+
+      .title {
+        text-transform: none;
+        padding-bottom: 10px;
+        font-weight: 600;
+      }
+
+      .desc {
+        font-size: 11px;
+        line-height: 1.7;
+        p {
+          margin-top: 0;
+        }
+      }
+
+      .buy {
+        font-size: 11px;
+        text-align: right;
+      }
+
+      .pic {
+        float: left;
+        margin-left: -120px;
+        width: 90px;
+
+        img {
+          border: 1px solid #eee;
+          display: block;
+          width: 90px;
+        }
+      }
+    }
+
+  }
+}
+
+.cart-item-price {
+  float: right;
+}
+
+@include row('.cart-item-qnt');
+
+.cart-item-qnt {
+  @include inline_list('ul');
+  line-height: 15px;
+  padding-bottom: 30px;
+  ul {
+    font-size: 11px;
+    & > li {
+      padding-right: 8px;
+    }
+  }
+}
+
+.cart-links {
+  padding: 0 30px 30px;
+  font-size: 12px;
+
+  .pull-right {
+    float: right;
+  }
+  a {
+    text-transform: uppercase;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

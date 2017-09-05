@@ -1,0 +1,3 @@
+[submodule "lib/stats_client"]
+	path = lib/stats_client
+	url = git@github.com:FantasyCapital/main.git

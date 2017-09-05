@@ -1,0 +1,6 @@
+<div class="logo-container">
+  <%= image_tag 'big_logo.png', alt: 'Fantasy capital logo' %>
+</div>
+
+<h2>You've been added in our priority list. Invite your friends and win the cash! </h2>
+<%= social_share_button_tag("Fantasy Capital join the beta group!", url: invite_waiting_lists_url(token: @waiting_list.invitation_token)) %>

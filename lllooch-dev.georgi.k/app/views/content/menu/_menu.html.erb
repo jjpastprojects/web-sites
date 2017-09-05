@@ -1,0 +1,11 @@
+<table class="b-menu">
+	<tr>
+    <% if menu('header') %>
+  		<% menu('header').items.each do |item| %>
+            <% unless ['buy', 'blogs'].include?(item.page.url) and !@language.is_default  %>
+  			    <%= render 'content/menu/item', :item => item %>
+            <% end %>
+  		<% end %>	
+    <% end %>
+	</tr>
+</table>

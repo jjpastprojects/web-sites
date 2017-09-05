@@ -1,0 +1,48 @@
+<%- model_class = File -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:type) %></th>
+      <th><%= model_class.human_attribute_name(:parent_id) %></th>
+      <th><%= model_class.human_attribute_name(:good_id) %></th>
+      <th><%= model_class.human_attribute_name(:src_file_name) %></th>
+      <th><%= model_class.human_attribute_name(:src_content_type) %></th>
+      <th><%= model_class.human_attribute_name(:src_file_size) %></th>
+      <th><%= model_class.human_attribute_name(:src_updated_at) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @pdfs.each do |pdf| %>
+      <tr>
+        <td><%= link_to pdf.id, pdf_path(pdf) %></td>
+        <td><%= pdf.type %></td>
+        <td><%= pdf.parent_id %></td>
+        <td><%= pdf.good_id %></td>
+        <td><%= pdf.src_file_name %></td>
+        <td><%= pdf.src_content_type %></td>
+        <td><%= pdf.src_file_size %></td>
+        <td><%= pdf.src_updated_at %></td>
+        <td><%=l pdf.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_pdf_path(pdf), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      pdf_path(pdf),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_pdf_path,
+            :class => 'btn btn-primary' %>

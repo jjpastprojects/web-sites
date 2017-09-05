@@ -1,0 +1,20 @@
+<%= content_tag :tr, id: dom_id(player), class: 'contest-player', data: {player_id: player.id, player_name: player.name, player_salary: player.salary, player_opp: 'Ind@SDD', player_fppg: 24.5, player_position: player.sport_position.name} do %>
+    <td class="position">
+      <span>
+        <strong> <%= player.sport_position.name %> </strong>
+      </span>
+    </td>
+    <td class='player player-stats' data-stats-url="<%= stats_player_path player %>">
+      <span class='player-link'><%= player.name %> </span>
+    </td>
+    <td class='opp'>
+      <span>Ind@<strong class='home-team'>SDD</strong></span>
+    </td>
+    <td class='salary currency'>
+      <span data-salary=<%= player.salary %>> <%= number_to_currency player.salary, precision: 0 %></span>
+    </td>
+    <td class='fppg'>
+      <span>24.5</span>
+    </td>
+    <td class='action-icon'><%= link_to '+', '#_', class: 'add-to-lineup' %> </td>
+<% end %>

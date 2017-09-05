@@ -1,0 +1,43 @@
+*.sassc
+.sass-cache
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/db/gamefeeds
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+config/secrets.yml
+config/database.yml
+config/initializers/setup_mail.rb
+.DS_Store
+
+#compiled assets
+/public/assets
+
+## Environment normalisation:
+/.bundle
+/vendor/bundle
+
+# these should all be checked in to normalise the environment:
+# Gemfile.lock, .ruby-version, .ruby-gemset
+
+# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
+.rvmrc
+.ruby-version
+.ruby-gemset
+config/database.yml
+
+# Ignore other unneeded files.
+*.swp
+*~
+.idea/*
+
+# Ignore sandbox folder, which is used for mockups
+/sandbox

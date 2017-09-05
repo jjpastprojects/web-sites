@@ -1,0 +1,37 @@
+<% if cart.items.empty? %>
+    <%= T "Ваша корзина пуста" %>
+<% else %>
+  <%= simple_form_for cart, url: cart_update_path, method: :post, html: {"data-type" => "cart"} do |f| %>
+      <div class="cart-links">
+        <div class="pull-right">
+          <a href="<%= order_show_path %>">
+            <%= T('Продолжить оформление') %>
+          </a>
+        </div>
+        <a href="<%= catalog_path %>">
+          <%= T "Вернуться к покупкам" %>
+        </a>
+      </div>
+      <ul class="cart-items">
+        <%= simple_fields_for 'cart', cart do |f| %>
+            <% cart.items.each do |item| %>
+              <%= f.simple_fields_for 'items' do |f| %>
+                <%= f.simple_fields_for item.id.to_s, item do |f| %>
+                    <%= render 'item', item: item, form: f %>
+                <% end %>
+              <% end %>
+            <% end %>
+        <% end %>
+
+        <li class="cart-total">
+          <span class="upper"><%= T "Итого" %>:</span> <span data-cart="total-price"><%= number_to_currency(cart.full_price, precision: 0, unit: 'р.') %></span>
+        </li>
+
+        <li class="cart-item cart-item-btn no-border">
+          <div class="cart-btn">
+            <%= f.button :submit, T('Продолжить оформление'), class: 'btn' %>
+          </div>
+        </li>
+      </ul>
+  <% end %>
+<% end %>

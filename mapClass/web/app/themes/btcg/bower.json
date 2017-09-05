@@ -1,0 +1,24 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "lodash": "~3.10.1",
+    "modernizr": "2.8.2",
+    "slick-carousel": "~1.5.8",
+    "angular": "~1.4.7",
+    "moment": "~2.10.6",
+    "bootstrap-datepicker": "~1.5.0",
+    "angular-selectize2": "~3.0.1"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "./modernizr.js"
+    }
+  }
+}

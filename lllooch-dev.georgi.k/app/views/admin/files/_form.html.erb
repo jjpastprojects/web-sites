@@ -1,0 +1,25 @@
+<%= language_prompt %>
+
+<%= simple_form_for [:admin, @file], :html => {:class => 'form-horizontal', multipart: true}, url: @file.new_record? ? admin_good_files_path(@good) : admin_file_path(@file) do |f| %>
+    <%= form_errors f %>
+
+    <%= simple_fields_for "file" do |f| %>
+        <% Globalize.with_locale(@locale.slug) do %>
+            <%= f.input :name, label: 'Название' %>
+        <% end %>
+
+        <% unless @file.id %>
+            <%= f.input :type, collection: [['PDF', 'GoodFile::Pdf'], ['DWG', 'GoodFile::Dwg']] %>
+            <%= f.input :src, as: :file %>
+            <%= f.input :good_id, as: :hidden %>
+        <% end %>
+
+        <%= language_input f %>
+
+        <div class="form-actions">
+          <%= f.button :submit, save_or_update(@file), :class => 'btn-primary' %>
+          <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                      edit_admin_good_path(@good, anchor: "files"), :class => 'btn' %>
+        </div>
+    <% end %>
+<% end %>

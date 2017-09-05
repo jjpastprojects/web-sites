@@ -1,0 +1,24 @@
+<script type="text/template" id="entry-template">
+    <div class="col-md-2 panelOne"><strong class="panelStrong">POS</strong>
+
+        <h2 class="panelHeading current-position"><%= entry.get("summary_position") %></h2>
+    </div>
+    <div class="col-md-8 panelTwo">
+        <p class="user">  <img alt="User" class="user" src="<%= user_img %>">
+            <span class="green username"><%= entry.get('username') %></span></p>
+
+        <div class="clearfix"></div>
+        <p><span class="entry-min-remaining"><%= entry.min_left() %></span> 
+        <% if (locals.sport === 'NBA') { %>
+        Minutes Remaining 
+        <% } else if (locals.sport === 'MLB') { %>
+        Innings Remaining
+        <% } %> 
+        <p><progress class="entry-progress-bar" value="<%= entry.min_left() %>" max="<%= entry.total_gamelength() %>" ></progress>
+        </p>
+    </div>
+    <div class="col-md-2 panelThree"><strong class="panelStrong">SCORE</strong>
+
+        <h2 class="panelHeading total-score"><%= entry.get_total_score() %></h2>
+    </div>
+</script>

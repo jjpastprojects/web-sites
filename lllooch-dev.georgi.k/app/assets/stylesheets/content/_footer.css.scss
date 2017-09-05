@@ -1,0 +1,21 @@
+@include inline_list(".foot-icons");
+
+footer {
+	position: fixed;
+	z-index: 20;
+	right: 10px;
+	bottom: 10px;
+	
+	display: inline-block;
+
+	&.absolute {
+		position: absolute;
+	}
+}
+
+.foot-icons {
+	a {
+		margin-left: 4px;
+		display: block;
+	}
+}

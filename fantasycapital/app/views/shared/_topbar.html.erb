@@ -1,0 +1,35 @@
+<div class='topbarWraper'>
+  <div class='navbar navbar-default navbar-static-top capital_top_nav topbar-nav' role="navigation">
+    <div class='container'>
+      <!--<div class='navbar-header'>
+        <button class='navbar-toggle' data-target=".capitalcollapse" data-toggle="collapse" type="button">
+          <span class='sr-only'>Toggle navigation</span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+      </div>-->
+      <% if current_user.try(:admin?)%>
+      <div class="" style="position:absolute; top:10px; left:10px; z-index:9999">
+        <%= link_to 'Admin', admin_path %>
+      </div>
+      <% end %>
+      <div class=''>
+        <ul class='nav navbar-nav navbar-nav-centered clearfix'>
+          <li>
+            <a href="#" class="pull-left">
+              <strong class="learn-more">Learn more about Fantasy Capital</strong>
+              <div class="learn-more-img"> 
+                <img class="no-margin" src="<%= image_path('header-learnmore-video.jpg') %>" width="40" height="22"> 
+              </div>
+            </a>
+            <%= link_to invite_waiting_lists_path, class: 'refer-link pull-right' do%>
+              <strong class='ajax-modal refer-friends'>Refer Friends for Cash &rarr;</strong>
+            <%end%>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-close-button"></div>
+  </div>
+</div>

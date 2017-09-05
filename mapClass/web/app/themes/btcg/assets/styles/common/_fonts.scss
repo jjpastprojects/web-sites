@@ -1,0 +1,27 @@
+
+//
+// Fonts provided by Typography.com
+// Account: TMB/brad@themodernbrand.com
+//
+
+//
+// Gotham Screensmart
+//
+@mixin gotham($weight:500, $anti:false) {
+  font-family: $font-family-sans-serif;
+  font-weight: $weight;
+  @if $anti == true {
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+//
+// Gotham Condensed
+//
+@mixin gotham-cond($weight:700, $anti:false) {
+  font-family: $font-family-condensed;
+  font-weight: $weight;
+  @if $anti == true {
+    -webkit-font-smoothing: antialiased;
+  }
+}

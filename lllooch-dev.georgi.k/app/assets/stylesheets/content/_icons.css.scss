@@ -1,0 +1,107 @@
+.icon {
+	width: 24px;
+	height: 24px;
+	margin-right: .4em;
+	background: image-url('content/icons-777777.png') no-repeat;
+	display: inline-block;
+
+	&.icon-search {
+		bacground-position: 0 0;
+	}
+
+	&.icon-phone {
+		width: 26px;
+		height: 26px;
+		background-position: -30px -48px;
+	}
+
+	&.icon-menu {
+		width: 29px;
+		height: 27px;
+		background-position: 0 -48px;
+	}
+}
+
+.social {
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: image-url('content/social.png') no-repeat;
+
+	&.facebook {
+		background-position: -24px 0;
+	}
+
+	&.pinterest {
+		background-position: -48px 0;
+	}
+
+	&.instagram {
+		background-position: -72px 0;
+	}
+}
+
+.control {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: image-url('content/control.png') no-repeat;
+
+	&.control-left {
+		background-position: -40px 0;
+	}
+
+	&.control-right {
+		background-position: -60px 0;
+	}
+
+	&.control-remove {
+		width: 21px;
+		height: 21px;
+		background-position: 0 -20px;
+	}
+
+	&.control-dismiss {
+		background-position: -80px 0;
+	}
+
+	&.control-up {
+		background-position: -24px -20px;
+	}
+
+	&.control-down {
+		background-position: -44px -20px;
+	}
+}
+
+.product-icon {
+	height: 15px;
+	width: 19px;
+	float: left;
+	margin-right: 8px;
+	background: image-url('content/product-icons.png') no-repeat;
+
+	&.icon-360 {	
+		width: 20px;
+		margin-right: 6px;
+		background-position: -24px 0;
+	}
+
+	&.icon-pan {
+		width: 29px;
+		margin-right: 6px;
+		background-position: -49px 0;
+	}
+}
+
+.active > .product-icon {
+	background-position: 0 -15px;
+	
+	&.icon-360 {	
+		background-position: -24px -15px;
+	}
+
+	&.icon-pan {
+		background-position: -49px -15px;
+	}
+}

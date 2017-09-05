@@ -1,0 +1,70 @@
+.paymenttab {
+    padding: 15px 15px 5px;
+}
+
+.paymenttab a:hover {
+    text-decoration: none
+}
+
+.green {
+    font-weight: normal
+}
+
+.paymenttab  .active {
+    color: #cecece;
+  }
+
+.information {
+    width: 100%;
+    padding: 10px 0
+}
+
+.informationdetails {
+    width: 100%;
+    padding: 10px 0 30px 0
+}
+
+table.personalinformation tr td {
+    padding: 10px 5px 15px;
+    vertical-align: top;
+}
+
+table.personalinformation tr td:nth-child(1) {
+    width: 40%
+}
+
+table.personalinformation tr td:nth-child(2) {
+    width: 60%
+}
+
+table.personalinformation tr td .green {
+    margin: 0
+}
+
+.information .col-md-4, .information .col-md-5, .information .col-md-7, .information .col-md-8 {
+    padding: 0
+}
+
+.accountdetails {
+}
+
+.accountdetails h5 {
+    color: #000;
+    padding: 5px 0 15px
+}
+
+.accountdetails .col-md-3, .accountdetails .col-md-9, .accountdetails .col-md-10 {
+    padding: 5px 0
+}
+
+.accountdetails .col-md-10 {
+    margin: 0 0 20px 0
+}
+
+.submitTeam {
+    text-align: center
+}
+
+.submitTeam input[type=submit] {
+    margin: 0 0 30px 0;
+}

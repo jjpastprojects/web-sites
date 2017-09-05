@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="blog">
+    <h1>
+      <%= @post.title %>
+    </h1>
+
+    <div class="blog-info">
+      <% @post.grouped_blocks.each_with_index do |b, i| %>
+          <div class="blog-block <%= b[:type] %>">
+            <% if b[:type] == 'picture' %>
+                <div class="blog-gallery">
+                  <% b[:items].each do |p| %>
+                      <a rel="gal-<%= i %>" href="<%= p[:block].picture.url %>" data-action="previewer" class="blog-gallery-item">
+                        <%= image_tag p[:block].picture.url(:blog) %>
+                      </a>
+                  <% end %>
+                </div>
+            <% elsif b[:type] == 'html' %>
+                <% b[:items].each do |p| %>
+                    <%= p[:block].content.html_safe if p[:block].content %>
+                <% end %>
+            <% else %>
+                <%= b[:block].content.html_safe if b[:block].content %>
+            <% end %>
+          </div>
+      <% end %>
+
+      <div class="blog-block">
+        <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki" data-yashareTheme="counter"></div>
+      </div>
+    </div>
+  </div>
+
+  <% unless @post.comments.empty? %>
+      <%= render 'comments', post: @post %>
+  <% end %>
+</div>

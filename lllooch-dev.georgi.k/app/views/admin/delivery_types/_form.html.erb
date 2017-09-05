@@ -1,0 +1,33 @@
+<%= language_prompt %>
+
+<%= simple_form_for [:admin, @delivery_type], url: @delivery_type.new_record? ? admin_delivery_types_path : admin_delivery_type_path(@delivery_type), :html => {:class => 'form-horizontal'} do |f| %>
+    <%= form_errors f %>
+
+    <%= simple_fields_for 'delivery_type', @delivery_type do |f| %>
+
+        <% Globalize.with_locale(@locale.slug) do %>
+            <%= f.input :name %>
+            <%= f.input :price %>
+        <% end %>
+
+        <%= f.input :type, collection: DeliveryType.types.invert %>
+        <%= f.input :is_active %>
+
+        <%= f.association :payment_types %>
+        <%= f.input :layout, collection: DeliveryType.layouts.invert, prompt: 'Выберите..' %>
+
+
+        <% Globalize.with_locale(@locale.slug) do %>
+            <%= f.input :conditions, as: :html %>
+            <%= f.input :hint, as: :html %>
+        <% end %>
+
+        <%= language_input f %>
+    <% end %>
+
+    <div class="form-actions">
+      <%= f.button :submit, save_or_update(@delivery_type), :class => 'btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  admin_delivery_types_path, :class => 'btn' %>
+    </div>
+<% end %>

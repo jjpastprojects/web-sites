@@ -1,0 +1,469 @@
+/* Essentials */
+
+html, div, map, dt, isindex, form, header, aside, section, section, article, footer {  
+    display: block;  
+} 
+
+html, body {
+height: 100%;
+margin: 0;
+padding: 0;
+font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+background: #F8F8F8;
+font-size: 12px;
+color: #FFFFFF;
+ background-image: url('/medschool/resource/background.jpg');
+}
+
+.clear {
+clear: both;
+}
+
+.spacer {
+height: 20px;
+}
+
+a:link, a:visited {
+color: #77BACE;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+
+
+/* Messages */
+
+input[type=submit],input[type=button] {
+background: #D0D1D4 url(../images/btn_submit.png) repeat-x;
+border: 1px solid #A8A9A8;
+-webkit-box-shadow: 0 1px 0 #fff;
+-moz-box-shadow: 0 1px 0 #fff;
+box-shadow: 0 1px 0 #fff;
+font-weight: normal;
+height: 22px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+padding: 0 10px;
+color: #666;
+text-shadow: 0 1px 0 #fff;
+cursor: pointer;
+}
+
+input[type=submit],input[type=button]:hover {
+color: #333333;
+}
+
+input[type=submit],input[type=button].alt_btn {
+background: #D0D1D4 url(../images/btn_submit_2.png) repeat-x;
+border: 1px solid#30B0C8;
+-webkit-box-shadow: 0 1px 0 #fff;
+-moz-box-shadow: 0 1px 0 #fff;
+box-shadow: 0 1px 0 #fff;
+font-weight: bold;
+height: 22px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+padding: 0 10px;
+color: #003E49;
+text-shadow: 0 1px 0 #6CDCF9;
+cursor: pointer;
+}
+
+input[type=submit],input[type=button].alt_btn:hover {
+color: #001217;
+}
+
+input[type=submit].btn_post_message {
+background: #D0D1D4 url(../images/post_message.png) no-repeat;
+display: block;
+width: 37px;
+border: none;
+height: 24px;
+cursor: pointer;
+text-indent: -5000px;
+}
+
+input[type=submit].btn_post_message:hover {
+background-position: 0 -24px;
+}
+
+
+.headertxt{
+    color: #1F1F20;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 13px;
+    margin: 10px 0 10px 6%;
+  
+  
+    width: 90%;
+}
+
+.submit_link {
+    float: right;
+    margin-right: 3%;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.submit_link select {
+width: 150px;
+border: 1px solid #bbb;
+height: 20px;
+color: #666666;
+}
+
+
+
+/* Loigin Page */
+.main_tabbar {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	height:41px;
+	background: #222222 url(../images/tab_bg.png) repeat-x;
+}
+
+.loginDiv {
+	width:300px;
+	margin:auto;
+	padding-top:200px;
+}
+
+.login_title {
+	color:#eeffdc;
+	font-size:12px;
+	text-align:center;
+	height:30px !important;
+	line-height:30px;
+}
+
+.scoreview{
+   width: 1180px;
+    	margin-left: auto;
+        margin-right: auto;
+    	margin-top: 10px;
+    	border-color: rgb(83,152,210);
+    	border-style: solid;
+    	background-color:rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+}
+
+.scoreview .info{
+	background-color:rgba(0, 0, 0, 0.8);
+}
+
+.scoreview .info, .scoreview .detail,.scoreview .footer{
+    width : 1100px;
+    border: rgb(83,152,210) solid 1px; 
+    height: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.scoreview .detail{
+    height : 650px;
+}
+.scoreview .info .name, .scoreview .info .level, .scoreview .info .leader{
+    width : 170px;
+    border: rgb(83,152,210) solid 1px; 
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 20px;
+    float:left;
+}
+
+.scoreview .info .score{
+    width: 329px;
+    padding-left: 10px;
+    border: rgb(83,152,210) solid 1px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 25px;
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    float: right;
+
+}
+
+.scoreview .info .btnlog{
+    width : 180px;
+    
+    height: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    float:left;
+}
+
+.scoreview .info .btnlog input[type=button]{
+    width : 180px;
+    color : white;
+    height: 60px;
+    background : none;
+    background-color: rgb(83,152,210);
+    margin-bottom: 10px;
+    float:left;
+}
+
+.scoreview .info .progress{
+    
+    padding-left: 10px;
+    width : 330px;
+     border: rgb(83,152,210) solid 1px; 
+    height: 40px;
+    margin-left: 70px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    float:left;
+}
+.scoreview  .qrcode{
+    width : 690px;
+    padding-left: 10px;
+    border: rgb(83,152,210) solid 1px; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;    
+     float: left;
+     height: 120px;
+}
+.scoreview  .link {
+    width : 690px;
+    padding-left: 10px;
+    border: rgb(83,152,210) solid 1px; 
+    height: 38px;
+    padding-top: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;    
+     float: left;
+}
+
+
+.scoreview  .btn{
+    width : 98px;
+    
+    height: 60px;
+    margin-left: 0px;
+    
+    margin-top: 20px;
+    margin-bottom: 10px;
+    float:left;
+}
+
+.scoreview  .btn input[type=button]{
+    float: left; 
+    width: 98px; 
+    height: 31px;
+    margin-top: 14px;
+}
+
+.scoreview .footer{
+    height: 100px;
+    background-color:rgba(0, 0, 0, 0.8);
+}
+
+
+.scoreview .status{
+    width : 808px;
+    border: rgb(83,152,210) solid 1px; 
+    height: 650px;
+    margin-left: 38px;
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    overflow: auto;
+    padding-left: 10px;
+    
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.scoreview .agent{
+    width : 250px;
+    border: rgb(83,152,210) solid 1px; 
+    border-width: 1px;
+    height: 650px;
+    margin-left: 20px;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+    overflow: hidden;
+     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scoreview h3{
+    color : rgb(83,152,210);
+    
+}
+
+.heading{
+    width:1180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:60px;
+    padding-top:50px;
+}
+
+.heading h1{
+    color : rgb(83,152,210);
+    
+}
+
+.scoreview input[type=text], .scoreview input[type=email]{
+    height: 30px;
+    width: 550px;
+}
+
+.scoreview .left{
+    width : 200px;
+    border: rgb(83,152,210) solid 1px; 
+    height: 500px;
+    margin-left: 40px;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+
+
+.webform  input:required:invalid, input:focus:invalid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeVJREFUeNqkU01oE1EQ/mazSTdRmqSxLVSJVKU9RYoHD8WfHr16kh5EFA8eSy6hXrwUPBSKZ6E9V1CU4tGf0DZWDEQrGkhprRDbCvlpavan3ezu+LLSUnADLZnHwHvzmJlvvpkhZkY7IqFNaTuAfPhhP/8Uo87SGSaDsP27hgYM/lUpy6lHdqsAtM+BPfvqKp3ufYKwcgmWCug6oKmrrG3PoaqngWjdd/922hOBs5C/jJA6x7AiUt8VYVUAVQXXShfIqCYRMZO8/N1N+B8H1sOUwivpSUSVCJ2MAjtVwBAIdv+AQkHQqbOgc+fBvorjyQENDcch16/BtkQdAlC4E6jrYHGgGU18Io3gmhzJuwub6/fQJYNi/YBpCifhbDaAPXFvCBVxXbvfbNGFeN8DkjogWAd8DljV3KRutcEAeHMN/HXZ4p9bhncJHCyhNx52R0Kv/XNuQvYBnM+CP7xddXL5KaJw0TMAF8qjnMvegeK/SLHubhpKDKIrJDlvXoMX3y9xcSMZyBQ+tpyk5hzsa2Ns7LGdfWdbL6fZvHn92d7dgROH/730YBLtiZmEdGPkFnhX4kxmjVe2xgPfCtrRd6GHRtEh9zsL8xVe+pwSzj+OtwvletZZ/wLeKD71L+ZeHHWZ/gowABkp7AwwnEjFAAAAAElFTkSuQmCC);
+    background-position: right top;
+    background-repeat: no-repeat;
+    -moz-box-shadow: none;
+  }
+  
+.webform  input:required:valid {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAepJREFUeNrEk79PFEEUx9/uDDd7v/AAQQnEQokmJCRGwc7/QeM/YGVxsZJQYI/EhCChICYmUJigNBSGzobQaI5SaYRw6imne0d2D/bYmZ3dGd+YQKEHYiyc5GUyb3Y+77vfeWNpreFfhvXfAWAAJtbKi7dff1rWK9vPHx3mThP2Iaipk5EzTg8Qmru38H7izmkFHAF4WH1R52654PR0Oamzj2dKxYt/Bbg1OPZuY3d9aU82VGem/5LtnJscLxWzfzRxaWNqWJP0XUadIbSzu5DuvUJpzq7sfYBKsP1GJeLB+PWpt8cCXm4+2+zLXx4guKiLXWA2Nc5ChOuacMEPv20FkT+dIawyenVi5VcAbcigWzXLeNiDRCdwId0LFm5IUMBIBgrp8wOEsFlfeCGm23/zoBZWn9a4C314A1nCoM1OAVccuGyCkPs/P+pIdVIOkG9pIh6YlyqCrwhRKD3GygK9PUBImIQQxRi4b2O+JcCLg8+e8NZiLVEygwCrWpYF0jQJziYU/ho2TUuCPTn8hHcQNuZy1/94sAMOzQHDeqaij7Cd8Dt8CatGhX3iWxgtFW/m29pnUjR7TSQcRCIAVW1FSr6KAVYdi+5Pj8yunviYHq7f72po3Y9dbi7CxzDO1+duzCXH9cEPAQYAhJELY/AqBtwAAAAASUVORK5CYII=);
+    background-position: right top;
+    background-repeat: no-repeat;
+  }
+  
+  
+.agentform{
+    width : 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-color : rgb(83,152,210);
+    border-style: solid;
+     
+    overflow: hidden;
+}
+.scoreview .main{
+    width : 586px;
+    border: rgb(83,152,210) solid 1px; 
+    height: 450px;
+    margin-left: 20px;
+    padding-left: 50px;
+    padding-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    float: left;
+}
+
+.scoreview .main input[type=text],.scoreview .main input[type=email]{
+    width : 200px;
+    margin-bottom:10px;
+}
+
+.scoreview .left{
+    width : 200px;
+    border: rgb(83,152,210) solid 1px; 
+    height: 500px;
+    margin-left: 40px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.scoreview .right{
+    width : 200px;
+    border: rgb(83,152,210) solid 1px; 
+    height: 500px;
+    margin-left: 40px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    float: left;
+}
+
+.agent table{
+    width: 220px;
+    
+    border-spacing: 0px;
+    border-top:rgb(83,152,210) 1px solid;
+    border-left: rgb(83,152,210) 1px solid;
+}
+
+.agent table td{
+    border-bottom: rgb(83,152,210) 1px solid;
+    border-right: rgb(83,152,210) 1px solid;
+    padding-left:  5px;
+    height: 30px;
+}
+
+.agentlist{ 
+    width: 765px;
+    margin-left: 10px;
+     border-spacing: 0px;
+    border-top: rgb(83,152,210) 1px solid;
+    border-left: rgb(83,152,210) 1px solid;
+}
+
+.agentlist td{
+    border-bottom: rgb(83,152,210) 1px solid;
+    border-right: rgb(83,152,210) 1px solid;
+    padding-left: 5px;
+    height: 30px;
+}
+
+ #d_clip_button {
+    width:150px;
+    text-align:center;
+    border:1px solid black;
+    background-color:#ccc;
+    margin:10px; padding:10px;
+  }
+  #d_clip_button.zeroclipboard-is-hover { background-color:#eee; }
+  #d_clip_button.zeroclipboard-is-active { background-color:#aaa; }
+  
+  .scoreview .info .refresh{
+      background-image: url('/medschool/resource/refresh.png');
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+  }
+  .scoreview .info .refreshdiv{
+      width: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 25px;
+    float:left;
+  }
+/* End Login Page */

@@ -1,0 +1,25 @@
+.btn {
+  border: none;
+  line-height: 58px;
+  padding: 0 23px;
+  font-size: 18px;
+  text-align:center;
+  background: #121212;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+
+  &.btn-width2 {
+    width: 150px;
+    margin-top: 20px;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+  display: block;
+  &.btn-width2 {
+    padding: 0;
+  }
+}

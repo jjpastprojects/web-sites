@@ -1,0 +1,25 @@
+$theme-green: #0eea6c;
+$theme-alternate-green: #12f089; // lighter green
+
+$theme-light-grey1: #e3eaf0;
+$theme-light-grey2: #758493;
+
+$theme-medium-grey1: #505e6c;
+$theme-medium-grey2: #2e363e;
+
+$theme-dark-grey1: #2e363e;
+$theme-dark-grey2: #22282d;
+
+$theme-extra-grey1: #505e6c; // used for table header. Not in pallette though
+
+// These variables will make it easier to use the vars above
+// hopefully.
+$theme-header-dark: $theme-dark-grey1;
+$theme-header-normal: $theme-extra-grey1;
+$theme-main-font-color: $theme-dark-grey1;
+$theme-dropdown-bg: $theme-dark-grey1;
+
+// Application fonts
+$main-font: 'oswald-regular';
+$main-bold-font: 'oswald-bold';
+$main-sans-bold-font: $main-font;

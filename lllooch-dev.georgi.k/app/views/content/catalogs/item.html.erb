@@ -1,0 +1,55 @@
+<%= content_for :extra_scripts do %>
+    <script>
+      $(document).on('page:load ready', function() {
+        var showroom = new Showroom($('[data-action=showroom]'));
+      });
+    </script>
+<% end %>
+<div class="showroom" data-action="showroom">
+  <% if !defined? controls or (defined? controls and controls != false) %>
+      <ul class="showroom-controls" data-action="middle">
+        <li>
+          <div class="showroom-control" data-showroom="control">
+            <i class="control control-left"></i>
+          </div>
+        </li>
+        <li>
+          <div class="showroom-control" data-showroom="control" data-showroom-control="right">
+            <i class="control control-right"></i>
+          </div>
+        </li>
+      </ul>
+  <% end %>
+
+  <div class="showroom-slide" data-showroom="slide" style="margin-left:60px">
+    <div class="loading-wrap" data-showroom="loading">
+      <div class="loading">
+        <div class="wrap">
+          <div class="loader">
+            <%= image_tag "content/product-loader.gif" %>
+          </div>
+
+          <%= T "Загружается..." %>
+        </div>
+      </div>
+    </div>
+    <div data-region="goods"></div>
+
+    <% if @items %>
+        <div class="showroom-items">
+          <% @items.each_with_index do |item, i| %>
+
+              <% if i % 2 == 0 %>
+                  <div class="showroom-col ready" data-showroom="item-col">
+              <% end %>
+
+              <%= render 'item', :item => item %>
+
+              <% if i % 2 == 1 %>
+                  </div>
+              <% end %>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+</div>

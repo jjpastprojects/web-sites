@@ -1,0 +1,474 @@
+@import url("../popreset.css");
+
+.popup-dom-lightbox-wrapper {
+	height: 100%;
+	min-height: 520px;
+	min-width: 910px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-overlay{
+	background-image:url('images/bg-trans.png');
+	height: 100%;
+	min-height: 520px;
+	min-width: 910px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.popup-dom-lightbox-wrapper .powered {
+	text-align: center;
+	padding-top: 10px;
+	clear: both;
+}
+
+.popup-dom-lightbox-wrapper .powered a {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #000;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	padding-bottom: 10px;
+	text-decoration: none;
+	display: block;
+}
+
+.popup-dom-lightbox-wrapper .powered a:hover {
+	text-decoration: underline;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-close {
+	float: right;
+	position: relative;
+	right:22px;
+	top: 25px;
+	background-image: url('images/lightbox-close.png');
+	background-image: url('../lightbox-close-ie.png')\0/ !important;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+		height: 32px;
+	width: 30px;
+	background-size: 100%;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-close:hover {
+	background-position: left top;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-close span {
+	display: none;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main {
+	color: #fff;
+	height: 420px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	width: 834px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-panel {
+	width: 380px;
+	height: 275px;
+	margin-left: 75px;
+	margin-top: 45px;
+	padding-top: 20px;
+	float: left;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-panel p.heading {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	line-height: 35px;
+	font-weight: bold;
+	font-style: italic;
+	color: #fff;
+	text-shadow: 0px 1px 2px #000;
+	letter-spacing: -1px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-panel p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #000;
+	letter-spacing: 0px;
+	margin-bottom: 20px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-panel .bullet-listx {
+	width: 100%;
+	margin-top: 25px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-panel ul.bullet-list {
+	list-style: none;
+	max-width: 400px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-left-panel ul.bullet-list li {
+	font-size: 18px;
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	background-image: url('images/bullet.png');	
+	background-position: 0px 0px;
+	text-shadow: 0px 1px 0px #000;
+	font-weight: normal;
+	background-repeat: no-repeat;
+	padding-left: 35px;
+	margin-bottom: 10px;
+	line-height: 27px;
+	color: #fff;
+}
+
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-signup-panel {
+	width: 282px;
+	height: 295px;
+	padding-left: 15px;
+	padding-top: 10px;
+	float: right;
+	margin-right: 60px;
+	margin-top: 45px;
+}
+
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-signup-panel p.heading2 {
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	font-style: normal;
+	margin-bottom: 20px;
+	color: #fff;
+	text-shadow: 0px 1px 2px #000;
+	letter-spacing: -1px;
+	line-height: 36px;
+}
+
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-signup-panel p {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 19px;
+	color: #fff;
+	letter-spacing: 0px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-info {
+	height: 230px;
+	float: left;
+	margin-left: 180px;
+	margin-top: 60px;
+	width: 400px;
+}
+
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-info p.heading {
+	font-size: 24px;
+	line-height: 30px;
+	font-family: Georgia, Garamond, Times, serif;
+	color: #002753;
+	font-weight: normal;
+	letter-spacing: -1px;
+	text-shadow: 0px 1px 0px #fff;
+	margin-bottom: 45px;
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-info .green-ticks {
+	list-style: none;
+	margin-top: 20px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-info .green-ticks li {
+	background-image: url('images/green-tick.png');
+	background-repeat: no-repeat;
+	padding-left: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	font-family: Georgia, Garamond, Times, serif;
+	color: #fff;
+	font-weight: normal;
+	letter-spacing: -1px;
+	text-shadow: 0px 1px 0px #fff;
+	background-position: left center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-info .discover {
+	background-image: url('images/discover.png');
+	background-repeat: no-repeat;
+	height: 12px;
+	width: 176px;
+}	
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-info .discover span {
+	display: none;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-signup {
+	height: 260px;
+	float: right;
+	margin-right: 40px;
+	margin-top: 50px;
+	width: 250px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-main .lightbox-signup p.get-free {
+	font-size: 16px;
+	line-height: 21px;
+	font-family: Georgia, Garamond, Times, serif;
+	color: #fff;
+	font-weight: normal;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 25px;
+	text-shadow: 0px 1px 0px #000;
+}
+
+.lightbox-clear {
+	clear: both;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-signup-panel form, .popup-dom-lightbox-wrapper .lightbox-signup-panel .form {
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-signup-panel input[type="text"] {
+	background-image: url('images/lightbox-text-box.png');
+	margin-bottom: 10px;
+	border: 0px;
+	line-height: 20px;
+	height: 20px;
+	padding-right: 50px;
+	padding-top: 10px;
+	margin-left: 3px;
+	background-repeat: no-repeat;
+	padding-bottom: 10px;
+	width: 200px;
+	font-family: Georgia, Garamond, Times, serif;
+	font-size: 14px;
+	padding-left: 10px;
+	background-color: transparent;
+	background-position: left top;
+	outline: none;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-signup-panel input[type="text"].email {
+	background-position: left bottom;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-signup-panel input[type="submit"] {
+	background-repeat: no-repeat;
+	width: 255px;
+	height: 47px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent;
+	border: none;
+	font-size: 19px;
+	color: #fff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #000;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	line-height: 45px;
+	text-align: center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-signup-panel input[type="submit"]:hover {
+	background-position: left center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-signup-panel input[type="submit"]:active {
+	background-position: left bottom;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-signup-panel p.secure {
+	font-size: 11px;
+	margin-top: 10px;
+	line-height: 14px;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #000;
+	text-shadow: 0px 1px 0px #5a7689;
+	width: 239px;
+	text-align: center;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-signup-panel p.secure img {
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-blue {
+	background-image: url('images/blue-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-blue .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-blue {
+	background-image: url('images/bright-blue-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-blue .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-green {
+	background-image: url('images/bright-green-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-green .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-orange {
+	background-image: url('images/bright-orange-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-orange .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-red {
+	background-image: url('images/bright-red-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-red .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-turquoise {
+	background-image: url('images/bright-turquoise-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-turquoise .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-dark-blue {
+	background-image: url('images/dark-blue-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-dark-blue .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-dark-purple {
+	background-image: url('images/dark-purple-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-dark-purple .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-grape {
+	background-image: url('images/grape-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-grape .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-green {
+	background-image: url('images/green-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-green .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-purple {
+	background-image: url('images/bright-purple-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-bright-purple .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-orange {
+	background-image: url('images/orange-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-orange .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-red {
+	background-image: url('images/red-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-red .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-turquoise {
+	background-image: url('images/turquoise-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-turquoise .lightbox-signup-panel .secure {
+	color: #fff;
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-black {
+	background-image: url('images/black-panel.png');
+}
+
+.popup-dom-lightbox-wrapper .lightbox-color-black .lightbox-signup-panel .secure {
+	color: #fff;
+	text-shadow: none;
+}
+
+
+.popup-dom-lightbox-wrapper input[type="submit"].red-button {
+	background-image: url('images/buttons/red-button.png');
+}
+
+.popup-dom-lightbox-wrapper input[type="submit"].dark-red-button {
+	background-image: url('images/buttons/dark-red-button.png');
+}
+
+.popup-dom-lightbox-wrapper input[type="submit"].orange-button {
+	background-image: url('images/buttons/orange-button.png');
+}
+
+.popup-dom-lightbox-wrapper input[type="submit"].dark-orange-button {
+	background-image: url('images/buttons/dark-orange-button.png');
+}
+
+.popup-dom-lightbox-wrapper input[type="submit"].green-button {
+	background-image: url('images/buttons/green-button.png');
+}
+
+.popup-dom-lightbox-wrapper input[type="submit"].dark-green-button {
+	background-image: url('images/buttons/dark-green-button.png');
+}
+
+.popup-dom-lightbox-wrapper input[type="submit"].blue-button {
+	background-image: url('images/buttons/blue-button.png');
+}
+
+.popup-dom-lightbox-wrapper input[type="submit"].dark-blue-button {
+	background-image: url('images/buttons/dark-blue-button.png');
+}

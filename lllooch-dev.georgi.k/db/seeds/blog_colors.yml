@@ -1,0 +1,11 @@
+- name: Бирюзовый
+  color: cyan
+
+- name: Коричневый
+  color: brown
+
+- name: Серый
+  color: gray
+
+- name: Темносерый
+  color: darkgray

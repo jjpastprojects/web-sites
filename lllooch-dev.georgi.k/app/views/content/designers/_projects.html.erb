@@ -1,0 +1,11 @@
+<h2>
+	<%= T "Проекты" %>
+</h2>
+
+<div class="designer-projects">
+	<div class="row">
+		<% projects.each do |p| %>
+			<%= render 'project', :project => p %>
+		<% end %>
+	</div>
+</div>

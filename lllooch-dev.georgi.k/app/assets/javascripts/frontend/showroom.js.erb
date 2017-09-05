@@ -1,0 +1,167 @@
+var Showroom = function(el) {
+	var items    = function() { return el.find('.showroom-col') },
+		controls = el.find('[data-showroom=control]'),
+		step     = 0,
+        oldStep  = 0,
+		slider   = el.find('[data-showroom=slide]'),
+        wrap  = function() { return $(el.find('[data-showroom=wrap]').get(0)) }
+	;
+
+    var stepWidth = function() {
+        return items().first().width();
+    };
+
+	var total = function() {
+        var t = items().size() - Math.floor(el.width()/stepWidth()) + 1;
+        return t > 0 ? t : 0;
+	};
+
+	var check = function(step) {
+		var _total = total();
+
+		if (step < 0) step = 0;
+		if (step > _total) step = _total;
+
+		return step;
+	};
+
+	var updateSlider = function(instant) {
+        if (!instant && slider.is(':animated'))
+            return;
+
+        toLeft = step * stepWidth()
+
+        if (step != oldStep)
+        {
+            if (step == 0) toLeft = -60;
+
+            if (step && toLeft || !step)
+            {
+                if (instant)
+                {
+                    slider.css({
+                        marginLeft: -1 * toLeft
+                    })
+                }
+                else
+                {
+                    slider.animate({
+                        marginLeft: -1 * toLeft
+                    }, 150);
+                }
+
+            }
+
+            oldStep = step;
+        }
+	};
+
+	var slide = function(toLeft) {
+		step = check(toLeft ? step - 1 : step + 1);
+		updateSlider();
+	};
+
+	var resize = function() {
+        var int, width = 0;
+
+        int = setInterval(function() {
+            wrap().height(slider.height());
+
+
+            if (wrap().height())
+            {
+                width = wrap().height()/ 2
+
+                items().not('.promo').each(function() {
+                    $(this).css({
+                        'width': width
+                    });
+
+                    $(this).addClass('ready');
+                });
+
+                clearInterval(int);
+            }
+        }, 50);
+
+	};
+
+
+    var scrollRight = true;
+
+    var updatePosition = function() {
+        el.off('mousewheel');
+        slide(scrollRight);
+        setTimeout(function() {
+           scrollIt();
+        }, 200);
+    }
+
+    var scrollIt = function() {
+        var throttled = _.throttle(updatePosition, 200, {leading: false, trailing: false});
+
+        el.on('mousewheel', function(e) {
+            scrollRight = e.deltaY <= 0;
+            throttled();
+        });
+    };
+
+    if ($('html').hasClass('touch'))
+    {
+        var _x, dx = false;
+
+        slider.on('touchstart', function(e) {
+            _x = e.originalEvent.touches[0].pageX;
+
+            slider.on('touchend', function(e) {
+                dx = _x - e.originalEvent.changedTouches[0].pageX;
+
+                if (Math.abs(dx) > 50) {
+                    slide(dx <= 0);
+                    slider.off('touchend');
+                }
+            })
+        });
+    }
+    else
+    {
+        scrollIt();
+    }
+
+    controls.click(function() {
+        slide($(this).data('showroom-control') == 'right');
+    });
+
+	$('body')
+		.on('resize:height', function() {
+			resize();
+			updateSlider(true);
+		})
+		.on('resize:width', function() {
+			resize();
+			updateSlider(true);
+		});
+
+	resize();
+
+    this.refresh = function() {
+        resize();
+    };
+
+//    this.init = function() {
+//        items().each(function() {
+////            $(this).css('visibility', '');
+//        });
+//    };
+
+    this.setStep = function(i) {
+        step = i;
+        updateSlider(true);
+    }
+
+    el.data('showroom', this);
+
+    controls.css({
+        visibility: ''
+    })
+};

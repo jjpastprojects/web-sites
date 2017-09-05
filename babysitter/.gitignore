@@ -1,0 +1,10 @@
+.idea/
+npm-debug.log
+node_modules/
+bower_components/
+vendor/
+app/js/
+app/css
+app/pages/
+app/views/
+.DS_Store

@@ -1,0 +1,237 @@
+<!-- load backbone templates -->
+<%= Rails.application.assets.find_asset('backbone/templates/player-template.html').to_s.html_safe %>
+<%= Rails.application.assets.find_asset('backbone/templates/entry-template.html').to_s.html_safe %>
+<%= Rails.application.assets.find_asset('backbone/templates/games-template.html').to_s.html_safe %>
+<%= Rails.application.assets.find_asset('backbone/templates/scorecard-template.html').to_s.html_safe %>
+<%= Rails.application.assets.find_asset('backbone/templates/entry-summary-template.html').to_s.html_safe %>
+
+<div class="row fantasy-subheader-black">
+  <div class="col-md-3 subheader">
+    <div class="padding">
+      <h3>Scoreboard</h3>
+      <p>Your games: <span class="date">April 30, 2014</span></p>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <h3>...</h3> 
+    <p>entries</p>
+  </div>
+  <div class="col-md-3">
+    <h3>...</h3>
+    <p>in play</p>
+  </div>
+  <div class="col-md-3">
+    <h3 class="green">...</h3>
+    <p class="green">currently winning</p>
+  </div>
+</div>
+
+<div class="row drafting-info-row">
+  <div class="col-md-3">
+    <div class="row">
+      <div class="col-xs-6">
+        <h3 class="text-right">NBA</h3>
+      </div>
+      <div class="col-xs-6">
+        <h6>50/50</h6>
+        <p class="small-margin-top"><strong>12-31-2014</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="row hidden-xs hidden-sm">
+      <div class="col-xs-2">
+        <h3>$9</h3>
+      </div>
+      <div class="col-xs-10">
+        <h6>PRIZE POOL</h6>
+        <p class="small-margin-top">Entry fee: <strong>$1</strong> Entries: <strong>15/100</strong></p>
+      </div>
+    </div>
+    <div class="row hidden-md hidden-lg">
+      <div class="col-xs-6">
+        <h3 class="text-right">$9</h3>
+      </div>
+      <div class="col-xs-6">
+        <h6>PRIZE POOL</h6>
+        <p class="small-margin-top">Entry fee: <strong>$1</strong> Entries: <strong>15/100</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="row hidden-xs hidden-sm">
+      <div class="col-xs-4">
+        <p class="live-border">LIVE</p>
+      </div>
+      <div class="col-xs-2">
+        <p class="contest-prefix">in</p>
+      </div>
+      <div class="col-xs-6">
+        <h3>4:12:24</h3>
+        <p class="contest-time">8:40pm EST</p>
+      </div>
+    </div>
+    <div class="row hidden-md hidden-lg">
+      <div class="col-xs-6">
+        <h3 class="text-right">LIVE in</h3>
+      </div>
+      <div class="col-xs-6">
+        <h3 class="text-left">4:12:24</h3>
+        <p class="contest-time">8:40pm EST</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-entry_id="<%= @entry_id %>" data-contest_id="<%= @entry.contest.id %>"
+            class="capitalcontent gamecenter" data-sport="<%= @contest.sport %>" >
+<!--Login Section-->
+<%#
+<%= form_tag({controller:"entries", action:"admin"}, remote: true, id: "admin_buttons_form") do >
+    < if @contest.accurate_state != :live >
+        <= submit_tag(value="Make Live", :name => "command") >
+    < end >
+< end >
+%>
+
+<!-- <ul class="list-inline title"> -->
+<!--  <li>
+    <h2>DAILY NBA FREEROLL </h2>
+    <h2><%= @contest.title || "No contest title" %></h2>
+  </li>
+  -->
+  <!--<li><span>10x $300k nfl bomb entries</span></li>-->
+ <!--  <li><h2><span style="font-size:0.8em;"><%= number_to_currency(@contest.prizepool, unit: '$') %> <%= @contest.sport %> <%= @contest.contest_type %> <%= @contest.contestdate %></span></h2></li>
+  <% if @contest.accurate_state == :live %>
+      <li><a id="is_contest_live_text" href="#">LIVE IN PLAY</a></li> -->
+      <!-- BUGBUG: should change this to be client-rendered time so we have timezone right -->
+   <!--    <li><span>Started <%= @contest.start_at.in_time_zone("America/New_York").strftime("%l:%M %p") %></span></li>
+  <% else %>
+      <li><a id="is_contest_live_text" href="#">not live</a></li>
+      <li></li>
+  <% end %> -->
+
+  <!--<li><span>Started 7:00pm ET 12/18</span></li>-->
+<!-- </ul>
+<div class="clearfix"></div> -->
+<!--Tab Section-->
+<!-- <div class="light_grey freerollbox">
+  <ul class="list-inline">
+    <li>
+      <h4><strong>Multiplayer League</strong></h4>
+    </li>
+    <li>
+      <h4> <%= @entries.count %> Entries</h4>
+    </li>
+    <li>
+
+      <h4>&nbsp;&nbsp;<strong>Entry:</strong> <%= number_to_currency(@contest.entry_fee, unit: '$') %></h4>
+    </li>
+    <li>&nbsp;&nbsp;<a href="#"><span class="green">
+         <%= number_to_currency(@contest.prizepool, unit: '$') %> Prize Pool</span></a>
+    </li>
+  </ul>
+</div> -->
+<!--/Tab Section-->
+
+
+<!-- <div class="clearfix">&nbsp;</div> -->
+<!--Status Table-->
+
+<!-- this element owned by backbone GamesView -->
+<ul class="list-inline freeroll_status gamecenter-list-padding" id="gamesview_el">
+  <!-- row of relevant games with realtime state, filled in via backbone -->
+</ul>
+
+<!--/.Status Table-->
+
+<!--List Area-->
+<table class="freeroll table-responsive js-gamecenter">
+  <thead>
+      <tr>
+        <th>POS</th>
+        <th>&nbsp;</th>
+        <th>USER</th>
+        <% if @contest.sport == 'NBA' %> 
+          <th>MINUTES REMAINING</th> 
+        <% elsif @contest.sport == 'MLB' %>
+          <th>INNINGS REMAINING</th> 
+        <% end %>
+        <th>SCORE</th>
+        <th>PRIZES</th>
+      </tr>
+
+  </thead>
+  <tbody id="entry-summarys-view-el">
+  <!-- @entries.each do |entry| -->
+  <!--<tr data-entry-id=" entry.id ">-->
+    <!--<td>1</td>-->
+    <!--<td><%= image_tag "user.png", class: "user"%></td>-->
+    <!--<td><span class="green">entry.lineup.user.username </span></td>-->
+    <!--<td><span class="entry-min-remaining"></span>-->
+      <!--<progress class="entry-progress-bar" value="0" max="48"></progress>-->
+    <!--</td>-->
+    <!--<td class="fantasypoints">entry.current_fantasypoints </td>-->
+    <!--&lt;!&ndash;<td>$300K NFL Bomb Entry</td>&ndash;&gt;-->
+    <!--<td><%# number_to_currency(@contest.prizepool, unit: '$') %> <%# @contest.sport %> <%# @contest.contest_type %></td>-->
+  <!--</tr>-->
+  <!-- end -->
+
+  </tbody>
+</table>
+<div class="clearfix"></div>
+<div class="users-previous green pull-left js-gc-paginate-previous">&#171; PREVIOUS</div>
+<div class="users-next green pull-right js-gc-paginate-next">NEXT &#187;</div>
+<div class="clearfix"></div>
+<!--/List Area-->
+
+<%= render partial: 'lineup_row_template' %>
+
+<div id="my-scorecard" class="col-md-5 scorecard pull-left" data-entry-id="<%= @entry.id %>">
+    <%# #render partial: 'inner_scorecard' %>
+</div>
+<div id="competitor-scorecard" class="col-md-5 scorecard pull-right" data-entry-id="">
+  <%# render partial: 'inner_scorecard' %>
+</div>
+
+  <script type="text/javascript">
+
+      var globals = {
+        sport: "<%= @contest.sport %>"
+      };
+      // populate games list from servers.
+      // temporary hack until we handle user images.
+      var user_img_placeholder = "<%= image_path("user.png") %>";
+
+      var teams_coll = new Backbone.Collection;
+      teams_coll.reset(<%= @teams.to_json.html_safe %>);
+
+      var contest = new Backbone.Model (<%= @contest.to_json.html_safe %>);
+
+      var sportpositions_coll = new Backbone.Collection;
+      sportpositions_coll.reset (<%= @sportpositions.to_json.html_safe %>);
+
+      var games_coll = new Main.Collections.GamesCollection([],
+              {teams_coll: teams_coll});
+      games_coll.reset(<%= @todaysgames.to_json.html_safe %>);
+
+      var players_coll = new Main.Collections.PlayersCollection([],
+              {teams_coll: teams_coll, games_coll: games_coll,
+                  contest: contest, sportpositions_coll: sportpositions_coll});
+      players_coll.reset(<%= @players.to_json.html_safe %>);
+
+      var entries_coll = new Main.Collections.EntriesCollection;
+      entries_coll.reset(<%= @entries.to_json.html_safe %>);
+
+      var playerscores_coll = new Main.Collections.PlayerScoresCollection;
+      playerscores_coll.reset (<%= @playerscores.to_json.html_safe %>);
+
+      $(document).on('page:load ready', function () {
+            if ($('.gamecenter').length > 0) {
+                window.gamecenter = new GameCenterCls
+                    ('<%= Rails.env.development? ? "86296472974842e38cce" : Pusher.key %>');
+            }
+      });
+
+  </script>
+</div>

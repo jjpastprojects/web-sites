@@ -1,0 +1,7 @@
+Template Name: Subscribe Clean 4
+Colors: Blue[blue:#005ba2] | Red[red:#651F17] | Bright Red[bright-red:#C6320E] | Bright Green[bright-green:#5CC32C] | Bright Purple[bright-purple:#A94196] | Bright Turq[bright-turq:#61CFDE] | Bright Orange[bright-orange:#DC8621] | Bright Blue[bright-blue:#1F5BD7] | Dark Blue[dark-blue:#1A4567] | Grape[grape:#76254D] | Green[green:#2F5C17] | Turq[turq:#3A8080] | Orange[orange:#964911] | Black[black:#000]
+Preview Size: 645x358
+Preview Ext: jpg
+Fields: Title[id:title,max:60,default_val:We’re giving away <span>FREE<span> Ebook!]|Description Title[id:description_title,max:120,default_val:Just another subheadline here]|Description[id:description,max:200,default_val:This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.]|Button Text[id:button_text,max:40,default_val:I want this amazing eBook for FREE!]|Footer Note[id:footer_note,max:180,default_val:I want this amazing eBook for FREE!]|Book Image[id:book_image,type:image,max_w:160,max_h:245]
+Button Colors: Default[default]
+Center: Y

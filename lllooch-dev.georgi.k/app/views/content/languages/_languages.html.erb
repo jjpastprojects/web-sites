@@ -1,0 +1,31 @@
+<table class="b-menu">
+	<tr>
+		<td>
+			<div<%= ' class=active' if current_page? cart_path %>>
+				<% if @language.is_default %>
+                  <a href="<%= cart_path %>" class="b-cart-link"><%= T "Корзина" %> <%= raw cart_size %></a>
+				<% end %>
+			</div>
+		</td>
+
+		<td>
+			<div class="b-dropdown">
+				<div class="current b-languages">
+					<%= @language.native %>
+				</div>
+
+				<div class="dropdown">
+					<div class="wrap">
+						<div class="inner">
+							<ul>
+								<% languages.select{|l| l != @language}.each do |item| %>
+									<%= render 'content/languages/item', :item => item %>
+								<% end %>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>

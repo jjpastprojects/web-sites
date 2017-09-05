@@ -1,0 +1,154 @@
+.classes-index {
+
+  .classes-index__intro {
+    margin: rem-calc(0 0 25);
+
+    h2 {
+      border-bottom: 1px solid $gray-light;
+      border-top: 1px solid $gray-light;
+      color: $primary-color;
+      font-family: $font-family-sans-serif;
+      font-size: rem-calc(18);
+      font-weight: $font-weight-bold;
+      letter-spacing: -0.05em;
+      line-height: 1;
+      margin: rem-calc(0 0 10);
+      padding: rem-calc(8 0);
+    }
+
+    h3 {
+      color: $blue-light;
+      font-size: rem-calc(15);
+      font-family: $font-family-sans-serif;
+      font-weight: $font-weight-normal;
+      letter-spacing: -0.05em;
+      margin: rem-calc(10 0 5);
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: rem-calc(14);
+      font-weight: $font-weight-light;
+      line-height: 1.3;
+    }
+  }
+
+  .search-map__container {
+    border: 3px solid $primary-color;
+    margin: rem-calc(0 0 15);
+
+    .market-marker {
+      background: $primary-color;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 2px solid $primary-color;
+      box-shadow: 2px 2px 2px rgba(black, 0.2);
+      border-radius: 50%;
+      font-size: rem-calc(13);
+      line-height: 0;
+      text-align: center;
+
+      &::before {
+        border: 2px solid white;
+        border-radius: 50%;
+        bottom: 2px;
+        content: '';
+        display: block;
+        left: 2px;
+        position: absolute;
+        right: 2px;
+        top: 2px;
+        z-index: 10;
+      }
+    }
+  }
+
+  .map-form {
+    margin: rem-calc(10 0);
+    @include clearfix;
+  }
+    .map-form__zip-search {
+      float: left;
+      padding: rem-calc(0 0 0 20);
+      min-width: 50%;
+    }
+
+  //
+  // Category Filters
+  //
+  .category-filters {
+    text-align: center;
+
+    fieldset {
+      display: inline-block;
+      overflow: hidden;
+      padding: rem-calc(0 5);
+    }
+    label {
+      display: inline-block;
+      margin: rem-calc(0 0 10);
+      padding: rem-calc(0 10 0 25);
+      position: relative;
+      white-space: nowrap;
+
+      &::before {
+        background: none;
+        border: rem-calc(10) solid $primary-color;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: rem-calc(20);
+        left: 0;
+        position: absolute;
+        transition: border 0.3s;
+        width: rem-calc(20);
+      }
+      &::after {
+        opacity: 0;
+        transition: opacity 0.1s;
+      }
+    }
+    input[type=checkbox] {
+      left: -99em;
+      position: absolute;
+
+      &:checked + label {
+        &::before {
+          border-width: rem-calc(3);
+        }
+        &::after {
+          color: $primary-color;
+          content: '\00D7';
+          left: 0;
+          line-height: rem-calc(18);
+          opacity: 1;
+          position: absolute;
+          text-align: center;
+          width: rem-calc(19);
+        }
+      }
+    }
+
+  }
+
+  //
+  // List of classes
+  //
+  .class-search__list {
+    width: 100%;
+  }
+
+  .list__sort-option {
+    display: block;
+    width: 100%;
+
+    .fa-caret-up {
+      transition: transform 0.3s;
+
+      &.is-desc {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+}

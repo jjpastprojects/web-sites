@@ -1,0 +1,42 @@
+{
+  "name": "Gift Extension",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "Gift Extension",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "16": "icons/gift.png",
+    "48": "icons/gift.png",
+    "128": "icons/gift.png"
+  },
+  "page_action": {
+    "default_icon": "icons/gift.png",
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
+  },
+  "options_page" : "src/page_action/page_action.html#settings",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/mail/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ],
+      "js": [
+        "js/jquery-1.8.3.min.js",
+        "src/inject/inject.js"
+
+      ]
+    }
+    ],
+	"permissions": [
+	    "storage"
+  	],
+	"web_accessible_resources" : [
+		"src/page_action/page_action.html",
+        "icons/gift.png",
+        "icons/diagram.png",
+        "icons/submit.png"
+	]
+}

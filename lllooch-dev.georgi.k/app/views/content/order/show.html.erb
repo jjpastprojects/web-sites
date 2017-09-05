@@ -1,0 +1,339 @@
+<%= content_for :extra_scripts do %>
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script src="/kladrapi/jquery.kladr.min.js"></script>
+    <link rel="stylesheet" href="/kladrapi/jquery.kladr.min.css"/>
+<% end %>
+
+<div class="container cart order-form" data-type="order" data-free="<%= T('бесплатно') %>" data-delivery-path="<%= cart_delivery_path %>">
+<h1>
+  <%= T "Заказ" %>
+</h1>
+
+<% if !@current_page.nil? and !@current_page.content.empty? %>
+    <div class="content">
+      <%= @current_page.content.html_safe %>
+    </div>
+<% end %>
+
+<%= simple_form_for @cart, url: order_finish_path, method: :patch, html: {novalidate: false} do |form| %>
+    <%= simple_fields_for 'cart', @cart do |f| %>
+
+        <%= f.simple_fields_for 'client', @cart do |c| %>
+            <div class="form-block">
+              <h2>Персональные данные</h2>
+
+              <div class="row">
+                <div class="span2">
+                  <div class="form-row">
+                    <label for="name">
+                      <%= T "Имя" %><sup>*</sup>:
+                    </label>
+
+                    <div class="input-wrap">
+                      <%= c.input_field :first_name, placeholder: "Введите Ваше имя", required: true, class: ('invalid' if form.object.errors['client.first_name'].present?) %>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="span2">
+                  <div class="form-row">
+                    <label for="surname">
+                      <%= T "Фамилия" %><sup>*</sup>:
+                    </label>
+
+                    <div class="input-wrap">
+                      <%= c.input_field :last_name, placeholder: T("Введите Вашу фамилию"), required: true, class: ('invalid' if form.object.errors['client.last_name'].present?) %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="span2">
+                  <div class="form-row">
+                    <label for="email">
+                      <%= T "Email" %><sup>*</sup>:
+                    </label>
+
+                    <div class="input-wrap">
+                      <%= c.input_field :email, type: :email, data: {mask: 'email'}, placeholder: T("Введите Ваш Email"), required: true, 'aria-required' => true, class: ('invalid' if form.object.errors['client.email'].present?) %>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="span2">
+                  <div class="form-row">
+                    <label for="phone">
+                      <%= T("Телефон:") %>
+                    </label>
+
+                    <div class="input-wrap">
+                      <%= c.input_field :phone, placeholder: T("Введите Ваш телефон"), data: {mask: 'phone'} %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% end %>
+
+        <div class="form-block">
+          <h2>Способ доставки</h2>
+
+          <div class="row">
+            <div class="span2">
+              <ul class="radio-group">
+                <li>
+                  <% DeliveryType.active.each do |delivery_type| %>
+                      <div class="radio-label">
+                        <input type="radio" id="delivery_type<%= delivery_type.id %>" name="cart[delivery_type]" value="<%= delivery_type.id %>" data-delivery-calculate="<%= delivery_type.is_cost_calc_needed? %>" data-delivery-type required/>
+                        <label for="delivery_type<%= delivery_type.id %>">
+                          <%= delivery_type.name %>
+                          <% if delivery_type.hint.present? %> <sup data-order="popover">?</sup>
+                          <% end %>
+                        </label>
+                      </div>
+                  <% end %>
+                </li>
+              </ul>
+              <% if form.object.errors['delivery_type'].present? %>
+                  <p class="error">
+                    <%= form.object.errors['delivery_type'][0] %>
+                  </p>
+              <% end %>
+            </div>
+            <div class="span2">
+              <div class="order-delivery">
+                <div class="order-delivery__icon"></div>
+
+                <div class="order-delivery__row">
+                  <div class="order-delivery__head">
+                    <%= T "Стоимость" %>
+                  </div>
+
+                  <div class="order-delivery__price">
+                    <span data-order="delivery-price">—</span>
+                  </div>
+                </div>
+
+                <div class="order-delivery__error" data-order="delivery_price_error"></div>
+
+                <div class="order-delivery__desc" data-order="delivery_price_desc">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div data-layout="address"></div>
+
+        <div data-layout="payment"></div>
+
+        <script type="text/html" data-view="address">
+          <div class="form-block">
+            <h2>Адрес доставки</h2>
+
+            <% if false %>
+                <div class="row">
+                  <div class="span2">
+                    <div class="form-row">
+                      <div class="select-wrap">
+                        <%= localized_country_select(:cart, :country, [:RU]) %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+
+            <div class="row">
+              <div class="span2">
+                <div class="form-row">
+                  <label for="city">
+                    Город<sup>*</sup>:
+                  </label>
+
+                  <div class="input-wrap">
+                    <%= f.input_field :city, placeholder: "Введите Ваш город", required: true, class: ('invalid' if form.object.errors['city'].present?), data: {'delivery-calc' => 'true', 'cart-kladr' => 'city'} %>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="span1_5">
+                <div class="form-row">
+                  <label for="region">
+                    Регион / Область:
+                  </label>
+
+                  <div class="input-wrap">
+                    <%= f.input_field :region, placeholder: "Ваш регион/область", tabindex: -1, data: {address: 'region', 'cart-kladr' => 'region'} %>
+                  </div>
+                </div>
+              </div>
+
+              <div class="span_5">
+                <div class="form-row">
+                  <label for="zip">
+                    Индекс<sup>*</sup>:
+                  </label>
+
+                  <div class="input-wrap">
+                    <%= f.input_field :zip, placeholder: "Ваш индекс", required: true, tabindex: -1, data: {address: 'zip'}, class: ('invalid' if form.object.errors['zip'].present?) %>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row" style="position: relative">
+              <div class="span2">
+                <div class="form-row">
+                  <label for="address">
+                    Улица<sup>*</sup>:
+                  </label>
+
+                  <div class="input-wrap">
+                    <%= f.input_field :street, placeholder: "Введите название улицы", required: true, class: ('invalid' if form.object.errors['street'].present?), data: {'delivery-calc' => 'true', 'cart-kladr' => 'street'} %>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="span1">
+                    <div class="form-row">
+                      <label for="street_number">
+                        Номер дома<sup>*</sup>:
+                      </label>
+
+                      <div class="input-wrap">
+                        <%= f.input_field :street_number, placeholder: "Введите номер дома", required: true, class: ('invalid' if form.object.errors['street_number'].present?), data: {'cart-kladr' => 'building'} %>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="span1">
+                    <div class="form-row">
+                      <label for="site">
+                        Квартира/Офис №:
+                      </label>
+
+                      <div class="input-wrap">
+                        <%= f.input_field :site, placeholder: "Квартира/Офис №:", data: {'delivery-calc' => 'true', 'cart-kladr' => 'building'} %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="span2">
+                    <label for="comment">
+                      Пожелания
+                    </label>
+
+                    <div class="input-wrap">
+                      <%= f.input_field :comment, as: :text %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="span2">
+                <div class="order-address">
+                  <div class="row">
+                    <div class="span2">
+                      <div class="order-delivery" data-order="address-wrap">
+                        <div class="order-delivery__icon down"></div>
+
+                        <div class="order-delivery__row">
+                          <div class="order-delivery__head">
+                            <%= T "Адрес доставки" %>
+                          </div>
+                        </div>
+
+                        <div class="order-delivery__desc" data-order="address"></div>
+                      </div>
+
+                      <div class="order-map" data-order="map">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </script>
+
+        <script type="text/html" data-view="payment">
+          <div class="form-block">
+            <h2>Способ оплаты</h2>
+
+            <div class="row">
+              <div class="span2">
+                <ul class="radio-group">
+                  <li>
+                    <% PaymentType.active.each do |payment_type| %>
+                        <% if payment_type.is_a?(PaymentType::Card) %>
+                            <% @card_payment_name = payment_type.name %>
+                        <% end %>
+                        <div class="radio-label">
+                          <input type="radio" name="cart[payment_type]" id="payment_type<%= payment_type.id %>" value="<%= payment_type.id %>" required/>
+                          <label for="payment_type<%= payment_type.id %>">
+                            <%= payment_type.name %>
+                          </label>
+                        </div>
+                    <% end %>
+                  </li>
+                </ul>
+              </div>
+
+              <% if @card_payment_name.present? %>
+                  <div class="span2">
+                    <div class="order-delivery" data-payment-cart>
+                      <div class="order-delivery__icon"></div>
+
+                      <div class="order-delivery__row">
+                        <div class="order-delivery__head">
+                          <%= @card_payment_name %>
+                        </div>
+                      </div>
+
+                      <div class="order-delivery__desc" data-order="delivery_price_desc">
+                        <%= T 'Описание процесса оформления заказа с помощью карты' %>
+                        <div class="order-payment-icons"></div>
+                      </div>
+                    </div>
+                  </div>
+              <% end %>
+            </div>
+          </div>
+        </script>
+
+        <ul class="cart-items">
+          <li class="cart-total">
+            <span class="upper"><%= T "Итого" %>:</span>
+            <span data-order="total"></span>
+          </li>
+        </ul>
+
+        <div class="form-block wide">
+          <div class="row">
+            <div class="pull-left">
+              <a href="<%= cart_path %>" class="btn btn-width2">
+                <%= T "Назад" %>
+              </a>
+            </div>
+
+            <div class="pull-right">
+              <button class="btn btn-width2" data-order="submit" disabled="disabled">
+                <%= T "Оформить" %>
+              </button>
+            </div>
+
+          </div>
+        </div>
+    <% end %>
+<% end %>
+</div>
+
+<script type="text/javascript">
+    <%= raw('var order_options =' + @cart.options.to_json) %>
+</script>

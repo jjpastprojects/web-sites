@@ -1,0 +1,53 @@
+@mixin block_list($selector) {
+	#{$selector} {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		& > li {
+			float: none;
+			margin: 0;
+		}
+	}
+}
+
+@mixin inline_list($selector) {
+	#{$selector} {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		& > li {
+			float: left;
+		}
+	}
+
+	@include row(#{$selector});
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+
+@mixin row($selector) {
+	#{$selector}:before,
+	#{$selector}:after {
+	    content:"";
+	    display:table;
+	}
+
+	#{$selector}:after {
+	    clear:both;
+	}
+
+	#{$selector} {
+	    zoom:1;
+	}
+}
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate(#{$deg}); /* Safari and Chrome */
+	   -moz-transform: rotate(#{$deg}); /* Firefox */
+		-ms-transform: rotate(#{$deg}); /* IE 9 */
+		 -o-transform: rotate(#{$deg}); /* Opera */	
+}

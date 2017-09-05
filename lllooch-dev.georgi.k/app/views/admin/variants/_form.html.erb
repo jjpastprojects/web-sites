@@ -1,0 +1,59 @@
+<%= language_prompt %>
+
+<%= simple_form_for [:admin, @variant], :html => {:class => 'form-horizontal'} do |f| %>
+    <%= form_errors f %>
+
+    <%= tabs [[:main, 'Основное'],
+              [:avatar, 'Картинка'],
+              [:material, 'Материал']] %>
+
+    <%= tab_contents do %>
+        <%= tab_pane :main, {active: true} do %>
+            <% Globalize.with_locale(@locale.slug) do %>
+                <%= f.input :name, as: :string %>
+            <% end if @variant.id %>
+
+            <%= f.input :suffix %>
+
+            <% Globalize.with_locale(@locale.slug) do %>
+                <%= f.input :price, as: :string %>
+            <% end %>
+
+            <%= f.simple_fields_for :property_types, @variant do |t| %>
+                <% @variant.good.property_type.each do |type| %>
+                    <% variant_type = @variant.properties.select { |p| type == p.property.property_type }.first %>
+                    <% (variant_type = VariantProperty.new) if variant_type.nil? %>
+                    <%= t.simple_fields_for type.id.to_s, variant_type do |p| %>
+                        <%= p.association :property, collection: type.properties, label: type.name.to_s, include_blank: 'Выберите ' + type.name.to_s %>
+                    <% end %>
+                <% end %>
+            <% end %>
+        <% end %>
+
+        <%= tab_pane :avatar do %>
+            <%= image_field @variant, :picture, f, [300, 300], sizes: ['300x300', '400x400', '90x90'] %>
+        <% end %>
+
+        <%= tab_pane :material do %>
+            <%= image_field @variant, :material, f, [300, 300], sizes: ['450x450', '300x300', '400x400', '90x90'] %>
+
+            <div class="control-group string optional variant_is_material">
+                <%= f.label :is_material %>
+                <%= f.check_box :is_material %>
+            </div
+
+            <% Globalize.with_locale(@locale.slug) do %>
+                <%= f.input :material_name %>
+            <% end %>
+        <% end %>
+    <% end %>
+
+    <%= f.input :good_id, as: :hidden %>
+    <%= language_input f %>
+
+    <div class="form-actions">
+      <%= f.button :submit, save_or_update(@variant), :class => 'btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  edit_admin_good_path(@good, anchor: :variants), :class => 'btn' %>
+    </div>
+<% end %>

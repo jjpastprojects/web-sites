@@ -1,0 +1,23 @@
+<div class="promo" data-showroom="item-col">
+	<div class="promo-pic">
+		<img src="<%= image_url(promo[:pic]) %>" />
+	</div>
+
+	<div class="promo-desc-wrap">
+		<div class="promo-desc-center">
+			<table class="promo-desc" data-action="middle">
+				<tr>
+					<td>
+						<div class="promo-logo">
+							<img src="<%= image_url(promo[:logo]) %>" width="139px" height="61px" />
+						</div>
+					</td>
+
+					<td>
+						<%= promo[:desc].html_safe %>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

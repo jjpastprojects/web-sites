@@ -1,0 +1,135 @@
+.g-header {
+	position: relative;
+	z-index: 10;
+	padding: 30px 80px 0;
+	height: 40px;
+	margin-bottom: 10px;
+  	font-weight: 500;
+}
+
+@include inline_list(".b-menu");
+
+.b-header {
+	width: 100%;
+	a {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.space.small {
+		width: 30px;
+	}
+
+	.dark & {
+		color: #fff;
+	}
+}
+
+.b-logo {
+	display: block;
+	width: 154px;
+	height: 40px;
+	background: image-url('content/logo-white.png') no-repeat;
+	.dark & {
+		background-image: image-url('content/logo-black.png');
+	}
+}
+
+.b-header-phone {
+	margin-top: -2px;
+	.icon {
+		background-image: image-url('content/icons-black.png');
+		margin-top: -3px;
+		margin-bottom: -7px;
+		.dark & {
+			background-image: image-url('content/icons-white.png');
+		}
+	}
+}
+
+.b-search-link, .b-menu-link {
+	margin-left: 10px;
+	height: 40px;
+	width: 60px;
+	text-align: center;
+	background: #fff;
+	@include border-radius(5px);
+
+	.icon {
+		margin: 7px 0 0 0;
+	}
+
+	.dark & {
+		background: #000;
+		& > .icon {
+			background-image: image-url('content/icons-888888.png');
+		}
+	}
+}
+
+.b-menu {
+	line-height: 40px;
+
+	td.spacer {
+		width: 100%;
+		padding: 0 10px;
+	}
+
+	td {
+		white-space: nowrap;
+		padding: 0 10px;
+		& > div {
+			border-bottom: 3px solid transparent;
+		}
+	}
+
+	.active {
+		border-bottom-color: #000;	
+		.dark & {
+			border-bottom-color: #fff;
+		}
+	}
+}
+
+.b-search {
+	&.active {
+		display: block;
+	}
+	background: #000;
+	display: none;
+	position: absolute;
+	width: 300px;
+	border-radius: 6px;
+	height: 40px;
+	right: 81px;
+	top: 18px;
+	padding: 0;
+	form {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		input {
+			background: #fff;
+			border: none;
+			padding: 0 6px;
+			line-height: 26px;
+			font-size: 14px;
+			margin: 7px;
+			height: 26px;
+			width: 216px;
+			border-radius: 2px;
+		}
+
+		button {
+			width: 56px;
+			padding: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 40px;
+			border: none;
+			background: none;
+		}
+	}
+}

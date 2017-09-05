@@ -1,0 +1,310 @@
+<%= language_prompt %>
+
+<%= simple_form_for [:admin, @good], :html => {:class => 'form-horizontal'} do |f| %>
+    <%= form_errors f %>
+
+    <%= tabs [[:main, 'Основное'],
+              [:pictures, 'Картинки'],
+              [:variants, 'Варианты'],
+              [:tech, 'Характеристики'],
+              [:descriptions, 'Описания'],
+              [:files, 'Файлы', {disabled: (true unless @good.id)}],
+              [:three60, '360-просмотр', {disabled: (true unless @good.id)}],
+              [:video, 'Видео'],
+              [:meta, 'META']] %>
+
+    <%= tab_contents do %>
+        <%= tab_pane :main, {active: true} do %>
+            <%= f.input :name %>
+            <%= f.input :article %>
+
+            <%= f.input :slug if @good.id? %>
+
+            <% Globalize.with_locale(@locale.slug) do %>
+                <%= f.input :price %>
+                <%= f.input :material_type_text %>
+            <% end %>
+
+            <%= f.input :no_shadow %>
+            <%= f.input :on_main %>
+            <%= f.input :is_preorder_only %>
+            <%= f.input :bg, collection: {'белый' => 'dark', 'чёрный' => 'light'}, include_blank: false %>
+
+            <%= f.association :good_category, input_html: {class: 'span6'} %>
+            <%= f.association :designer, input_html: {class: 'span6'} %>
+            <%= f.association :material, input_html: {class: 'span6'} %>
+            <%= f.association :property_type, input_html: {class: 'span6'} %>
+
+            <%= f.association :goods, input_html: {class: 'span6'}, collection: Good.all.select { |g| g != @good } %>
+
+            <% Globalize.with_locale(@locale.slug) do %>
+                <%= f.association :tags, input_html: {class: 'span6'} %>
+            <% end %>
+        <% end %>
+
+        <%= tab_pane :pictures do %>
+            <%= f.input :picture_alignment, collection: get_alignments.map { |k, v| [v, k] }, include_blank: false %>
+            <%= image_field @good, 'picture', f, [100, 100], sizes: ['300x300'] %>
+            <%= image_field @good, 'portrait', f, [100, 100], sizes: ['768x1024', '100x100'] %>
+            <%= image_field @good, 'landscape', f, [100, 100], sizes: ['768x1024', '100x100'] %>
+
+            <hr/>
+
+            <%= image_field @good, 'thumb', f, [100, 100], sizes: ['300x300', '400x400'] %>
+            <%= image_field @good, 'logo', f, [100, 100], transparent: true, sizes: ['300x300'] %>
+            <%= image_field @good, 'logo_desc', f, [100, 100], transparent: true, sizes: ['400x30'] %>
+
+            <hr/>
+
+            <%= image_field @good, 'panorama', f, [100, 100], sizes: ['300x300'] %>
+            <%= image_field @good, 'panorama_ipad', f, [100, 100], sizes: ['300x300'] %>
+        <% end %>
+
+        <%= tab_pane :files do %>
+            <% if @good.files.empty? %>
+                <div class="well">
+                  Опаньки.. Ни одного PDF-файла не найдено..
+                </div>
+            <% else %>
+                <table class="table table-hover" data-type="nested" data-nested-url="<%= order_admin_files_path %>">
+                  <thead>
+                  <tr>
+                    <th>
+                      Файл
+                    </th>
+
+                    <th>
+                      Тип
+                    </th>
+
+                    <th width="30%" class="center">
+                      Размер
+                    </th>
+                    <th width="60px">
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <% @good.files.each do |file| %>
+                      <tr data-nested="item" data-nested-id="<%= file.id %>">
+                        <td>
+                          <% Globalize.with_locale(@locale.slug) do %>
+                              <i class="icon icon-file"></i> <%= file.name %>
+                              <%= content_tag :div, content_tag(:small, file.filename), class: 'muted' if file.src %>
+                          <% end %>
+                        </td>
+
+                        <td>
+                          <%= file.file_type %>
+                        </td>
+
+                        <td class="center">
+                          <%= number_to_human_size file.size %>
+                        </td>
+                        <td>
+                          <%= link_to pencil_icon,
+                                      edit_admin_file_path(file), :class => 'btn btn-mini' %>
+                          <%= link_to trash_icon(true),
+                                      admin_file_path(file),
+                                      :method => :delete,
+                                      :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
+                                      :class => 'btn btn-mini btn-danger' %>
+                        </td>
+                      </tr>
+                  <% end %>
+                  </tbody>
+                </table>
+            <% end %>
+
+            <%= link_to (content_tag :i, '', class: 'icon icon-file') + ' Добавить файл',
+                        new_admin_good_file_path(@good),
+                        :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Произойдет переход на другую страницу. Вы действительно хотите продолжить?'))}, :class => 'btn' %>
+
+        <% end %>
+
+        <%= tab_pane :variants do %>
+            <% if @good.variants.empty? %>
+                <div class="well">
+                  Опаньки.. Ни одного варианта не найдено..
+                </div>
+            <% else %>
+                <table class="table table-hover" data-type="nested" data-nested-url="<%= order_admin_variants_path %>">
+                  <thead>
+                  <tr>
+                    <th>
+                      Вариант
+                    </th>
+
+                    <th>
+                      Артикул
+                    </th>
+
+                    <% @good.property_type.each do |t| %>
+                        <th class="center">
+                          <%= t.name %>
+                        </th>
+                    <% end %>
+                    <th width="120px" class="center">
+                      Цена
+                    </th>
+                    <th width="12px" class="center">
+                      Образец
+                    </th>
+                    <th width="60px"></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <% @good.variants.each do |variant| %>
+                      <tr data-nested="item" data-nested-id="<%= variant.id %>">
+                        <td>
+                          <% Globalize.with_locale(@locale.slug) do %>
+                              <%= with_pic variant, variant.picture %>
+                          <% end %>
+                        </td>
+
+                        <td>
+                          <%= variant.full_article %>
+                        </td>
+
+
+                        <% variant.properties.each do |p| %>
+                            <td class="center">
+                              <%= p.property.name if p.property %>
+                            </td>
+                        <% end %>
+
+                        <td class="center">
+                          <% Globalize.with_locale(@locale.slug) do %>
+                              <%= variant.price %>
+                          <% end %>
+                        </td>
+
+                        <td class="center">
+                          <% if variant.is_material %>
+                            √
+                          <% else %>
+                            ✖
+                          <% end %>
+                        </td>
+
+                        <td>
+                          <%= link_to pencil_icon,
+                                      edit_admin_variant_path(variant), :class => 'btn btn-mini' %>
+                          <%= link_to trash_icon(true),
+                                      admin_variant_path(variant),
+                                      :method => :delete,
+                                      :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
+                                      :class => 'btn btn-mini btn-danger' %>
+                        </td>
+                      </tr>
+                  <% end %>
+                  </tbody>
+                </table>
+            <% end %>
+
+            <%= link_to (content_tag :i, '', class: 'icon icon-file') + ' Добавить вариант',
+                        new_admin_good_variant_path(@good),
+                        :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Произойдет переход на другую страницу. Вы действительно хотите продолжить?'))}, :class => 'btn' %>
+
+        <% end %>
+
+        <%= tab_pane :three60 do %>
+            <% if @good.three60s.empty? %>
+                <div class="well">
+                  Опаньки.. Ни одного 3D-просмотра не найдено..
+                </div>
+            <% else %>
+                <table class="table table-hover" data-type="nested" data-nested-url="<%= order_admin_three60s_path %>">
+                  <thead>
+                  <tr>
+                    <th>
+                      Файл
+                    </th>
+                    <th class="center">
+                      Кадров
+                    </th>
+                    <th width="60px">
+                    </th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <% @good.three60s.each do |three60| %>
+                      <tr data-nested="item" data-nested-id="<%= three60.id %>">
+                        <% if three60.is_uploaded %>
+                            <td>
+                              <%= with_pic three60, three60.src, :thumb %>
+                            </td>
+                            <td class="center">
+                              <%= three60.items.size unless three60.items.empty? %>
+                            </td>
+                            <td>
+                              <%= link_to pencil_icon,
+                                          edit_admin_three60_path(three60), :class => 'btn btn-mini' %>
+                              <%= link_to trash_icon(true),
+                                          admin_three60_path(three60),
+                                          :method => :delete,
+                                          :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
+                                          :class => 'btn btn-mini btn-danger' %>
+                            </td>
+                        <% else %>
+                            <td colspan="2">
+                              <div class="muted">
+                                <i class="icon"></i> &laquo;<%= three60.name %>&raquo; загружается...
+                              </div>
+                            </td>
+                            <td>
+                              <%= link_to trash_icon(true),
+                                          admin_three60_path(three60),
+                                          :method => :delete,
+                                          :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
+                                          :class => 'btn btn-mini btn-danger' %>
+                            </td>
+                        <% end %>
+                      </tr>
+                  <% end %>
+                  </tbody>
+                </table>
+            <% end %>
+
+            <%= link_to (content_tag :i, '', class: 'icon icon-book') + ' Добавить 3D-просмотр',
+                        new_admin_good_three60_path(@good),
+                        :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Произойдет переход на другую страницу. Вы действительно хотите продолжить?'))}, :class => 'btn' %>
+
+        <% end %>
+
+        <%= tab_pane :video do %>
+            <%= f.input :vimeo %>
+        <% end %>
+
+        <%= tab_pane :meta do %>
+            <% Globalize.with_locale(@locale.slug) do %>
+                <%= f.input :title %>
+                <%= f.input :heading %>
+                <%= f.input :keywords %>
+                <%= f.input :description %>
+            <% end %>
+        <% end %>
+
+        <%= tab_pane :tech do %>
+            <%= f.input :parameters, as: :html %>
+            <%= f.input :good_weight, as: :string %>
+            <%= f.input :good_volume, as: :string %>
+        <% end %>
+
+        <%= tab_pane :descriptions do %>
+            <% Globalize.with_locale(@locale.slug) do %>
+                <%= f.input :announce, as: :html %>
+                <%= f.input :content, as: :html %>
+                <%= f.input :additional, as: :html %>
+            <% end %>
+        <% end %>
+    <% end %>
+
+    <%= language_input f %>
+
+    <div class="form-actions">
+      <%= f.button :submit, save_or_update(@good), :class => 'btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  admin_good_categories_path, :class => 'btn' %>
+    </div>
+<% end %>

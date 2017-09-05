@@ -1,0 +1,36 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require bootstrap
+ *= require utilities
+ *= require navbar-static-top
+ *= require navbar
+ *= require style
+ *= require entries
+ *= require lineups
+ *= require balance_block
+ *= require bootstrap-sortable
+ *= require social-share-button
+ *= require bootstrap-modal-bs3patch
+ *= require bootstrap-modal
+ *= require waiting_lists
+ *= require users
+ *= require account
+ *= require account_information
+ *= require account_history
+ *= require bootstrap-override
+ *= require account_withdraw
+ *= require refer
+ *= require footer
+ *= require grid
+ *= require gamecenter
+ *= require_tree ./widgets
+ */

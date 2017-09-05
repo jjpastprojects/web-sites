@@ -1,0 +1,45 @@
+<div class="navigation<%= ' fixed' if @navigation[:fixed] %>" data-navigation="nav">
+	<div class="navigation-wrap">
+		<div class="navigation-helper" data-navigation="helper">
+			<div class="navigation-control-wrap">
+				<div class="control control-opener"></div>
+			</div>
+			<div class="navigation-title-wrap">
+				<div class="navigation-title">
+					<%= @navigation[:helper] %>
+				</div>
+			</div>
+		</div>
+
+		<div class="navigation-center" data-action="middle">
+			<div class="navigation-block">
+				<div class="title">
+					<%= @navigation[:title] %>
+				</div>
+
+				<ul class="links">
+					<% @navigation[:items].each do |link| %>
+						<%= render 'content/navigation/link', :link => link %>
+					<% end %>
+				</ul>
+
+			</div>
+
+			<% if @navigation[:search] %>
+				<div class="navigation-block navigation-search">
+					<div class="title"><%= @navigation[:search] %></div>
+
+					<div class="hint">например, &laquo;<span class="fake">дизайнерская розетка</span>&raquo;</div>
+
+					<form>
+						<div class="input-wrap">
+							<div class="search-icon"></div>
+							<input type="text" placeholder="Поиск" />
+						</div>
+					</form>
+
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
