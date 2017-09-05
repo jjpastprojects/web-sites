@@ -1,0 +1,5 @@
+@include('uploadManager::upload.partials.create_folder_modal')
+@include('uploadManager::upload.partials.delete_file_modal')
+@include('uploadManager::upload.partials.delete_folder_modal')
+@include('uploadManager::upload.partials.upload_file_modal')
+@include('uploadManager::upload.partials.view_image_modal')
