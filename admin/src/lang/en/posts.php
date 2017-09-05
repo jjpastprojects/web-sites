@@ -1,0 +1,21 @@
+<?php
+return [
+    "title" => "title",
+    "description" => "description",
+    "body" => "body",
+    "update" => "update",
+    "delete" => "delete",
+    "post_deleted" => "post has been deleted successfully",
+    "text" => "text",
+    "create" => "Create Post",
+    "post_created" => "post has been created successfully",
+    "preview" => "preview",
+    "active" => "active",
+    "publish" => "publish",
+    "suspend" => "suspend",
+    "new_post" => "New Post",
+    "published_at" => "published at",
+    "author" => "author",
+    "can_not_create_posts" => "can not create posts",
+    "id" => "id",
+];

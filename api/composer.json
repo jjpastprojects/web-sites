@@ -1,0 +1,37 @@
+{
+    "name": "lembarek/api",
+    "description": "{{description}}",
+    "keywords": [
+        "lembarek",
+        "api"
+    ],
+    "homepage": "https://github.com/lembarek/api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lembarek benghezala",
+            "email": "lembarek2011@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.3",
+        "php" : ">=5.3.0",
+        "lembarek/core" : "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "codeception/codeception": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lembarek\\Api\\": "src"
+        },
+        "files": [
+          "src/testing/helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

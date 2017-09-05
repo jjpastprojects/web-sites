@@ -1,0 +1,35 @@
+{
+    "name": "joe/package1",
+    "description": "{{description}}",
+    "keywords": [
+        "joe",
+        "package1"
+    ],
+    "homepage": "https://github.com/joe/package1",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "joe doe",
+            "email": "joe@example.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.2",
+        "php" : ">=5.3.0",
+        "lembarek/core" : "dev-master@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "codeception/codeception": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Joe\\Package1\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "minimum-stability": "stable"
+}

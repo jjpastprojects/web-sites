@@ -1,0 +1,14 @@
+            @include('layout.include.head')
+            @if(isset($info))
+	             <div class=" col-sm-12 btn btn-warning">
+	                            {{ $info }}
+	             </div>
+	             <div class="clear"></div>
+            @endif
+            @if(Session::has('global'))
+                    <div class=" col-sm-12 btn btn-warning">
+                            {{ Session::get('global') }}
+                    </div>
+            @endif
+            @yield('content')
+            @include('layout.include.footer')

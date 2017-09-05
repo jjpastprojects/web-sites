@@ -1,0 +1,41 @@
+{
+    "name": "lembarek/admin",
+    "description": "the admin part  for laravel site, that handle users, and other admin stuff",
+    "keywords": [
+        "lembarek",
+        "admin"
+    ],
+    "homepage": "https://github.com/lembarek/admin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lembarek benghezala",
+            "email": "lembarek2011@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.3",
+        "php" : ">=5.3.0",
+        "lembarek/core" : "dev-master",
+        "lembarek/auth" : "dev-master",
+        "lembarek/role" : "dev-master",
+        "lembarek/upload-manager" : "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "codeception/codeception": "^2.1",
+        "mockery/mockery": "^0.9.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lembarek\\Admin\\": "src"
+        },
+        "files": [
+          "src/testing/helpers.php"
+        ]
+    },
+    "scripts": {
+        "test": "phpunit"
+    }
+}

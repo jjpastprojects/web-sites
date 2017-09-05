@@ -1,0 +1,205 @@
+<?php
+
+class ReferController extends BaseController{
+	
+	function getAddRefer(){
+		return View::make('refer.AddRefer');
+	}
+	
+	function postAddRefer(){
+			$validator = Validator::make(Input::all(),array(
+						'site-name' => 'required',
+						'refer-url' => 'required',
+						'click' => 'required',
+						'amount' => 'required'
+				));
+			$refers = Refer::where('user_id','=',Auth::user()->id)->where('site_name','=',Input::get('site-name'))->count();
+			if($refers > 0){
+				return Redirect::route('refer-add')
+						->with('global',Lang::get('refer.double-site-name'))
+						->withInput();
+			}
+			$refers = Refer::where('user_id','=',Auth::user()->id)->where('refer','=',Input::get('refer-url'))->count();
+			if($refers>0){
+				return Redirect::route('refer-add')
+						->with('global',Lang::get('refer.double-site-url'))
+						->withInput();
+			}
+			if($validator->fails()){
+				return Redirect::route('refer-add')
+					->withErrors($validator)
+					->withInput();
+			}else{
+				$coins = Coin::where('user_id','=',Auth::user()->id)->first()->coins;
+				if($coins < Input::get('click')*Input::get('amount')){
+						return Redirect::route('refer-add')->
+						with('global',Lang::get('refer.not-enough-coins'))
+						->withInput();
+				}
+				$url = Refer::create(array(
+					'user_id' => Auth::user()->id,
+					'site_name' => Input::get('site-name'),
+					'refer' => Input::get('refer-url'),
+					'click' => Input::get('click'),
+					'amount' => Input::get('amount'),
+					'active' => 1
+					));
+				if($url){
+					$coins = Coin::where('user_id','=',Auth::user()->id)->first();
+					$coins->coins = $coins->coins - Input::get('amount')*Input::get('click');
+					$coins->save();
+					return Redirect::route('refer-add')
+					->with('global',Lang::get('refer.add-refer-success'));
+				}else{
+					return Redirect::route('refer-add')
+						->with('globla', Lang::get('refer.add-refer-fail'));
+				}
+			}
+	}
+
+	function getMakeMoney(){
+		$refers = Refer::where('click','>',0)->where('user_id','!=',Auth::user()->id)->where('active','=',1);
+		$clicks = Click::where('user_id','=',Auth::user()->id)->get();
+		$a = array();
+		foreach($clicks as $click){
+			$refers = $refers->where('id','!=',$click->refer_id);
+		}
+		$refers = $refers->get();
+		return View::make('refer.MakeMoney')->with('refers',$refers);
+	}
+	
+	function postMakeMoney(){
+		$validator = Validator::make(Input::all(),array(
+					'refer_id' => 'required',
+					'UserNameCheck' => 'required'
+			));
+		if($validator->fails()){
+			return 0;
+		}else{
+			$refer = Refer::find(Input::get('refer_id'));
+			if($refer->click > 0){
+				$refer->click= $refer->click-1;
+				$refer->save();
+
+				Click::create(array(
+				'user_id' => Auth::user()->id,
+				'refer_id' => Input::get('refer_id'),
+				'confirmed' => 0
+				));
+
+				return 1;
+
+			}else{
+					return 0;	
+			}
+		}
+	}
+
+	function MakeMoneyFail(){
+		return View::make('refer.MakeMoneyFail');
+	}
+
+	function MakeMoneySucess(){
+		return "when you confirmed I will pass";
+	}
+
+	function MyClicks(){
+		$clicks = Click::where('user_id','=',Auth::user()->id);
+		if($clicks->count() == 0){
+			return Redirect::route('home')->with('global', Lang::get('refer.NoClicks') );
+		}
+		return View::make('refer/MyClicks')->with('clicks',$clicks->get());
+	}
+
+	function MakeMoneyComplain(){
+		return "this is make money complain and it need to be changed";
+	}
+
+	function MyRefers(){
+		$refers = Refer::where('user_id','=',Auth::user()->id)->where('active','=',0);
+		if($refers->count() == 0){
+			return Redirect::route('home')->with('global',Lang::get('refer.NoRefers'));
+		}
+		return  View::make('refer/MyRefers')->with('refers',$refers->get());
+	}
+
+	function PeopleClicks(){
+		$refers = Refer::where('user_id','=',Auth::user()->id)->get();
+		$infos = array();
+		$i=0;
+		foreach($refers as $refer){
+			$clicks = Click::where('refer_id','=',$refer->id)->get();
+			foreach($clicks as $click){
+				$i++;
+				$infos[$i]['site_name'] = $refer->site_name;
+				$infos[$i]['user_name'] = User::find($click->user_id)->username;
+				$infos[$i]['confirmed'] = $click->confirmed;
+				$infos[$i]['created_at'] = $click->created_at;
+				$infos[$i]['click_id'] = $click->id;
+			}
+		}
+		if(size($infos) == 0){
+			return Redirect::route('home')->with('global',Lang::get(''));
+		}
+		return View::make('refer/PeopleClicks')->with('infos',$infos);
+	}
+
+	function Confirm(){
+		$click = Click::find(Input::get('click_id'));
+		if($click->confimed == 0){
+			$click->confirmed = 1;
+			if($click->save()){
+				$coins = Coin::where('user_id','=',$click->user_id)->first();
+				$AddCoins = Refer::find($click->refer_id)->amount;
+				$coins->coins = $coins->coins + $AddCoins;
+				if($coins->save()){
+					return 1;
+				}
+			}
+		}
+		return 0;
+	}
+
+	function DeleteRefer(){
+		$refer = Refer::find(Input::get('refer_id'));
+		$refer->active = 0;
+		if($refer->save()){
+			return 1;
+		}else{
+			return 0;
+		}
+	}
+
+	function EditRefer(){
+		$validator = Validator::make(Input::all(),array(
+						'site-name' => 'required',
+						'refer-url' => 'required',
+						'click' => 'required',
+						'amount' => 'required'
+				));
+			if($validator->fails()){
+				return 0;
+			}else{
+				$coins = Coin::where('user_id','=',Auth::user()->id)->first()->coins;
+				if($coins < Input::get('click')*Input::get('amount')){
+						return 0;
+				}
+				$refer = Refer::find(Input::get('refer_id'));
+				$refer->user_name = Input::get('user_name');
+				$refer->refer = Input::get('refer');
+				$refer->click = Input::get('click');
+				$refer->amount = Input::get('amount');
+				$refer->save();
+				if($url){
+					$coins = Coin::where('user_id','=',Auth::user()->id)->first();
+					$coins->coins = $coins->coins - Input::get('amount')*Input::get('click');
+					$coins->save();
+					return Redirect::route('refer-add')
+					->with('global',Lang::get('refer.add-refer-success'));
+				}else{
+					return Redirect::route('refer-add')
+						->with('global', Lang::get('refer.add-refer-fail'));
+				}
+			}
+	}
+}

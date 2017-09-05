@@ -1,0 +1,31 @@
+{
+    "name": "laravel/laravel",
+    "description": "",
+    "keywords": ["", ""],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.2.*",
+        "doctrine/dbal": "^2.5"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "Lembarek\\Core\\": "lembarek/core/src",
+            "Lembarek\\Auth\\": "lembarek/auth/src",
+            "Lembarek\\Role\\": "lembarek/role/src",
+            "Lembarek\\ShareFiles\\": "lembarek/shareFiles/src",
+            "Lembarek\\Mailer\\": "lembarek/mailer/src",
+            "Lembarek\\Profile\\": "lembarek/profile/src",
+            "Lembarek\\Admin\\": "lembarek/admin/src",
+            "Lembarek\\Blog\\": "lembarek/blog/src"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}

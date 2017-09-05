@@ -1,0 +1,9 @@
+<?php
+
+return array(
+	'email' => "E-mails: By creating an account, you agree to receive emails form GoSignups.com. ",
+	'verify' => 'You are responsible for verifying every signup you get. You will have two days to deny or approve each signup. After two days, signups will be auto-approve with no option to dispute. Our members are require to signup at your website only, not to do anything else like view videos or buy anything. ',
+	'right_to_modify' => ' Right to Modify: we reserves the right to modify or change any of these Terms and Conditions at any time without notice to you. Is your responsibility to periodically read this web page to see if we have made any changes to these Terms and Conditions.',
+	'copy_right' => " Copy Right: our  software, databases, stats, website, and information are proprietary and cannot be used without prior permission from us ",
+	'responsibility' => "Responsibility: GoSignups.com does not assume responsibility for any content or service provided by our advertisers, nor for any damage or loss resulting from the use of our service and website.",
+	);

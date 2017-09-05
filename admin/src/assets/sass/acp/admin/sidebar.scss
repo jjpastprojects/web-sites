@@ -1,0 +1,9 @@
+.sidebar-transition{
+  transition: all .3s ease;
+}
+
+.sidebar-enter .sidebar-leave{
+  height: 0;
+  padding: 0 10px;
+  opacity: 0;
+}

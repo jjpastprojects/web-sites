@@ -1,0 +1,19 @@
+{
+    "name": "lembarek/package",
+    "description": "to facilate the creation of laravel package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lembarek",
+            "email": "lembarek2011@gmail.com"
+        }
+    ],
+    "require": {
+        "mustache/mustache": "^2.9"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.4",
+        "codeception/codeception": "^2.1",
+        "mockery/mockery": "^0.9.4"
+    }
+}

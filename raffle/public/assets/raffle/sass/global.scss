@@ -1,0 +1,361 @@
+body
+{
+    background-color: #EEEEEE;
+}
+.login-form
+{
+    > h2
+    {
+        margin-bottom: 25px;
+    }
+    .social-login
+    {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 14px;
+        a
+        {
+            color: #000;
+            .fa
+            {
+                font-size: 25px;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+.raffle-container
+{
+    margin-top: 25px;
+    .holder
+    {
+        .img
+        {
+            margin-bottom: 15px;
+            img
+            {
+                width: 100%;
+            }
+        }
+        .info
+        {
+            padding: 7.5px;
+            border: 2px solid #ccc;
+            .title
+            {
+                > strong
+                {
+                    text-transform: capitalize;
+                }
+            }
+            .text
+            {
+                > .cnt
+                {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+//Billy
+p
+{
+    color: red;
+    font-size: 11px;
+    text-align: right;
+}
+h2
+{
+    text-align: center;   
+}
+.formbg
+{
+    background-color: #DDDDDD;
+}
+.customPlaceholder::-webkit-input-placeholder 
+{
+    color: #d4d4d4 !important;
+}
+    .customPlaceholder:-moz-placeholder 
+    {
+        color: #d4d4d4 !important;
+    }
+        .customPlaceholder::-moz-placeholder 
+        {
+            color: #d4d4d4 !important;
+        }
+            .customPlaceholder:-ms-input-placeholder 
+            {
+                color: #d4d4d4 !important;
+            }
+.makeTextarea
+{ 
+    height: 90px; 
+    min-height: 90px;  
+    max-height: 90px;
+}
+.labelPadding
+{
+    padding-top: 5px;
+}
+    .textboxPadding
+    {
+        padding-top: 20px;
+    }
+        .paddingLeft
+        {
+            padding-left: 3px;
+        }
+.labelFont
+{
+    font-size: 30px;
+}
+.btn
+{
+    letter-spacing: 1px;
+}
+.labelWidth
+{
+    width: 100%;
+}
+.col-md-offset-left-6
+{
+    margin-left: 48%;
+}
+.col-xs-offset-right-12 
+{
+    margin-right: 100%;
+}
+    .col-xs-offset-right-11 
+    {
+        margin-right: 91.66666667%;
+    }
+        .col-xs-offset-right-10 
+        {
+            margin-right: 83.33333333%;
+        }
+            .col-xs-offset-right-9
+            {
+                margin-right: 75%;
+            }
+                .col-xs-offset-right-8
+                {
+                    margin-right: 66.66666667%;
+                }
+                    .col-xs-offset-right-7 
+                    {
+                        margin-right: 58.33333333%;
+                    }
+                        .col-xs-offset-right-6 
+                        {
+                            margin-right: 50%;
+                        }
+                            .col-xs-offset-right-5 
+                            {
+                                margin-right: 41.66666667%;
+                            }
+                                .col-xs-offset-right-4 
+                                {
+                                    margin-right: 33.33333333%;
+                                }
+                                    .col-xs-offset-right-3 
+                                    {
+                                        margin-right: 25%;
+                                    }
+                                        .col-xs-offset-right-2 
+                                        {
+                                            margin-right: 16.66666667%;
+                                        }
+                                            .col-xs-offset-right-1 
+                                            {
+                                                margin-right: 8.33333333%;
+                                            }
+                                                .col-xs-offset-right-0 
+                                                {
+                                                    margin-right: 0;
+                                                }
+@media (min-width: 768px) {
+.col-sm-offset-right-12 {
+
+margin-right: 100%;
+}
+    .col-sm-offset-right-11 {
+    
+    margin-right: 91.66666667%;
+    }
+    
+        .col-sm-offset-right-10 {
+            
+        margin-right: 83.33333333%;
+        }
+        
+            .col-sm-offset-right-9 {
+                
+            margin-right: 75%;
+            }
+            
+                .col-sm-offset-right-8 {
+                    
+                margin-right: 66.66666667%;
+                }
+                
+                    .col-sm-offset-right-7 {
+                        
+                    margin-right: 58.33333333%;
+                    }
+                    
+                        .col-sm-offset-right-6 {
+                            
+                        margin-right: 50%;
+                        }
+                        
+                            .col-sm-offset-right-5 {
+                            margin-right: 41.66666667%;
+                            
+                            }
+                                .col-sm-offset-right-4 {
+                                    
+                                margin-right: 33.33333333%;
+                                }
+                                
+                                    .col-sm-offset-right-3 {
+                                        
+                                    margin-right: 25%;
+                                    }
+                                    
+                                        .col-sm-offset-right-2 {
+                                            
+                                        margin-right: 16.66666667%;
+                                        }
+                                        
+                                            .col-sm-offset-right-1 {
+                                                
+                                            margin-right: 8.33333333%;
+                                            }
+                                            
+                                                .col-sm-offset-right-0 {
+                                                    
+                                                margin-right: 0;
+                                                }
+}
+
+@media (min-width: 992px) {
+.col-md-offset-right-12 {
+    
+margin-right: 100%;
+}
+
+    .col-md-offset-right-11 {
+        
+    margin-right: 82%;
+    }
+    
+        .col-md-offset-right-10 {
+            
+        margin-right: 80%;
+        }
+        
+            .col-md-offset-right-9 {
+                
+            margin-right: 72%;
+            }
+            
+                .col-md-offset-right-8 {
+                    
+                margin-right: 66.66666667%;
+                }
+                
+                    .col-md-offset-right-7 {
+                        
+                    margin-right: 58.33333333%;
+                    }
+                    
+                        .col-md-offset-right-6 {
+                            
+                        margin-right: 50%;
+                        }
+                        
+                            .col-md-offset-right-5 {
+                                
+                            margin-right: 41.66666667%
+                            }
+                                .col-md-offset-right-4 {
+                                    
+                                margin-right: 33.33333333%;
+                                }
+                                    .col-md-offset-right-3 {
+                                        
+                                    margin-right: 25%;
+                                    }
+                                        .col-md-offset-right-2 {
+                                            
+                                        margin-right: 16.66666667%;
+                                        }
+                                            .col-md-offset-right-1 {
+                                                
+                                            margin-right: 8.33333333%;
+                                            }
+                                                .col-md-offset-right-0 {
+                                                    
+                                                margin-right: 0;
+                                                }
+                                                
+}
+
+@media (min-width: 1200px) {
+.col-lg-offset-right-12 {
+    
+margin-right: 100%;
+}
+    .col-lg-offset-right-11 {
+        
+    margin-right: 91.66666667%;
+    }
+        .col-lg-offset-right-10 {
+            
+        margin-right: 83.33333333%;
+        }
+            .col-lg-offset-right-9 {
+                
+            margin-right: 75%;
+            }
+                .col-lg-offset-right-8 {
+                    
+                margin-right: 66.66666667%;
+                }
+                    .col-lg-offset-right-7 {
+                        
+                    margin-right: 58.33333333%;
+                    }
+                        .col-lg-offset-right-6 {
+                            
+                        margin-right: 50%;
+                        }
+                            .col-lg-offset-right-5 {
+                                
+                            margin-right: 41.66666667%;
+                            }
+                                .col-lg-offset-right-4 {
+                                    
+                                margin-right: 33.33333333%;
+                                }
+                                    .col-lg-offset-right-3 {
+                                        
+                                    margin-right: 25%;
+                                    }
+                                        .col-lg-offset-right-2 {
+                                            
+                                        margin-right: 16.66666667%;
+                                        }
+                                            .col-lg-offset-right-1 {
+                                                
+                                            margin-right: 8.33333333%;
+                                            }
+                                                .col-lg-offset-right-0 {
+                                                    
+                                                margin-right: 0;
+                                                }
+
+}

@@ -1,0 +1,19 @@
+@mixin category-level($size){
+    font-size: $size;
+}
+
+.category{
+    cursor: pointer;
+}
+
+.category-level-0{
+    @include category-level(18px);
+}
+
+.category-level-1{
+    @include category-level(14px);
+}
+
+.category-level-2{
+    @include category-level(12px);
+}

@@ -1,1 +1,0 @@
-db.profiles.update({}, {$set: {points: 0}}, {multi: true})

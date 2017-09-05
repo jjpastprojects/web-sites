@@ -1,0 +1,11 @@
+/vendor
+/node_modules
+/storage
+Homestead.yaml
+Homestead.json
+.env
+tests/_output/*
+lembarek/
+tests/joe
+bower_components
+joe/package1

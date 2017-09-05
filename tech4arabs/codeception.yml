@@ -1,0 +1,24 @@
+actor: Tester
+paths:
+    tests: codeception
+    log: codeception/_output
+    data: codeception/_data
+    support: codeception/_support
+    envs: codeception/_envs
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+modules:
+    config:
+        Db:
+            dsn: 'mysql:host=localhost;dbname=packages'
+            user: 'root'
+            password: ''
+            dump: codeception/_data/packages.sql
+            cleanup: false
+            populate: false
+            reconnect: false
